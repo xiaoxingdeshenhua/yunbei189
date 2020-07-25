@@ -1,0 +1,85 @@
+<view class="pb130 data-v-3d490a56">
+    <view class="bf f-x-bt p3 data-v-3d490a56">
+        <view bindtap="__e" class="pstypec bs10 f-c data-v-3d490a56" data-event-opts="{{[ [ 'tap',[ [ 'clickMode',['$0'],[ [ ['ModeArr','',i] ] ] ] ] ] ]}}" style="{{'color:'+(v.value==params.isOut?tColor:'')+';'+'border-color:'+(v.value==params.isOut?tColor:'')+';'}}" wx:for="{{ModeArr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <text class="{{['iconfont c6 mr20 f42 data-v-3d490a56',v.icon]}}" style="{{'color:'+(v.value==params.isOut?tColor:'')+';'}}"></text>
+            <text class="f32 data-v-3d490a56">{{v.name}}</text>
+            <view class="yddsj posi-a data-v-3d490a56" style="{{'border-bottom:'+(v.value==params.isOut?'41rpx solid '+tColor:'')+';'}}"></view>
+            <text class="gou posi-a iconfont icongou cf f20 data-v-3d490a56" wx:if="{{v.value==params.isOut}}"></text>
+        </view>
+    </view>
+    <view class="mainc data-v-3d490a56">
+        <view class="p03 bf bs20 data-v-3d490a56">
+            <mg-cell bind:__l="__l" btt="商品明细" bttc="f30" class="data-v-3d490a56" cname="p30" isl="1" vueId="10bff116-1"></mg-cell>
+            <mg-cell bind:__l="__l" brs="5rpx" class="data-v-3d490a56" cname="p30 la124" h="104" img="{{v['$orig'].icon}}" isl="{{i==carList.length-1&&1}}" vueId="{{'10bff116-2-'+i}}" vueSlots="{{['bd']}}" w="104" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <view class="data-v-3d490a56" slot="bd">
+                    <view class="f-bt data-v-3d490a56">
+                        <view class="t-o-e data-v-3d490a56">{{v['$orig'].name}}</view>
+                        <view class="f-g-0 f32 data-v-3d490a56">{{sl+v.m0}}</view>
+                    </view>
+                    <view class="f-bt mt10 f24 c9 data-v-3d490a56">
+                        <view class="f-g-1 f-y-c data-v-3d490a56">
+                            <text class="ml10 data-v-3d490a56" wx:if="{{v['$orig'].isSpec==1}}">{{v['$orig'].data}}</text>
+                            <text class="data-v-3d490a56" wx:if="{{v['$orig'].attribute}}">{{'('+v['$orig'].attribute+')'}}</text>
+                            <text class="ml10 data-v-3d490a56" wx:if="{{v['$orig'].jldata}}">{{'+'+v['$orig'].jldata}}</text>
+                        </view>
+                        <view class="data-v-3d490a56">{{'x'+v['$orig'].num}}</view>
+                    </view>
+                </view>
+            </mg-cell>
+            <mg-cell bbt="{{zwf.tip}}" bind:__l="__l" btt="打包盒费" class="data-v-3d490a56" cname="p30" ft="{{''+sl+zwf.money}}" ftc="f32 c3" isl="1" vueId="10bff116-3" vueSlots="{{['hd']}}" wx:if="{{zwf.money>0}}">
+                <view class="f-row hdwith data-v-3d490a56" slot="hd">
+                    <view class="itemcon popsf data-v-3d490a56">包装费</view>
+                </view>
+            </mg-cell>
+            <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="优惠券抵扣" class="data-v-3d490a56" cname="p30" color="{{kyhb.n>0?'#F06011':''}}" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/coupon/use-coupon?storeId='+params.storeId] ] ] ] ] ] ]}}" isl="1" vueId="10bff116-4" vueSlots="{{['hd','ft']}}">
+                <view class="f-row hdwith data-v-3d490a56" slot="hd">
+                    <view class="itemcon pomj data-v-3d490a56">优惠券</view>
+                </view>
+                <view class="data-v-3d490a56" slot="ft">
+                    <text class="f32 data-v-3d490a56" wx:if="{{couponInfo}}">{{'-'+sl+couponInfo.money}}</text>
+                    <block wx:else>
+                        <view class="hongbao bs5 f20 f-y-c data-v-3d490a56" wx:if="{{kyhb.n>0}}">
+                            <text class="iconfont iconhb cf mr10 f26 data-v-3d490a56"></text>{{kyhb.n+'个可用'}}</view>
+                        <block wx:else>
+                            <view class="f24 f-y-c data-v-3d490a56" wx:if="{{kyhb.n==0}}">暂无可用</view>
+                        </block>
+                    </block>
+                </view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" class="data-v-3d490a56" cname="p30" isl="1" vueId="10bff116-5" vueSlots="{{['bd','ft']}}">
+                <view class="f-y-c c9 f24 data-v-3d490a56" slot="bd">优惠规则<text class="iconfont iconwen f20 c9 ml10 data-v-3d490a56"></text>
+                </view>
+                <view class="ml10 c3 data-v-3d490a56" slot="ft">
+                    <text class="f24 data-v-3d490a56">{{'共'+getTotal.num+'件商品'}}</text>
+                    <text class="m02 data-v-3d490a56">小计</text>
+                    <text class="f34 data-v-3d490a56">{{sl+xjMoney.total}}</text>
+                </view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" class="data-v-3d490a56" cname="p30" isl="1" vueId="10bff116-6" vueSlots="{{['bd','ft']}}" wx:if="{{system.taxRatio>0}}">
+                <view class="f-y-c data-v-3d490a56" slot="bd">税率<text class="ml10 c6 f24 data-v-3d490a56">{{'('+system.taxRatio+'%)'}}</text>
+                </view>
+                <view class="f32 c3 data-v-3d490a56" slot="ft">{{'+'+sl+xjMoney.slje}}</view>
+            </mg-cell>
+        </view>
+        <view class="mt30 p03 bf bs20 data-v-3d490a56">
+            <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="备注" class="data-v-3d490a56" cname="p30" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/shop/bz?note='+params.userNote] ] ] ] ] ] ]}}" ft="{{params.userNote||'请填写你的其他要求'}}" ftc="f-s-1" isl="1" vueId="10bff116-7"></mg-cell>
+        </view>
+    </view>
+    <view class="dbbtnc data-v-3d490a56" style="{{'bottom:'+(isIpx?'40rpx':0)+';'}}">
+        <view class="dbbtn data-v-3d490a56">
+            <view class="f-g-1 lt f-x-bt data-v-3d490a56">
+                <view class="f-y-c data-v-3d490a56">
+                    <view class="data-v-3d490a56">为您节省</view>
+                    <view class="data-v-3d490a56">{{sl+jsInfo.yhzj}}</view>
+                </view>
+                <view class="data-v-3d490a56">
+                    <text class="mr10 data-v-3d490a56">合计</text>
+                    <text class="f48 data-v-3d490a56">{{sl+jsInfo.hjMoney}}</text>
+                </view>
+            </view>
+            <button bindtap="__e" class="rt f-c data-v-3d490a56" data-event-opts="{{[ [ 'tap',[ [ 'ljzf',['$event'] ] ] ] ]}}" disabled="{{loading}}" loading="{{loading}}" style="{{'background:'+tColor+';'}}">立即支付</button>
+        </view>
+    </view>
+    <view class="bgf data-v-3d490a56" wx:if="{{isIpx}}"></view>
+    <load bind:__l="__l" class="data-v-3d490a56" vueId="10bff116-8" wx:if="{{showLoading}}"></load>
+</view>

@@ -1,48 +1,43 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "yb_cy/my/signin/my-signin" ], {
-    "164d": function(t, e, n) {
-        var r = n("3527");
-        n.n(r).a;
-    },
-    3527: function(t, e, n) {},
     4364: function(t, e, n) {
         n.r(e);
-        var r = n("8884"), a = n("e960");
-        for (var i in a) "default" !== i && function(t) {
+        var r = n("6005"), i = n("e960");
+        for (var a in i) "default" !== a && function(t) {
             n.d(e, t, function() {
-                return a[t];
+                return i[t];
             });
-        }(i);
-        n("164d");
-        var o = n("f0c5"), c = Object(o.a)(a.default, r.b, r.c, !1, null, "3b4fa1d7", null, !1, r.a, void 0);
+        }(a);
+        n("ee19");
+        var o = n("f0c5"), c = Object(o.a)(i.default, r.b, r.c, !1, null, "547e7090", null, !1, r.a, void 0);
         e.default = c.exports;
     },
     "557f": function(t, e, n) {
         Object.defineProperty(e, "__esModule", {
             value: !0
         }), e.default = void 0;
-        var r, a = (r = n("4795")) && r.__esModule ? r : {
+        var r, i = (r = n("4795")) && r.__esModule ? r : {
             default: r
-        }, i = n("2f62");
-        function u(t, e, n, r, a, i, o) {
+        }, a = n("2f62");
+        function u(t, e, n, r, i, a, o) {
             try {
-                var c = t[i](o), u = c.value;
+                var c = t[a](o), u = c.value;
             } catch (t) {
                 return void n(t);
             }
-            c.done ? e(u) : Promise.resolve(u).then(r, a);
+            c.done ? e(u) : Promise.resolve(u).then(r, i);
         }
         function o(c) {
             return function() {
                 var t = this, o = arguments;
                 return new Promise(function(e, n) {
                     var r = c.apply(t, o);
-                    function a(t) {
-                        u(r, e, n, a, i, "next", t);
-                    }
                     function i(t) {
-                        u(r, e, n, a, i, "throw", t);
+                        u(r, e, n, i, a, "next", t);
                     }
-                    a(void 0);
+                    function a(t) {
+                        u(r, e, n, i, a, "throw", t);
+                    }
+                    i(void 0);
                 });
             };
         }
@@ -56,22 +51,22 @@
             }
             return n;
         }
-        function s(a) {
+        function s(i) {
             for (var t = 1; t < arguments.length; t++) {
-                var i = null != arguments[t] ? arguments[t] : {};
-                t % 2 ? c(Object(i), !0).forEach(function(t) {
+                var a = null != arguments[t] ? arguments[t] : {};
+                t % 2 ? c(Object(a), !0).forEach(function(t) {
                     var e, n, r;
-                    e = a, r = i[n = t], n in e ? Object.defineProperty(e, n, {
+                    e = i, r = a[n = t], n in e ? Object.defineProperty(e, n, {
                         value: r,
                         enumerable: !0,
                         configurable: !0,
                         writable: !0
                     }) : e[n] = r;
-                }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i)) : c(Object(i)).forEach(function(t) {
-                    Object.defineProperty(a, t, Object.getOwnPropertyDescriptor(i, t));
+                }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a)) : c(Object(a)).forEach(function(t) {
+                    Object.defineProperty(i, t, Object.getOwnPropertyDescriptor(a, t));
                 });
             }
-            return a;
+            return i;
         }
         var f = {
             name: "mySignin",
@@ -102,13 +97,13 @@
                 this.type = t.type;
             },
             mixins: [ n("c1ef").utilMixins ],
-            computed: s({}, (0, i.mapState)("dndc", [ "mySwitch" ])),
+            computed: s({}, (0, a.mapState)("dndc", [ "mySwitch" ])),
             methods: {
                 getData: function() {
                     var r = this;
-                    return o(a.default.mark(function t() {
+                    return o(i.default.mark(function t() {
                         var e, n;
-                        return a.default.wrap(function(t) {
+                        return i.default.wrap(function(t) {
                             for (;;) switch (t.prev = t.next) {
                               case 0:
                                 return t.next = 2, r.util.request({
@@ -145,8 +140,8 @@
                 !this.mygd && this.isget && (this.isget = !1, this.getData());
             },
             created: function() {
-                return o(a.default.mark(function t() {
-                    return a.default.wrap(function(t) {
+                return o(i.default.mark(function t() {
+                    return i.default.wrap(function(t) {
                         for (;;) switch (t.prev = t.next) {
                           case 0:
                           case "end":
@@ -158,26 +153,30 @@
         };
         e.default = f;
     },
-    8884: function(t, e, n) {
+    6005: function(t, e, n) {
         var r = function() {
             this.$createElement;
             this._self._c;
-        }, a = [];
+        }, i = [];
         n.d(e, "b", function() {
             return r;
         }), n.d(e, "c", function() {
-            return a;
+            return i;
         }), n.d(e, "a", function() {});
     },
     e960: function(t, e, n) {
         n.r(e);
-        var r = n("557f"), a = n.n(r);
-        for (var i in r) "default" !== i && function(t) {
+        var r = n("557f"), i = n.n(r);
+        for (var a in r) "default" !== a && function(t) {
             n.d(e, t, function() {
                 return r[t];
             });
-        }(i);
-        e.default = a.a;
+        }(a);
+        e.default = i.a;
+    },
+    ee19: function(t, e, n) {
+        var r = n("fc08");
+        n.n(r).a;
     },
     f699: function(t, e, n) {
         (function(t) {
@@ -188,5 +187,6 @@
             }
             n("c27a"), e(n("66fd")), t(e(n("4364")).default);
         }).call(this, n("543d").createPage);
-    }
+    },
+    fc08: function(t, e, n) {}
 }, [ [ "f699", "common/runtime", "common/vendor" ] ] ]);

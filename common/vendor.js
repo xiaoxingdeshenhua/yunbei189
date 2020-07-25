@@ -1865,7 +1865,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
         function Re(e) {
             return Component(De(e));
         }
-        Le.push.apply(Le, [ "onPullDownRefresh", "onReachBottom", "onShareAppMessage", "onPageScroll", "onResize", "onTabItemTap" ]), 
+        Le.push.apply(Le, [ "onPullDownRefresh", "onReachBottom", "onShareAppMessage", "onShareTimeline", "onPageScroll", "onResize", "onTabItemTap" ]), 
         [ "vibrate", "preloadPage", "unPreloadPage", "loadSubPackage" ].forEach(function(e) {
             K[e] = !1;
         }), [].forEach(function(e) {
@@ -1989,7 +1989,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         return i.default.wrap(function(e) {
                             for (;;) switch (e.prev = e.next) {
                               case 0:
-                                if (t = r.commit, r.state.mySwitch.inStore) {
+                                if (t = r.commit, r.state.mySwitch.hasOwnProperty("jfName")) {
                                     e.next = 6;
                                     break;
                                 }
@@ -2068,7 +2068,8 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                                 return t = r.commit, r.state, e.next = 3, a.default.request({
                                     url: s.default.distributionCenter,
                                     data: {
-                                        userId: o.uId
+                                        userId: o.uId,
+                                        notcheck: o.notcheck || ""
                                     }
                                 });
 
@@ -2091,18 +2092,18 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
         };
         t.default = o;
     },
-    "66e7": function(e, v, g) {
-        (function(o) {
-            Object.defineProperty(v, "__esModule", {
+    "66e7": function(e, i, g) {
+        (function(s) {
+            Object.defineProperty(i, "__esModule", {
                 value: !0
-            }), v.default = void 0;
+            }), i.default = void 0;
             var c = r(g("4795")), e = r(g("66fd")), t = r(g("2f62")), u = r(g("4e1e")), f = r(g("f7d4")), a = r(g("6f73")), n = r(g("56d9"));
             function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 };
             }
-            function s(t, e) {
+            function l(t, e) {
                 var n = Object.keys(t);
                 if (Object.getOwnPropertySymbols) {
                     var r = Object.getOwnPropertySymbols(t);
@@ -2112,10 +2113,10 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 }
                 return n;
             }
-            function l(o) {
+            function p(o) {
                 for (var e = 1; e < arguments.length; e++) {
                     var i = null != arguments[e] ? arguments[e] : {};
-                    e % 2 ? s(Object(i), !0).forEach(function(e) {
+                    e % 2 ? l(Object(i), !0).forEach(function(e) {
                         var t, n, r;
                         t = o, r = i[n = e], n in t ? Object.defineProperty(t, n, {
                             value: r,
@@ -2123,13 +2124,13 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                             configurable: !0,
                             writable: !0
                         }) : t[n] = r;
-                    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(i)) : s(Object(i)).forEach(function(e) {
+                    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(i)) : l(Object(i)).forEach(function(e) {
                         Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(i, e));
                     });
                 }
                 return o;
             }
-            function p(e, t, n, r, o, i, a) {
+            function d(e, t, n, r, o, i, a) {
                 try {
                     var s = e[i](a), c = s.value;
                 } catch (e) {
@@ -2137,23 +2138,23 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 }
                 s.done ? t(c) : Promise.resolve(c).then(r, o);
             }
-            function d(s) {
+            function h(s) {
                 return function() {
                     var e = this, a = arguments;
                     return new Promise(function(t, n) {
                         var r = s.apply(e, a);
                         function o(e) {
-                            p(r, t, n, o, i, "next", e);
+                            d(r, t, n, o, i, "next", e);
                         }
                         function i(e) {
-                            p(r, t, n, o, i, "throw", e);
+                            d(r, t, n, o, i, "throw", e);
                         }
                         o(void 0);
                     });
                 };
             }
             e.default.use(t.default);
-            var h = new t.default.Store({
+            var v = new t.default.Store({
                 state: {
                     system: {},
                     user: {},
@@ -2162,7 +2163,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                     scarList: {},
                     sjxx: {},
                     isIpx: !1,
-                    showTips: !o.getStorageSync("tips"),
+                    showTips: !s.getStorageSync("tips"),
                     layout: {},
                     hasKp: !1,
                     vipConfig: {},
@@ -2214,8 +2215,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 getters: {
                     hcCar: function(n) {
                         return function() {
-                            // debugger;
-                            var e = o.getStorageSync("hcCar") || [], t = e.find(function(e) {
+                            var e = s.getStorageSync("hcCar") || [], t = e.find(function(e) {
                                 return e.storeId == n.sjxx.storeInfo.id;
                             });
                             t ? t.list = n.carList : (e.length < 5 ? e.push({
@@ -2224,13 +2224,13 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                             }) : (e.splice(0, 1), e.push({
                                 storeId: n.sjxx.storeInfo.id,
                                 list: n.carList
-                            }), console.log("商家缓存最多5个,删除第一个")), console.log("无此商家缓存")), o.setStorageSync("hcCar", e);
+                            }), console.log("商家缓存最多5个,删除第一个")), console.log("无此商家缓存")), s.setStorageSync("hcCar", e);
                         };
                     }
                 },
                 actions: {
                     getSystem: function(i, e) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var t, n, r, o;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
@@ -2257,19 +2257,19 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }))();
                     },
                     checkBindTel: function(t, e) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var n;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
                                   case 0:
                                     return t.commit, n = t.rootState, e.abrupt("return", new Promise(function(e, t) {
-                                        n.user.userTel ? e() : o.showModal({
+                                        n.user.userTel ? e() : s.showModal({
                                             title: "提示",
                                             content: "请先绑定手机号",
                                             confirmText: "前往绑定",
                                             cancelText: "暂不绑定",
                                             success: function(e) {
-                                                e.confirm && o.navigateTo({
+                                                e.confirm && s.navigateTo({
                                                     url: "/yb_cy/my/login/index"
                                                 });
                                             }
@@ -2285,12 +2285,12 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                     },
                     getLoginInfo: function(n) {
                         var r = arguments;
-                        return d(c.default.mark(function e() {
-                            var a, t, s;
+                        return h(c.default.mark(function e() {
+                            var i, t, a;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
                                   case 0:
-                                    if (a = n.commit, t = n.state, s = 1 < r.length && void 0 !== r[1] ? r[1] : {}, 
+                                    if (i = n.commit, t = n.state, a = 1 < r.length && void 0 !== r[1] ? r[1] : {}, 
                                     !t.user.openId) {
                                         e.next = 6;
                                         break;
@@ -2299,29 +2299,29 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
 
                                   case 6:
                                     return e.next = 8, new Promise(function() {
-                                        var n = d(c.default.mark(function e(i, t) {
+                                        var n = h(c.default.mark(function e(o, t) {
                                             return c.default.wrap(function(e) {
                                                 for (;;) switch (e.prev = e.next) {
                                                   case 0:
-                                                    o.login({
+                                                    s.login({
                                                         success: function() {
-                                                            var t = d(c.default.mark(function e(t) {
-                                                                var n, r, o;
+                                                            var t = h(c.default.mark(function e(t) {
+                                                                var n, r;
                                                                 return c.default.wrap(function(e) {
                                                                     for (;;) switch (e.prev = e.next) {
                                                                       case 0:
-                                                                        return n = t.code, e.next = 3, u.default.request({
+                                                                        return e.next = 2, u.default.request({
                                                                             url: f.default.login,
                                                                             data: {
-                                                                                code: n,
-                                                                                inviteId: s.inviteId || ""
+                                                                                code: t.code,
+                                                                                inviteId: a.inviteId || ""
                                                                             }
                                                                         });
 
-                                                                      case 3:
-                                                                        r = e.sent, o = r.data, a("setUser", o), i(), o.session_key && (getApp().globalData.session_key = o.session_key);
+                                                                      case 2:
+                                                                        n = e.sent, r = n.data, i("setUser", r), o(), r.session_key && (getApp().globalData.session_key = r.session_key);
 
-                                                                      case 8:
+                                                                      case 7:
                                                                       case "end":
                                                                         return e.stop();
                                                                     }
@@ -2358,7 +2358,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }))();
                     },
                     refreshUser: function(o, i, a) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var t, n, r;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
@@ -2383,7 +2383,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }))();
                     },
                     loginBind: function(r, o) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var t, n;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
@@ -2439,7 +2439,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                             s.num = i.gnum, s.price = 1 == t.outin ? o && 0 < t.g.outVipPrice ? +t.g.outVipPrice : +t.g.outSalesPrice : +t.g.inSalesPrice, 
                             s.price += t.g.jlmoney || 0, s.price = +s.price.toFixed(2), r.carList.push(s);
                         }
-                        return 1 == t.outin && h.getters.hcCar(), i;
+                        return 1 == t.outin && v.getters.hcCar(), i;
                     },
                     decCar: function(e, t) {
                         e.commit;
@@ -2451,17 +2451,17 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }) : r.carList.findIndex(function(e) {
                             return e.goodsId == t.g.goodsId && e.groupId == t.g.groupId && e.jlids == t.g.jlids && e.sxdata == t.g.sxdata;
                         })) && (1 < t.g.minNum && t.g.minNum == r.carList[n].num && (o.gnum = +t.g.minNum), 
-                        r.carList[n].num -= o.gnum, 0 == r.carList[n].num && r.carList.splice(n, 1)), 1 == t.outin && h.getters.hcCar(), 
+                        r.carList[n].num -= o.gnum, 0 == r.carList[n].num && r.carList.splice(n, 1)), 1 == t.outin && v.getters.hcCar(), 
                         o;
                     },
                     cshCar: function(e, t) {
-                        var n = e.commit, r = (e.state, o.getStorageSync("hcCar") || []).find(function(e) {
+                        var n = e.commit, r = (e.state, s.getStorageSync("hcCar") || []).find(function(e) {
                             return e.storeId == t;
                         });
                         n("setCarList", r ? r.list : []);
                     },
                     clearMycar: function(t, n) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
                                   case 0:
@@ -2483,13 +2483,14 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }))();
                     },
                     getMycar: function(r, o) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var t, n;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
                                   case 0:
                                     return t = r.commit, r.state, e.next = 3, u.default.request({
                                         url: f.default.MyCar,
+                                        mask: o.mask,
                                         data: o
                                     });
 
@@ -2504,7 +2505,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }))();
                     },
                     supdCar: function(e, o) {
-                        return e.dispatch, e.commit, e.state, new Promise((n = d(c.default.mark(function e(t, n) {
+                        return e.dispatch, e.commit, e.state, new Promise((n = h(c.default.mark(function e(t, n) {
                             var r;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
@@ -2530,7 +2531,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         var n;
                     },
                     getSjxx: function(o, i) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var t, n, r;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
@@ -2557,7 +2558,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }))();
                     },
                     getLayout: function(r, o) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var t, n;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
@@ -2583,7 +2584,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }))();
                     },
                     getVipConfig: function(r, e) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var t, n;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
@@ -2610,7 +2611,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }))();
                     },
                     getPayConfig: function(r, e) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var t, n;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
@@ -2637,7 +2638,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }))();
                     },
                     getAllStore: function(r, o) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var t, n;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
@@ -2665,7 +2666,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         }))();
                     },
                     getConfig: function(o, i) {
-                        return d(c.default.mark(function e() {
+                        return h(c.default.mark(function e() {
                             var t, n, r;
                             return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
@@ -2698,10 +2699,10 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                                     }
                                     return t("setConfig", {
                                         params: i,
-                                        data: l({
+                                        data: p({
                                             isget: !0
                                         }, r.data)
-                                    }), e.abrupt("return", l({
+                                    }), e.abrupt("return", p({
                                         isget: !0
                                     }, r.data));
 
@@ -2732,8 +2733,8 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 modules: {
                     dndc: n.default
                 }
-            }), i = h;
-            v.default = i;
+            }), o = v;
+            i.default = o;
         }).call(this, g("543d").default);
     },
     "66fd": function(e, Fn, t) {
@@ -4288,7 +4289,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 }), n;
             });
             var Nn = [ "createSelectorQuery", "createIntersectionObserver", "selectAllComponents", "selectComponent" ];
-            var Rn = [ "onLaunch", "onShow", "onHide", "onUniNViewMessage", "onError", "onLoad", "onReady", "onUnload", "onPullDownRefresh", "onReachBottom", "onTabItemTap", "onShareAppMessage", "onResize", "onPageScroll", "onNavigationBarButtonTap", "onBackPress", "onNavigationBarSearchInputChanged", "onNavigationBarSearchInputConfirmed", "onNavigationBarSearchInputClicked", "onPageShow", "onPageHide", "onPageResize" ];
+            var Rn = [ "onLaunch", "onShow", "onHide", "onUniNViewMessage", "onError", "onLoad", "onReady", "onUnload", "onPullDownRefresh", "onReachBottom", "onTabItemTap", "onShareAppMessage", "onShareTimeline", "onResize", "onPageScroll", "onNavigationBarButtonTap", "onBackPress", "onNavigationBarSearchInputChanged", "onNavigationBarSearchInputConfirmed", "onNavigationBarSearchInputClicked", "onPageShow", "onPageHide", "onPageResize" ];
             gn.prototype.__patch__ = function(e, t) {
                 var n, r, o = this;
                 if (null !== t && ("page" === this.mpType || "component" === this.mpType)) {
@@ -4490,6 +4491,9 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                     o[i[0]] = i[1];
                 }
                 return o;
+            }, s.getOptions = function(e, t) {
+                var n = t.key, r = t.q1;
+                return e.scene ? decodeURIComponent(e.scene) : e.q ? s.getUrlParams(decodeURIComponent(e.q))[n] : r;
             }, s.throttle = function(t, e) {
                 var n = 0, r = e || 300;
                 return function() {
@@ -5218,6 +5222,10 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
 
                                   case "outT":
                                     t = "/yb_cy/shop/goods?type=2";
+                                    break;
+
+                                  case "fastOrder":
+                                    t = "/yb_cy/inshop/ffmode/goods";
                                 }
                                 return t;
                             }
@@ -6190,7 +6198,8 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
         r(n, "incomeByDay", o + "oldWithNew_incomeByDay"), r(n, "incomeInfo", o + "oldWithNew_incomeInfo"), 
         r(n, "myPartner", o + "oldWithNew_myPartner"), r(n, "txjl", o + "oldWithNew_cashWithdrawRecord"), 
         r(n, "fxtx", o + "oldWithNew_cashWithdraw"), r(n, "txxq", o + "oldWithNew_cashWithdrawInfo"), 
-        r(n, "sjspsl", o + "GetStoreGoodsNum"), n);
+        r(n, "sjspsl", o + "GetStoreGoodsNum"), r(n, "kcxd", o + "SaveFastOrder"), r(n, "tsqxdd", o + "CancelInorder"), 
+        n);
         e.exports = i;
     }
 } ]);

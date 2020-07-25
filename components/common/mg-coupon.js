@@ -1,21 +1,21 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "components/common/mg-coupon" ], {
     "42c7": function(t, e, o) {
         o.r(e);
-        var n = o("d30d"), c = o.n(n);
-        for (var i in n) "default" !== i && function(t) {
+        var c = o("d30d"), n = o.n(c);
+        for (var i in c) "default" !== i && function(t) {
             o.d(e, t, function() {
-                return n[t];
+                return c[t];
             });
         }(i);
-        e.default = c.a;
+        e.default = n.a;
     },
-    "7e6b": function(t, e, o) {
-        var n = o("b708");
-        o.n(n).a;
+    "65f2": function(t, e, o) {
+        var c = o("90d9");
+        o.n(c).a;
     },
-    "818b": function(t, e, o) {
-        var n = function() {
-            var e = this, t = (e.$createElement, e._self._c, Number(e.co.money)), o = e.useTypeName(e.co.activityType), n = e.useTypeName(e.co.activityType), c = Number(e.co.money), i = e.useTypeName(e.co.activityType), a = Number(e.co.money), u = e.useTypeName(e.co.activityType), s = Number(e.co.money), p = e.useTypeName(e.co.activityType), m = e.useTypeName(e.co.activityType), r = Number(e.co.money), y = Number(e.co.money), f = e.useTypeName(e.co.activityType), d = e.useTypeName(e.co.activityType);
+    "7e2c": function(t, e, o) {
+        var c = function() {
+            var e = this, t = (e.$createElement, e._self._c, Number(e.co.money)), o = e.useTypeName(e.co.activityType), c = e.useTypeName(e.co.activityType), n = Number(e.co.money), i = e.useTypeName(e.co.activityType), a = Number(e.co.money), u = e.useTypeName(e.co.activityType), s = Number(e.co.money), p = e.useTypeName(e.co.activityType), m = e.useTypeName(e.co.activityType), r = Number(e.co.money), f = Number(e.co.money), d = e.useTypeName(e.co.activityType), y = e.useTypeName(e.co.activityType);
             e._isMounted || (e.e0 = function(t) {
                 t.stopPropagation(), e.active = !e.active;
             }, e.e1 = function(t) {
@@ -26,8 +26,8 @@
                 $root: {
                     m0: t,
                     m1: o,
-                    m2: n,
-                    m3: c,
+                    m2: c,
+                    m3: n,
                     m4: i,
                     m5: a,
                     m6: u,
@@ -35,36 +35,36 @@
                     m8: p,
                     m9: m,
                     m10: r,
-                    m11: y,
-                    m12: f,
-                    m13: d
+                    m11: f,
+                    m12: d,
+                    m13: y
                 }
             });
-        }, c = [];
+        }, n = [];
         o.d(e, "b", function() {
-            return n;
-        }), o.d(e, "c", function() {
             return c;
+        }), o.d(e, "c", function() {
+            return n;
         }), o.d(e, "a", function() {});
     },
+    "90d9": function(t, e, o) {},
     ac48: function(t, e, o) {
         o.r(e);
-        var n = o("818b"), c = o("42c7");
-        for (var i in c) "default" !== i && function(t) {
+        var c = o("7e2c"), n = o("42c7");
+        for (var i in n) "default" !== i && function(t) {
             o.d(e, t, function() {
-                return c[t];
+                return n[t];
             });
         }(i);
-        o("7e6b");
-        var a = o("f0c5"), u = Object(a.a)(c.default, n.b, n.c, !1, null, "63f2b094", null, !1, n.a, void 0);
+        o("65f2");
+        var a = o("f0c5"), u = Object(a.a)(n.default, c.b, c.c, !1, null, "1efac2a8", null, !1, c.a, void 0);
         e.default = u.exports;
     },
-    b708: function(t, e, o) {},
     d30d: function(t, e, o) {
         Object.defineProperty(e, "__esModule", {
             value: !0
         }), e.default = void 0, o("2f62");
-        var n = o("c1ef"), c = {
+        var c = o("c1ef"), n = {
             name: "searchBox",
             components: {
                 mgRtext: function() {
@@ -111,7 +111,7 @@
                     disabled: !1
                 };
             },
-            mixins: [ n.utilMixins ],
+            mixins: [ c.utilMixins ],
             computed: {
                 typeName: function() {
                     if (1 != this.gttype) {
@@ -132,11 +132,11 @@
                     if (this.co.item) {
                         var t = this.co.item, e = [];
                         return -1 < t.indexOf(1) && e.push("外卖可用"), -1 < t.indexOf(2) && e.push("堂食可用"), 
-                        -1 < t.indexOf(3) && e.push("当面付可用"), e.toString();
+                        -1 < t.indexOf(3) && e.push("当面付可用"), -1 < t.indexOf(4) && e.push("快餐可用"), e.toString();
                     }
                 },
                 dateText: function() {
-                    return 1 == this.ptype && 2 == this.ttype ? "有效期至".concat(this.timeToDate(this.co.endAt, "yyyy-MM-dd")) : 2 == this.co.timeType && this.co.day ? "领取后".concat(this.co.day, "日内有效") : "有效期至".concat(this.timeToDate(this.co.endAt, "yyyy-MM-dd"));
+                    return 1 == this.ptype && 2 == this.ttype ? "有效期至".concat(this.timeToDate(this.co.endAt)) : 2 == this.co.timeType && this.co.day ? "领取后".concat(this.co.day, "日内有效") : "有效期至".concat(this.timeToDate(this.co.endAt));
                 }
             },
             methods: {
@@ -162,9 +162,10 @@
                     return e;
                 },
                 goTo: function() {
-                    this.go({
+                    var t = "/yb_cy/my/coupon/coupon-dl?id=" + (this.co.couponId ? this.co.couponId : this.co.id);
+                    1 == this.ptype && 2 == this.ttype && (t += "&receiveId=" + this.co.id), this.go({
                         t: 1,
-                        url: "/yb_cy/my/coupon/coupon-dl?id=" + (this.co.couponId ? this.co.couponId : this.co.id)
+                        url: t
                     });
                 },
                 btnClick: function() {
@@ -175,7 +176,7 @@
                 }
             }
         };
-        e.default = c;
+        e.default = n;
     }
 } ]), (global.webpackJsonp = global.webpackJsonp || []).push([ "components/common/mg-coupon-create-component", {
     "components/common/mg-coupon-create-component": function(t, e, o) {

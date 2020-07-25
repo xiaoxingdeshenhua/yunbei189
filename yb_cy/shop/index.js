@@ -1,18 +1,4 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "yb_cy/shop/index" ], {
-    "058e": function(e, t, n) {
-        var o = function() {
-            var t = this;
-            t.$createElement;
-            t._self._c, t._isMounted || (t.e0 = function(e) {
-                t.tcyhqshow = !1;
-            });
-        }, r = [];
-        n.d(t, "b", function() {
-            return o;
-        }), n.d(t, "c", function() {
-            return r;
-        }), n.d(t, "a", function() {});
-    },
     "0739": function(e, t, n) {
         (function(e) {
             function t(e) {
@@ -35,19 +21,33 @@
     },
     6335: function(e, t, n) {
         n.r(t);
-        var o = n("058e"), r = n("0931");
+        var o = n("b443"), r = n("0931");
         for (var c in r) "default" !== c && function(e) {
             n.d(t, e, function() {
                 return r[e];
             });
         }(c);
-        n("cefc");
-        var i = n("f0c5"), u = Object(i.a)(r.default, o.b, o.c, !1, null, "09e82166", null, !1, o.a, void 0);
-        t.default = u.exports;
+        n("a583");
+        var i = n("f0c5"), s = Object(i.a)(r.default, o.b, o.c, !1, null, "437b9cb1", null, !1, o.a, void 0);
+        t.default = s.exports;
     },
-    cefc: function(e, t, n) {
-        var o = n("e6ac");
+    a583: function(e, t, n) {
+        var o = n("ef3c");
         n.n(o).a;
+    },
+    b443: function(e, t, n) {
+        var o = function() {
+            var t = this;
+            t.$createElement;
+            t._self._c, t._isMounted || (t.e0 = function(e) {
+                t.tcyhqshow = !1;
+            });
+        }, r = [];
+        n.d(t, "b", function() {
+            return o;
+        }), n.d(t, "c", function() {
+            return r;
+        }), n.d(t, "a", function() {});
     },
     d2a8: function(e, f, d) {
         (function(r) {
@@ -67,7 +67,7 @@
                 }
                 return n;
             }
-            function u(r) {
+            function s(r) {
                 for (var e = 1; e < arguments.length; e++) {
                     var c = null != arguments[e] ? arguments[e] : {};
                     e % 2 ? o(Object(c), !0).forEach(function(e) {
@@ -84,24 +84,24 @@
                 }
                 return r;
             }
-            function s(e, t, n, o, r, c, i) {
+            function u(e, t, n, o, r, c, i) {
                 try {
-                    var u = e[c](i), s = u.value;
+                    var s = e[c](i), u = s.value;
                 } catch (e) {
                     return void n(e);
                 }
-                u.done ? t(s) : Promise.resolve(s).then(o, r);
+                s.done ? t(u) : Promise.resolve(u).then(o, r);
             }
-            function a(u) {
+            function a(s) {
                 return function() {
                     var e = this, i = arguments;
                     return new Promise(function(t, n) {
-                        var o = u.apply(e, i);
+                        var o = s.apply(e, i);
                         function r(e) {
-                            s(o, t, n, r, c, "next", e);
+                            u(o, t, n, r, c, "next", e);
                         }
                         function c(e) {
-                            s(o, t, n, r, c, "throw", e);
+                            u(o, t, n, r, c, "throw", e);
                         }
                         r(void 0);
                     });
@@ -280,15 +280,17 @@
                                 return o.showLoading = !1, o.query = n, o.swiper.swiper.children = o.launch.pictureList || [], 
                                 o.launch.switch && !o.hasKp ? (o.second = +o.launch.duration, o.dsq = setInterval(function() {
                                     o.second--, o.second <= 0 && o.tg();
-                                }, 1e3)) : o.tg(), getApp().globalData.selectStore ? t = getApp().globalData.selectStore : n.storeId ? t = n.storeId : n.scene && (t = decodeURIComponent(n.scene)), 
+                                }, 1e3)) : o.tg(), n.storeId ? t = n.storeId : getApp().globalData.selectStore ? t = getApp().globalData.selectStore : n.scene && (t = decodeURIComponent(n.scene)), 
                                 o.storeId = t, e.next = 10, o.getLoginInfo({
                                     inviteId: n.userId
                                 });
 
                               case 10:
-                                o.getDw();
+                                o.getDw(), wx.showShareMenu({
+                                    menus: [ "shareAppMessage", "shareTimeline" ]
+                                });
 
-                              case 11:
+                              case 12:
                               case "end":
                                 return e.stop();
                             }
@@ -314,7 +316,7 @@
                     }))();
                 },
                 mixins: [ n.utilMixins ],
-                computed: u({}, (0, t.mapState)([ "layout", "hasKp", "allStore", "sjxx" ]), {
+                computed: s({}, (0, t.mapState)([ "layout", "hasKp", "allStore", "sjxx" ]), {
                     launch: function() {
                         return this.layout.launch && this.layout.launch.config || {};
                     },
@@ -322,7 +324,7 @@
                         return this.layout.page || [];
                     }
                 }),
-                methods: u({}, (0, t.mapActions)([ "getSjxx", "getAllStore" ]), {}, (0, t.mapMutations)([ "setHasKp" ]), {
+                methods: s({}, (0, t.mapActions)([ "getSjxx", "getAllStore" ]), {}, (0, t.mapMutations)([ "setHasKp" ]), {
                     isFirstCmp: function(t, e) {
                         return this.page.findIndex(function(e) {
                             return e.cmpName == t;
@@ -533,6 +535,12 @@
                         p: e
                     });
                 },
+                onShareTimeline: function(e) {
+                    return {
+                        title: this.system.shareTitle,
+                        imageUrl: this.getImgS(this.system.shareImg)
+                    };
+                },
                 onUnload: function() {
                     this.dsq && clearInterval(this.dsq);
                 }
@@ -540,5 +548,5 @@
             f.default = l;
         }).call(this, d("543d").default);
     },
-    e6ac: function(e, t, n) {}
+    ef3c: function(e, t, n) {}
 }, [ [ "0739", "common/runtime", "common/vendor" ] ] ]);

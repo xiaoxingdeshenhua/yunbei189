@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-5478237d {
+.animated.bounceIn.data-v-04e3d773 {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-5478237d {
+@-webkit-keyframes bounceIn-data-v-04e3d773 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-5478237d {
+@keyframes bounceIn-data-v-04e3d773 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,26 +68,26 @@
     }
 }
 
-.bounceIn.data-v-5478237d {
-    animation-name: bounceIn-data-v-5478237d;
+.bounceIn.data-v-04e3d773 {
+    animation-name: bounceIn-data-v-04e3d773;
 }
 
-.imgc.data-v-5478237d {
+.imgc.data-v-04e3d773 {
     width: 320rpx;
     height: 320rpx;
     margin-top: 30rpx;
 }
 
-.goodsc.data-v-5478237d {
+.goodsc.data-v-04e3d773 {
     width: 325rpx;
 }
 
-.goodsimg.data-v-5478237d {
+.goodsimg.data-v-04e3d773 {
     width: 325rpx;
     height: 325rpx;
 }
 
-.boxs.data-v-5478237d {
+.boxs.data-v-04e3d773 {
     border-radius: 8rpx;
     padding: 0 7rpx;
 }

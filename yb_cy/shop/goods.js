@@ -194,7 +194,7 @@
                         return h.default.wrap(function(t) {
                             for (;;) switch (t.prev = t.next) {
                               case 0:
-                                return getApp().globalData.selectStore ? e = getApp().globalData.selectStore : n.storeId ? e = getApp().globalData.selectStore = n.storeId : n.scene && (e = getApp().globalData.selectStore = decodeURIComponent(n.scene)), 
+                                return n.storeId ? e = getApp().globalData.selectStore = n.storeId : getApp().globalData.selectStore ? e = getApp().globalData.selectStore : n.scene && (e = getApp().globalData.selectStore = decodeURIComponent(n.scene)), 
                                 o.storeId = e, o.distance = n.distance, o.query = n, t.next = 6, o.getLoginInfo({
                                     inviteId: n.userId
                                 });
@@ -241,13 +241,13 @@
                         t;
                     },
                     yysj: function() {
-                        // var t = "";
-                        // if (this.getsjxx) {
-                        //     var e = this.sjxx.storeInfo;
-                        //     1 == e.timeArrType ? t = "24小时营业" : (t = "".concat(s.default.timeToDate(e.timeArr[0][0], "hh:mm"), "-").concat(s.default.timeToDate(e.timeArr[0][1], "hh:mm")), 
-                        //     e.timeArr[1] && (t += " " + "".concat(s.default.timeToDate(e.timeArr[1][0], "hh:mm"), "-").concat(s.default.timeToDate(e.timeArr[1][1], "hh:mm"))));
-                        // }
-                        // return t;
+                        var t = "";
+                        if (this.getsjxx) {
+                            var e = this.sjxx.storeInfo;
+                            1 == e.timeArrType ? t = "24小时营业" : (t = "".concat(s.default.timeToDate(e.timeArr[0][0], "hh:mm"), "-").concat(s.default.timeToDate(e.timeArr[0][1], "hh:mm")), 
+                            e.timeArr[1] && (t += " " + "".concat(s.default.timeToDate(e.timeArr[1][0], "hh:mm"), "-").concat(s.default.timeToDate(e.timeArr[1][1], "hh:mm"))));
+                        }
+                        return t;
                     },
                     cshow: function() {
                         return 0 < this.carList.length;
@@ -728,11 +728,7 @@
         }).call(this, l("543d").default);
     },
     "2d06": function(t, e, n) {},
-    "313e": function(t, e, n) {
-        var o = n("50fe");
-        n.n(o).a;
-    },
-    4552: function(t, e, n) {
+    5840: function(t, e, n) {
         var o = function() {
             var s = this, t = (s.$createElement, s._self._c, Number(s.getsjxx && s.sjxx.storeInfo.newMoney)), e = s.__map(s.catrgoryList, function(t, e) {
                 var n = s.lfName(t.name), o = s.lsName(t.name), r = s.lsName(t.name);
@@ -765,7 +761,10 @@
             return r;
         }), n.d(e, "a", function() {});
     },
-    "50fe": function(t, e, n) {},
+    "7ff1": function(t, e, n) {
+        var o = n("923c");
+        n.n(o).a;
+    },
     "8c6a": function(t, e, n) {
         n.r(e);
         var o = n("2b4a"), r = n.n(o);
@@ -776,16 +775,17 @@
         }(s);
         e.default = r.a;
     },
+    "923c": function(t, e, n) {},
     b285: function(t, e, n) {
         n.r(e);
-        var o = n("4552"), r = n("8c6a");
+        var o = n("5840"), r = n("8c6a");
         for (var s in r) "default" !== s && function(t) {
             n.d(e, t, function() {
                 return r[t];
             });
         }(s);
-        n("b4e6"), n("313e");
-        var i = n("f0c5"), a = Object(i.a)(r.default, o.b, o.c, !1, null, "bec6ac68", null, !1, o.a, void 0);
+        n("b4e6"), n("7ff1");
+        var i = n("f0c5"), a = Object(i.a)(r.default, o.b, o.c, !1, null, "79041fec", null, !1, o.a, void 0);
         e.default = a.exports;
     },
     b4e6: function(t, e, n) {

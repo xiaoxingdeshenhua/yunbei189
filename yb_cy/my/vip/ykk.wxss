@@ -99,10 +99,11 @@
 }
 
 .jbc.data-v-ca3fac20 {
-    background: linear-gradient(90deg,#e6dbce,#dba789);
-    -webkit-text-fill-color: transparent;
+   /* background: linear-gradient(90deg,#e6dbce,#dba789);
+    -webkit-text-fill-color: transparent;*/
+    color: #713c0e;
     background-clip: text;
-    color: transparent;
+    /*color: transparent;*/
 }
 
 .vbtn.data-v-ca3fac20 {

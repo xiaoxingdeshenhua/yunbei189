@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-50af59e0 {
+.animated.bounceIn.data-v-21f9eede {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-50af59e0 {
+@-webkit-keyframes bounceIn-data-v-21f9eede {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-50af59e0 {
+@keyframes bounceIn-data-v-21f9eede {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,24 +68,28 @@
     }
 }
 
-.bounceIn.data-v-50af59e0 {
-    animation-name: bounceIn-data-v-50af59e0;
+.bounceIn.data-v-21f9eede {
+    animation-name: bounceIn-data-v-21f9eede;
 }
 
-.mrltc.data-v-50af59e0 {
+.mrltc.data-v-21f9eede {
     width: 50rpx;
     height: 50rpx;
 }
 
-.b-l-ts.data-v-50af59e0 {
+.b-l-ts.data-v-21f9eede {
     background: linear-gradient(180deg,#f38529,#fe912c);
 }
 
-.b-l-sy.data-v-50af59e0 {
+.b-l-sy.data-v-21f9eede {
     background: linear-gradient(180deg,#a57afa,#a175f8);
 }
 
-.b-r.data-v-50af59e0 {
+.b-l-kc.data-v-21f9eede {
+    background: linear-gradient(180deg,#07c160,#09bb07);
+}
+
+.b-r.data-v-21f9eede {
     width: 1px;
     height: 23rpx;
     background: #999;

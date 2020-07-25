@@ -112,6 +112,8 @@
     height: 104rpx;
     border-radius: 0rpx;
     overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     box-shadow: 0rpx 8rpx 18rpx 5rpx hsla(0,0%,86.7%,.9);
 }
@@ -120,6 +122,8 @@
     color: #fff;
     padding: 0 30rpx 0 50rpx;
     background: #393939;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;

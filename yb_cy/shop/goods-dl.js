@@ -1,23 +1,23 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "yb_cy/shop/goods-dl" ], {
     "184a": function(e, t, n) {
         n.r(t);
-        var o = n("bcd2"), r = n("426d");
-        for (var i in r) "default" !== i && function(e) {
+        var o = n("f4ac"), r = n("426d");
+        for (var c in r) "default" !== c && function(e) {
             n.d(t, e, function() {
                 return r[e];
             });
-        }(i);
-        var c = n("f0c5"), a = Object(c.a)(r.default, o.b, o.c, !1, null, "88a44424", null, !1, o.a, void 0);
-        t.default = a.exports;
+        }(c);
+        var i = n("f0c5"), s = Object(i.a)(r.default, o.b, o.c, !1, null, "4c465fb0", null, !1, o.a, void 0);
+        t.default = s.exports;
     },
     "426d": function(e, t, n) {
         n.r(t);
         var o = n("6d0c"), r = n.n(o);
-        for (var i in o) "default" !== i && function(e) {
+        for (var c in o) "default" !== c && function(e) {
             n.d(t, e, function() {
                 return o[e];
             });
-        }(i);
+        }(c);
         t.default = r.a;
     },
     "6d0c": function(e, f, l) {
@@ -25,13 +25,13 @@
             Object.defineProperty(f, "__esModule", {
                 value: !0
             }), f.default = void 0;
-            var i = o(l("4795")), e = l("2f62"), t = (o(l("6f73")), l("c1ef")), c = l("1127");
+            var c = o(l("4795")), e = l("2f62"), t = (o(l("6f73")), l("c1ef")), i = l("1127");
             function o(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 };
             }
-            function a(t, e) {
+            function s(t, e) {
                 var n = Object.keys(t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(t);
@@ -43,39 +43,39 @@
             }
             function r(r) {
                 for (var e = 1; e < arguments.length; e++) {
-                    var i = null != arguments[e] ? arguments[e] : {};
-                    e % 2 ? a(Object(i), !0).forEach(function(e) {
+                    var c = null != arguments[e] ? arguments[e] : {};
+                    e % 2 ? s(Object(c), !0).forEach(function(e) {
                         var t, n, o;
-                        t = r, o = i[n = e], n in t ? Object.defineProperty(t, n, {
+                        t = r, o = c[n = e], n in t ? Object.defineProperty(t, n, {
                             value: o,
                             enumerable: !0,
                             configurable: !0,
                             writable: !0
                         }) : t[n] = o;
-                    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i)) : a(Object(i)).forEach(function(e) {
-                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(c)) : s(Object(c)).forEach(function(e) {
+                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(c, e));
                     });
                 }
                 return r;
             }
-            function s(e, t, n, o, r, i, c) {
+            function a(e, t, n, o, r, c, i) {
                 try {
-                    var a = e[i](c), s = a.value;
+                    var s = e[c](i), a = s.value;
                 } catch (e) {
                     return void n(e);
                 }
-                a.done ? t(s) : Promise.resolve(s).then(o, r);
+                s.done ? t(a) : Promise.resolve(a).then(o, r);
             }
-            function u(a) {
+            function u(s) {
                 return function() {
-                    var e = this, c = arguments;
+                    var e = this, i = arguments;
                     return new Promise(function(t, n) {
-                        var o = a.apply(e, c);
+                        var o = s.apply(e, i);
                         function r(e) {
-                            s(o, t, n, r, i, "next", e);
+                            a(o, t, n, r, c, "next", e);
                         }
-                        function i(e) {
-                            s(o, t, n, r, i, "throw", e);
+                        function c(e) {
+                            a(o, t, n, r, c, "throw", e);
                         }
                         r(void 0);
                     });
@@ -153,25 +153,21 @@
                 },
                 onLoad: function(n) {
                     var o = this;
-                    return u(i.default.mark(function e() {
+                    return u(c.default.mark(function e() {
                         var t;
-                        return i.default.wrap(function(e) {
+                        return c.default.wrap(function(e) {
                             for (;;) switch (e.prev = e.next) {
                               case 0:
-                                if (t = n.scene ? decodeURIComponent(n.scene) : n.id, o.id = t, o.getSystem(o), 
-                                o.isShare = 1 == getCurrentPages().length, !o.isShare) {
-                                    e.next = 7;
-                                    break;
-                                }
-                                return e.next = 7, o.getLoginInfo({
+                                return t = n.scene ? decodeURIComponent(n.scene) : n.id, o.id = t, o.getSystem(o), 
+                                e.next = 5, o.getLoginInfo({
                                     inviteId: n.userId
                                 });
 
-                              case 7:
-                                o.getData(), o.isShare || (o.lastPage = o.util.getPage()), "shopGoods" == n.page && (o.isshopGoods = !0), 
-                                console.log("%c options ", "color: white; background-color: #2274A5", o.isShare, o.isshopGoods, n);
+                              case 5:
+                                o.getData(), "shopGoods" == n.page && (o.isshopGoods = !0), o.isshopGoods && (o.lastPage = o.util.getPage()), 
+                                console.log("%c options ", "color: white; background-color: #2274A5", o.isshopGoods, n);
 
-                              case 11:
+                              case 9:
                               case "end":
                                 return e.stop();
                             }
@@ -181,7 +177,7 @@
                 mixins: [ t.utilMixins ],
                 computed: r({}, (0, e.mapState)([ "carList", "sjxx" ]), {
                     canUseShopGoods: function() {
-                        return !this.isShare && this.isshopGoods;
+                        return this.isshopGoods;
                     }
                 }),
                 methods: r({}, (0, e.mapActions)([ "getSjxx", "cshCar", "addCar", "decCar" ]), {}, (0, 
@@ -198,8 +194,8 @@
                     },
                     add: function(t) {
                         var n = this;
-                        return u(i.default.mark(function e() {
-                            return i.default.wrap(function(e) {
+                        return u(c.default.mark(function e() {
+                            return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
                                   case 0:
                                     if (!(1 != t.g.isSpec && 1 != t.g.isMaterial && 1 != t.g.isAttribute || t.g.hasOwnProperty("groupId"))) {
@@ -246,15 +242,15 @@
                         this.canUseShopGoods ? this.go({
                             t: 4
                         }) : this.go({
-                            t: this.isShare ? 3 : 2,
+                            t: 3,
                             url: "/yb_cy/shop/goods?storeId=".concat(this.co.storeId, "&isgl=1")
                         });
                     },
                     getData: function() {
                         var r = this;
-                        return u(i.default.mark(function e() {
+                        return u(c.default.mark(function e() {
                             var t, n, o;
-                            return i.default.wrap(function(e) {
+                            return c.default.wrap(function(e) {
                                 for (;;) switch (e.prev = e.next) {
                                   case 0:
                                     return e.next = 2, r.util.request({
@@ -267,16 +263,16 @@
                                     });
 
                                   case 2:
-                                    return t = e.sent, (n = t.data).num = 0, r.co = n, r.util.setNT(n.name), r.swiper.swiper.children = n.media.map(function(e) {
+                                    return t = e.sent, (n = t.data).num = 0, r.co = n, r.swiper.swiper.children = n.media.map(function(e) {
                                         return {
                                             icon: e
                                         };
-                                    }), r.cshCar(n.storeId), r.changeNum(), e.next = 12, (0, c.getDw)({
+                                    }), r.cshCar(n.storeId), r.changeNum(), e.next = 11, (0, i.getDw)({
                                         t: 0
                                     });
 
-                                  case 12:
-                                    o = e.sent, r.isShare && r.getSjxx({
+                                  case 11:
+                                    o = e.sent, r.sjxx.storeInfo || r.getSjxx({
                                         storeId: n.storeId,
                                         item: r.outin,
                                         lat: o.latitude,
@@ -284,7 +280,7 @@
                                         userId: r.user.userId || ""
                                     });
 
-                                  case 14:
+                                  case 13:
                                   case "end":
                                     return e.stop();
                                 }
@@ -305,8 +301,8 @@
                     }
                 }),
                 created: function() {
-                    return u(i.default.mark(function e() {
-                        return i.default.wrap(function(e) {
+                    return u(c.default.mark(function e() {
+                        return c.default.wrap(function(e) {
                             for (;;) switch (e.prev = e.next) {
                               case 0:
                               case "end":
@@ -333,7 +329,17 @@
             f.default = d;
         }).call(this, l("543d").default);
     },
-    bcd2: function(e, t, n) {
+    f46d: function(e, t, n) {
+        (function(e) {
+            function t(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                };
+            }
+            n("c27a"), t(n("66fd")), e(t(n("184a")).default);
+        }).call(this, n("543d").createPage);
+    },
+    f4ac: function(e, t, n) {
         var o = function() {
             this.$createElement;
             var e = (this._self._c, {
@@ -350,15 +356,5 @@
         }), n.d(t, "c", function() {
             return r;
         }), n.d(t, "a", function() {});
-    },
-    f46d: function(e, t, n) {
-        (function(e) {
-            function t(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                };
-            }
-            n("c27a"), t(n("66fd")), e(t(n("184a")).default);
-        }).call(this, n("543d").createPage);
     }
 }, [ [ "f46d", "common/runtime", "common/vendor" ] ] ]);

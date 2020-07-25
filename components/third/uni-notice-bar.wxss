@@ -3,6 +3,8 @@
     font-size: 24rpx;
     line-height: 1.5;
     margin-bottom: 20rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -19,6 +21,8 @@
 .uni-noticebar__close {
     color: #999;
     margin-right: 24rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -38,6 +42,8 @@
 .uni-noticebar__content.uni-noticebar--flex {
     -webkit-box-flex: 1;
     flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -52,6 +58,8 @@
 
 .uni-noticebar__content-more {
     width: 180rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

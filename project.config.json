@@ -5,43 +5,39 @@
 	},
 	"setting": {
 		"urlCheck": false,
-		"es6": false,
-		"enhance": false,
+		"scopeDataCheck": false,
+		"coverView": true,
+		"es6": true,
 		"postcss": true,
+		"compileHotReLoad": false,
 		"preloadBackgroundData": false,
 		"minified": true,
-		"newFeature": false,
-		"coverView": true,
-		"nodeModules": false,
 		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
+		"newFeature": true,
 		"uglifyFileName": false,
+		"uploadWithSourceMap": true,
+		"useIsolateContext": true,
+		"nodeModules": false,
+		"enhance": false,
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"showShadowRootInWxmlPanel": true,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.11.3",
+	"libVersion": "2.12.0",
 	"appid": "wxf94ec43f0642467c",
-	"projectname": "%E4%BA%91%E8%B4%9D%E9%A4%90%E9%A5%AE189",
-	"cloudfunctionTemplateRoot": "",
-	"watchOptions": {
-		"ignore": []
-	},
+	"projectname": "%E4%BA%91%E8%B4%9D%E8%BF%9E%E9%94%81189%E4%BF%AE%E5%A4%8D%E7%89%88",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"scripts": {},
+	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -53,16 +49,8 @@
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
 		"game": {
-			"current": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
+			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {

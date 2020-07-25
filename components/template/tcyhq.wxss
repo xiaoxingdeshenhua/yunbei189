@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-09a2a131 {
+.animated.bounceIn.data-v-4fe57758 {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-09a2a131 {
+@-webkit-keyframes bounceIn-data-v-4fe57758 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-09a2a131 {
+@keyframes bounceIn-data-v-4fe57758 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,16 +68,16 @@
     }
 }
 
-.bounceIn.data-v-09a2a131 {
-    animation-name: bounceIn-data-v-09a2a131;
+.bounceIn.data-v-4fe57758 {
+    animation-name: bounceIn-data-v-4fe57758;
 }
 
-.tcimg.data-v-09a2a131 {
+.tcimg.data-v-4fe57758 {
     width: 100%;
     height: 857rpx;
 }
 
-.tctopbd.data-v-09a2a131,.tctopft.data-v-09a2a131 {
+.tctopbd.data-v-4fe57758,.tctopft.data-v-4fe57758 {
     width: 551rpx;
     height: 530rpx;
     top: 0;
@@ -85,33 +85,33 @@
     transform: translateX(-50%);
 }
 
-.tctopft.data-v-09a2a131 {
+.tctopft.data-v-4fe57758 {
     width: 480rpx;
     height: 96rpx;
     top: 648rpx;
     color: #fff;
 }
 
-.tctopbdt.data-v-09a2a131 {
+.tctopbdt.data-v-4fe57758 {
     padding: 50rpx 30rpx 10rpx;
 }
 
-.tctopbdb.data-v-09a2a131 {
+.tctopbdb.data-v-4fe57758 {
     padding: 10rpx 20rpx 0;
     overflow-y: scroll;
 }
 
-.tcc1.data-v-09a2a131 {
+.tcc1.data-v-4fe57758 {
     background: linear-gradient(45deg,#ff6b12,#ef2f1f);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
 }
 
-.tcc2.data-v-09a2a131 {
+.tcc2.data-v-4fe57758 {
     color: #ef301f;
 }
 
-.tcbtm.data-v-09a2a131 {
+.tcbtm.data-v-4fe57758 {
     margin-top: 10rpx;
 }

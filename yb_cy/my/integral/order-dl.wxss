@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-67241877 {
+.animated.bounceIn.data-v-3e868e49 {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-67241877 {
+@-webkit-keyframes bounceIn-data-v-3e868e49 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-67241877 {
+@keyframes bounceIn-data-v-3e868e49 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,28 +68,28 @@
     }
 }
 
-.bounceIn.data-v-67241877 {
-    animation-name: bounceIn-data-v-67241877;
+.bounceIn.data-v-3e868e49 {
+    animation-name: bounceIn-data-v-3e868e49;
 }
 
-.imgw.data-v-67241877 {
+.imgw.data-v-3e868e49 {
     width: 100rpx;
     height: 100rpx;
 }
 
-.ptb7.data-v-67241877 {
+.ptb7.data-v-3e868e49 {
     padding: 40rpx 70rpx;
 }
 
-.mt60.data-v-67241877 {
+.mt60.data-v-3e868e49 {
     margin-top: 60rpx;
 }
 
-.line24.data-v-67241877 {
+.line24.data-v-3e868e49 {
     line-height: 24rpx;
 }
 
-.yuan.data-v-67241877 {
+.yuan.data-v-3e868e49 {
     width: 64rpx;
     height: 64rpx;
     border-radius: 50%;

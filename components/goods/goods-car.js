@@ -1,5 +1,4 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "components/goods/goods-car" ], {
-    "0334": function(t, e, n) {},
     "046c": function(t, e, n) {
         n.r(e);
         var o = n("9473"), r = n.n(o);
@@ -10,23 +9,24 @@
         }(a);
         e.default = r.a;
     },
-    "0651": function(t, e, n) {
-        var o = n("0334");
-        n.n(o).a;
-    },
     "0e67": function(t, e, n) {
         n.r(e);
-        var o = n("83de"), r = n("046c");
+        var o = n("852e"), r = n("046c");
         for (var a in r) "default" !== a && function(t) {
             n.d(e, t, function() {
                 return r[t];
             });
         }(a);
-        n("0651");
-        var c = n("f0c5"), s = Object(c.a)(r.default, o.b, o.c, !1, null, "7b75f84b", null, !1, o.a, void 0);
+        n("5a9a");
+        var c = n("f0c5"), s = Object(c.a)(r.default, o.b, o.c, !1, null, "4bb37dac", null, !1, o.a, void 0);
         e.default = s.exports;
     },
-    "83de": function(t, e, n) {
+    "13fc": function(t, e, n) {},
+    "5a9a": function(t, e, n) {
+        var o = n("13fc");
+        n.n(o).a;
+    },
+    "852e": function(t, e, n) {
         var o = function() {
             var o = this, t = (o.$createElement, o._self._c, o.__get_style([ {
                 bottom: o.carBtm + "rpx"

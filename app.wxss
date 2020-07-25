@@ -63,6 +63,8 @@ icon {
     background: #fff;
     padding: 30rpx;
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -247,6 +249,8 @@ icon {
 
 .weui-agree__text {
     color: #999;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -838,6 +842,8 @@ button::after {
     border: none;
     padding: 0;
     margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -968,16 +974,22 @@ button::after {
 }
 
 .flex {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
 }
 
 .f-row {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     flex-direction: row;
 }
 
 .f-col {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     flex-direction: column;
@@ -1014,6 +1026,8 @@ button::after {
 }
 
 .f-c {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1025,6 +1039,8 @@ button::after {
 }
 
 .f-c-c {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1036,12 +1052,16 @@ button::after {
 }
 
 .f-x-c {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
 }
 
 .f-y-c {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1050,6 +1070,8 @@ button::after {
 }
 
 .f-c-xc {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1063,6 +1085,8 @@ button::after {
 }
 
 .f-raw {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1073,6 +1097,8 @@ button::after {
 }
 
 .f-c-e {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1082,12 +1108,16 @@ button::after {
 }
 
 .f-s {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-align: start;
     align-items: flex-start;
 }
 
 .f-c-s {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1097,24 +1127,32 @@ button::after {
 }
 
 .f-y-e {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-align: end;
     align-items: flex-end;
 }
 
 .f-x-e {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: end;
     justify-content: flex-end;
 }
 
 .f-bt {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
 }
 
 .f-x-bt {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -1123,6 +1161,8 @@ button::after {
 }
 
 .f-y-bt {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1132,11 +1172,15 @@ button::after {
 }
 
 .f-x-ad {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     justify-content: space-around;
 }
 
 .f-y-ad {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1173,6 +1217,8 @@ button::after {
     height: 60rpx;
     font-size: 26rpx;
     border-radius: 6rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -1183,6 +1229,8 @@ button::after {
 
 .rbtn {
     padding: 15rpx 35rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -1218,6 +1266,10 @@ button::after {
     min-height: 100%;
 }
 
+.mvh100 {
+    min-height: 100vh;
+}
+
 .h0 {
     height: 0;
 }
@@ -1225,6 +1277,14 @@ button::after {
 .wh {
     width: 100%;
     height: 100%;
+}
+
+.w100v {
+    width: 100vw;
+}
+
+.h100v {
+    height: 100vh;
 }
 
 .w500 {
@@ -1484,6 +1544,10 @@ button::after {
 
 .o-h {
     overflow: hidden;
+}
+
+.o-x-h {
+    overflow-x: hidden;
 }
 
 .o-x-s {
@@ -2150,6 +2214,8 @@ button::after {
 .itemcon {
     width: 75rpx;
     height: 32rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;

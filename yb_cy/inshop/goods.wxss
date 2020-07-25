@@ -123,6 +123,8 @@ page {
 
 .category .category-wrapper.data-v-6ee4b064 {
     width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

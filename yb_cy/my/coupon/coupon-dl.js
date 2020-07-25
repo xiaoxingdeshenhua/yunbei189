@@ -1,13 +1,24 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "yb_cy/my/coupon/coupon-dl" ], {
+    1123: function(n, t, e) {
+        var o = function() {
+            this.$createElement;
+            this._self._c;
+        }, c = [];
+        e.d(t, "b", function() {
+            return o;
+        }), e.d(t, "c", function() {
+            return c;
+        }), e.d(t, "a", function() {});
+    },
     "19c4": function(n, t, e) {
         e.r(t);
-        var o = e("6f0c"), c = e("5c43");
+        var o = e("1123"), c = e("5c43");
         for (var a in c) "default" !== a && function(n) {
             e.d(t, n, function() {
                 return c[n];
             });
         }(a);
-        var u = e("f0c5"), i = Object(u.a)(c.default, o.b, o.c, !1, null, "09e8c4a8", null, !1, o.a, void 0);
+        var u = e("f0c5"), i = Object(u.a)(c.default, o.b, o.c, !1, null, "27e05075", null, !1, o.a, void 0);
         t.default = i.exports;
     },
     "5c43": function(n, t, e) {
@@ -19,17 +30,6 @@
             });
         }(a);
         t.default = c.a;
-    },
-    "6f0c": function(n, t, e) {
-        var o = function() {
-            this.$createElement;
-            this._self._c;
-        }, c = [];
-        e.d(t, "b", function() {
-            return o;
-        }), e.d(t, "c", function() {
-            return c;
-        }), e.d(t, "a", function() {});
     },
     "962c": function(n, t, e) {
         (function(n) {
@@ -78,7 +78,8 @@
             data: function() {
                 return {
                     content: "",
-                    dataInfo: {}
+                    dataInfo: {},
+                    query: {}
                 };
             },
             onLoad: function(o) {
@@ -88,19 +89,20 @@
                     return a.default.wrap(function(n) {
                         for (;;) switch (n.prev = n.next) {
                           case 0:
-                            return c.util.setNT("优惠券详情"), n.next = 3, c.util.request({
+                            return c.query = o, c.util.setNT("优惠券详情"), n.next = 4, c.util.request({
                                 url: c.api.CouponInfo,
                                 method: "POST",
                                 mask: 1,
                                 data: {
-                                    couponId: o.id
+                                    couponId: o.id,
+                                    receiveId: o.receiveId || ""
                                 }
                             });
 
-                          case 3:
+                          case 4:
                             t = n.sent, e = t.data, c.dataInfo = e;
 
-                          case 6:
+                          case 7:
                           case "end":
                             return n.stop();
                         }
@@ -128,11 +130,11 @@
                     if (this.dataInfo.item) {
                         var n = this.dataInfo.item, t = [];
                         return -1 < n.indexOf(1) && t.push("外卖可用"), -1 < n.indexOf(2) && t.push("堂食可用"), 
-                        -1 < n.indexOf(3) && t.push("当面付可用"), t.toString();
+                        -1 < n.indexOf(3) && t.push("当面付可用"), -1 < n.indexOf(4) && t.push("快餐可用"), t.toString();
                     }
                 },
                 dateText: function() {
-                    return 2 == this.dataInfo.timeType && this.dataInfo.day ? "领取后".concat(this.dataInfo.day, "日内有效") : "有效期至".concat(this.timeToDate(this.dataInfo.endAt, "yyyy-MM-dd"));
+                    return this.query.receiveId ? "有效期至".concat(this.timeToDate(this.dataInfo.endAt)) : 2 == this.dataInfo.timeType && this.dataInfo.day ? "领取后".concat(this.dataInfo.day, "日内有效") : "有效期至".concat(this.timeToDate(this.dataInfo.endAt));
                 }
             },
             methods: {}

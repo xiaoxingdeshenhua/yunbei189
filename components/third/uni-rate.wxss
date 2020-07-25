@@ -1,6 +1,8 @@
 .uni-rate {
     line-height: 0;
     font-size: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

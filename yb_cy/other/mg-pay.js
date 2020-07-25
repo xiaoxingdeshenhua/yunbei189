@@ -18,14 +18,14 @@
     },
     4390: function(e, t, n) {
         n.r(t);
-        var a = n("6238"), o = n("4a74");
+        var a = n("d64b"), o = n("4a74");
         for (var r in o) "default" !== r && function(e) {
             n.d(t, e, function() {
                 return o[e];
             });
         }(r);
-        n("9e88");
-        var i = n("f0c5"), u = Object(i.a)(o.default, a.b, a.c, !1, null, "68d05d6e", null, !1, a.a, void 0);
+        n("997b");
+        var i = n("f0c5"), u = Object(i.a)(o.default, a.b, a.c, !1, null, "0b420294", null, !1, a.a, void 0);
         t.default = u.exports;
     },
     "4a74": function(e, t, n) {
@@ -37,17 +37,6 @@
             });
         }(r);
         t.default = o.a;
-    },
-    6238: function(e, t, n) {
-        var a = function() {
-            this.$createElement;
-            this._self._c;
-        }, o = [];
-        n.d(t, "b", function() {
-            return a;
-        }), n.d(t, "c", function() {
-            return o;
-        }), n.d(t, "a", function() {});
     },
     "673b": function(e, t, n) {
         (function(e) {
@@ -63,8 +52,9 @@
         var a = n("d1e3");
         n.n(a).a;
     },
-    "9e88": function(e, t, n) {
-        var a = n("e56b");
+    "89ac": function(e, t, n) {},
+    "997b": function(e, t, n) {
+        var a = n("89ac");
         n.n(a).a;
     },
     bdf6: function(e, t, n) {
@@ -129,7 +119,17 @@
         t.default = a;
     },
     d1e3: function(e, t, n) {},
-    e56b: function(e, t, n) {},
+    d64b: function(e, t, n) {
+        var a = function() {
+            this.$createElement;
+            this._self._c;
+        }, o = [];
+        n.d(t, "b", function() {
+            return a;
+        }), n.d(t, "c", function() {
+            return o;
+        }), n.d(t, "a", function() {});
+    },
     ef6e: function(e, t, n) {
         n.r(t);
         var a = n("35c7"), o = n("bdf6");
@@ -300,8 +300,8 @@
                             img: "/static/pay/bdzf.png",
                             checked: !0
                         }) : "toutiao" == this.api.platform && e.push({
-                            name: "头条支付",
-                            value: "baidu",
+                            name: "在线支付",
+                            value: "toutiao",
                             img: "/static/pay/ttzf.png",
                             checked: !0
                         }), +this.payObj.orderType) {

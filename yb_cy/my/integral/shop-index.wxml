@@ -1,48 +1,50 @@
-<view class="bf pb130 data-v-5478237d">
-    <view class="f-row data-v-5478237d">
-        <view bindtap="__e" class="f-c flex-1 p3 data-v-5478237d" data-event-opts="{{[ [ 'tap',[ [ 'myIntegral',['$event'] ] ] ] ]}}">
-            <text class="iconfont iconjf mr10 cf7 f34 data-v-5478237d"></text>
-            <text class="data-v-5478237d">
-                <text class="cf7 mr10 data-v-5478237d">{{integral}}</text>{{mySwitch.jfName}}</text>
+<view class="bf pb130 data-v-04e3d773">
+    <view class="f-row data-v-04e3d773">
+        <view bindtap="__e" class="f-c flex-1 p3 data-v-04e3d773" data-event-opts="{{[ [ 'tap',[ [ 'myIntegral',['$event'] ] ] ] ]}}">
+            <text class="iconfont iconjf mr10 cf7 f34 data-v-04e3d773"></text>
+            <text class="data-v-04e3d773">
+                <text class="cf7 mr10 data-v-04e3d773">{{integral}}</text>{{mySwitch.jfName}}</text>
         </view>
-        <view bindtap="__e" class="f-c flex-1 p3 data-v-5478237d" data-event-opts="{{[ [ 'tap',[ [ 'integralRecord',['$event'] ] ] ] ]}}">
-            <text class="iconfont icondhjl mr10 cf7 f34 data-v-5478237d"></text>
-            <text class="data-v-5478237d">兑换记录</text>
+        <view bindtap="__e" class="f-c flex-1 p3 data-v-04e3d773" data-event-opts="{{[ [ 'tap',[ [ 'integralRecord',['$event'] ] ] ] ]}}">
+            <text class="iconfont icondhjl mr10 cf7 f34 data-v-04e3d773"></text>
+            <text class="data-v-04e3d773">兑换记录</text>
         </view>
     </view>
-    <mg-swiper bind:__l="__l" class="data-v-5478237d" co="{{swiper}}" color="{{tColor}}" u="rpx" vueId="5268574c-1"></mg-swiper>
-    <notice-group bind:__l="__l" class="data-v-5478237d" co="{{ggConfig}}" color="{{tColor}}" list="{{ggList}}" type="2" vueId="5268574c-2"></notice-group>
-    <view class="p230 data-v-5478237d">
-        <view class="f32 wei data-v-5478237d">热门推荐</view>
-    </view>
-    <view class="bf f-row o-x-s p23 data-v-5478237d" wx:if="{{hotList.length}}">
-        <view bindtap="__e" class="bf goodsc mr30 data-v-5478237d" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/integral/details?id='+v.id] ] ] ] ] ] ]}}" wx:if="{{i<4}}" wx:for="{{hotList}}" wx:for-index="i" wx:for-item="v" wx:key="i">
-            <view class="goodsimg be6 bs15 data-v-5478237d">
-                <mg-img bind:__l="__l" class="data-v-5478237d" src="{{v.icon}}" vueId="{{'5268574c-3-'+i}}"></mg-img>
-            </view>
-            <view class="p20 data-v-5478237d">
-                <view class="f-bt data-v-5478237d">
-                    <text class="bf2 cf f24 mr10 boxs f-g-0 data-v-5478237d" wx:if="{{v.type=='2'}}">红</text>
-                    <text class="t-o-e f-g-1 data-v-5478237d">{{v.name}}</text>
+    <mg-swiper bind:__l="__l" class="data-v-04e3d773" co="{{swiper}}" color="{{tColor}}" u="rpx" vueId="5268574c-1"></mg-swiper>
+    <notice-group bind:__l="__l" class="data-v-04e3d773" co="{{ggConfig}}" color="{{tColor}}" list="{{ggList}}" type="2" vueId="5268574c-2"></notice-group>
+    <block wx:if="{{hotList.length}}">
+        <view class="p230 data-v-04e3d773">
+            <view class="f32 wei data-v-04e3d773">热门推荐</view>
+        </view>
+        <view class="bf f-row o-x-s p23 data-v-04e3d773">
+            <view bindtap="__e" class="bf goodsc mr30 data-v-04e3d773" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/integral/details?id='+v.id] ] ] ] ] ] ]}}" wx:for="{{hotList}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <view class="goodsimg be6 bs15 data-v-04e3d773">
+                    <mg-img bind:__l="__l" class="data-v-04e3d773" src="{{v.icon}}" vueId="{{'5268574c-3-'+i}}"></mg-img>
                 </view>
-                <view class="cfa data-v-5478237d">
-                    <view class="t-o-e f30 wei data-v-5478237d">
-                        <text class="data-v-5478237d" wx:if="{{v.score>0}}">{{v.score}}</text>
-                        <text class="f26 ml10 nowei data-v-5478237d" wx:if="{{v.score>0}}">{{mySwitch.jfName}}</text>
-                        <text class="nowei data-v-5478237d" wx:if="{{v.score>0&&v.money>0}}">+</text>
-                        <text class="data-v-5478237d" wx:if="{{v.money>0}}">
-                            <text class="f22 data-v-5478237d">{{sl}}</text>{{v.money}}</text>
+                <view class="p20 data-v-04e3d773">
+                    <view class="f-bt data-v-04e3d773">
+                        <text class="bf2 cf f24 mr10 boxs f-g-0 data-v-04e3d773" wx:if="{{v.type=='2'}}">红</text>
+                        <text class="t-o-e f-g-1 data-v-04e3d773">{{v.name}}</text>
                     </view>
-                    <view class="t-o-e t-d-l c9 f22 wei4 data-v-5478237d">{{sl+v.price}}</view>
+                    <view class="cfa data-v-04e3d773">
+                        <view class="t-o-e f30 wei data-v-04e3d773">
+                            <text class="data-v-04e3d773" wx:if="{{v.score>0}}">{{v.score}}</text>
+                            <text class="f26 ml10 nowei data-v-04e3d773" wx:if="{{v.score>0}}">{{mySwitch.jfName}}</text>
+                            <text class="nowei data-v-04e3d773" wx:if="{{v.score>0&&v.money>0}}">+</text>
+                            <text class="data-v-04e3d773" wx:if="{{v.money>0}}">
+                                <text class="f22 data-v-04e3d773">{{sl}}</text>{{v.money}}</text>
+                        </view>
+                        <view class="t-o-e t-d-l c9 f22 wei4 data-v-04e3d773">{{sl+v.price}}</view>
+                    </view>
                 </view>
             </view>
         </view>
+    </block>
+    <entry-button-group bind:__l="__l" bind:tabItem="__e" class="data-v-04e3d773" co="{{ebg}}" color="{{tColor}}" data-event-opts="{{[ [ '^tabItem',[ ['tabType'] ] ] ]}}" vueId="5268574c-4"></entry-button-group>
+    <view class="p230 data-v-04e3d773" wx:if="{{dataList.length}}">
+        <view class="f32 wei data-v-04e3d773">精品推荐</view>
     </view>
-    <entry-button-group bind:__l="__l" bind:tabItem="__e" class="data-v-5478237d" co="{{ebg}}" color="{{tColor}}" data-event-opts="{{[ [ '^tabItem',[ ['tabType'] ] ] ]}}" vueId="5268574c-4"></entry-button-group>
-    <view class="p230 data-v-5478237d">
-        <view class="f32 wei data-v-5478237d">精品推荐</view>
-    </view>
-    <goods-list bind:__l="__l" class="data-v-5478237d" color="{{tColor}}" list="{{dataList}}" vueId="5268574c-5"></goods-list>
-    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-5478237d" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="5268574c-6"></jzz>
-    <tab-bar bind:__l="__l" class="data-v-5478237d" vueId="5268574c-7"></tab-bar>
+    <goods-list bind:__l="__l" class="data-v-04e3d773" color="{{tColor}}" list="{{dataList}}" vueId="5268574c-5"></goods-list>
+    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-04e3d773" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="5268574c-6"></jzz>
+    <tab-bar bind:__l="__l" class="data-v-04e3d773" vueId="5268574c-7"></tab-bar>
 </view>

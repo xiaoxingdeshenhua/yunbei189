@@ -9,22 +9,11 @@
         }(a);
         e.default = r.a;
     },
-    4141: function(t, e, n) {
-        var o = function() {
-            this.$createElement;
-            this._self._c;
-        }, r = [];
-        n.d(e, "b", function() {
-            return o;
-        }), n.d(e, "c", function() {
-            return r;
-        }), n.d(e, "a", function() {});
-    },
     8073: function(t, e, n) {
         Object.defineProperty(e, "__esModule", {
             value: !0
         }), e.default = void 0;
-        var o = a(n("4795")), r = n("2f62"), f = a(n("6f73"));
+        var o = a(n("4795")), r = n("2f62"), s = a(n("6f73"));
         function a(t) {
             return t && t.__esModule ? t : {
                 default: t
@@ -85,26 +74,25 @@
                 return r;
             }({}, (0, r.mapState)([ "layout" ]), {
                 navbar: function() {
-                    var e = this;
                     if (getApp().globalData.tabbar) {
-                        var t = getApp().globalData.tabbar, n = this.util.getRoute(), o = !1;
-                        for (var r in t.navs) t.navs[r].link == "/" + n ? o = t.navs[r].active = !0 : t.navs[r].active = !1;
-                        return o ? this.$emit("refresh", !0) : t = null, t;
+                        var t = s.default.deepCopy(getApp().globalData.tabbar), e = this.util.getRoute(), n = !1;
+                        for (var o in t.navs) t.navs[o].link == "/" + e ? n = t.navs[o].active = !0 : t.navs[o].active = !1;
+                        return n ? this.$emit("refresh", !0) : t = null, t;
                     }
                     if (this.layout.nav) {
-                        var a = this.layout.nav, c = {
+                        var r = this.layout.nav, a = {
                             border_color: "rgba(0,0,0,0.05)",
                             bottomTabStyle: 0,
                             color: this.system.color,
                             colorOff: "#888",
                             navs: []
                         };
-                        if (a.config && a.config.bottomTabList.length) {
-                            c.bottomTabStyle = a.config.bottomTabStyle, c.color = a.config.color;
-                            var i = JSON.parse(JSON.stringify(a.config.bottomTabList));
-                            for (var l in i) i[l].link = this.changeUrl(i[l].link);
-                            c.navs = i;
-                        } else c.navs = [ {
+                        if (r.config && r.config.bottomTabList.length) {
+                            a.bottomTabStyle = r.config.bottomTabStyle, a.color = r.config.color;
+                            var c = JSON.parse(JSON.stringify(r.config.bottomTabList));
+                            for (var i in c) c[i].link = this.changeUrl(c[i].link);
+                            a.navs = c;
+                        } else a.navs = [ {
                             icon2: "icondc",
                             legend: "点单",
                             link: "/yb_cy/shop/goods"
@@ -117,18 +105,19 @@
                             legend: "我的",
                             link: "/yb_cy/my/index"
                         } ];
-                        getApp().globalData.tabbar = f.default.deepCopy(c);
-                        var u = c.navs.findIndex(function(t) {
-                            return t.link == "/" + e.util.getRoute();
-                        });
-                        return -1 < u && (c.navs[u].active = !0, this.$emit("refresh", !0)), -1 == u && (c = null), 
-                        c;
+                        getApp().globalData.tabbar = s.default.deepCopy(a);
+                        var l = this.util.getRoute(), u = !1;
+                        for (var f in a.navs) a.navs[f].link == "/" + l ? u = a.navs[f].active = !0 : a.navs[f].active = !1;
+                        return u ? this.$emit("refresh", !0) : a = null, a;
                     }
                 }
             }),
             methods: {
-                onClick: function() {
-                    this.$emit("click");
+                djtab: function(t) {
+                    t.active || this.go({
+                        t: 2,
+                        url: t.link
+                    });
                 }
             },
             created: function() {
@@ -158,9 +147,20 @@
         };
         e.default = i;
     },
+    "9df7": function(t, e, n) {
+        var o = function() {
+            this.$createElement;
+            this._self._c;
+        }, r = [];
+        n.d(e, "b", function() {
+            return o;
+        }), n.d(e, "c", function() {
+            return r;
+        }), n.d(e, "a", function() {});
+    },
     f13c: function(t, e, n) {
         n.r(e);
-        var o = n("4141"), r = n("1f19");
+        var o = n("9df7"), r = n("1f19");
         for (var a in r) "default" !== a && function(t) {
             n.d(e, t, function() {
                 return r[t];

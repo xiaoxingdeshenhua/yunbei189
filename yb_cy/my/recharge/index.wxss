@@ -141,6 +141,8 @@
 }
 
 .weui-agree.data-v-46041bde {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

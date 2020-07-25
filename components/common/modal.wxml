@@ -1,8 +1,8 @@
-<view class="data-v-65c356ae" hidden="{{!(vs?value:true)}}">
-    <view bindtap="__e" catchtouchmove="__e" class="{{['i-modal-mask data-v-65c356ae',value?'i-modal-mask-show':'']}}" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ],[ 'tap',[ [ 'maskTap',['$event'] ] ] ] ]}}" style="{{'z-index:'+zIndex+';'}}"></view>
-    <view class="{{['i-modal data-v-65c356ae',value?'i-modal-show':'']}}" style="{{'width:'+''+width+';'+'z-index:'+zIndex+';'}}">
+<view class="data-v-7ea12403" hidden="{{!(vs?value:true)}}">
+    <view bindtap="__e" catchtouchmove="__e" class="{{['i-modal-mask data-v-7ea12403',value?'i-modal-mask-show':'']}}" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ],[ 'tap',[ [ 'maskTap',['$event'] ] ] ] ]}}" style="{{'z-index:'+(value?zIndex:-9)+';'}}"></view>
+    <view class="{{['i-modal data-v-7ea12403',value?'i-modal-show':'']}}" style="{{'width:'+''+width+';'+'z-index:'+(value?zIndex:-9)+';'}}">
         <slot wx:if="{{ismr}}"></slot>
-        <view class="f-c-c p23 bf data-v-65c356ae" wx:else>
+        <view class="f-c-c p23 bf data-v-7ea12403" wx:else>
             <slot></slot>
         </view>
     </view>

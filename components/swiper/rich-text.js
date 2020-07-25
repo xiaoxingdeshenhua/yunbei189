@@ -1,19 +1,19 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "components/swiper/rich-text" ], {
-    "0f7e": function(e, c, r) {
+    "0f7e": function(t, c, r) {
         (function(n) {
             Object.defineProperty(c, "__esModule", {
                 value: !0
             }), c.default = void 0;
-            var e, t = (e = r("4795")) && e.__esModule ? e : {
-                default: e
+            var t, e = (t = r("4795")) && t.__esModule ? t : {
+                default: t
             };
-            function u(e, t, n, o, c, r, a) {
+            function u(t, e, n, o, c, r, a) {
                 try {
-                    var i = e[r](a), u = i.value;
-                } catch (e) {
-                    return void n(e);
+                    var i = t[r](a), u = i.value;
+                } catch (t) {
+                    return void n(t);
                 }
-                i.done ? t(u) : Promise.resolve(u).then(o, c);
+                i.done ? e(u) : Promise.resolve(u).then(o, c);
             }
             r("2f62");
             var o = {
@@ -61,34 +61,34 @@
                     }
                 },
                 methods: {
-                    preview: function(e, t) {
-                        console.log("src: " + e);
+                    preview: function(t, e) {
+                        console.log("src: " + t);
                     },
-                    navigate: function(e, t) {
-                        console.log("href: " + e), n.showModal({
-                            content: "点击链接为：" + e,
+                    navigate: function(t, e) {
+                        console.log("href: " + t), n.showModal({
+                            content: "点击链接为：" + t,
                             showCancel: !1
                         });
                     }
                 },
                 created: function() {
-                    return i = t.default.mark(function e() {
-                        return t.default.wrap(function(e) {
-                            for (;;) switch (e.prev = e.next) {
+                    return i = e.default.mark(function t() {
+                        return e.default.wrap(function(t) {
+                            for (;;) switch (t.prev = t.next) {
                               case 0:
                               case "end":
-                                return e.stop();
+                                return t.stop();
                             }
-                        }, e);
+                        }, t);
                     }), function() {
-                        var e = this, a = arguments;
-                        return new Promise(function(t, n) {
-                            var o = i.apply(e, a);
-                            function c(e) {
-                                u(o, t, n, c, r, "next", e);
+                        var t = this, a = arguments;
+                        return new Promise(function(e, n) {
+                            var o = i.apply(t, a);
+                            function c(t) {
+                                u(o, e, n, c, r, "next", t);
                             }
-                            function r(e) {
-                                u(o, t, n, c, r, "throw", e);
+                            function r(t) {
+                                u(o, e, n, c, r, "throw", t);
                             }
                             c(void 0);
                         });
@@ -99,40 +99,40 @@
             c.default = o;
         }).call(this, r("543d").default);
     },
-    "7cad": function(e, t, n) {
-        n.r(t);
-        var o = n("a49c"), c = n("9c90");
-        for (var r in c) "default" !== r && function(e) {
-            n.d(t, e, function() {
-                return c[e];
-            });
-        }(r);
-        var a = n("f0c5"), i = Object(a.a)(c.default, o.b, o.c, !1, null, "613ccee4", null, !1, o.a, void 0);
-        t.default = i.exports;
-    },
-    "9c90": function(e, t, n) {
-        n.r(t);
-        var o = n("0f7e"), c = n.n(o);
-        for (var r in o) "default" !== r && function(e) {
-            n.d(t, e, function() {
-                return o[e];
-            });
-        }(r);
-        t.default = c.a;
-    },
-    a49c: function(e, t, n) {
+    "57fb": function(t, e, n) {
         var o = function() {
             this.$createElement;
             this._self._c;
         }, c = [];
-        n.d(t, "b", function() {
+        n.d(e, "b", function() {
             return o;
-        }), n.d(t, "c", function() {
+        }), n.d(e, "c", function() {
             return c;
-        }), n.d(t, "a", function() {});
+        }), n.d(e, "a", function() {});
+    },
+    "7cad": function(t, e, n) {
+        n.r(e);
+        var o = n("57fb"), c = n("9c90");
+        for (var r in c) "default" !== r && function(t) {
+            n.d(e, t, function() {
+                return c[t];
+            });
+        }(r);
+        var a = n("f0c5"), i = Object(a.a)(c.default, o.b, o.c, !1, null, "20a80889", null, !1, o.a, void 0);
+        e.default = i.exports;
+    },
+    "9c90": function(t, e, n) {
+        n.r(e);
+        var o = n("0f7e"), c = n.n(o);
+        for (var r in o) "default" !== r && function(t) {
+            n.d(e, t, function() {
+                return o[t];
+            });
+        }(r);
+        e.default = c.a;
     }
 } ]), (global.webpackJsonp = global.webpackJsonp || []).push([ "components/swiper/rich-text-create-component", {
-    "components/swiper/rich-text-create-component": function(e, t, n) {
+    "components/swiper/rich-text-create-component": function(t, e, n) {
         n("543d").createComponent(n("7cad"));
     }
 }, [ [ "components/swiper/rich-text-create-component" ] ] ]);

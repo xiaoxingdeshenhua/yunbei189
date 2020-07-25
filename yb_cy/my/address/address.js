@@ -1,30 +1,13 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "yb_cy/my/address/address" ], {
-    "37b8": function(e, t, n) {
-        var r = function() {
-            var e = this, t = (e.$createElement, e._self._c, {
-                background: "transparent"
-            });
-            e.$mp.data = Object.assign({}, {
-                $root: {
-                    a0: t
-                }
-            });
-        }, a = [];
-        n.d(t, "b", function() {
-            return r;
-        }), n.d(t, "c", function() {
-            return a;
-        }), n.d(t, "a", function() {});
-    },
     5092: function(e, t, n) {
         n.r(t);
-        var r = n("37b8"), a = n("d06d");
+        var r = n("e557"), a = n("d06d");
         for (var o in a) "default" !== o && function(e) {
             n.d(t, e, function() {
                 return a[e];
             });
         }(o);
-        var u = n("f0c5"), s = Object(u.a)(a.default, r.b, r.c, !1, null, "5fce790c", null, !1, r.a, void 0);
+        var u = n("f0c5"), s = Object(u.a)(a.default, r.b, r.c, !1, null, "1bdd5ebb", null, !1, r.a, void 0);
         t.default = s.exports;
     },
     a8f2: function(e, t, n) {
@@ -46,6 +29,23 @@
             });
         }(o);
         t.default = a.a;
+    },
+    e557: function(e, t, n) {
+        var r = function() {
+            var e = this, t = (e.$createElement, e._self._c, {
+                background: "transparent"
+            });
+            e.$mp.data = Object.assign({}, {
+                $root: {
+                    a0: t
+                }
+            });
+        }, a = [];
+        n.d(t, "b", function() {
+            return r;
+        }), n.d(t, "c", function() {
+            return a;
+        }), n.d(t, "a", function() {});
     },
     f0f5: function(e, i, l) {
         (function(e) {

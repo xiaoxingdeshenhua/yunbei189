@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-30ef0aa8 {
+.animated.bounceIn.data-v-12095702 {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-30ef0aa8 {
+@-webkit-keyframes bounceIn-data-v-12095702 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-30ef0aa8 {
+@keyframes bounceIn-data-v-12095702 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,11 +68,11 @@
     }
 }
 
-.bounceIn.data-v-30ef0aa8 {
-    animation-name: bounceIn-data-v-30ef0aa8;
+.bounceIn.data-v-12095702 {
+    animation-name: bounceIn-data-v-12095702;
 }
 
-.swiper.data-v-30ef0aa8 {
+.swiper.data-v-12095702 {
     width: 100%;
     height: 350rpx;
     overflow: hidden;

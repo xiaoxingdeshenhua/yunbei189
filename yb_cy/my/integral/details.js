@@ -1,5 +1,16 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "yb_cy/my/integral/details" ], {
-    "0385": function(e, t, n) {},
+    3084: function(e, t, n) {
+        var r = function() {
+            this.$createElement;
+            this._self._c;
+        }, o = [];
+        n.d(t, "b", function() {
+            return r;
+        }), n.d(t, "c", function() {
+            return o;
+        }), n.d(t, "a", function() {});
+    },
+    "35ec": function(e, t, n) {},
     "896d": function(e, t, n) {
         (function(e) {
             function t(e) {
@@ -12,19 +23,15 @@
     },
     9950: function(e, t, n) {
         n.r(t);
-        var r = n("f284"), o = n("d811");
+        var r = n("3084"), o = n("d811");
         for (var a in o) "default" !== a && function(e) {
             n.d(t, e, function() {
                 return o[e];
             });
         }(a);
-        n("ab17");
-        var s = n("f0c5"), i = Object(s.a)(o.default, r.b, r.c, !1, null, "794a7d09", null, !1, r.a, void 0);
+        n("c814");
+        var s = n("f0c5"), i = Object(s.a)(o.default, r.b, r.c, !1, null, "8b1acd48", null, !1, r.a, void 0);
         t.default = i.exports;
-    },
-    ab17: function(e, t, n) {
-        var r = n("0385");
-        n.n(r).a;
     },
     b7f0: function(e, i, u) {
         (function(n) {
@@ -151,7 +158,7 @@
                             selfId: "",
                             goodsId: "",
                             convertNum: "1",
-                            deliveryMode: "",
+                            deliveryMode: "1",
                             userAddId: ""
                         },
                         dlDatl: "",
@@ -232,10 +239,9 @@
                                     });
 
                                   case 2:
-                                    t = e.sent, n = t.data, r.config = n, "1" == r.config && (r.params.deliveryMode = 1), 
-                                    "2" == r.config && (r.params.deliveryMode = 2);
+                                    t = e.sent, n = t.data, "2" == (r.config = n).delivery && (r.params.deliveryMode = 2);
 
-                                  case 7:
+                                  case 6:
                                   case "end":
                                     return e.stop();
                                 }
@@ -260,9 +266,9 @@
                                   case 2:
                                     t = e.sent, n = t.data, console.log("详情", n), r.swiper.swiper.children[0].icon = n.icon, 
                                     r.co.details = n.notice, r.dlDatl = n, r.maxNum = n.num, r.params.goodsId = n.id, 
-                                    console.log("类别", n.type), 1 == n.type && (r.params.deliveryMode = 1), r.showLoading = !1;
+                                    r.showLoading = !1;
 
-                                  case 13:
+                                  case 11:
                                   case "end":
                                     return e.stop();
                                 }
@@ -488,6 +494,10 @@
             i.default = s;
         }).call(this, u("543d").default);
     },
+    c814: function(e, t, n) {
+        var r = n("35ec");
+        n.n(r).a;
+    },
     d811: function(e, t, n) {
         n.r(t);
         var r = n("b7f0"), o = n.n(r);
@@ -497,16 +507,5 @@
             });
         }(a);
         t.default = o.a;
-    },
-    f284: function(e, t, n) {
-        var r = function() {
-            this.$createElement;
-            this._self._c;
-        }, o = [];
-        n.d(t, "b", function() {
-            return r;
-        }), n.d(t, "c", function() {
-            return o;
-        }), n.d(t, "a", function() {});
     }
 }, [ [ "896d", "common/runtime", "common/vendor" ] ] ]);

@@ -108,6 +108,8 @@
     height: 100%;
     width: 100%;
     z-index: 997;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

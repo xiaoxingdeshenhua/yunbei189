@@ -1,7 +1,7 @@
 <view>
     <block wx:if="{{navbar&&navbar.navs&&navbar.navs.length>0}}">
         <view class="navbar f-row" style="{{'border-top:'+'1rpx solid '+navbar.border_color+';'+'bottom:'+(isIpx?'40rpx':'')+';'}}">
-            <view bindtap="__e" class="navbargator f-g-1 f-y-c" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',2],['url',item.link] ] ] ] ] ] ]}}" hoverClass="be" wx:if="{{!item.item}}" wx:for="{{navbar.navs}}" wx:for-index="idx" wx:key="idx">
+            <view bindtap="__e" class="navbargator f-g-1 f-y-c" data-event-opts="{{[ [ 'tap',[ [ 'djtab',['$0'],[ [ ['navbar.navs','',idx] ] ] ] ] ] ]}}" wx:if="{{!item.item}}" wx:for="{{navbar.navs}}" wx:for-index="idx" wx:key="idx">
                 <view class="navbar-view f-c-c">
                     <image class="navbar-icon" hidden="{{!(navbar.bottomTabStyle!='2')}}" src="{{item.active?item.icon.active:item.icon.normal}}" wx:if="{{item.icon}}"></image>
                     <block wx:else>

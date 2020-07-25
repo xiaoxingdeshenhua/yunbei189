@@ -68,12 +68,12 @@
                     return r.default.colorToRGB(t);
                 },
                 yysj: function(t) {
-                    // if (t) {
-                    //     var n = "";
-                    //     return 1 == t.timeArrType ? n = "24小时营业" : (n = "".concat(r.default.timeToDate(t.timeArr[0][0], "hh:mm"), "-").concat(r.default.timeToDate(t.timeArr[0][1], "hh:mm")), 
-                    //     t.timeArr[1] && (n += " " + "".concat(r.default.timeToDate(t.timeArr[1][0], "hh:mm"), "-").concat(r.default.timeToDate(t.timeArr[1][1], "hh:mm")))), 
-                    //     n;
-                    // }
+                    if (t) {
+                        var n = "";
+                        return 1 == t.timeArrType ? n = "24小时营业" : (n = "".concat(r.default.timeToDate(t.timeArr[0][0], "hh:mm"), "-").concat(r.default.timeToDate(t.timeArr[0][1], "hh:mm")), 
+                        t.timeArr[1] && (n += " " + "".concat(r.default.timeToDate(t.timeArr[1][0], "hh:mm"), "-").concat(r.default.timeToDate(t.timeArr[1][1], "hh:mm")))), 
+                        n;
+                    }
                 },
                 yl: function(t) {
                     this.util.preImg({

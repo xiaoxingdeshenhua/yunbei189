@@ -73,6 +73,8 @@
 }
 
 audio.data-v-0e49e629 {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -1,11 +1,22 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "yb_cy/my/integral/shop-index" ], {
+    "242b": function(t, e, n) {
+        var r = function() {
+            this.$createElement;
+            this._self._c;
+        }, o = [];
+        n.d(e, "b", function() {
+            return r;
+        }), n.d(e, "c", function() {
+            return o;
+        }), n.d(e, "a", function() {});
+    },
     "3bd1": function(t, e, n) {
         Object.defineProperty(e, "__esModule", {
             value: !0
         }), e.default = void 0;
-        var r, a = (r = n("4795")) && r.__esModule ? r : {
+        var r, o = (r = n("4795")) && r.__esModule ? r : {
             default: r
-        }, o = n("2f62");
+        }, a = n("2f62");
         function i(e, t) {
             var n = Object.keys(e);
             if (Object.getOwnPropertySymbols) {
@@ -16,43 +27,43 @@
             }
             return n;
         }
-        function c(a) {
+        function c(o) {
             for (var t = 1; t < arguments.length; t++) {
-                var o = null != arguments[t] ? arguments[t] : {};
-                t % 2 ? i(Object(o), !0).forEach(function(t) {
+                var a = null != arguments[t] ? arguments[t] : {};
+                t % 2 ? i(Object(a), !0).forEach(function(t) {
                     var e, n, r;
-                    e = a, r = o[n = t], n in e ? Object.defineProperty(e, n, {
+                    e = o, r = a[n = t], n in e ? Object.defineProperty(e, n, {
                         value: r,
                         enumerable: !0,
                         configurable: !0,
                         writable: !0
                     }) : e[n] = r;
-                }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o)) : i(Object(o)).forEach(function(t) {
-                    Object.defineProperty(a, t, Object.getOwnPropertyDescriptor(o, t));
+                }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a)) : i(Object(a)).forEach(function(t) {
+                    Object.defineProperty(o, t, Object.getOwnPropertyDescriptor(a, t));
                 });
             }
-            return a;
+            return o;
         }
-        function u(t, e, n, r, a, o, i) {
+        function u(t, e, n, r, o, a, i) {
             try {
-                var c = t[o](i), u = c.value;
+                var c = t[a](i), u = c.value;
             } catch (t) {
                 return void n(t);
             }
-            c.done ? e(u) : Promise.resolve(u).then(r, a);
+            c.done ? e(u) : Promise.resolve(u).then(r, o);
         }
         function s(c) {
             return function() {
                 var t = this, i = arguments;
                 return new Promise(function(e, n) {
                     var r = c.apply(t, i);
-                    function a(t) {
-                        u(r, e, n, a, o, "next", t);
-                    }
                     function o(t) {
-                        u(r, e, n, a, o, "throw", t);
+                        u(r, e, n, o, a, "next", t);
                     }
-                    a(void 0);
+                    function a(t) {
+                        u(r, e, n, o, a, "throw", t);
+                    }
+                    o(void 0);
                 });
             };
         }
@@ -137,8 +148,8 @@
             },
             onLoad: function(t) {
                 var e = this;
-                return s(a.default.mark(function t() {
-                    return a.default.wrap(function(t) {
+                return s(o.default.mark(function t() {
+                    return o.default.wrap(function(t) {
                         for (;;) switch (t.prev = t.next) {
                           case 0:
                             e.getSystem(), e.getSwitchConfig().then(function() {
@@ -161,8 +172,8 @@
                     }, t);
                 }))();
             },
-            computed: c({}, (0, o.mapState)("dndc", [ "mySwitch" ])),
-            methods: c({}, (0, o.mapActions)("dndc", [ "getSwitchConfig" ]), {
+            computed: c({}, (0, a.mapState)("dndc", [ "mySwitch" ])),
+            methods: c({}, (0, a.mapActions)("dndc", [ "getSwitchConfig" ]), {
                 myIntegral: function() {
                     this.go({
                         t: 1,
@@ -177,9 +188,9 @@
                 },
                 getAd: function() {
                     var n = this;
-                    return s(a.default.mark(function t() {
+                    return s(o.default.mark(function t() {
                         var e;
-                        return a.default.wrap(function(t) {
+                        return o.default.wrap(function(t) {
                             for (;;) switch (t.prev = t.next) {
                               case 0:
                                 return t.next = 2, n.util.request({
@@ -207,9 +218,9 @@
                 },
                 getList: function() {
                     var r = this;
-                    return s(a.default.mark(function t() {
+                    return s(o.default.mark(function t() {
                         var e, n;
-                        return a.default.wrap(function(t) {
+                        return o.default.wrap(function(t) {
                             for (;;) switch (t.prev = t.next) {
                               case 0:
                                 return t.next = 2, r.util.request({
@@ -231,9 +242,9 @@
                 },
                 getHotList: function() {
                     var r = this;
-                    return s(a.default.mark(function t() {
+                    return s(o.default.mark(function t() {
                         var e, n;
-                        return a.default.wrap(function(t) {
+                        return o.default.wrap(function(t) {
                             for (;;) switch (t.prev = t.next) {
                               case 0:
                                 return t.next = 2, r.util.request({
@@ -259,9 +270,9 @@
                 },
                 getCategory: function() {
                     var n = this;
-                    return s(a.default.mark(function t() {
+                    return s(o.default.mark(function t() {
                         var e;
-                        return a.default.wrap(function(t) {
+                        return o.default.wrap(function(t) {
                             for (;;) switch (t.prev = t.next) {
                               case 0:
                                 return t.next = 2, n.util.request({
@@ -293,27 +304,21 @@
         };
         e.default = l;
     },
-    7804: function(t, e, n) {
-        var r = function() {
-            this.$createElement;
-            this._self._c;
-        }, a = [];
-        n.d(e, "b", function() {
-            return r;
-        }), n.d(e, "c", function() {
-            return a;
-        }), n.d(e, "a", function() {});
+    "56fc": function(t, e, n) {
+        var r = n("76b9");
+        n.n(r).a;
     },
+    "76b9": function(t, e, n) {},
     "7b69": function(t, e, n) {
         n.r(e);
-        var r = n("7804"), a = n("a4b9");
-        for (var o in a) "default" !== o && function(t) {
+        var r = n("242b"), o = n("a4b9");
+        for (var a in o) "default" !== a && function(t) {
             n.d(e, t, function() {
-                return a[t];
+                return o[t];
             });
-        }(o);
-        n("a6a0");
-        var i = n("f0c5"), c = Object(i.a)(a.default, r.b, r.c, !1, null, "5478237d", null, !1, r.a, void 0);
+        }(a);
+        n("56fc");
+        var i = n("f0c5"), c = Object(i.a)(o.default, r.b, r.c, !1, null, "04e3d773", null, !1, r.a, void 0);
         e.default = c.exports;
     },
     a41a: function(t, e, n) {
@@ -328,17 +333,12 @@
     },
     a4b9: function(t, e, n) {
         n.r(e);
-        var r = n("3bd1"), a = n.n(r);
-        for (var o in r) "default" !== o && function(t) {
+        var r = n("3bd1"), o = n.n(r);
+        for (var a in r) "default" !== a && function(t) {
             n.d(e, t, function() {
                 return r[t];
             });
-        }(o);
-        e.default = a.a;
-    },
-    a6a0: function(t, e, n) {
-        var r = n("d446");
-        n.n(r).a;
-    },
-    d446: function(t, e, n) {}
+        }(a);
+        e.default = o.a;
+    }
 }, [ [ "a41a", "common/runtime", "common/vendor" ] ] ]);

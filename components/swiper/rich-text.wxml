@@ -1,9 +1,9 @@
-<view class="bf p23 data-v-613ccee4" style="{{'margin-top:'+''+co.topMargin+u+';'}}" wx:if="{{type==1&&co.richText}}">
-    <rich-text class="data-v-613ccee4" nodes="{{nodes}}"></rich-text>
+<view class="bf p23 data-v-20a80889" style="{{'margin-top:'+''+co.topMargin+u+';'}}" wx:if="{{type==1&&co.richText}}">
+    <rich-text class="data-v-20a80889" nodes="{{nodes}}"></rich-text>
 </view>
 <block wx:else>
-    <rich-text class="data-v-613ccee4" nodes="{{nodes}}" wx:if="{{type==2}}"></rich-text>
+    <rich-text class="data-v-20a80889" nodes="{{nodes}}" wx:if="{{type==2}}"></rich-text>
     <block wx:else>
-        <u-parse bind:__l="__l" bind:navigate="__e" bind:preview="__e" class="data-v-613ccee4" content="{{nodes}}" data-event-opts="{{[ [ '^preview',[ ['preview'] ] ],[ '^navigate',[ ['navigate'] ] ] ]}}" vueId="ca028e38-1" wx:if="{{type==3}}"></u-parse>
+        <u-parse bind:__l="__l" bind:navigate="__e" bind:preview="__e" class="data-v-20a80889" content="{{nodes}}" data-event-opts="{{[ [ '^preview',[ ['preview'] ] ],[ '^navigate',[ ['navigate'] ] ] ]}}" vueId="ca028e38-1" wx:if="{{type==3}}"></u-parse>
     </block>
 </block>

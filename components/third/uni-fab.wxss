@@ -1,5 +1,7 @@
 .fab-box.data-v-292eb428 {
     position: fixed;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -50,6 +52,8 @@
 }
 
 .fab-circle.data-v-292eb428 {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -93,6 +97,8 @@
 .fab-content.data-v-292eb428 {
     background: #69c;
     box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     border-radius: 100rpx;
     overflow: hidden;
@@ -136,6 +142,8 @@
 }
 
 .fab-content .fab-item.data-v-292eb428 {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -1,15 +1,26 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "yb_cy/invite/sqfx" ], {
     "07ac": function(e, n, t) {
         t.r(n);
-        var r = t("4199"), o = t("235d");
+        var r = t("1ad8"), o = t("235d");
         for (var a in o) "default" !== a && function(e) {
             t.d(n, e, function() {
                 return o[e];
             });
         }(a);
-        t("7ba5");
-        var u = t("f0c5"), i = Object(u.a)(o.default, r.b, r.c, !1, null, "71c4787c", null, !1, r.a, void 0);
+        t("477b");
+        var u = t("f0c5"), i = Object(u.a)(o.default, r.b, r.c, !1, null, "78cf5ca6", null, !1, r.a, void 0);
         n.default = i.exports;
+    },
+    "1ad8": function(e, n, t) {
+        var r = function() {
+            this.$createElement;
+            this._self._c;
+        }, o = [];
+        t.d(n, "b", function() {
+            return r;
+        }), t.d(n, "c", function() {
+            return o;
+        }), t.d(n, "a", function() {});
     },
     "235d": function(e, n, t) {
         t.r(n);
@@ -58,7 +69,7 @@
             }
             return o;
         }
-        function s(e, n, t, r, o, a, u) {
+        function f(e, n, t, r, o, a, u) {
             try {
                 var i = e[a](u), c = i.value;
             } catch (e) {
@@ -66,16 +77,16 @@
             }
             i.done ? n(c) : Promise.resolve(c).then(r, o);
         }
-        function f(i) {
+        function s(i) {
             return function() {
                 var e = this, u = arguments;
                 return new Promise(function(n, t) {
                     var r = i.apply(e, u);
                     function o(e) {
-                        s(r, n, t, o, a, "next", e);
+                        f(r, n, t, o, a, "next", e);
                     }
                     function a(e) {
-                        s(r, n, t, o, a, "throw", e);
+                        f(r, n, t, o, a, "throw", e);
                     }
                     o(void 0);
                 });
@@ -118,32 +129,21 @@
                         tel: ""
                     },
                     loading: !1,
-                    isbj: !1,
-                    swiper: {
-                        topMargin: 0,
-                        leftRightPadding: 0,
-                        upDownPadding: 0,
-                        swiper: {
-                            children: [ {
-                                url: "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1852711472,2216622092&fm=26&gp=0.jpg"
-                            } ]
-                        },
-                        duration: "",
-                        height: "250",
-                        radius: "0",
-                        auto: !0,
-                        interval: 5
-                    }
+                    isbj: !1
                 };
             },
             onLoad: function(n) {
                 var t = this;
-                return f(o.default.mark(function e() {
+                return s(o.default.mark(function e() {
                     return o.default.wrap(function(e) {
                         for (;;) switch (e.prev = e.next) {
                           case 0:
                             n.userId && (t.isbj = !0), t.util.setNT("申请"), t.getLoginInfo().then(function() {
-                                t.params.userId = t.uId, t.params.tel = t.user.tel || "", t.isbj && (t.params.realName = t.user.realName);
+                                t.getFxzx({
+                                    that: t,
+                                    uId: t.uId,
+                                    notcheck: 1
+                                }), t.params.userId = t.uId, t.params.tel = t.user.tel || "", t.isbj && (t.params.realName = t.user.realName);
                             });
 
                           case 3:
@@ -154,11 +154,29 @@
                 }))();
             },
             mixins: [ t("c1ef").utilMixins ],
-            computed: c({}, (0, r.mapState)([ "vipConfig" ])),
-            methods: c({}, (0, r.mapActions)([ "getVipConfig" ]), {
+            computed: c({}, (0, r.mapState)("dndc", [ "fxsInfo" ]), {
+                swiper: function() {
+                    return {
+                        topMargin: 0,
+                        leftRightPadding: 0,
+                        upDownPadding: 0,
+                        swiper: {
+                            children: [ {
+                                url: this.fxsInfo.bgAd
+                            } ]
+                        },
+                        duration: "",
+                        height: "250",
+                        radius: "0",
+                        auto: !0,
+                        interval: 5
+                    };
+                }
+            }),
+            methods: c({}, (0, r.mapActions)("dndc", [ "getFxzx" ]), {
                 save: function() {
                     var r = this;
-                    return f(o.default.mark(function e() {
+                    return s(o.default.mark(function e() {
                         var n, t;
                         return o.default.wrap(function(e) {
                             for (;;) switch (e.prev = e.next) {
@@ -211,20 +229,9 @@
         };
         n.default = l;
     },
-    4199: function(e, n, t) {
-        var r = function() {
-            this.$createElement;
-            this._self._c;
-        }, o = [];
-        t.d(n, "b", function() {
-            return r;
-        }), t.d(n, "c", function() {
-            return o;
-        }), t.d(n, "a", function() {});
-    },
-    "73e4": function(e, n, t) {},
-    "7ba5": function(e, n, t) {
-        var r = t("73e4");
+    "455d": function(e, n, t) {},
+    "477b": function(e, n, t) {
+        var r = t("455d");
         t.n(r).a;
     },
     ca51: function(e, n, t) {

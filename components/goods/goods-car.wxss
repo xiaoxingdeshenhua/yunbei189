@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-7b75f84b {
+.animated.bounceIn.data-v-4bb37dac {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-7b75f84b {
+@-webkit-keyframes bounceIn-data-v-4bb37dac {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-7b75f84b {
+@keyframes bounceIn-data-v-4bb37dac {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,11 +68,11 @@
     }
 }
 
-.bounceIn.data-v-7b75f84b {
-    animation-name: bounceIn-data-v-7b75f84b;
+.bounceIn.data-v-4bb37dac {
+    animation-name: bounceIn-data-v-4bb37dac;
 }
 
-.mjts.data-v-7b75f84b {
+.mjts.data-v-4bb37dac {
     height: 60rpx;
     font-size: 24rpx;
     text-align: center;
@@ -80,7 +80,7 @@
     color: #fc5a21;
 }
 
-.closec.data-v-7b75f84b {
+.closec.data-v-4bb37dac {
     width: 100%;
     height: 130rpx;
     bottom: 115rpx;
@@ -88,7 +88,7 @@
     z-index: 2000;
 }
 
-.cartopmj.data-v-7b75f84b {
+.cartopmj.data-v-4bb37dac {
     position: absolute;
     width: 92%;
     height: 100rpx;
@@ -97,7 +97,7 @@
     top: -60rpx;
 }
 
-.carc.data-v-7b75f84b {
+.carc.data-v-4bb37dac {
     width: 100%;
     height: 130rpx;
     bottom: 115rpx;
@@ -105,7 +105,7 @@
     z-index: 2000;
 }
 
-.carc .car.data-v-7b75f84b {
+.carc .car.data-v-4bb37dac {
     height: 105rpx;
     width: 92%;
     margin: 0 4%;
@@ -113,20 +113,20 @@
     box-shadow: 0 5rpx 5rpx 1rpx #dcdcdc;
 }
 
-.carc .car .carh.data-v-7b75f84b {
+.carc .car .carh.data-v-4bb37dac {
     padding: 0 20rpx 0 40rpx;
     height: 70rpx;
 }
 
-.carc .car .carb.data-v-7b75f84b {
+.carc .car .carb.data-v-4bb37dac {
     border-radius: 60rpx 0 0 60rpx;
 }
 
-.carc .car .carb-img.data-v-7b75f84b {
+.carc .car .carb-img.data-v-4bb37dac {
     padding: 0 30rpx;
 }
 
-.carc .car .carb-img .dot.data-v-7b75f84b {
+.carc .car .carb-img .dot.data-v-4bb37dac {
     width: 41rpx;
     height: 31rpx;
     border-radius: 17rpx;
@@ -137,21 +137,21 @@
     transform: translate(-50%);
 }
 
-.carc .car .carf.data-v-7b75f84b {
+.carc .car .carf.data-v-4bb37dac {
     border-radius: 0 60rpx 60rpx 0;
     width: 190rpx;
     height: 100%;
 }
 
-.carlistc.data-v-7b75f84b {
+.carlistc.data-v-4bb37dac {
     padding-bottom: 235rpx;
 }
 
-.carlistc .carbody.data-v-7b75f84b {
+.carlistc .carbody.data-v-4bb37dac {
     max-height: 600rpx;
 }
 
-.carimg.data-v-7b75f84b {
+.carimg.data-v-4bb37dac {
     width: 80rpx;
     height: 110rpx;
     margin-bottom: 45rpx;

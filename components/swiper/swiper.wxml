@@ -1,8 +1,8 @@
-<view class="{{['data-v-30ef0aa8',co.class]}}" style="{{'margin-top:'+''+(co.topMargin||'')+u+';'+'padding:'+''+(co.upDownPadding||'0')+u+' '+(co.leftRightPadding||'0')+u+';'}}" wx:if="{{list.length}}">
-    <swiper autoplay="{{co.auto||true}}" circular="true" class="swiper data-v-30ef0aa8" duration="500" indicatorActiveColor="#fff" indicatorColor="#ccc" indicatorDots="{{list.length>1}}" interval="{{co.interval*1000}}" style="{{'height:'+''+(u=='px'?$root.m0:co.height)+u+';'+'border-radius:'+''+co.radius+u+';'}}">
-        <swiper-item class="data-v-30ef0aa8" wx:for="{{list}}" wx:for-index="i" wx:for-item="v" wx:key="i">
-            <view bindtap="__e" class="wh bf6 data-v-30ef0aa8" data-event-opts="{{[ [ 'tap',[ [ 'goTo',[i] ] ] ] ]}}" style="{{'border-radius:'+''+co.radius+u+';'}}">
-                <mg-img bind:__l="__l" class="data-v-30ef0aa8" src="{{v.icon||v.url}}" vueId="{{'57a05042-1-'+i}}"></mg-img>
+<view class="{{['data-v-12095702',co.class]}}" style="{{'margin-top:'+''+(co.topMargin||'')+u+';'+'padding:'+''+(co.upDownPadding||'0')+u+' '+(co.leftRightPadding||'0')+u+';'}}" wx:if="{{list.length}}">
+    <swiper autoplay="{{co.auto||true}}" circular="true" class="swiper data-v-12095702" duration="500" indicatorActiveColor="#fff" indicatorColor="#ccc" indicatorDots="{{list.length>1}}" interval="{{co.interval*1000}}" style="{{'height:'+''+(u=='px'?$root.m0:co.height)+u+';'+'border-radius:'+''+co.radius+u+';'}}">
+        <swiper-item class="data-v-12095702" wx:for="{{list}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view bindtap="__e" class="wh bf6 o-h data-v-12095702" data-event-opts="{{[ [ 'tap',[ [ 'goTo',[i] ] ] ] ]}}" style="{{'border-radius:'+''+co.radius+u+';'}}">
+                <mg-img bind:__l="__l" class="data-v-12095702" src="{{v.icon||v.url}}" vueId="{{'57a05042-1-'+i}}"></mg-img>
             </view>
         </swiper-item>
     </swiper>

@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-24a13de8 {
+.animated.bounceIn.data-v-3ecadeb6 {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-24a13de8 {
+@-webkit-keyframes bounceIn-data-v-3ecadeb6 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-24a13de8 {
+@keyframes bounceIn-data-v-3ecadeb6 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,11 +68,11 @@
     }
 }
 
-.bounceIn.data-v-24a13de8 {
-    animation-name: bounceIn-data-v-24a13de8;
+.bounceIn.data-v-3ecadeb6 {
+    animation-name: bounceIn-data-v-3ecadeb6;
 }
 
-.tipsc.data-v-24a13de8 {
+.tipsc.data-v-3ecadeb6 {
     position: fixed;
     background: #fff;
     z-index: 10;
@@ -84,17 +84,17 @@
     box-shadow: 0 0rpx 10rpx 7rpx #d1d1d1;
 }
 
-.tipx.data-v-24a13de8 {
+.tipx.data-v-3ecadeb6 {
     background: #e8e8e8;
     width: 40rpx;
     height: 40rpx;
 }
 
-.f14.data-v-24a13de8 {
+.f14.data-v-3ecadeb6 {
     font-size: 14rpx;
 }
 
-.triangle-up.data-v-24a13de8 {
+.triangle-up.data-v-3ecadeb6 {
     top: -20rpx;
     right: 100rpx;
     width: 0;

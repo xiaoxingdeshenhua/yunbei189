@@ -1,25 +1,25 @@
-<view class="container pb115 data-v-5fce790c">
-    <mg-input bind:__l="__l" bind:input="__e" class="data-v-5fce790c" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','userName','$event',[] ],['params'] ] ] ] ]}}" ht="联系人" hw="130" pr="请输入联系人" value="{{params.userName}}" vueId="3d0318df-1"></mg-input>
-    <mg-cell bind:__l="__l" class="data-v-5fce790c" cname="p03" ht="性别" hw="130" vueId="3d0318df-2" vueSlots="{{['bd']}}">
-        <view class="data-v-5fce790c" slot="bd">
-            <mg-radio arr="{{sexArr}}" bind:__l="__l" bind:input="__e" class="data-v-5fce790c" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','sex','$event',[] ],['params'] ] ] ] ]}}" value="{{params.sex}}" vueId="{{'3d0318df-3'+','+'3d0318df-2'}}"></mg-radio>
+<view class="container pb115 data-v-1bdd5ebb">
+    <mg-input bind:__l="__l" bind:input="__e" class="data-v-1bdd5ebb" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','userName','$event',[] ],['params'] ] ] ] ]}}" ht="联系人" hw="130" pr="请输入联系人" value="{{params.userName}}" vueId="3d0318df-1"></mg-input>
+    <mg-cell bind:__l="__l" class="data-v-1bdd5ebb" cname="p03" ht="性别" hw="130" vueId="3d0318df-2" vueSlots="{{['bd']}}">
+        <view class="data-v-1bdd5ebb" slot="bd">
+            <mg-radio arr="{{sexArr}}" bind:__l="__l" bind:input="__e" class="data-v-1bdd5ebb" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','sex','$event',[] ],['params'] ] ] ] ]}}" value="{{params.sex}}" vueId="{{'3d0318df-3'+','+'3d0318df-2'}}"></mg-radio>
         </view>
     </mg-cell>
-    <mg-input bind:__l="__l" bind:input="__e" class="data-v-5fce790c" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','userTel','$event',[] ],['params'] ] ] ] ]}}" ht="手机号" hw="130" max="{{11}}" pr="请输入手机号" t="number" value="{{params.userTel}}" vueId="3d0318df-4"></mg-input>
-    <mg-input arrow="1" bind:__l="__l" bind:tab="__e" class="data-v-5fce790c" data-event-opts="{{[ [ '^tab',[ ['chooseLocation'] ] ] ]}}" dis="1" ht="地址" hw="130" pr="请选择地址" value="{{params.address}}" vueId="3d0318df-5"></mg-input>
-    <mg-input bind:__l="__l" bind:input="__e" class="data-v-5fce790c" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','details','$event',[] ],['params'] ] ] ] ]}}" ht="门牌号" hw="130" pr="如：5号楼208室" value="{{params.details}}" vueId="3d0318df-6"></mg-input>
-    <mg-cell bind:__l="__l" class="data-v-5fce790c" ht="标签" hw="130" last="1" vueId="3d0318df-7" vueSlots="{{['bd']}}">
-        <view class="f-raw data-v-5fce790c" slot="bd">
-            <bk-b bind:__l="__l" bind:tab="__e" cName="{{'be6 mr30 '+(params.label!=v&&'c3')}}" class="data-v-5fce790c" color="{{params.label==v?tColor:''}}" data-event-opts="{{[ [ '^tab',[ [ 'label',['$0'],[ [ ['labels','',i] ] ] ] ] ] ]}}" sname="{{i==1?{padding:'7rpx 30rpx'}:''}}" t="{{v}}" vueId="{{'3d0318df-8-'+i+','+'3d0318df-7'}}" wx:for="{{labels}}" wx:for-index="i" wx:for-item="v" wx:key="i"></bk-b>
+    <mg-input bind:__l="__l" bind:input="__e" class="data-v-1bdd5ebb" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','userTel','$event',[] ],['params'] ] ] ] ]}}" ht="手机号" hw="130" max="{{11}}" pr="请输入手机号" t="number" value="{{params.userTel}}" vueId="3d0318df-4"></mg-input>
+    <mg-input arrow="1" bind:__l="__l" bind:tab="__e" class="data-v-1bdd5ebb" data-event-opts="{{[ [ '^tab',[ ['chooseLocation'] ] ] ]}}" dis="1" ht="地址" hw="130" pr="请选择地址" value="{{params.address}}" vueId="3d0318df-5"></mg-input>
+    <mg-input bind:__l="__l" bind:input="__e" class="data-v-1bdd5ebb" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','details','$event',[] ],['params'] ] ] ] ]}}" ht="门牌号" hw="130" pr="如：5号楼208室" value="{{params.details}}" vueId="3d0318df-6"></mg-input>
+    <mg-cell bind:__l="__l" class="data-v-1bdd5ebb" ht="标签" hw="130" last="1" vueId="3d0318df-7" vueSlots="{{['bd']}}">
+        <view class="f-raw data-v-1bdd5ebb" slot="bd">
+            <bk-b bind:__l="__l" bind:tab="__e" cName="{{'be6 mr30 '+(params.label!=v&&'c3')}}" class="data-v-1bdd5ebb" color="{{params.label==v?tColor:''}}" data-event-opts="{{[ [ '^tab',[ [ 'label',['$0'],[ [ ['labels','',i] ] ] ] ] ] ]}}" sname="{{i==1?{padding:'7rpx 30rpx'}:''}}" t="{{v}}" vueId="{{'3d0318df-8-'+i+','+'3d0318df-7'}}" wx:for="{{labels}}" wx:for-index="i" wx:for-item="v" wx:key="i"></bk-b>
         </view>
     </mg-cell>
-    <mg-cell bind:__l="__l" class="data-v-5fce790c" sname="{{$root.a0}}" vueId="3d0318df-9" vueSlots="{{['ft']}}" wx:if="{{isEdit}}">
-        <view bindtap="__e" class="f-y-c data-v-5fce790c" data-event-opts="{{[ [ 'tap',[ [ 'deleteAdd',['$event'] ] ] ] ]}}" slot="ft">
-            <text class="iconfont iconshanchu f40 data-v-5fce790c"></text>
-            <text class="ml10 data-v-5fce790c">删除</text>
+    <mg-cell bind:__l="__l" class="data-v-1bdd5ebb" sname="{{$root.a0}}" vueId="3d0318df-9" vueSlots="{{['ft']}}" wx:if="{{isEdit}}">
+        <view bindtap="__e" class="f-y-c data-v-1bdd5ebb" data-event-opts="{{[ [ 'tap',[ [ 'deleteAdd',['$event'] ] ] ] ]}}" slot="ft">
+            <text class="iconfont iconshanchu f40 data-v-1bdd5ebb"></text>
+            <text class="ml10 data-v-1bdd5ebb">删除</text>
         </view>
     </mg-cell>
-    <view class="foot-btnc data-v-5fce790c">
-        <button bindtap="__e" class="foot-btn data-v-5fce790c" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{loading}}" loading="{{loading}}" style="{{'background:'+tColor+';'}}">保存</button>
+    <view class="foot-btnc data-v-1bdd5ebb">
+        <button bindtap="__e" class="foot-btn data-v-1bdd5ebb" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{loading}}" loading="{{loading}}" style="{{'background:'+tColor+';'}}">保存</button>
     </view>
 </view>

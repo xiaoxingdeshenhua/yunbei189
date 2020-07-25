@@ -1,31 +1,31 @@
-<view class="mh100 data-v-3b4fa1d7">
-    <view class="bf mb30 data-v-3b4fa1d7" wx:if="{{type=='1'}}">
-        <view class="f-c-c p30 data-v-3b4fa1d7">
-            <view class="f28 data-v-3b4fa1d7">{{'当前'+mySwitch.jfName}}</view>
-            <view class="f56 cf7 wei data-v-3b4fa1d7">{{integral}}</view>
+<view class="mh100 data-v-547e7090">
+    <view class="bf mb30 data-v-547e7090" wx:if="{{type=='1'}}">
+        <view class="f-c-c p30 data-v-547e7090">
+            <view class="f28 data-v-547e7090">{{'当前'+mySwitch.jfName}}</view>
+            <view class="f56 cf7 wei data-v-547e7090">{{integral}}</view>
         </view>
-        <view class="f-x-bt data-v-3b4fa1d7">
-            <view bindtap="__e" class="f-c p3 data-v-3b4fa1d7" data-event-opts="{{[ [ 'tap',[ [ 'integralMall',['$event'] ] ] ] ]}}">
-                <text class="iconfont iconjfsc mr10 cf7 f34 data-v-3b4fa1d7"></text>
-                <text class="data-v-3b4fa1d7">{{mySwitch.jfName+'商城'}}</text>
+        <view class="f-x-bt data-v-547e7090">
+            <view bindtap="__e" class="f-c p3 data-v-547e7090" data-event-opts="{{[ [ 'tap',[ [ 'integralMall',['$event'] ] ] ] ]}}">
+                <text class="iconfont iconjfsc mr10 cf7 f34 data-v-547e7090"></text>
+                <text class="data-v-547e7090">{{mySwitch.jfName+'商城'}}</text>
             </view>
-            <view bindtap="__e" class="f-c p3 data-v-3b4fa1d7" data-event-opts="{{[ [ 'tap',[ [ 'integralRule',['$event'] ] ] ] ]}}">
-                <text class="iconfont iconjfgz mr10 cf7 f34 data-v-3b4fa1d7"></text>
-                <text class="data-v-3b4fa1d7">{{mySwitch.jfName+'规则'}}</text>
-            </view>
-        </view>
-    </view>
-    <view class="bf data-v-3b4fa1d7">
-        <view class="f32 wei p3 bor-b data-v-3b4fa1d7">签到记录</view>
-        <view class="p3 bf bor-b data-v-3b4fa1d7" wx:for="{{dlData}}" wx:for-index="i" wx:for-item="v" wx:key="i">
-            <view class="f-x-bt data-v-3b4fa1d7">
-                <view class="t-o-e f28 data-v-3b4fa1d7">{{v.note}}</view>
-                <view class="cf7 f28 data-v-3b4fa1d7">{{'+'+v.integral}}</view>
-            </view>
-            <view class="f-x-bt data-v-3b4fa1d7">
-                <view class="c9 f24 m10 data-v-3b4fa1d7">{{v.signTime}}</view>
+            <view bindtap="__e" class="f-c p3 data-v-547e7090" data-event-opts="{{[ [ 'tap',[ [ 'integralRule',['$event'] ] ] ] ]}}">
+                <text class="iconfont iconjfgz mr10 cf7 f34 data-v-547e7090"></text>
+                <text class="data-v-547e7090">{{mySwitch.jfName+'规则'}}</text>
             </view>
         </view>
     </view>
-    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-3b4fa1d7" mygd="{{mygd}}" nodata="{{dlData.length==0&&isget}}" vueId="24843b0e-1"></jzz>
+    <view class="bf data-v-547e7090">
+        <view class="f32 wei p3 bor-b data-v-547e7090">签到记录</view>
+        <view class="p3 bf bor-b data-v-547e7090" wx:for="{{dlData}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="f-x-bt data-v-547e7090">
+                <view class="t-o-e f28 data-v-547e7090">{{v.note}}</view>
+                <view class="cf7 f28 data-v-547e7090">{{'+'+v.integral}}</view>
+            </view>
+            <view class="f-x-bt data-v-547e7090">
+                <view class="c9 f24 m10 data-v-547e7090">{{v.signTime}}</view>
+            </view>
+        </view>
+    </view>
+    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-547e7090" mygd="{{mygd}}" nodata="{{dlData.length==0&&isget}}" vueId="24843b0e-1"></jzz>
 </view>

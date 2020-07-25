@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-5dc7a391 {
+.animated.bounceIn.data-v-f6da6144 {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-5dc7a391 {
+@-webkit-keyframes bounceIn-data-v-f6da6144 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-5dc7a391 {
+@keyframes bounceIn-data-v-f6da6144 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,16 +68,16 @@
     }
 }
 
-.bounceIn.data-v-5dc7a391 {
-    animation-name: bounceIn-data-v-5dc7a391;
+.bounceIn.data-v-f6da6144 {
+    animation-name: bounceIn-data-v-f6da6144;
 }
 
-.carc.data-v-5dc7a391 {
+.carc.data-v-f6da6144 {
     height: 130rpx;
     background: #fff;
 }
 
-.carc .car.data-v-5dc7a391 {
+.carc .car.data-v-f6da6144 {
     width: 92%;
     margin: auto 4%;
     height: 100rpx;

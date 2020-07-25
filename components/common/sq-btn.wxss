@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-048561f3 {
+.animated.bounceIn.data-v-32935cc2 {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-048561f3 {
+@-webkit-keyframes bounceIn-data-v-32935cc2 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-048561f3 {
+@keyframes bounceIn-data-v-32935cc2 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,6 +68,6 @@
     }
 }
 
-.bounceIn.data-v-048561f3 {
-    animation-name: bounceIn-data-v-048561f3;
+.bounceIn.data-v-32935cc2 {
+    animation-name: bounceIn-data-v-32935cc2;
 }

@@ -78,6 +78,8 @@
 }
 
 .picture-magic-cont.data-v-06359f6b {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     width: 100%;
 }

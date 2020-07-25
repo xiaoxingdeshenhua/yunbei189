@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-3b4fa1d7 {
+.animated.bounceIn.data-v-547e7090 {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-3b4fa1d7 {
+@-webkit-keyframes bounceIn-data-v-547e7090 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-3b4fa1d7 {
+@keyframes bounceIn-data-v-547e7090 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,10 +68,10 @@
     }
 }
 
-.bounceIn.data-v-3b4fa1d7 {
-    animation-name: bounceIn-data-v-3b4fa1d7;
+.bounceIn.data-v-547e7090 {
+    animation-name: bounceIn-data-v-547e7090;
 }
 
-.bor-b.data-v-3b4fa1d7 {
+.bor-b.data-v-547e7090 {
     border-bottom: 1px solid #eff3f6;
 }

@@ -114,10 +114,11 @@
 }
 
 .jbc.data-v-2e452483 {
-    background: linear-gradient(90deg,#61471d 30%,#c0a883 50%,#61471d 70%);
-    -webkit-text-fill-color: transparent;
+    /*background: linear-gradient(90deg,#61471d 30%,#c0a883 50%,#61471d 70%);
+    -webkit-text-fill-color: transparent;*/
+    color: #713c0e;
     background-clip: text;
-    color: transparent;
+    /*color: transparent;*/
 }
 
 .vbtn.data-v-2e452483 {

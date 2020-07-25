@@ -110,11 +110,11 @@
     min-width: 140rpx;
 }
 
-.animated.bounceIn.data-v-68d05d6e {
+.animated.bounceIn.data-v-0b420294 {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-68d05d6e {
+@-webkit-keyframes bounceIn-data-v-0b420294 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -147,7 +147,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-68d05d6e {
+@keyframes bounceIn-data-v-0b420294 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -180,39 +180,41 @@
     }
 }
 
-.bounceIn.data-v-68d05d6e {
-    animation-name: bounceIn-data-v-68d05d6e;
+.bounceIn.data-v-0b420294 {
+    animation-name: bounceIn-data-v-0b420294;
 }
 
-.paytop.data-v-68d05d6e {
+.paytop.data-v-0b420294 {
     padding: 30rpx 30rpx 60rpx;
 }
 
-.paymoeny.data-v-68d05d6e {
+.paymoeny.data-v-0b420294 {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-align: baseline;
     align-items: baseline;
 }
 
-.weui-cell.data-v-68d05d6e:last-child:after {
+.weui-cell.data-v-0b420294:last-child:after {
     display: block;
 }
 
-.weui-cell.data-v-68d05d6e:after {
+.weui-cell.data-v-0b420294:after {
     left: 112rpx;
 }
 
-.hdimg.data-v-68d05d6e {
+.hdimg.data-v-0b420294 {
     width: 52rpx;
     height: 52rpx;
     margin-right: 30rpx;
 }
 
-.right30.data-v-68d05d6e::after {
+.right30.data-v-0b420294::after {
     right: 30rpx;
 }
 
-.payimg.data-v-68d05d6e {
+.payimg.data-v-0b420294 {
     width: 206rpx;
     height: 208rpx;
 }

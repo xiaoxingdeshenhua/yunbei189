@@ -1,24 +1,24 @@
-<mg-modal bind:__l="__l" bind:input="__e" class="data-v-09a2a131" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','show','$event',[] ] ] ] ] ]}}" ismr="{{true}}" value="{{show}}" vueId="80c486e6-1" vueSlots="{{['default']}}" width="700rpx" zIndex="{{3000}}">
-    <view class="data-v-09a2a131">
-        <view bindtap="__e" class="tctop posi-r data-v-09a2a131" data-event-opts="{{[ [ 'tap',[ [ 'ljck',['$event'] ] ] ] ]}}">
-            <view class="tcimg data-v-09a2a131" wx:if="{{co.couponInfo}}">
-                <mg-img bind:__l="__l" class="data-v-09a2a131" src="{{co.icon||'/static/yhq/yhqbg.png'}}" vueId="{{'80c486e6-2'+','+'80c486e6-1'}}"></mg-img>
+<mg-modal bind:__l="__l" bind:input="__e" class="data-v-4fe57758" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','show','$event',[] ] ] ] ] ]}}" ismr="{{true}}" value="{{show}}" vueId="80c486e6-1" vueSlots="{{['default']}}" width="700rpx" zIndex="{{3000}}">
+    <view class="data-v-4fe57758" wx:if="{{co.couponInfo}}">
+        <view bindtap="__e" class="tctop posi-r data-v-4fe57758" data-event-opts="{{[ [ 'tap',[ [ 'ljck',['$event'] ] ] ] ]}}">
+            <view class="tcimg data-v-4fe57758">
+                <mg-img bind:__l="__l" class="data-v-4fe57758" src="{{co.icon||'/static/yhq/yhqbg.png'}}" vueId="{{'80c486e6-2'+','+'80c486e6-1'}}"></mg-img>
             </view>
-            <view class="posi-a tctopbd f-col data-v-09a2a131" wx:if="{{co.couponInfo}}">
-                <view class="f-g-0 tctopbdt t-c data-v-09a2a131">
-                    <view class="f34 wei tcc1 data-v-09a2a131">{{co.name}}</view>
-                    <view class="f20 tcc2 mt10 data-v-09a2a131">优惠券已放入您的账户中</view>
+            <view class="posi-a tctopbd f-col data-v-4fe57758">
+                <view class="f-g-0 tctopbdt t-c data-v-4fe57758">
+                    <view class="f34 wei tcc1 data-v-4fe57758">{{co.name}}</view>
+                    <view class="f20 tcc2 mt10 data-v-4fe57758">优惠券已放入您的账户中</view>
                 </view>
-                <view class="f-g-1 tctopbdb data-v-09a2a131">
-                    <view class="mb20 data-v-09a2a131" wx:for="{{co.couponInfo}}" wx:for-index="i" wx:for-item="v" wx:key="i">
-                        <mg-coupon cname bind:__l="__l" class="data-v-09a2a131" co="{{v}}" color="{{color}}" ptype="5" vueId="{{'80c486e6-3-'+i+','+'80c486e6-1'}}"></mg-coupon>
+                <view class="f-g-1 tctopbdb data-v-4fe57758">
+                    <view class="mb20 data-v-4fe57758" wx:for="{{co.couponInfo}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                        <mg-coupon cname bind:__l="__l" class="data-v-4fe57758" co="{{v}}" color="{{color}}" ptype="5" vueId="{{'80c486e6-3-'+i+','+'80c486e6-1'}}"></mg-coupon>
                     </view>
                 </view>
             </view>
-            <view bindtap="__e" class="posi-a tctopft f-c f32 wei data-v-09a2a131" data-event-opts="{{[ [ 'tap',[ [ 'ljck',['$event'] ] ] ] ]}}" wx:if="{{!co.icon}}">立即查看</view>
+            <view bindtap="__e" class="posi-a tctopft f-c f32 wei data-v-4fe57758" data-event-opts="{{[ [ 'tap',[ [ 'ljck',['$event'] ] ] ] ]}}" wx:if="{{!co.icon}}">立即查看</view>
         </view>
-        <view bindtap="__e" class="tcbtm f-c data-v-09a2a131" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
-            <text class="iconfont iconcuo cf f60 data-v-09a2a131"></text>
+        <view bindtap="__e" class="tcbtm f-c data-v-4fe57758" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+            <text class="iconfont iconcuo cf f60 data-v-4fe57758"></text>
         </view>
     </view>
 </mg-modal>

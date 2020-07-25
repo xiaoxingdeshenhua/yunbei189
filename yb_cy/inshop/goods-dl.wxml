@@ -1,16 +1,16 @@
-<view class="{{['pb130 data-v-5dc7a391',showGg?'bgfix':'']}}" wx:if="{{co}}">
-    <uni-nav-bar bind:__l="__l" border="{{opcity>=1}}" class="data-v-5dc7a391" fixed="{{true}}" ispr="{{false}}" statusBar="{{true}}" title="{{co.name}}" uriconopcity="{{iconOpcity}}" uropcity="{{opcity}}" vueId="19640e34-1"></uni-nav-bar>
-    <mg-swiper bind:__l="__l" class="data-v-5dc7a391" co="{{swiper}}" color="{{tColor}}" u="rpx" vueId="19640e34-2"></mg-swiper>
-    <goods addtype="2" bind:__l="__l" bind:add="__e" bind:dec="__e" class="data-v-5dc7a391" co="{{co}}" data-event-opts="{{[ [ '^dec',[ ['dec'] ] ],[ '^add',[ ['add'] ] ] ]}}" outin="{{outin}}" type="3" vueId="19640e34-3" wx:if="{{co}}"></goods>
-    <view class="bf mt15 p3 data-v-5dc7a391">
-        <view class="f32 wei data-v-5dc7a391">商品简介</view>
-        <view class="mt30 data-v-5dc7a391" wx:if="{{co.details}}">
-            <mg-rtext bind:__l="__l" class="data-v-5dc7a391" content="{{co.details}}" type="2" vueId="19640e34-4"></mg-rtext>
+<view class="{{['pb130 data-v-f6da6144',showGg?'bgfix':'']}}" wx:if="{{co}}">
+    <uni-nav-bar bind:__l="__l" border="{{opcity>=1}}" class="data-v-f6da6144" fixed="{{true}}" ispr="{{false}}" statusBar="{{true}}" title="{{co.name}}" uriconopcity="{{iconOpcity}}" uropcity="{{opcity}}" vueId="19640e34-1"></uni-nav-bar>
+    <mg-swiper bind:__l="__l" class="data-v-f6da6144" co="{{swiper}}" color="{{tColor}}" u="rpx" vueId="19640e34-2"></mg-swiper>
+    <goods addtype="2" bind:__l="__l" bind:add="__e" bind:dec="__e" class="data-v-f6da6144" co="{{co}}" data-event-opts="{{[ [ '^dec',[ ['dec'] ] ],[ '^add',[ ['add'] ] ] ]}}" outin="{{outin}}" type="3" vueId="19640e34-3" wx:if="{{co}}"></goods>
+    <view class="bf mt15 p3 data-v-f6da6144">
+        <view class="f32 wei data-v-f6da6144">商品简介</view>
+        <view class="mt30 data-v-f6da6144" wx:if="{{co.details}}">
+            <mg-rtext bind:__l="__l" class="data-v-f6da6144" content="{{co.details}}" type="2" vueId="19640e34-4"></mg-rtext>
         </view>
     </view>
-    <shop-car-animation bind:__l="__l" cartx="0.12" carty="0.95" class="data-v-5dc7a391 vue-ref" data-ref="carAnmation" vueId="19640e34-5"></shop-car-animation>
-    <view class="posi-f b0 w100 carc data-v-5dc7a391">
-        <button bindtap="__e" class="p-a udlr car cf f-c data-v-5dc7a391" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',4] ] ] ] ] ] ]}}">继续点菜</button>
+    <shop-car-animation bind:__l="__l" cartx="0.12" carty="0.95" class="data-v-f6da6144 vue-ref" data-ref="carAnmation" vueId="19640e34-5"></shop-car-animation>
+    <view class="posi-f b0 w100 carc data-v-f6da6144">
+        <button bindtap="__e" class="p-a udlr car cf f-c data-v-f6da6144" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',4] ] ] ] ] ] ]}}">继续点菜</button>
     </view>
-    <spec bind:__l="__l" bind:add="__e" bind:input="__e" class="data-v-5dc7a391" co="{{goodsInfo}}" data-event-opts="{{[ [ '^add',[ ['add'] ] ],[ '^input',[ [ '__set_model',[ '','showGg','$event',[] ] ] ] ] ]}}" outin="{{outin}}" storeid="{{co.storeId}}" value="{{showGg}}" vueId="19640e34-6"></spec>
+    <spec bind:__l="__l" bind:add="__e" bind:input="__e" class="data-v-f6da6144" co="{{goodsInfo}}" data-event-opts="{{[ [ '^add',[ ['add'] ] ],[ '^input',[ [ '__set_model',[ '','showGg','$event',[] ] ] ] ] ]}}" outin="{{outin}}" storeid="{{co.storeId}}" value="{{showGg}}" vueId="19640e34-6"></spec>
 </view>

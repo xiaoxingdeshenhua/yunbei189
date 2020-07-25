@@ -1,8 +1,8 @@
-.animated.bounceIn.data-v-ef7c52c4 {
+.animated.bounceIn.data-v-094d9120 {
     animation-duration: .75s;
 }
 
-@-webkit-keyframes bounceIn-data-v-ef7c52c4 {
+@-webkit-keyframes bounceIn-data-v-094d9120 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes bounceIn-data-v-ef7c52c4 {
+@keyframes bounceIn-data-v-094d9120 {
     from,20%,40%,60%,80%,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
     }
@@ -68,36 +68,36 @@
     }
 }
 
-.bounceIn.data-v-ef7c52c4 {
-    animation-name: bounceIn-data-v-ef7c52c4;
+.bounceIn.data-v-094d9120 {
+    animation-name: bounceIn-data-v-094d9120;
 }
 
-.payimg.data-v-ef7c52c4 {
+.payimg.data-v-094d9120 {
     width: 153rpx;
     height: 155rpx;
 }
 
-.pt60.data-v-ef7c52c4 {
+.pt60.data-v-094d9120 {
     padding-top: 50rpx;
 }
 
-.btn.data-v-ef7c52c4 {
+.btn.data-v-094d9120 {
     border-radius: 0;
 }
 
-.btn.data-v-ef7c52c4::after {
+.btn.data-v-094d9120::after {
     transform-origin: 50% 50%;
     border-radius: 0;
 }
 
-.p25.data-v-ef7c52c4 {
+.p25.data-v-094d9120 {
     padding: 20rpx 50rpx;
 }
 
-.ipolcs.data-v-ef7c52c4 {
+.ipolcs.data-v-094d9120 {
     height: 65rpx;
 }
 
-.ipomt.data-v-ef7c52c4 {
+.ipomt.data-v-094d9120 {
     margin-top: 175rpx;
 }

@@ -3,8 +3,8 @@ module.exports = {
     uniacid: "2",
     acid: "2",
     multiid: "0",
-    version: "1.66",
+    version: "1.8.9",
     siteroot: "https://wq.yilianbaihui.cn/app/index.php",
     design_method: "3",
-    tominiprogram: [ "wxf94ec43f0642467c" ]
+    tominiprogram: [ "wx1a97018ac59098d2" ]
 };

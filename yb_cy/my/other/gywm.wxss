@@ -199,6 +199,8 @@ page {
 }
 
 .wxParse .thead.data-v-ae22c9ae,.wxParse .tfoot.data-v-ae22c9ae,.wxParse .tr.data-v-ae22c9ae {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -207,12 +209,16 @@ page {
 
 .wxParse .tr.data-v-ae22c9ae {
     width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     border-right: 2rpx solid #e0e0e0;
     border-bottom: 2rpx solid #e0e0e0;
 }
 
 .wxParse .th.data-v-ae22c9ae,.wxParse .td.data-v-ae22c9ae {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     width: 1276rpx;
     overflow: auto;

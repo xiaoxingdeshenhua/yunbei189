@@ -1,46 +1,15 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "components/common/sq-btn" ], {
     "0df4": function(e, t, n) {
         n.r(t);
-        var o = n("112b"), r = n("f2dc");
+        var o = n("897e"), r = n("f2dc");
         for (var s in r) "default" !== s && function(e) {
             n.d(t, e, function() {
                 return r[e];
             });
         }(s);
-        n("50aa");
-        var a = n("f0c5"), i = Object(a.a)(r.default, o.b, o.c, !1, null, "048561f3", null, !1, o.a, void 0);
+        n("c732");
+        var a = n("f0c5"), i = Object(a.a)(r.default, o.b, o.c, !1, null, "32935cc2", null, !1, o.a, void 0);
         t.default = i.exports;
-    },
-    "112b": function(e, t, n) {
-        var o = function() {
-            var e = this, t = (e.$createElement, e._self._c, e.__get_style([ {
-                width: e.w + "rpx",
-                height: e.h + "rpx",
-                lineHeight: e.h + "rpx"
-            }, e.sname ])), n = e.__get_style([ {
-                width: e.w + "rpx",
-                height: e.h + "rpx",
-                lineHeight: e.h + "rpx"
-            }, e.sname ]), o = e.__get_style([ {
-                width: e.w + "rpx",
-                height: e.h + "rpx",
-                lineHeight: e.h + "rpx"
-            }, e.sname ]);
-            e._isMounted || (e.e0 = function(e) {
-                return this.$emit("refresh");
-            }), e.$mp.data = Object.assign({}, {
-                $root: {
-                    s0: t,
-                    s1: n,
-                    s2: o
-                }
-            });
-        }, r = [];
-        n.d(t, "b", function() {
-            return o;
-        }), n.d(t, "c", function() {
-            return r;
-        }), n.d(t, "a", function() {});
     },
     "4c04": function(e, t, n) {
         (function(a) {
@@ -61,10 +30,31 @@
                     }
                 },
                 data: function() {
-                    return {};
+                    return {
+                        platform: ""
+                    };
+                },
+                created: function() {
+                    this.platform = this.api.platform;
                 },
                 watch: {},
                 methods: {
+                    onGetAuthorize: function(e) {
+                        var n = this;
+                        my.getOpenUserInfo({
+                            fail: function(e) {},
+                            success: function(e) {
+                                var t = JSON.parse(e.response).response;
+                                n.refreshUser({
+                                    portrait: t.avatar,
+                                    userName: t.nickName,
+                                    userId: n.uId
+                                }).then(function(e) {
+                                    n.$emit("refresh");
+                                });
+                            }
+                        });
+                    },
                     getUserInfo: function() {
                         var t = this;
                         a.getUserInfo({
@@ -132,11 +122,42 @@
             t.default = e;
         }).call(this, n("543d").default);
     },
-    "50aa": function(e, t, n) {
-        var o = n("cedd");
+    "897e": function(e, t, n) {
+        var o = function() {
+            var e = this, t = (e.$createElement, e._self._c, e.__get_style([ {
+                width: e.w + "rpx",
+                height: e.h + "rpx",
+                lineHeight: e.h + "rpx"
+            }, e.sname ])), n = e.__get_style([ {
+                width: e.w + "rpx",
+                height: e.h + "rpx",
+                lineHeight: e.h + "rpx"
+            }, e.sname ]), o = e.__get_style([ {
+                width: e.w + "rpx",
+                height: e.h + "rpx",
+                lineHeight: e.h + "rpx"
+            }, e.sname ]);
+            e._isMounted || (e.e0 = function(e) {
+                return this.$emit("refresh");
+            }), e.$mp.data = Object.assign({}, {
+                $root: {
+                    s0: t,
+                    s1: n,
+                    s2: o
+                }
+            });
+        }, r = [];
+        n.d(t, "b", function() {
+            return o;
+        }), n.d(t, "c", function() {
+            return r;
+        }), n.d(t, "a", function() {});
+    },
+    a517: function(e, t, n) {},
+    c732: function(e, t, n) {
+        var o = n("a517");
         n.n(o).a;
     },
-    cedd: function(e, t, n) {},
     f2dc: function(e, t, n) {
         n.r(t);
         var o = n("4c04"), r = n.n(o);

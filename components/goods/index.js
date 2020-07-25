@@ -1,7 +1,7 @@
 (global.webpackJsonp = global.webpackJsonp || []).push([ [ "components/goods/index" ], {
     "38ef": function(t, e, n) {
         n.r(e);
-        var o = n("a49c3"), c = n("d2f6");
+        var o = n("a49c"), c = n("d2f6");
         for (var r in c) "default" !== r && function(t) {
             n.d(e, t, function() {
                 return c[t];
@@ -170,7 +170,7 @@
         };
         e.default = d;
     },
-    a49c3: function(t, e, n) {
+    a49c: function(t, e, n) {
         var o = function() {
             var t = this, e = (t.$createElement, t._self._c, t.itemTotal(t.co.price, t.co.num));
             t.$mp.data = Object.assign({}, {

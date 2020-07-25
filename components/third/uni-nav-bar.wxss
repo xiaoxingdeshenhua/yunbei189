@@ -84,6 +84,8 @@
 }
 
 .uni-navbar__header.data-v-5642edd0 {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

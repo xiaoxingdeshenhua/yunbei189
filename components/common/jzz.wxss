@@ -78,6 +78,8 @@
 }
 
 .weui-loadmore.data-v-268039de {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -102,6 +104,8 @@
 
 .no-data-tip.data-v-268039de {
     padding: 100rpx 0;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
