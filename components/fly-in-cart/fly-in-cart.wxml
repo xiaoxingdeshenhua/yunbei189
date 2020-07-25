@@ -1,0 +1,5 @@
+<view class="container">
+    <view class="good_box" style="{{'left:'+bus_x+'px;top:'+bus_y+'px;'}}" wx:if="{{!hide_good_box}}">
+        <image src="{{imgUrl}}"></image>
+    </view>
+</view>

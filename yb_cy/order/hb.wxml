@@ -1,0 +1,9 @@
+<view class="bf bgfix data-v-e2d8e450">
+    <view class="wh f-col f-y-c data-v-e2d8e450" wx:if="{{show}}">
+        <image class="img bs15 data-v-e2d8e450" mode="scaleToFill" src="{{img}}" style="{{'height:'+'900rpx'+';'}}"></image>
+    </view>
+    <view class="foot-btnc data-v-e2d8e450">
+        <button bindtap="__e" class="bcan foot-btn data-v-e2d8e450" data-event-opts="{{[ [ 'tap',[ [ 'bc',['$event'] ] ] ] ]}}" style="{{'background:'+(tColor||'#07c160')+';'}}">保存</button>
+    </view>
+    <canvas canvasId="hbctx" class="data-v-e2d8e450" style="width:325px;height:450px;position:fixed;top:9999px;"></canvas>
+</view>

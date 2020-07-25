@@ -1,0 +1,6 @@
+<mg-modal bind:__l="__l" bind:input="__e" class="data-v-01900a9b" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','show','$event',[] ] ] ] ] ]}}" ismr="{{true}}" value="{{show}}" vueId="13b47966-1" vueSlots="{{['default']}}" width="550rpx" zIndex="{{3000}}">
+    <mg-swiper bind:__l="__l" class="data-v-01900a9b" co="{{swiper}}" color="{{tColor}}" u="rpx" vueId="{{'13b47966-2'+','+'13b47966-1'}}"></mg-swiper>
+    <view bindtap="__e" class="tcbtm f-c data-v-01900a9b" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+        <text class="iconfont iconcuo cf f60 data-v-01900a9b"></text>
+    </view>
+</mg-modal>

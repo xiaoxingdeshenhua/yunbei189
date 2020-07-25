@@ -1,0 +1,27 @@
+<view class="pb115 data-v-4169a8f3">
+    <view class="f-raw zbl f-bt data-v-4169a8f3">
+        <view bindtap="__e" class="zbc p-r b-s-3 bs15 mb20 data-v-4169a8f3" data-event-opts="{{[ [ 'tap',[ [ 'goDl',['$0'],[ [ ['dataList','',i] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="zbfm bs15 p-r data-v-4169a8f3">
+                <mg-img bind:__l="__l" class="data-v-4169a8f3" src="{{v['$orig'].cover_img}}" vueId="{{'5a0a8bf2-1-'+i}}"></mg-img>
+                <view class="p-a udlr zban bsf f-c data-v-4169a8f3">
+                    <text class="iconfont iconsxxx cf f56 ml10 data-v-4169a8f3" style="transform:rotate(-90deg);"></text>
+                </view>
+            </view>
+            <view class="p23 bf data-v-4169a8f3">
+                <view class="t-o-e l-n data-v-4169a8f3">{{v['$orig'].name}}</view>
+                <view class="f-y-c mt10 data-v-4169a8f3">
+                    <view class="zbtx bsf mr10 data-v-4169a8f3">
+                        <mg-img bind:__l="__l" class="data-v-4169a8f3" src="{{v['$orig'].cover_img}}" vueId="{{'5a0a8bf2-2-'+i}}"></mg-img>
+                    </view>
+                    <view class="f24 c9 f-1 t-o-e data-v-4169a8f3">{{v['$orig'].anchor_name}}</view>
+                </view>
+            </view>
+            <view class="p-a l0 t0 zbzt f-y-c cf f24 data-v-4169a8f3">
+                <view class="yd bsf bf mr10 data-v-4169a8f3"></view>
+                <view class="data-v-4169a8f3">{{v.m0}}</view>
+            </view>
+        </view>
+    </view>
+    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-4169a8f3" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="5a0a8bf2-3"></jzz>
+    <tab-bar bind:__l="__l" class="data-v-4169a8f3" vueId="5a0a8bf2-4"></tab-bar>
+</view>

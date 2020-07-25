@@ -1,0 +1,10 @@
+<view class="bf data-v-ccf9e1fe" style="{{'margin-top:'+''+co.topMargin+u+';'+'margin-bottom:'+''+co.isBottom+u+';'}}" wx:if="{{list.length}}">
+    <view class="p-15-30-0 data-v-ccf9e1fe">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="{{co.infoTitle||'优惠券'}}" bttc="f32 wei" class="data-v-ccf9e1fe" cname="p0" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/coupon/center?storeId='+storeInfo.id+'&name='+storeInfo.name] ] ] ] ] ] ]}}" ft="查看全部" ftc="f24 c6" hc="1" last="1" vueId="6469bd54-1"></mg-cell>
+    </view>
+    <view class="f-row o-x-s p30 data-v-ccf9e1fe">
+        <view class="f-g-0 w-210 ml20 data-v-ccf9e1fe" wx:for="{{list}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <mg-coupon cname bind:__l="__l" bind:btntap="__e" bind:operation="__e" class="data-v-ccf9e1fe" co="{{v}}" color="{{color}}" data-event-opts="{{[ [ '^btntap',[ [ 'btntap',['$0'],[ [ ['list','',i,'id'] ] ] ] ] ],[ '^operation',[ ['operation'] ] ] ]}}" ptype="3" vueId="{{'6469bd54-2-'+i}}"></mg-coupon>
+        </view>
+    </view>
+</view>

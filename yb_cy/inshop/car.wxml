@@ -1,0 +1,56 @@
+<view class="pb130 data-v-31e97b59">
+    <view class="carlistc p03 bf data-v-31e97b59" style="{{'padding-bottom:'+carlistPab+'rpx'+';'}}">
+        <mg-cell bind:__l="__l" class="data-v-31e97b59" cname="p30" isl="1" vueId="5bad3f35-1" vueSlots="{{['bd','ft']}}">
+            <view class="f-y-c data-v-31e97b59" slot="bd">
+                <text class="data-v-31e97b59">已选以下商品</text>
+            </view>
+            <view class="f-y-c f24 data-v-31e97b59" slot="ft">
+                <text bindtap="__e" class="iconfont iconsx f50 c3 data-v-31e97b59" data-event-opts="{{[ [ 'tap',[ [ 'sxsj',['$event'] ] ] ] ]}}" style="margin-right:40rpx;"></text>
+                <text bindtap="__e" class="iconfont iconshanchu f42 c3 data-v-31e97b59" data-event-opts="{{[ [ 'tap',[ [ 'clearCar',['$event'] ] ] ] ]}}"></text>
+            </view>
+        </mg-cell>
+        <view class="p20 data-v-31e97b59" wx:if="{{tableInfo.orderInfo&&orderGoods.length}}">当前桌位订单商品</view>
+        <view class="data-v-31e97b59" style="opacity:0.5;">
+            <mg-cell bind:__l="__l" brs="5rpx" class="data-v-31e97b59" cname="p30 la124" h="104" img="{{v['$orig'].icon}}" last="1" vueId="{{'5bad3f35-2-'+i}}" vueSlots="{{['bd']}}" w="104" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <view class="data-v-31e97b59" slot="bd">
+                    <view class="f-bt data-v-31e97b59">
+                        <view class="t-o-e data-v-31e97b59">{{v['$orig'].name}}</view>
+                        <view class="f-g-0 f32 data-v-31e97b59">{{sl+v.m0}}</view>
+                    </view>
+                    <view class="f-bt mt10 data-v-31e97b59">
+                        <view class="f-g-1 f24 c9 f-y-c data-v-31e97b59">
+                            <text class="ml10 data-v-31e97b59" wx:if="{{v['$orig'].spec==1}}">{{v['$orig'].spec}}</text>
+                            <text class="data-v-31e97b59" wx:if="{{v['$orig'].attribute}}">{{'('+v['$orig'].attribute+')'}}</text>
+                            <text class="ml10 data-v-31e97b59" wx:if="{{v['$orig'].material}}">{{'+'+v['$orig'].material}}</text>
+                        </view>
+                    </view>
+                </view>
+            </mg-cell>
+        </view>
+        <view class="p20 data-v-31e97b59" wx:if="{{tableInfo.orderInfo&&orderGoods.length}}">新增商品</view>
+        <view class="p0 data-v-31e97b59">
+            <view class="hlb data-v-31e97b59" wx:for="{{carList}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <view class="posi-r pt20 data-v-31e97b59">
+                    <view class="cimg bsf data-v-31e97b59">
+                        <mg-img bind:__l="__l" class="data-v-31e97b59" src="{{v.portrait}}" vueId="{{'5bad3f35-3-'+i}}"></mg-img>
+                    </view>
+                    <view class="posi-a cun c6 f24 f-c data-v-31e97b59">{{v.userName+'点了'}}</view>
+                </view>
+                <goods addtype="2" bind:__l="__l" bind:add="__e" bind:dec="__e" class="data-v-31e97b59" co="{{cv}}" data-event-opts="{{[ [ '^dec',[ ['dec'] ] ],[ '^add',[ ['add'] ] ] ]}}" outin="2" type="4" vueId="{{'5bad3f35-4-'+i+'-'+ci}}" wx:for="{{v.goodsArr}}" wx:for-index="ci" wx:for-item="cv" wx:key="ci"></goods>
+            </view>
+        </view>
+    </view>
+    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-31e97b59" mygd="{{true}}" nodata="{{true}}" vueId="5bad3f35-5" wx:if="{{carList.length==0}}"></jzz>
+    <view class="dbbtnc bf f-row data-v-31e97b59" style="{{'bottom:'+(isIpx?'40rpx':0)+';'}}" wx:if="{{otableInfo.userId}}">
+        <view class="f-g-1 f-y-c f-x-e data-v-31e97b59">
+            <view class="cf1 mr30 f24 data-v-31e97b59">
+                <text class="f30 wei data-v-31e97b59">{{scarList.money}}</text>元</view>
+        </view>
+        <view c="{{true}}" class="f-g-1 dbbtn o-h f-row data-v-31e97b59">
+            <button bindtap="__e" class="dbl f-c flex-1 data-v-31e97b59" data-event-opts="{{[ [ 'tap',[ [ 'jxdc',['$event'] ] ] ] ]}}">继续点菜</button>
+            <button bindtap="__e" class="dbr f-c flex-1 data-v-31e97b59" data-event-opts="{{[ [ 'tap',[ [ 'tjsp',['$event'] ] ] ] ]}}" disabled="{{loading}}" loading="{{loading}}" wx:if="{{tableInfo.orderInfo}}">提交商品</button>
+            <button bindtap="__e" class="dbr f-c flex-1 data-v-31e97b59" data-event-opts="{{[ [ 'tap',[ [ 'ljxd',['$event'] ] ] ] ]}}" wx:else>去下单</button>
+        </view>
+    </view>
+    <view class="bgf data-v-31e97b59" wx:if="{{isIpx}}"></view>
+</view>

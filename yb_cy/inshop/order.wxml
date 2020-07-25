@@ -1,0 +1,41 @@
+<view class="{{['pb115 data-v-ef7c52c4',showCoupon?'bgfix':'']}}">
+    <view class="fixedtop data-v-ef7c52c4">
+        <nav-tab bind:__l="__l" bind:changeTab="__e" bind:input="__e" class="data-v-ef7c52c4" data-event-opts="{{[ [ '^changeTab',[ ['changeTab'] ] ],[ '^input',[ [ '__set_model',[ '','aIdx','$event',[] ] ] ] ] ]}}" tabs="{{tabs}}" value="{{aIdx}}" vueId="13e6f93b-1"></nav-tab>
+        <view class="p253 bf5 data-v-ef7c52c4" wx:if="{{labelArr.length}}">
+            <scroll-view class="ws-n ipolcs f-y-c data-v-ef7c52c4" scrollX="true">
+                <bk-b bind:__l="__l" bind:tab="__e" cName="{{'f-g-0 dis-in mr20 bs60 '+(i!=laIdx&&'c3')}}" class="data-v-ef7c52c4" color="{{i==laIdx?tColor:'#F1F2F3'}}" data-event-opts="{{[ [ '^tab',[ [ 'lTab',[i] ] ] ] ]}}" sname="{{$root.a0}}" t="{{v}}" vueId="{{'13e6f93b-2-'+i}}" wx:for="{{labelArr}}" wx:for-index="i" wx:for-item="v" wx:key="i"></bk-b>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="{{['mt90 p3 data-v-ef7c52c4',hasLabel?'ipomt':'']}}">
+        <my-order bind:__l="__l" bind:operation="__e" class="data-v-ef7c52c4" co="{{v}}" data-event-opts="{{[ [ '^operation',[ ['operation'] ] ] ]}}" otype="{{aIdx+1}}" vueId="{{'13e6f93b-3-'+i}}" wx:for="{{dataList}}" wx:for-index="i" wx:for-item="v" wx:key="i"></my-order>
+        <jzz bgcolor="transparent" bind:__l="__l" class="data-v-ef7c52c4" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="13e6f93b-4"></jzz>
+    </view>
+    <tab-bar bind:__l="__l" class="data-v-ef7c52c4" vueId="13e6f93b-5"></tab-bar>
+    <mg-modal bind:__l="__l" bind:input="__e" class="data-v-ef7c52c4" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showCoupon','$event',[] ] ] ] ] ]}}" ismr="{{true}}" value="{{showCoupon}}" vueId="13e6f93b-6" vueSlots="{{['default']}}" width="630rpx" zIndex="{{3000}}">
+        <view class="bf bs10 data-v-ef7c52c4" wx:if="{{tcCoupon.couponInfo}}">
+            <view class="data-v-ef7c52c4">
+                <view class="p330 f-c-c data-v-ef7c52c4">
+                    <image class="payimg data-v-ef7c52c4" mode="widthFix" src="/static/pay/payok.png"></image>
+                    <view class="mt20 f30 wei data-v-ef7c52c4">支付成功</view>
+                    <view class="mt5 f50 wei data-v-ef7c52c4">{{sl+tcCoupon.paymoney}}</view>
+                </view>
+                <mg-cell bind:__l="__l" class="data-v-ef7c52c4" last="1" vueId="{{'13e6f93b-7'+','+'13e6f93b-6'}}" vueSlots="{{['bd']}}">
+                    <view class="f-y-c c6 data-v-ef7c52c4" slot="bd">
+                        <view class="f-g-0 c3 mr30 data-v-ef7c52c4">返赠</view>
+                        <view class="f-g-1 c9 f26 data-v-ef7c52c4">{{'恭喜你获得1张优惠券共'+tcCoupon.money+'元'}}</view>
+                    </view>
+                </mg-cell>
+            </view>
+            <view class="p25 hlt data-v-ef7c52c4" style="{{'background:'+'linear-gradient(45deg,rgba('+$root.m0+',0.5),'+tColor+')'+';'}}">
+                <view class="data-v-ef7c52c4" wx:for="{{tcCoupon.couponInfo}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <mg-coupon cname bind:__l="__l" class="data-v-ef7c52c4" co="{{v}}" color="{{color}}" ptype="5" vueId="{{'13e6f93b-8-'+i+','+'13e6f93b-6'}}"></mg-coupon>
+                </view>
+            </view>
+            <view class="f-row hlt data-v-ef7c52c4" style="height:100rpx;">
+                <button bindtap="__e" class="btn flex-1 bf f30 h100 f-c c9 data-v-ef7c52c4" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" hoverClass="be">关闭</button>
+                <button bindtap="__e" class="btn flex-1 bf f30 h100 f-c hll data-v-ef7c52c4" data-event-opts="{{[ [ 'tap',[ [ 'ljck',['$event'] ] ] ] ]}}" hoverClass="be" style="{{'color:'+tColor+';'}}">立即查看</button>
+            </view>
+        </view>
+    </mg-modal>
+</view>

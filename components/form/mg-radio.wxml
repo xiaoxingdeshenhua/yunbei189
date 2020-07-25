@@ -1,0 +1,27 @@
+<radio-group bindchange="__e" bindinput="__e" class="data-v-7d30a0ea" data-event-opts="{{[ [ 'change',[ [ 'radioChange',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','radioVal','$event',[] ] ] ] ] ]}}" value="{{radioVal}}">
+    <view class="f-raw data-v-7d30a0ea" wx:if="{{rtype==1}}">
+        <label class="weui-cell mr-r1i noafter data-v-7d30a0ea" wx:for="{{arr}}" wx:key="index">
+            <view class="mr10 data-v-7d30a0ea">
+                <radio checked="{{item.value==radioVal}}" class="weui-check data-v-7d30a0ea" value="{{item.value}}"></radio>
+                <text class="{{['iconfont f40 data-v-7d30a0ea',item.value==radioVal?'icongx':'iconwgx']}}" style="{{'color:'+(item.value==radioVal?color||tColor:'')+';'}}"></text>
+            </view>
+            <view class="data-v-7d30a0ea">{{item.name}}</view>
+        </label>
+    </view>
+    <block wx:else>
+        <view class="data-v-7d30a0ea" wx:if="{{rtype==2}}">
+            <label class="data-v-7d30a0ea" wx:for="{{arr}}" wx:key="index">
+                <mg-cell bind:__l="__l" btt="{{item.name}}" bttc="{{'c3 '+bttc}}" class="data-v-7d30a0ea" cname="p253" isr="1" last="{{last||index==arr.length-1}}" vueId="{{'2a669c84-1-'+index}}" vueSlots="{{['default']}}">
+                    <view class="f-y-c data-v-7d30a0ea" slot="ft" wx:if="{{ranktype==1}}">
+                        <radio checked="{{item.value==radioVal}}" class="weui-check data-v-7d30a0ea" value="{{item.value}}"></radio>
+                        <text class="{{['iconfont f40 data-v-7d30a0ea',item.value==radioVal?'icongx':'iconwgx']}}" style="{{'color:'+(item.value==radioVal?color||tColor:'')+';'}}"></text>
+                    </view>
+                    <view class="f-y-c mr30 data-v-7d30a0ea" slot="hd" wx:else>
+                        <radio checked="{{item.value==radioVal}}" class="weui-check data-v-7d30a0ea" value="{{item.value}}"></radio>
+                        <text class="{{['iconfont f40 data-v-7d30a0ea',item.value==radioVal?'icongx':'iconwgx']}}" style="{{'color:'+(item.value==radioVal?color||tColor:'')+';'}}"></text>
+                    </view>
+                </mg-cell>
+            </label>
+        </view>
+    </block>
+</radio-group>

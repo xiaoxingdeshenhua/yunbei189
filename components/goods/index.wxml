@@ -1,0 +1,89 @@
+<view class="{{['conw2 f-row p2 data-v-a23ac79c',last?'mb80':'']}}" wx:if="{{type==1}}">
+    <view bindtap="__e" class="f-g-0 bf6 left bs5 posi-r data-v-a23ac79c" data-event-opts="{{[ [ 'tap',[ [ 'goodinfo',['$event'] ] ] ] ]}}">
+        <mg-img bind:__l="__l" class="data-v-a23ac79c" cname="wh" src="{{co.icon}}" vueId="22e0cc58-1"></mg-img>
+        <view class="posi-a ysq f-c b0 cf w100 f26 data-v-a23ac79c" wx:if="{{outin==1?co.outStock<=0:co.inStock<=0}}">已售罄</view>
+    </view>
+    <view class="f-g-1 right ml20 f24 c9 data-v-a23ac79c">
+        <view class="f30 t-o-e c0 data-v-a23ac79c">{{co.name}}</view>
+        <view class="mt10 t-o-e data-v-a23ac79c">{{co.body}}</view>
+        <view class="mt10 f-raw data-v-a23ac79c">
+            <text class="mr30 data-v-a23ac79c" wx:if="{{orderset.displayOpen==1&&co.salesNum>0}}">{{'销量 '+co.salesNum}}</text>
+        </view>
+        <view class="mt10 f-row data-v-a23ac79c" wx:if="{{vipPrice}}">
+            <view class="vipl f-y-c data-v-a23ac79c">
+                <view class="data-v-a23ac79c">{{sl+vipPrice}}</view>
+            </view>
+            <view class="vipr f-y-c data-v-a23ac79c">VIP</view>
+        </view>
+        <add-goods bind:__l="__l" bind:add="__e" bind:dec="__e" class="data-v-a23ac79c" co="{{co}}" data-event-opts="{{[ [ '^add',[ ['add'] ] ],[ '^dec',[ ['dec'] ] ] ]}}" outin="{{outin}}" pcname="f34 c3" vueId="22e0cc58-2"></add-goods>
+        <view class="data-v-a23ac79c" wx:if="{{co.maxNum>0||co.minNum>1}}">
+            <text class="crb mr20 data-v-a23ac79c" wx:if="{{co.minNum>1}}">{{co.minNum+'份起售'}}</text>
+            <text class="crb data-v-a23ac79c" wx:if="{{co.maxNum>0}}">{{'限'+co.maxNum+'份'}}</text>
+        </view>
+    </view>
+</view>
+<block wx:else>
+    <view class="f-g-0 conw mr20 b-s bs15 data-v-a23ac79c" wx:if="{{type==2}}">
+        <view bindtap="__e" class="goodsimg data-v-a23ac79c" data-event-opts="{{[ [ 'tap',[ [ 'goodinfo',['$event'] ] ] ] ]}}">
+            <mg-img bind:__l="__l" class="data-v-a23ac79c" cname="wh" src="{{co.icon}}" vueId="22e0cc58-3"></mg-img>
+        </view>
+        <view class="conwb data-v-a23ac79c">
+            <view class="t-o-e f26 data-v-a23ac79c">{{co.name}}</view>
+            <add-goods bind:__l="__l" bind:add="__e" bind:dec="__e" class="data-v-a23ac79c" co="{{co}}" data-event-opts="{{[ [ '^add',[ ['add'] ] ],[ '^dec',[ ['dec'] ] ] ]}}" outin="{{outin}}" pcname="f26" vueId="22e0cc58-4"></add-goods>
+        </view>
+    </view>
+    <block wx:else>
+        <view class="p3 bf data-v-a23ac79c" wx:if="{{type==3}}">
+            <view class="f-x-bt data-v-a23ac79c">
+                <view class="t-o-e c0 f34 wei data-v-a23ac79c">{{co.name}}</view>
+                <view class="c9 f24 data-v-a23ac79c">
+                    <text class="data-v-a23ac79c" wx:if="{{orderset.displayOpen==1&&co.salesNum>0}}">{{'销量'+co.salesNum}}</text>
+                    <text class="ml20 data-v-a23ac79c">{{'库存'+co.outStock}}</text>
+                </view>
+            </view>
+            <view class="c9 f24 mb10 data-v-a23ac79c">{{co.body}}</view>
+            <view class="mt10 f-row data-v-a23ac79c" wx:if="{{vipPrice}}">
+                <view class="vipl f-y-c data-v-a23ac79c">
+                    <view class="data-v-a23ac79c">{{sl+vipPrice}}</view>
+                </view>
+                <view class="vipr f-y-c data-v-a23ac79c">VIP</view>
+            </view>
+            <add-goods bind:__l="__l" bind:add="__e" bind:dec="__e" class="data-v-a23ac79c" cname="mt10" co="{{co}}" data-event-opts="{{[ [ '^add',[ ['add'] ] ],[ '^dec',[ ['dec'] ] ] ]}}" isunit="{{true}}" isyprice="{{true}}" outin="{{outin}}" pcname="f44" vueId="22e0cc58-5" wx:if="{{addtype==1}}"></add-goods>
+            <view class="f24 data-v-a23ac79c" wx:if="{{co.maxNum>0||co.minNum>1}}">
+                <text class="crb mr20 data-v-a23ac79c" wx:if="{{co.minNum>1}}">{{co.minNum+'份起售'}}</text>
+                <text class="crb data-v-a23ac79c" wx:if="{{co.maxNum>0}}">{{'限'+co.maxNum+'份'}}</text>
+            </view>
+        </view>
+        <block wx:else>
+            <mg-cell bind:__l="__l" brs="5rpx" class="data-v-a23ac79c" cname="p30 la124" h="104" img="{{co.icon}}" last="1" vueId="22e0cc58-6" vueSlots="{{['bd']}}" w="104" wx:if="{{type==4}}">
+                <view class="data-v-a23ac79c" slot="bd">
+                    <view class="f-bt data-v-a23ac79c">
+                        <view class="t-o-e data-v-a23ac79c">{{co.name}}</view>
+                        <view class="f-g-0 f32 data-v-a23ac79c">{{sl+$root.m0}}</view>
+                    </view>
+                    <view class="f-bt mt10 data-v-a23ac79c">
+                        <view class="f-g-1 f24 c9 f-y-c data-v-a23ac79c">
+                            <text class="ml10 data-v-a23ac79c" wx:if="{{co.isSpec==1}}">{{co.data}}</text>
+                            <text class="data-v-a23ac79c" wx:if="{{co.attribute}}">{{'('+co.attribute+')'}}</text>
+                            <text class="ml10 data-v-a23ac79c" wx:if="{{co.jldata}}">{{'+'+co.jldata}}</text>
+                        </view>
+                        <add-goods addwz="2" bind:__l="__l" bind:add="__e" bind:dec="__e" class="data-v-a23ac79c" cname="f-g-0 mt10" co="{{co}}" data-event-opts="{{[ [ '^add',[ ['add'] ] ],[ '^dec',[ ['dec'] ] ] ]}}" isprice="{{0}}" showspec="{{false}}" vueId="{{'22e0cc58-7'+','+'22e0cc58-6'}}"></add-goods>
+                    </view>
+                </view>
+            </mg-cell>
+            <view class="conw2 f-row p2 data-v-a23ac79c" wx:else>
+                <view class="f-g-0 left bf6 data-v-a23ac79c"></view>
+                <view class="f-g-1 right ml20 f22 c9 data-v-a23ac79c">
+                    <view class="be p20 data-v-a23ac79c"></view>
+                    <view class="mt20 be p15 w80 data-v-a23ac79c"></view>
+                    <view class="mt20 f-x-bt data-v-a23ac79c">
+                        <view class="be p20 w50 data-v-a23ac79c"></view>
+                        <view class="f-g-0 f-bt data-v-a23ac79c">
+                            <button class="cartadd be data-v-a23ac79c"></button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </block>
+</block>

@@ -1,0 +1,23 @@
+<view class="data-v-429f30f7" wx:if="{{fxsInfo.been}}">
+    <view class="bf p3 data-v-429f30f7">
+        <view class="p3 bs20 b-s data-v-429f30f7">
+            <view class="f32 data-v-429f30f7">可提现金额<text class="f26 ml10 crb data-v-429f30f7">{{'（'+sl+fxsInfo.available+'）'}}</text>
+            </view>
+            <view class="f-y-c mt30 data-v-429f30f7">
+                <view class="f42 mr10 data-v-429f30f7">{{sl}}</view>
+                <input bindinput="__e" class="f-1 f42 data-v-429f30f7" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','money','$event',[] ],['params'] ] ] ] ]}}" maxlength="{{fxsInfo.available.length}}" placeholder="请输入提现金额" placeholderClass="cd f32" style="height:70rpx;" type="digit" value="{{params.money}}"></input>
+                <button bindtap="__e" class="ml20 txbtn f-c b-d f28 wei c6 bf data-v-429f30f7" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{loading}}" hoverClass="be" loading="{{loading}}">提现</button>
+            </view>
+        </view>
+    </view>
+    <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="提现记录" bttc="f30" class="data-v-429f30f7" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','txmx'] ] ] ] ] ] ]}}" hc="1" isr="1" vueId="55c09f46-1"></mg-cell>
+    <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="提现设置" bttc="f30" class="data-v-429f30f7" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','txsz'] ] ] ] ] ] ]}}" hc="1" isr="1" vueId="55c09f46-2" vueSlots="{{['ft']}}">
+        <text class="data-v-429f30f7" slot="ft" style="color:#C65F10;">{{fxsInfo.txTypeName||'设置提现方式'}}</text>
+    </mg-cell>
+    <mg-cell bind:__l="__l" btt="结算周期" bttc="f30" class="data-v-429f30f7" ft="{{'t+'+fxsInfo.cycle}}" ftc="c3" last="1" vueId="55c09f46-3"></mg-cell>
+    <mg-cell bind:__l="__l" btt="最低提现金额" bttc="f30" class="data-v-429f30f7" ft="{{fxsInfo.minMoney}}" ftc="c3" last="1" vueId="55c09f46-4"></mg-cell>
+    <view class="mt20 bf p3 data-v-429f30f7">
+        <view class="f30 mb10 data-v-429f30f7">提现说明</view>
+        <mg-rtext bind:__l="__l" class="data-v-429f30f7" content="{{fxsInfo.agreement}}" type="2" vueId="55c09f46-5"></mg-rtext>
+    </view>
+</view>

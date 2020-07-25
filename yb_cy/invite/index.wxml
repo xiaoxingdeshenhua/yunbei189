@@ -1,0 +1,141 @@
+<view class="{{['invite mh100 data-v-cf5cf66a',fxshow||shareshow?'bgfix':'']}}">
+    <uni-nav-bar bind:__l="__l" border="{{opcity>=1}}" class="data-v-cf5cf66a" fixed="{{true}}" id="uninavbar" ispr="{{false}}" statusBar="{{true}}" title="{{hdInfo.name}}" uriconopcity="{{iconOpcity}}" uropcity="{{opcity}}" vueId="56b6b809-1"></uni-nav-bar>
+    <view class="hbg posi-a data-v-cf5cf66a">
+        <mg-img bind:__l="__l" class="data-v-cf5cf66a" src="{{onImgurl+'/yxbg.png'}}" vueId="56b6b809-2"></mg-img>
+    </view>
+    <view class="main posi-r f-col f-y-c data-v-cf5cf66a" wx:if="{{!showLoading}}">
+        <block wx:if="{{hdInfo.name}}">
+            <view class="iet1 mb20 f24 jbc cjb f-c data-v-cf5cf66a">
+                <view class="yd bsf data-v-cf5cf66a"></view>
+                <view class="m01 data-v-cf5cf66a">吃喝玩乐都能用</view>
+                <view class="yd bsf data-v-cf5cf66a"></view>
+            </view>
+            <view class="iet2 jbc cjb wei data-v-cf5cf66a">{{hdInfo.name}}</view>
+            <view class="mt10 mb30 f24 jbc cjb f-c data-v-cf5cf66a">活动时间:<text class="data-v-cf5cf66a">{{$root.m0+'至'+$root.m1}}</text>
+            </view>
+            <view class="iet3 mb30 posi-r data-v-cf5cf66a">
+                <swiper autoplay="true" class="lb data-v-cf5cf66a" interval="3000" vertical="true">
+                    <swiper-item class="f-y-c data-v-cf5cf66a" wx:for="{{lbarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                        <view class="f-g-0 imgl bf bsf data-v-cf5cf66a">
+                            <mg-img bind:__l="__l" class="data-v-cf5cf66a" src="{{v.portrait}}" vueId="{{'56b6b809-3-'+i}}"></mg-img>
+                        </view>
+                        <view class="f-g-1 t-c t-o-e cf f24 data-v-cf5cf66a">{{v.userName+' 已赚'}}<text class="cf2 data-v-cf5cf66a">{{v.commission}}</text>元</view>
+                    </swiper-item>
+                </swiper>
+            </view>
+            <view class="iet4 posi-r mb30 data-v-cf5cf66a">
+                <view class="posi-a t0 wh data-v-cf5cf66a">
+                    <mg-img bind:__l="__l" class="data-v-cf5cf66a" src="{{onImgurl+'/yxhbbg.png'}}" vueId="56b6b809-4"></mg-img>
+                </view>
+                <view class="posi-r wh f-col f-y-c data-v-cf5cf66a">
+                    <view class="top data-v-cf5cf66a">
+                        <view class="yxt1 p3 f30 t-c data-v-cf5cf66a">每邀请一位新用户你赚</view>
+                        <view class="posi-r data-v-cf5cf66a">
+                            <view class="yxt2 cjb wei f30 data-v-cf5cf66a">{{nzmoney}}</view>
+                            <view class="posi-a dw bsf f-c data-v-cf5cf66a">元</view>
+                        </view>
+                    </view>
+                    <view class="btm data-v-cf5cf66a">
+                        <view bindtap="__e" class="ljyq posi-r data-v-cf5cf66a" data-event-opts="{{[ [ 'tap',[ [ 'ljyq',[1] ] ] ] ]}}">
+                            <view class="wh data-v-cf5cf66a">
+                                <mg-img bind:__l="__l" class="data-v-cf5cf66a" src="{{onImgurl+'/ljyq.png'}}" vueId="56b6b809-5"></mg-img>
+                            </view>
+                            <view class="posi-a t0 wh f-c data-v-cf5cf66a">
+                                <view class="tl cjb wei data-v-cf5cf66a">立即邀请</view>
+                                <view class="iconfont iconright tr wei data-v-cf5cf66a"></view>
+                            </view>
+                        </view>
+                        <view bindtap="__e" class="mdmyq f-c mt30 f40 data-v-cf5cf66a" data-event-opts="{{[ [ 'tap',[ [ 'ljyq',[2] ] ] ] ]}}">面对面邀请</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="w100 data-v-cf5cf66a">
+            <view class="iet5 posi-r bf7 mt60 data-v-cf5cf66a" wx:if="{{fxsInfo.state==2}}">
+                <view class="sy bf77 f-row data-v-cf5cf66a">
+                    <view bindtap="__e" class="flex-1 t-c f26 b-r-d data-v-cf5cf66a" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url',v.url] ] ] ] ] ] ]}}" hoverClass="bec" wx:for="{{syarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                        <view class="f60 wei cf8 wbba data-v-cf5cf66a">{{v.num}}<text class="f26 data-v-cf5cf66a">{{i!=2?'元':'人'}}</text>
+                        </view>
+                        <view class="c6 data-v-cf5cf66a">{{v.name}}</view>
+                    </view>
+                </view>
+                <view class="p43 data-v-cf5cf66a">
+                    <view bindtap="__e" class="ljtx mla b-l-faf0 cf f-c mb30 data-v-cf5cf66a" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['url','tx'] ] ] ] ] ] ]}}">立即提现</view>
+                    <view bindtap="__e" class="txjl mla f-c c6 f24 data-v-cf5cf66a" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['url','fxzx'] ] ] ] ] ] ]}}">推广中心<text class="iconfont iconright c6 data-v-cf5cf66a"></text>
+                    </view>
+                </view>
+                <view class="posi-a yxbt data-v-cf5cf66a">
+                    <mg-img bind:__l="__l" class="data-v-cf5cf66a" src="{{onImgurl+'/yxbt.png'}}" vueId="56b6b809-6"></mg-img>
+                    <view class="posi-a t0 wh f-c f34 wei cf data-v-cf5cf66a">邀请收益</view>
+                </view>
+            </view>
+            <view class="iet6 posi-r bf7 mt60 data-v-cf5cf66a">
+                <view class="jtc f-row b-b-e data-v-cf5cf66a">
+                    <view class="flex-1 f-c-c f26 data-v-cf5cf66a" hoverClass="bec" wx:for="{{jtarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                        <view class="{{['jtitem b-l-faf0 posi-r data-v-cf5cf66a',i==jtarr.length-1?'last':'']}}">
+                            <view class="posi-a udlr img data-v-cf5cf66a">
+                                <mg-img bind:__l="__l" class="data-v-cf5cf66a" m="widthFix" src="{{onImgurl+'/'+v.img+'.png'}}" vueId="{{'56b6b809-7-'+i}}"></mg-img>
+                            </view>
+                        </view>
+                        <view class="c6 mt20 data-v-cf5cf66a">{{v.name}}</view>
+                    </view>
+                </view>
+                <view class="posi-a yxbt data-v-cf5cf66a">
+                    <mg-img bind:__l="__l" class="data-v-cf5cf66a" src="{{onImgurl+'/yxbt.png'}}" vueId="56b6b809-8"></mg-img>
+                    <view class="posi-a t0 wh f-c f34 wei cf data-v-cf5cf66a">赚阶梯赏金</view>
+                </view>
+                <view class="p3 data-v-cf5cf66a">
+                    <view class="f-c data-v-cf5cf66a">
+                        <view class="btjbl data-v-cf5cf66a"></view>
+                        <view class="m01 yxtt f32 wei data-v-cf5cf66a">邀新越多，赏金越多</view>
+                        <view class="btjbr data-v-cf5cf66a"></view>
+                    </view>
+                    <view class="p23 t-c c6 mb20 data-v-cf5cf66a">{{'已邀请 '+(fxsInfo.people||0)+' 人，邀请好友越多，赏金越多'}}</view>
+                    <view class="f-raw data-v-cf5cf66a">
+                        <view class="hbc f-col f-x-e f-y-c data-v-cf5cf66a" wx:for="{{hbarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                            <view class="ykhb posi-r data-v-cf5cf66a" wx:if="{{v.speed!=null}}">
+                                <image class="posi-a t0 wh data-v-cf5cf66a" src="{{onImgurl+'/ykhb.png'}}"></image>
+                                <view class="posi-r wh f-col f-y-c data-v-cf5cf66a">
+                                    <view class="ykt1 posi-r data-v-cf5cf66a">
+                                        <text class="num wei data-v-cf5cf66a">{{v.money}}</text>
+                                        <view class="posi-a dw bsf f-c data-v-cf5cf66a">元</view>
+                                    </view>
+                                    <view class="mt20 cfc3 f24 data-v-cf5cf66a">{{v.money+'元/'+v.integral+mySwitch.jfName}}</view>
+                                    <view class="ykt2 f-c mt15 data-v-cf5cf66a">{{'邀请'+v.peole+'人'}}</view>
+                                </view>
+                                <block wx:if="{{v.speed==1}}">
+                                    <view class="posi-a dqjd cf f-c data-v-cf5cf66a">当前进度</view>
+                                    <view class="posi-a xsj data-v-cf5cf66a"></view>
+                                </block>
+                            </view>
+                            <view class="wkhb posi-r data-v-cf5cf66a" wx:else>
+                                <image class="wh data-v-cf5cf66a" src="{{onImgurl+'/wkhb.png'}}"></image>
+                                <view class="posi-a t0 wh f-col f-y-c data-v-cf5cf66a">
+                                    <view class="wkt1 posi-r data-v-cf5cf66a">
+                                        <text class="num wei cfbf data-v-cf5cf66a">{{v.money}}</text>
+                                        <view class="posi-a dw bsf f-c data-v-cf5cf66a">元</view>
+                                    </view>
+                                    <view class="wkt2 cfc3 f20 data-v-cf5cf66a">{{v.money+'元/'+v.integral+mySwitch.jfName}}</view>
+                                    <view class="wkt3 f-c data-v-cf5cf66a">{{'邀请'+v.peole+'人'}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <load bind:__l="__l" class="data-v-cf5cf66a" vueId="56b6b809-9" wx:else></load>
+    <view bindtap="__e" class="fixr data-v-cf5cf66a" data-event-opts="{{[ [ 'tap',[ [ 'hdgz',['$event'] ] ] ] ]}}" wx:if="{{hdInfo.name}}">规则</view>
+    <view bindtap="__e" class="fixr data-v-cf5cf66a" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" style="top:265rpx;" wx:if="{{hdInfo.name}}">分享</view>
+    <mg-modal bind:__l="__l" bind:input="__e" class="data-v-cf5cf66a" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','mdmshow','$event',[] ] ] ] ] ]}}" ismr="{{true}}" value="{{mdmshow}}" vueId="56b6b809-10" vueSlots="{{['default']}}" width="55%" zIndex="{{2002}}">
+        <view class="bf p3 bs10 f-c-c data-v-cf5cf66a">
+            <image bindtap="__e" class="mdmimg data-v-cf5cf66a" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}" src="{{mdmimg}}"></image>
+            <view class="mt20 data-v-cf5cf66a">邀请好友扫码</view>
+        </view>
+        <view bindtap="__e" class="mt30 f-c data-v-cf5cf66a" data-event-opts="{{[ [ 'tap',[ [ 'e2',['$event'] ] ] ] ]}}">
+            <text class="iconfont iconcuo cf data-v-cf5cf66a" style="font-size:80rpx;"></text>
+        </view>
+    </mg-modal>
+    <mg-share bind:__l="__l" bind:input="__e" class="data-v-cf5cf66a" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','shareshow','$event',[] ] ] ] ] ]}}" value="{{shareshow}}" vueId="56b6b809-11" wxs="1"></mg-share>
+</view>

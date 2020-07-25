@@ -1,0 +1,21 @@
+{
+    "usingComponents": {
+        "goods": "/components/goods/index",
+        "shop-car-animation": "/components/fly-in-cart/fly-in-cart",
+        "goods-car": "/components/goods/goods-car",
+        "spec": "/components/goods/spec",
+        "load": "/components/common/load",
+        "mg-popup": "/components/common/popup",
+        "mg-modal": "/components/common/modal",
+        "uni-fab": "/components/third/uni-fab",
+        "tips": "/components/common/tips",
+        "mg-swiper": "/components/swiper/swiper",
+        "mg-img": "/components/common/mg-img",
+        "custom-coupon": "/components/swiper/coupon",
+        "tcyhq": "/components/template/tcyhq",
+        "tcgg": "/components/template/tcgg",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

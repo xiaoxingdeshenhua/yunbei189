@@ -1,0 +1,8 @@
+<view class="uni-rate">
+    <view bindtap="__e" class="uni-rate-icon" data-event-opts="{{[ [ 'tap',[ [ '_onClick',[index] ] ] ] ]}}" style="{{'margin-left:'+(index==0?0:margin+'rpx')+';'}}" wx:for="{{stars}}" wx:for-item="star" wx:key="index">
+        <text class="iconfont iconxing" style="{{'color:'+color+';'+'font-size:'+size+'rpx'+';'}}"></text>
+        <view class="uni-rate-icon-on" style="{{'width:'+star.activeWitch+';'}}">
+            <text class="iconfont iconxing" style="{{'color:'+activeColor+';'+'font-size:'+size+'rpx'+';'}}"></text>
+        </view>
+    </view>
+</view>

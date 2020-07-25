@@ -1,0 +1,39 @@
+<view class="data-v-09e8c4a8" hidden="{{!dataInfo.id}}">
+    <view class="p3 data-v-09e8c4a8">
+        <mg-coupon cname bind:__l="__l" bind:operation="__e" class="data-v-09e8c4a8" co="{{dataInfo}}" color="{{tColor}}" data-event-opts="{{[ [ '^operation',[ ['operation'] ] ] ]}}" ptype="2" vueId="1832f4de-1"></mg-coupon>
+    </view>
+    <view class="bf data-v-09e8c4a8">
+        <view class="p23 cell c6 data-v-09e8c4a8">
+            <mg-cell bind:__l="__l" btt="使用须知" bttc="f32 wei c3" class="data-v-09e8c4a8" cname="p10" last="1" vueId="1832f4de-2"></mg-cell>
+            <mg-cell bind:__l="__l" class="data-v-09e8c4a8" cname="p10" last="1" noc="1" vueId="1832f4de-3" vueSlots="{{['hd','bd']}}">
+                <view class="data-v-09e8c4a8" slot="hd">1、</view>
+                <view class="data-v-09e8c4a8" slot="bd">{{fullName}}</view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" class="data-v-09e8c4a8" cname="p10" last="1" noc="1" vueId="1832f4de-4" vueSlots="{{['default','hd']}}">
+                <view class="data-v-09e8c4a8" slot="hd">2、</view>
+                <view class="data-v-09e8c4a8" slot="bd" wx:if="{{dataInfo.endAt}}">{{dateText}}</view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" class="data-v-09e8c4a8" cname="p10" last="1" noc="1" vueId="1832f4de-5" vueSlots="{{['hd','bd']}}">
+                <view class="data-v-09e8c4a8" slot="hd">3、</view>
+                <view class="data-v-09e8c4a8" slot="bd">{{dataInfo.use}}</view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" class="data-v-09e8c4a8" cname="p10" last="1" noc="1" vueId="1832f4de-6" vueSlots="{{['hd','bd']}}">
+                <view class="data-v-09e8c4a8" slot="hd">4、</view>
+                <view class="data-v-09e8c4a8" slot="bd">{{sycjName}}</view>
+            </mg-cell>
+        </view>
+        <view class="p23 cell data-v-09e8c4a8">
+            <mg-cell bind:__l="__l" btt="适用范围" bttc="f32 wei" class="data-v-09e8c4a8" cname="p10" last="1" vueId="1832f4de-7"></mg-cell>
+            <block wx:if="{{dataInfo.range.length}}">
+                <mg-cell bind:__l="__l" btt="{{v}}" bttc="c6" class="data-v-09e8c4a8" cname="p10" last="1" vueId="{{'1832f4de-8-'+i}}" wx:for="{{dataInfo.range}}" wx:for-index="i" wx:for-item="v" wx:key="i"></mg-cell>
+            </block>
+            <mg-cell bind:__l="__l" btt="全门店通用" bttc="c6" class="data-v-09e8c4a8" cname="p10" last="1" vueId="1832f4de-9" wx:else></mg-cell>
+        </view>
+        <view class="p23 cell data-v-09e8c4a8">
+            <mg-cell bind:__l="__l" btt="注意事项" bttc="f32 wei" class="data-v-09e8c4a8" cname="p10" last="1" vueId="1832f4de-10"></mg-cell>
+            <view class="p10 data-v-09e8c4a8">
+                <mg-rtext bind:__l="__l" class="data-v-09e8c4a8" content="{{dataInfo.introduce}}" type="2" vueId="1832f4de-11" wx:if="{{dataInfo.introduce}}"></mg-rtext>
+            </view>
+        </view>
+    </view>
+</view>

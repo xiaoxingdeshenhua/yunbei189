@@ -1,0 +1,1 @@
+<mg-cell arrow="1" bbt="{{desc}}" bind:__l="__l" bind:tab="__e" btt="{{address.address||'暂无自提地址'}}" bttc="f34" class="data-v-72537fb4" data-event-opts="{{[ [ '^tab',[ ['ztshow'] ] ] ]}}" last="1" vueId="6f3f7e63-1"></mg-cell>

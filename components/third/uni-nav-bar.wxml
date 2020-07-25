@@ -1,0 +1,46 @@
+<view class="uni-navbar data-v-5642edd0">
+    <view class="{{['uni-navbar__content data-v-5642edd0',fixed?'uni-navbar--fixed':'',border?'uni-navbar--shadow':'',border?'uni-navbar--border':'']}}" style="{{'background:'+'rgba(255,255,255,'+uropcity+')'+';'}}">
+        <uni-status-bar bind:__l="__l" class="data-v-5642edd0" vueId="89578c26-1" wx:if="{{statusBar}}"></uni-status-bar>
+        <view class="uni-navbar__header uncv data-v-5642edd0" style="{{'color:'+color+';'}}" wx:if="{{urbd}}">
+            <view class="header-l f-g-0 p02 f-y-c data-v-5642edd0">
+                <view class="urlc f-row data-v-5642edd0" style="{{'background:'+'rgba(0, 0, 0,'+uriconopcity+')'+';'}}" wx:if="{{isleft}}">
+                    <view bindtap="__e" class="flex-1 posi-r f-c data-v-5642edd0" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}">
+                        <text class="iconfont iconleft data-v-5642edd0" style="{{'color:'+(uropcity>=1?color:'#fff')+';'+'font-size:'+size+'rpx'+';'}}"></text>
+                    </view>
+                    <view class="urlcsx data-v-5642edd0"></view>
+                    <view bindtap="__e" class="flex-1 posi-r f-c data-v-5642edd0" data-event-opts="{{[ [ 'tap',[ [ 'more',['$event'] ] ] ] ]}}">
+                        <text class="iconfont iconshx data-v-5642edd0" style="{{'color:'+(uropcity>=1?color:'#fff')+';'+'font-size:'+size-6+'rpx'+';'}}"></text>
+                    </view>
+                </view>
+                <slot name="left"></slot>
+            </view>
+            <view class="{{[ 'f-g-1 t-c wei f30 uncv data-v-5642edd0',[isleft?'uni-navbar__header-container':''] ]}}" style="{{'color:'+(uropcity>=1?'':'#fff')+';'+'opacity:'+(isleft?uropcity:'')+';'}}" wx:if="{{title.length}}">{{title}}</view>
+            <view class="uni-navbar__header-container f-c data-v-5642edd0" style="{{'opacity:'+uropcity+';'}}" wx:else>
+                <slot></slot>
+            </view>
+            <view bindtap="__e" class="uni-navbar__header-btns uncv data-v-5642edd0" data-event-opts="{{[ [ 'tap',[ [ 'onClickRight',['$event'] ] ] ] ]}}">
+                <view class="uncv data-v-5642edd0" wx:if="{{rightIcon.length}}">
+                    <text class="{{['iconfont data-v-5642edd0',rightIcon]}}" style="{{'color:'+color+';'+'font-size:'+size+'rpx'+';'}}"></text>
+                </view>
+                <view class="uni-navbar-btn-text uncv data-v-5642edd0" wx:if="{{rightText.length&&!rightIcon.length}}">{{rightText}}</view>
+                <slot name="right"></slot>
+            </view>
+        </view>
+        <slot wx:else></slot>
+    </view>
+    <view class="uni-navbar__placeholder data-v-5642edd0" wx:if="{{fixed&&ispr}}">
+        <uni-status-bar bind:__l="__l" class="data-v-5642edd0" vueId="89578c26-2" wx:if="{{statusBar}}"></uni-status-bar>
+        <view class="uni-navbar__placeholder-view data-v-5642edd0"></view>
+    </view>
+    <mg-popup bind:__l="__l" bind:input="__e" class="data-v-5642edd0" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showMore','$event',[] ] ] ] ] ]}}" position="top" value="{{showMore}}" vueId="89578c26-3" vueSlots="{{['default']}}" zIndex="10000">
+        <view class="bf p3 data-v-5642edd0" style="padding-top:44px;">
+            <view class="mb20 data-v-5642edd0">功能直达</view>
+            <view class="f-raw data-v-5642edd0">
+                <view bindtap="__e" class="urgnc f-c-c data-v-5642edd0" data-event-opts="{{[ [ 'tap',[ [ 'gogn',[i] ] ] ] ]}}" wx:for="{{gnarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <text class="{{['iconfont cf f46 data-v-5642edd0','icon'+v.icon]}}"></text>
+                    <text class="mt10 cf f26 data-v-5642edd0">{{v.name}}</text>
+                </view>
+            </view>
+        </view>
+    </mg-popup>
+</view>

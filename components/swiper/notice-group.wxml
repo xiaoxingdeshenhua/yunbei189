@@ -1,0 +1,16 @@
+<view class="bf p03 f-y-c data-v-3d8a34dd">
+    <view class="f-g-0 mr20 data-v-3d8a34dd">
+        <view class="limg data-v-3d8a34dd" wx:if="{{co.txtOrImg==1&&co.icon[0].url}}">
+            <mg-img bind:__l="__l" class="data-v-3d8a34dd" m="aspectFit" src="{{co.icon[0].url}}" vueId="c2d838a0-1"></mg-img>
+        </view>
+        <view class="data-v-3d8a34dd" style="{{'color:'+co.notice.color+';'}}" wx:else>{{co.notice.title}}</view>
+    </view>
+    <view class="f-g-1 ngr b-s1 bs10 data-v-3d8a34dd">
+        <uni-notice-bar backgroundColor="#fff" bind:__l="__l" class="data-v-3d8a34dd" color="{{tColor}}" scrollable="{{true}}" single="{{true}}" text="{{notice}}" vueId="c2d838a0-2" wx:if="{{type==1}}"></uni-notice-bar>
+        <swiper autoplay="{{true}}" circular="true" class="wh data-v-3d8a34dd" interval="2000" vertical="true" wx:else>
+            <swiper-item class="f-c-xc data-v-3d8a34dd" wx:for="{{list}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <rich-text class="w100 c6 f24 t-o-e data-v-3d8a34dd" nodes="{{v.content}}" wx:if="{{v.content}}"></rich-text>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

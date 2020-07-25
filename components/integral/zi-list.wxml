@@ -1,0 +1,21 @@
+<view class="data-v-5ef9a022">
+    <mg-modal bind:__l="__l" bind:input="__e" class="data-v-5ef9a022" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showGg','$event',[] ] ] ] ] ]}}" ismr="{{true}}" value="{{showGg}}" vueId="706affb2-1" vueSlots="{{['default']}}" width="90%" zIndex="{{2000}}">
+        <view class="ggc bf posi-r data-v-5ef9a022">
+            <view class="container pb115 ggb data-v-5ef9a022">
+                <view class="p23 data-v-5ef9a022">
+                    <view bindtap="__e" class="bf bs20 p23 mb20 f-row data-v-5ef9a022" data-event-opts="{{[ [ 'tap',[ [ 'chooseAdd',['$0','$1','$2'],[ [ ['co','',i,'id'] ],[ ['co','',i,'address'] ],[ ['co','',i,'title'] ] ] ] ] ] ]}}" wx:for="{{co}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                        <view class="f-g-1 data-v-5ef9a022">
+                            <view class="f-row data-v-5ef9a022">
+                                <view class="f32 mr10 t-o-e data-v-5ef9a022" style="max-width:80%;">{{v.address}}</view>
+                            </view>
+                            <view class="f-row f24 c6 mt15 data-v-5ef9a022">
+                                <text class="mr20 data-v-5ef9a022">{{v.title}}</text>
+                            </view>
+                        </view>
+                        <view class="data-v-5ef9a022">{{v.id}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </mg-modal>
+</view>

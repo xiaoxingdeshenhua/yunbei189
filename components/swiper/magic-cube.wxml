@@ -1,0 +1,42 @@
+<view class="picture-magic-ind data-v-06359f6b" style="{{'padding:'+''+co.upDownPadding+u+' '+(co.leftRightPadding||20)+'rpx'+';'+'margin-top:'+''+co.topMargin+u+';'}}">
+    <view class="picture-magic-cont data-v-06359f6b">
+        <block wx:if="{{!co.reverse}}">
+            <view class="at-col-6 data-v-06359f6b">
+                <view class="picture-magic-item data-v-06359f6b">
+                    <view bindtap="__e" class="picture-magic-img1 o-h data-v-06359f6b" data-event-opts="{{[ [ 'tap',[ [ 'goTo',['$0'],['co.pictureList.__$n0'] ] ] ] ]}}" style="{{'border-radius:'+''+co.radius+u+';'}}">
+                        <mg-img bind:__l="__l" class="data-v-06359f6b" src="{{co.pictureList[0].url}}" vueId="c091d6f6-1"></mg-img>
+                    </view>
+                </view>
+            </view>
+            <view class="at-col-6 data-v-06359f6b">
+                <view class="picture-magic-item data-v-06359f6b">
+                    <view bindtap="__e" class="picture-magic-img o-h picture-magic-img-space data-v-06359f6b" data-event-opts="{{[ [ 'tap',[ [ 'goTo',['$0'],['co.pictureList.__$n1'] ] ] ] ]}}" style="{{'border-radius:'+''+co.radius+u+';'}}">
+                        <mg-img bind:__l="__l" class="data-v-06359f6b" src="{{co.pictureList[1].url}}" vueId="c091d6f6-2"></mg-img>
+                    </view>
+                    <view bindtap="__e" class="picture-magic-img o-h data-v-06359f6b" data-event-opts="{{[ [ 'tap',[ [ 'goTo',['$0'],['co.pictureList.__$n2'] ] ] ] ]}}" style="{{'border-radius:'+''+co.radius+u+';'}}">
+                        <mg-img bind:__l="__l" class="data-v-06359f6b" src="{{co.pictureList[2].url}}" vueId="c091d6f6-3"></mg-img>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="at-col-6 data-v-06359f6b">
+                <view class="picture-magic-item data-v-06359f6b">
+                    <view bindtap="__e" class="picture-magic-img o-h picture-magic-img-space data-v-06359f6b" data-event-opts="{{[ [ 'tap',[ [ 'goTo',['$0'],['co.pictureList.__$n1'] ] ] ] ]}}" style="{{'border-radius:'+''+co.radius+u+';'}}">
+                        <mg-img bind:__l="__l" class="data-v-06359f6b" src="{{co.pictureList[1].url}}" vueId="c091d6f6-4"></mg-img>
+                    </view>
+                    <view bindtap="__e" class="picture-magic-img o-h data-v-06359f6b" data-event-opts="{{[ [ 'tap',[ [ 'goTo',['$0'],['co.pictureList.__$n2'] ] ] ] ]}}" style="{{'border-radius:'+''+co.radius+u+';'}}">
+                        <mg-img bind:__l="__l" class="data-v-06359f6b" src="{{co.pictureList[2].url}}" vueId="c091d6f6-5"></mg-img>
+                    </view>
+                </view>
+            </view>
+            <view class="at-col-6 data-v-06359f6b">
+                <view class="picture-magic-item data-v-06359f6b">
+                    <view bindtap="__e" class="picture-magic-img1 o-h data-v-06359f6b" data-event-opts="{{[ [ 'tap',[ [ 'goTo',['$0'],['co.pictureList.__$n0'] ] ] ] ]}}" style="{{'border-radius:'+''+co.radius+u+';'}}">
+                        <mg-img bind:__l="__l" class="data-v-06359f6b" src="{{co.pictureList[0].url}}" vueId="c091d6f6-6"></mg-img>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

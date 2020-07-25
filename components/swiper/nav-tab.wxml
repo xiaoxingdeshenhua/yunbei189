@@ -1,0 +1,36 @@
+<view class="{{['navTabBox',cname]}}" wx:if="{{type==1}}">
+    <view class="shortTab" wx:if="{{tabs.length<=5}}">
+        <view class="navTab" style="{{'height:'+height+'rpx'+';'}}">
+            <view bindtap="__e" class="{{['navTabItem',icname]}}" data-event-opts="{{[ [ 'tap',[ [ 'navClick',[index] ] ] ] ]}}" style="{{item.s0}}" wx:for="{{$root.l0}}" wx:key="index">
+                <view class="p-r">{{item['$orig'].name+''}}<text class="p-a c9 f24 onum" wx:if="{{item['$orig'].num}}">{{item['$orig'].num}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="underlineBox" style="{{'transform:'+'translateX('+isLeft+'px)'+';'+'width:'+isWidth+'px'+';'}}" wx:if="{{isWidth>0}}">
+            <view class="underline" style="{{'background:'+(color||tColor)+';'}}"></view>
+        </view>
+    </view>
+    <view class="longTab" wx:if="{{tabs.length>5}}">
+        <scroll-view scrollIntoView="{{toView}}" scrollWithAnimation="{{true}}" scrollX="true" style="white-space:nowrap;display:flex;">
+            <view bindtap="__e" class="{{['longItem',icname]}}" data-event-opts="{{[ [ 'tap',[ [ 'longClick',[index] ] ] ] ]}}" data-index="{{index}}" id="{{'id'+index}}" style="{{'color:'+(index==tabClick?'#000':'#000')+';'+'height:'+height+'rpx'+';'}}" wx:for="{{tabs}}" wx:key="index">{{item.name}}</view>
+            <view class="underlineBox" style="{{'transform:'+'translateX('+isLeft+'px)'+';'}}">
+                <view class="underline" style="{{'background:'+(color||tColor)+';'+'width:'+uw+'rpx'+';'}}"></view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<view class="{{['navTabBox',cname]}}" wx:else>
+    <scroll-view class="ws-n p20 longTab" scrollIntoView="{{toView}}" scrollWithAnimation="{{true}}" scrollX="true">
+        <view bindtap="__e" class="{{['p-r longItem longItem2',icname]}}" data-event-opts="{{[ [ 'tap',[ [ 'longClick',[index] ] ] ] ]}}" id="{{'id'+index}}" style="{{'color:'+(index==tabClick?color||tColor:ncolor)+';'+'width:'+itw+';'}}" wx:for="{{tabs}}" wx:key="index">
+            <view class="f-c mt10">
+                <view class="typeimg bf6 bsf">
+                    <mg-img bind:__l="__l" src="{{item.icon}}" vueId="{{'2bba8597-1-'+index}}"></mg-img>
+                </view>
+            </view>
+            <view style="{{'height:'+height+'rpx'+';'+'line-height:'+height+'rpx'+';'}}">{{item.name}}</view>
+            <view class="p-a underlineBox b0" style="{{'width:'+'100%'+';'}}">
+                <view class="underline" style="{{'background:'+(index==tabClick?color||tColor:'')+';'+'width:'+uw+'rpx'+';'}}"></view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

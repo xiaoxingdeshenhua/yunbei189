@@ -1,0 +1,39 @@
+<view bindtap="__e" class="bf bs30 mb30 pb10 data-v-bba07f68" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/order/order-dl?id='+co.id] ] ] ] ] ] ]}}">
+    <mg-cell bgc="#FAFBFC" bind:__l="__l" class="data-v-bba07f68" cname="p23 bfc" last="1" noc="1" vueId="40319cc6-1" vueSlots="{{['bd']}}">
+        <view class="data-v-bba07f68" slot="bd">
+            <view class="f-bt data-v-bba07f68">
+                <view class="f-g-1 f30 f-y-c data-v-bba07f68">
+                    <text class="t-o-e data-v-bba07f68">{{co.storeName+''}}<text class="data-v-bba07f68" wx:if="{{orderset.oIdOpen==1}}">(<text class="data-v-bba07f68" style="{{'color:'+tColor+';'}}">{{'#'+(co.deliveryMode==1?co.mId:co.oId)}}</text>)</text>
+                    </text>
+                    <text class="iconfont iconright c0 f24 data-v-bba07f68"></text>
+                </view>
+                <view class="f-g-0 f30 data-v-bba07f68" style="{{'color:'+$root.m0+';'}}">{{''+$root.m1+stime}}</view>
+            </view>
+            <view class="mt10 f-x-bt f22 c9 data-v-bba07f68">
+                <text class="data-v-bba07f68">{{$root.m2}}</text>
+                <text class="data-v-bba07f68" wx:if="{{co.state==7}}">订单超时未支付</text>
+                <text class="data-v-bba07f68" wx:if="{{co.deliveryMode==1&&co.state==4}}">{{'取货码:'+co.selfCode}}</text>
+            </view>
+        </view>
+    </mg-cell>
+    <mg-cell bind:__l="__l" btt="{{co.goods[0].name+' 等 '+co.num+'件商品'}}" bttc="c6" class="data-v-bba07f68" cname="p23" ft="{{''+(co.symbol||sl)+co.money}}" ftc="wei c3" last="1" noc="1" vueId="40319cc6-2"></mg-cell>
+    <view class="p3 f-x-bt data-v-bba07f68">
+        <view class="f-g-1 f-row data-v-bba07f68">
+            <view class="f-y-c f24 data-v-bba07f68" style="{{'color:'+tColor+';'}}" wx:if="{{co.deliveryMode==1}}">
+                <text class="iconfont iconmd mr10 f36 data-v-bba07f68" style="{{'color:'+tColor+';'}}"></text>自提订单</view>
+        </view>
+        <view class="f-g-0 f-x-e data-v-bba07f68">
+            <view catchtap="__e" class="obtn b-d data-v-bba07f68" data-event-opts="{{[ [ 'tap',[ [ '$emit',[ 'operation',[ 'o',['t','qxdd'],['co',co],['tip',1] ] ] ] ] ] ]}}" wx:if="{{co.state==1}}">取消订单</view>
+            <view catchtap="__e" class="obtn cf data-v-bba07f68" data-event-opts="{{[ [ 'tap',[ [ '$emit',[ 'operation',[ 'o',['t','ljzf'],['co',co] ] ] ] ] ] ]}}" style="{{'background:'+tColor+';'}}" wx:if="{{co.state==1}}">立即支付</view>
+            <view catchtap="__e" class="obtn b-d data-v-bba07f68" data-event-opts="{{[ [ 'tap',[ [ '$emit',[ 'operation',[ 'o',['t','sqtk'],['co',co] ] ] ] ] ] ]}}" wx:if="{{co.isTk==1&&(co.state>2&&orderset.refundOpen==1||co.state==2)}}">{{co.state==2?'取消订单':'申请退款'}}</view>
+            <view catchtap="__e" class="obtn cf data-v-bba07f68" data-event-opts="{{[ [ 'tap',[ [ '$emit',[ 'operation',[ 'o',['t','cd'],['co',co] ] ] ] ] ] ]}}" style="{{'background:'+tColor+';'}}" wx:if="{{(co.state==2||co.state==3||co.state==4)&&co.deliveryMode>1}}">催单</view>
+            <view catchtap="__e" class="obtn b-d data-v-bba07f68" data-event-opts="{{[ [ 'tap',[ [ '$emit',[ 'operation',[ 'o',['t','lxsj'],['co',co] ] ] ] ] ] ]}}" wx:if="{{co.state==3}}">联系商家</view>
+            <view catchtap="__e" class="obtn cf data-v-bba07f68" data-event-opts="{{[ [ 'tap',[ [ '$emit',[ 'operation',[ 'o',['t','qrsh'],['co',co] ] ] ] ] ] ]}}" style="{{'background:'+tColor+';'}}" wx:if="{{co.state==4}}">确认收货</view>
+            <view catchtap="__e" class="obtn cf data-v-bba07f68" data-event-opts="{{[ [ 'tap',[ [ '$emit',[ 'operation',[ 'o',['t','pj'],['co',co] ] ] ] ] ] ]}}" style="{{'background:'+tColor+';'}}" wx:if="{{co.state==5&&orderset.isAssess}}">评价</view>
+            <view class="obtn cf data-v-bba07f68" style="{{'background:'+tColor+';'}}" wx:if="{{co.state==9}}">退款中</view>
+            <view class="obtn b-d data-v-bba07f68" wx:if="{{co.state==10}}">已退款</view>
+            <view class="obtn b-d c9 data-v-bba07f68" wx:if="{{co.state==11}}">已拒绝</view>
+            <view catchtap="__e" class="obtn b-d data-v-bba07f68" data-event-opts="{{[ [ 'tap',[ [ '$emit',[ 'operation',[ 'o',['t','scdd'],['co',co] ] ] ] ] ] ]}}" wx:if="{{co.state>=5&&co.state!=9}}">删除订单</view>
+        </view>
+    </view>
+</view>

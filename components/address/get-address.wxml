@@ -1,0 +1,1 @@
+<mg-cell arrow="1" bbt="{{desc}}" bind:__l="__l" bind:tab="__e" btt="{{address.address||'暂无地址'}}" bttc="f34" class="data-v-352fc220" data-event-opts="{{[ [ '^tab',[ ['goChoose'] ] ] ]}}" last="1" vueId="ab08fe22-1"></mg-cell>

@@ -1,0 +1,3 @@
+<view class="p03 data-v-708f9219" style="{{'margin-top:'+''+co.topMargin+u+';'}}">
+    <video binderror="__e" class="w100 data-v-708f9219" controls="{{true}}" data-event-opts="{{[ [ 'error',[ [ 'videoErrorCallback',['$event'] ] ] ] ]}}" id="myVideo" poster="{{co.icon[0].url}}" src="{{co.videocon.links}}"></video>
+</view>

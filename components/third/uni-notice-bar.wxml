@@ -1,0 +1,10 @@
+<view bindtap="__e" class="uni-noticebar" data-event-opts="{{[ [ 'tap',[ [ 'onClick',['$event'] ] ] ] ]}}" style="{{'background-color:'+backgroundColor+';'+'color:'+color+';'}}" wx:if="{{show}}">
+    <view class="{{['uni-noticebar__content',scrollable||single||moreText?'uni-noticebar--flex':'']}}">
+        <view class="{{['uni-noticebar__content-text',scrollable?'uni-noticebar--scrollable':'',!scrollable&&(single||moreText)?'uni-noticebar--single':'']}}">
+            <view class="uni-noticebar__content-inner" id="{{elId}}" style="{{'animation:'+animation+';'+'-webkit-animation:'+animation+';'}}">{{text}}</view>
+        </view>
+        <view bindtap="__e" class="uni-noticebar__content-more" data-event-opts="{{[ [ 'tap',[ [ 'clickMore',['$event'] ] ] ] ]}}" style="{{'width:'+(moreText?'180upx':'20px')+';'}}" wx:if="{{showGetMore==='true'||showGetMore===true}}">
+            <view class="uni-noticebar__content-more-text" wx:if="{{moreText}}">{{moreText}}</view>
+        </view>
+    </view>
+</view>

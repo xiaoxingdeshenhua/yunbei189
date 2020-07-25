@@ -1,0 +1,81 @@
+<view class="data-v-7b75f84b">
+    <view class="posi-f carc c9 f22 data-v-7b75f84b" hidden="{{!cshow}}" style="{{$root.s0}}">
+        <view class="mjts cartopmj data-v-7b75f84b" hidden="{{!(!showCar&&mjInfo.discount.length)}}" style="background:#FAF0DE;">
+            <text class="data-v-7b75f84b" wx:if="{{carList.length||!mjInfo.discount.length}}">{{mjInfo.text}}</text>
+            <block wx:else>
+                <text class="data-v-7b75f84b" wx:for="{{mjInfo.discount}}" wx:for-index="i" wx:for-item="v" wx:key="i">{{'满'+v.full+'减'+v.reduce}}<text class="m01 data-v-7b75f84b" wx:if="{{i<mjInfo.discount.length-1}}">,</text>
+                </text>
+            </block>
+        </view>
+        <view class="car posi-r f-row data-v-7b75f84b">
+            <view bindtap="__e" class="f-g-1 carb f-row data-v-7b75f84b" data-event-opts="{{[ [ 'tap',[ [ 'openCar',['$event'] ] ] ] ]}}" style="background:#393939;">
+                <view class="{{['carb-img posi-r f-c animated data-v-7b75f84b',carList.length?'bounceIn':'']}}">
+                    <view class="carimg data-v-7b75f84b">
+                        <mg-img bind:__l="__l" class="data-v-7b75f84b" src="/static/carf2.png" vueId="ab5895a6-1" wx:if="{{carList.length}}"></mg-img>
+                        <mg-img bind:__l="__l" class="data-v-7b75f84b" src="/static/car2.png" vueId="ab5895a6-2" wx:else></mg-img>
+                    </view>
+                    <view class="posi-a dot f-c data-v-7b75f84b" wx:if="{{carList.length}}">{{getTotal.num}}</view>
+                </view>
+                <view class="f-c-xc data-v-7b75f84b">
+                    <view class="data-v-7b75f84b">
+                        <text class="wei f34 cf data-v-7b75f84b" wx:if="{{carList.length}}">{{sl+carPrice.nowPrice}}</text>
+                        <text class="f28 data-v-7b75f84b" wx:else>未选购商品</text>
+                        <text class="ml10 t-d-l data-v-7b75f84b" wx:if="{{carPrice.reduceMoney>0}}">{{sl+getTotal.total}}</text>
+                    </view>
+                    <view class="data-v-7b75f84b">
+                        <text class="data-v-7b75f84b" wx:if="{{buytype==2}}">{{'另需配送费'+sl+sjxx.storeInfo.deliveryMoney}}</text>
+                        <text class="m01 data-v-7b75f84b" wx:if="{{buytype==2&&sjxx.orderSet.data.support>1}}">|</text>
+                        <text class="data-v-7b75f84b" wx:if="{{sjxx.orderSet.data.support>1}}">支持自取</text>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="__e" class="f-g-0 carf f-c data-v-7b75f84b" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" style="{{'background:'+(qsText.reach?tColor:'#323232')+';'+'border:'+(qsText.reach?'1rpx solid '+tColor:'')+';'}}">
+                <view class="{{['f28 data-v-7b75f84b',qsText.reach?'cf':'']}}" wx:if="{{isLogin||!qsText.reach}}">{{qsText.text}}</view>
+                <sq-btn bind:__l="__l" bind:refresh="__e" class="data-v-7b75f84b" cname="{{'f28 '+(qsText.reach?'cf':'')}}" data-event-opts="{{[ [ '^refresh',[ ['goPay'] ] ] ]}}" h="105" t="{{qsText.text}}" vueId="ab5895a6-3" wx:else></sq-btn>
+            </view>
+        </view>
+    </view>
+    <view class="posi-f closec data-v-7b75f84b" hidden="{{!xxshow}}" style="{{'bottom:'+carBtm+'rpx'+';'}}">
+        <view class="h100 f34 cf f-c-xc data-v-7b75f84b">
+            <view class="f-c data-v-7b75f84b">{{sjxx.orderSet.data.orders?'门店接受预定中':'门店休息中'}}</view>
+        </view>
+    </view>
+    <mg-popup bind:__l="__l" bind:input="__e" class="data-v-7b75f84b" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showCar','$event',[] ] ] ] ] ]}}" value="{{showCar}}" vueId="ab5895a6-4" vueSlots="{{['default']}}">
+        <view class="mjts data-v-7b75f84b" hidden="{{!mjInfo.discount.length}}" style="background:#FAF0DE;">
+            <text class="data-v-7b75f84b" wx:if="{{carList.length||!mjInfo.discount.length}}">{{mjInfo.text}}</text>
+            <block wx:else>
+                <text class="data-v-7b75f84b" wx:for="{{mjInfo.discount}}" wx:for-index="i" wx:for-item="v" wx:key="i">{{'满'+v.full+'减'+v.reduce}}<text class="m01 data-v-7b75f84b" wx:if="{{i<mjInfo.discount.length-1}}">,</text>
+                </text>
+            </block>
+        </view>
+        <view class="carlistc p03 bf data-v-7b75f84b" style="{{'padding-bottom:'+carlistPab+'rpx'+';'}}">
+            <mg-cell bind:__l="__l" class="data-v-7b75f84b" cname="p30" isl="1" vueId="{{'ab5895a6-5'+','+'ab5895a6-4'}}" vueSlots="{{['bd','ft']}}">
+                <view class="f-y-c data-v-7b75f84b" slot="bd">
+                    <text class="f34 data-v-7b75f84b">购物车</text>
+                    <text bindtap="__e" class="ml10 f24 data-v-7b75f84b" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','bzf'] ] ] ] ] ] ]}}" hidden="{{!(getTotal.bzf>0)}}">( 包装费<text class="cf3 data-v-7b75f84b">{{sl+getTotal.bzf}}</text>
+                        <text class="iconfont iconwen f24 m01 data-v-7b75f84b"></text>)</text>
+                </view>
+                <view bindtap="__e" class="f-y-c f24 data-v-7b75f84b" data-event-opts="{{[ [ 'tap',[ [ 'clearCar',['$event'] ] ] ] ]}}" slot="ft">
+                    <text class="iconfont iconqingkong mr10 data-v-7b75f84b"></text>清空购物车</view>
+            </mg-cell>
+            <view class="p0 carbody o-y-s data-v-7b75f84b">
+                <mg-cell bind:__l="__l" brs="5rpx" class="data-v-7b75f84b" cname="p30 la124" h="104" img="{{v['$orig'].icon}}" vueId="{{'ab5895a6-6-'+i+','+'ab5895a6-4'}}" vueSlots="{{['bd']}}" w="104" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <view class="data-v-7b75f84b" slot="bd">
+                        <view class="f-bt data-v-7b75f84b">
+                            <view class="t-o-e data-v-7b75f84b">{{v['$orig'].name}}</view>
+                            <view class="f-g-0 f32 data-v-7b75f84b">{{sl+v.m0}}</view>
+                        </view>
+                        <view class="f-bt mt10 data-v-7b75f84b">
+                            <view class="f-g-1 f24 c9 f-y-c data-v-7b75f84b">
+                                <text class="ml10 data-v-7b75f84b" wx:if="{{v['$orig'].isSpec==1}}">{{v['$orig'].data}}</text>
+                                <text class="data-v-7b75f84b" wx:if="{{v['$orig'].sxdata}}">{{'('+v['$orig'].sxdata+')'}}</text>
+                                <text class="ml10 data-v-7b75f84b" wx:if="{{v['$orig'].jldata}}">{{'+'+v['$orig'].jldata}}</text>
+                            </view>
+                            <add-goods bind:__l="__l" bind:add="__e" bind:dec="__e" class="data-v-7b75f84b" cname="f-g-0 mt10" co="{{v['$orig']}}" data-event-opts="{{[ [ '^add',[ [ 'add',['$0'],[ [ ['carList','',i] ] ] ] ] ],[ '^dec',[ [ 'dec',['$0'],[ [ ['carList','',i] ] ] ] ] ] ]}}" isprice="{{0}}" showspec="{{false}}" vueId="{{'ab5895a6-7-'+i+','+'ab5895a6-6-'+i}}"></add-goods>
+                        </view>
+                    </view>
+                </mg-cell>
+            </view>
+        </view>
+    </mg-popup>
+</view>

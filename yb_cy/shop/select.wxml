@@ -1,0 +1,54 @@
+<view class="f-col h100 data-v-2721f858">
+    <view class="f-g-0 data-v-2721f858">
+        <map bindcallouttap="__e" class="map data-v-2721f858" data-event-opts="{{[ [ 'callouttap',[ [ 'markertap',['$event'] ] ] ] ]}}" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{covers}}" scale="12" wx:if="{{system.storeTop==1}}"></map>
+        <mg-swiper bind:__l="__l" class="data-v-2721f858" co="{{swiper}}" color="{{tColor}}" u="rpx" vueId="44c9de12-1" wx:if="{{system.storeTop==2}}"></mg-swiper>
+        <nav-tab bind:__l="__l" bind:changeTab="__e" bind:input="__e" class="data-v-2721f858" color="{{tColor}}" data-event-opts="{{[ [ '^changeTab',[ ['changeTab'] ] ],[ '^input',[ [ '__set_model',[ '','aIdx','$event',[] ] ] ] ] ]}}" tabs="{{tabs}}" value="{{aIdx}}" vueId="44c9de12-2"></nav-tab>
+    </view>
+    <scroll-view class="{{['f-g-1 o-a p23 data-v-2721f858',hasTabbar?'pb130':'']}}" scrollY="true">
+        <view bindtap="__e" class="bf bs20 mb20 data-v-2721f858" data-event-opts="{{[ [ 'tap',[ [ 'selectStore',['$0',i],[ [ ['addList','',i] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="p3 b-b-e data-v-2721f858">
+                <view class="f-x-bt mb20 data-v-2721f858">
+                    <view class="flex-1 f-y-c data-v-2721f858">
+                        <view class="f32 t-o-e data-v-2721f858">{{v['$orig'].name}}</view>
+                        <view class="f-g-0 data-v-2721f858">
+                            <bk-b bind:__l="__l" cName="f24 ml20" class="data-v-2721f858" color="{{tColor}}" t="当前店铺" vueId="{{'44c9de12-3-'+i}}" wx:if="{{lastPageId==v['$orig'].id}}"></bk-b>
+                        </view>
+                    </view>
+                    <view catchtap="__e" class="b-s-1 bsf sc f-c ml20 data-v-2721f858" data-event-opts="{{[ [ 'tap',[ [ 'scsj',['$0',i],[ [ ['addList','',i] ] ] ] ] ] ]}}">
+                        <text class="{{['iconfont iconxingk f28 data-v-2721f858',v['$orig'].collection==1?'iconxing':'']}}" style="{{'color:'+(v['$orig'].collection==1?tColor:'')+';'}}"></text>
+                    </view>
+                </view>
+                <view class="f-bt f24 c6 data-v-2721f858">
+                    <view class="data-v-2721f858">
+                        <text class="iconfont iconsj mr10 data-v-2721f858"></text>
+                        <text class="data-v-2721f858">{{v.m0}}</text>
+                    </view>
+                    <text class="data-v-2721f858">{{'距您'+v['$orig'].distance}}</text>
+                </view>
+                <view class="f-bt f24 c6 mt15 data-v-2721f858">
+                    <view class="f-g-1 t-o-e mr20 data-v-2721f858">
+                        <text class="iconfont icondw mr10 data-v-2721f858"></text>
+                        <text class="data-v-2721f858">{{v['$orig'].address}}</text>
+                    </view>
+                    <view class="f-g-0 f-y-c data-v-2721f858">
+                        <text class="mr10 data-v-2721f858">查看详情</text>
+                        <text class="iconfont iconxyy c6 f28 data-v-2721f858"></text>
+                    </view>
+                </view>
+            </view>
+            <view class="f-x-bt p23 data-v-2721f858">
+                <view class="data-v-2721f858">
+                    <text class="c6 data-v-2721f858">营业状态：</text>
+                    <text class="f24 data-v-2721f858" style="{{'color:'+(v['$orig'].isOpen==1?tColor:'#999')+';'}}">{{v['$orig'].isOpen==1?'营业中':'休息中'}}</text>
+                </view>
+                <view class="data-v-2721f858">
+                    <bk-b bind:__l="__l" bind:tab="__e" cName="f24 ml20" class="data-v-2721f858" color="#666" data-event-opts="{{[ [ '^tab',[ [ 'tel',['$0'],[ [ ['addList','',i,'tel'] ] ] ] ] ] ]}}" t="电话" type="2" vueId="{{'44c9de12-4-'+i}}"></bk-b>
+                    <bk-b bind:__l="__l" bind:tab="__e" cName="f24 ml20" class="data-v-2721f858" color="#666" data-event-opts="{{[ [ '^tab',[ [ 'dh',['$0'],[ [ ['addList','',i] ] ] ] ] ] ]}}" t="导航" type="2" vueId="{{'44c9de12-5-'+i}}"></bk-b>
+                </view>
+            </view>
+        </view>
+        <jzz bgcolor="transparent" bind:__l="__l" class="data-v-2721f858" mygd="{{mygd}}" nodata="{{addList.length==0&&isget}}" vueId="44c9de12-6"></jzz>
+    </scroll-view>
+    <sqtc bind:__l="__l" bind:input="__e" class="data-v-2721f858" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showSq','$event',[] ] ] ] ] ]}}" value="{{showSq}}" vueId="44c9de12-7"></sqtc>
+    <tab-bar bind:__l="__l" bind:refresh="__e" class="data-v-2721f858 vue-ref" data-event-opts="{{[ [ '^refresh',[ ['tbrh'] ] ] ]}}" data-ref="tabbar" vueId="44c9de12-8"></tab-bar>
+</view>

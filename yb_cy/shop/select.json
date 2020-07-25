@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "选择门店",
+    "usingComponents": {
+        "nav-tab": "/components/swiper/nav-tab",
+        "bk-b": "/components/common/block-b",
+        "sqtc": "/components/common/sqtc",
+        "tab-bar": "/components/common/tabbar",
+        "jzz": "/components/common/jzz",
+        "mg-swiper": "/components/swiper/swiper",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img"
+    }
+}

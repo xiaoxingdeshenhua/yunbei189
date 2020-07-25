@@ -1,0 +1,13 @@
+{
+    "usingComponents": {
+        "nav-tab": "/components/swiper/nav-tab",
+        "bk-b": "/components/common/block-b",
+        "gf-evaluate": "/components/goods/gf-evaluate",
+        "jzz": "/components/common/jzz",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

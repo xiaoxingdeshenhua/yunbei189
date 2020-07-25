@@ -1,0 +1,117 @@
+.uni-noticebar {
+    padding: 12rpx 0rpx;
+    font-size: 24rpx;
+    line-height: 1.5;
+    margin-bottom: 20rpx;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+    justify-content: left;
+}
+
+.uni-noticebar__close {
+    color: #999;
+    margin-right: 24rpx;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.uni-noticebar__content {
+    -webkit-box-flex: 1;
+    flex: 1;
+    overflow: hidden;
+}
+
+.uni-noticebar__content.uni-noticebar--flex {
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+}
+
+.uni-noticebar__content-icon {
+    display: inline-block;
+    z-index: 1;
+    padding-right: 12rpx;
+}
+
+.uni-noticebar__content-more {
+    width: 180rpx;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    word-break: keep-all;
+    margin-left: 10rpx;
+    color: #999;
+}
+
+.uni-noticebar__content-more-text {
+    font-size: 24rpx;
+    white-space: nowrap;
+}
+
+.uni-noticebar__content-text {
+    word-break: break-all;
+    line-height: 1.5;
+    display: inline;
+}
+
+.uni-noticebar__content-text.uni-noticebar--single {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.uni-noticebar__content-text.uni-noticebar--scrollable {
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: block;
+    overflow: hidden;
+}
+
+.uni-noticebar__content-text.uni-noticebar--scrollable .uni-noticebar__content-inner {
+    padding-left: 100%;
+    white-space: nowrap;
+    display: inline-block;
+    transform: translateZ(0);
+}
+
+.uni-noticebar__content-inner {
+    font-size: 24rpx;
+    display: inline;
+}
+
+@-webkit-keyframes notice {
+    100% {
+        transform: translate3d(-100%,0,0);
+    }
+}
+
+@keyframes notice {
+    100% {
+        transform: translate3d(-100%,0,0);
+    }
+}

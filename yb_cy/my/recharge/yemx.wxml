@@ -1,0 +1,7 @@
+<view class="mh100 data-v-6dcb6c87">
+    <nav-tab bind:__l="__l" bind:changeTab="__e" bind:input="__e" class="data-v-6dcb6c87" cname="fixedtop" data-event-opts="{{[ [ '^changeTab',[ ['changeTab'] ] ],[ '^input',[ [ '__set_model',[ '','aIdx','$event',[] ] ] ] ] ]}}" tabs="{{tabs}}" value="{{aIdx}}" vueId="8787a84e-1"></nav-tab>
+    <view class="mt120 data-v-6dcb6c87">
+        <mg-cell bbt="{{v.m0}}" bind:__l="__l" btt="{{v['$orig'].note}}" bttc="f32" class="data-v-6dcb6c87" cname="p43 f-s" ft="{{v['$orig'].type==1?'+'+v['$orig'].money:'-'+v['$orig'].money}}" last="1" vueId="{{'8787a84e-2-'+i}}" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i"></mg-cell>
+    </view>
+    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-6dcb6c87" mygd="{{mygd}}" nodata="{{dlData.length==0&&isget}}" vueId="8787a84e-3"></jzz>
+</view>

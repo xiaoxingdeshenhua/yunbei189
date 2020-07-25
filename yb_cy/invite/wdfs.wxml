@@ -1,0 +1,15 @@
+<view class="bf mh100 data-v-58f29743">
+    <view class="xqyfixedtop data-v-58f29743">
+        <nav-tab bind:__l="__l" bind:changeTab="__e" bind:input="__e" class="data-v-58f29743" cname="hlb" color="#FF3535" data-event-opts="{{[ [ '^changeTab',[ ['changeTab'] ] ],[ '^input',[ [ '__set_model',[ '','aIdx','$event',[] ] ] ] ] ]}}" tabs="{{tabs}}" value="{{aIdx}}" vueId="32a66787-1" wx:if="{{aIdx!=-1}}"></nav-tab>
+    </view>
+    <view class="{{['p03 data-v-58f29743',aIdx!=-1?'mt90':'']}}">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" brs="50%" class="data-v-58f29743" cname="p30" color="#F10D24" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','syxq?t=4&uid='+v['$orig'].userId] ] ] ] ] ] ]}}" ft="{{'预计收益'+sl+v['$orig'].money}}" ftc="f-s-1 wei" h="72" hc="1" img="{{v['$orig'].portrait}}" isl="1" vueId="{{'32a66787-2-'+i}}" vueSlots="{{['bd']}}" w="72" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="data-v-58f29743" slot="bd">
+                <view class="f26 data-v-58f29743">{{v['$orig'].userName}}<text class="f22 c9 ml5 data-v-58f29743">{{'（UID：'+v['$orig'].userId+'）'}}</text>
+                </view>
+                <view class="f22 c9 mt10 data-v-58f29743">{{'推荐时间：'+v.g0}}</view>
+            </view>
+        </mg-cell>
+        <jzz bgcolor="transparent" bind:__l="__l" class="data-v-58f29743" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="32a66787-3"></jzz>
+    </view>
+</view>

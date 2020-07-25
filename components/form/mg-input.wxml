@@ -1,0 +1,13 @@
+<mg-cell arrow="{{arrow}}" bind:__l="__l" bind:tab="__e" class="data-v-938cd0d8" cname="{{cname}}" data-event-opts="{{[ [ '^tab',[ [ '$emit',['tab'] ] ] ] ]}}" ft="{{ft}}" ftc="{{ftc}}" ht="{{ht}}" htc="{{htc}}" hw="{{hw}}" isl="{{isl}}" isr="{{isr}}" sname="{{sname}}" vueId="3d92774f-1" vueSlots="{{['bd','ft']}}" wx:if="{{formt==1}}">
+    <view slot="bd">
+        <input bindinput="__e" class="{{['weui-input data-v-938cd0d8',icn]}}" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','inputVal','$event',[] ] ] ] ] ]}}" disabled="{{dis}}" maxlength="{{max}}" placeholder="{{pr}}" type="{{t}}" value="{{inputVal}}"></input>
+    </view>
+    <view class="data-v-938cd0d8" slot="ft">
+        <slot name="ft"></slot>
+    </view>
+</mg-cell>
+<block wx:else>
+    <mg-cell bind:__l="__l" class="data-v-938cd0d8" cname="p23" ht="{{ht}}" hw="{{hw}}" vueId="3d92774f-2" vueSlots="{{['ft']}}" wx:if="{{formt==2}}">
+        <switch bindchange="__e" checked="{{value==1}}" class="data-v-938cd0d8" color="{{tColor}}" data-event-opts="{{[ [ 'change',[ [ 'switchChange',['$event'] ] ] ] ]}}" slot="ft" style="transform:scale(0.92);"></switch>
+    </mg-cell>
+</block>

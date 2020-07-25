@@ -1,0 +1,97 @@
+<view class="mh100 data-v-ed0935a4" hidden="{{!!showLoading}}">
+    <view class="qdh posi-r data-v-ed0935a4">
+        <view class="wh data-v-ed0935a4">
+            <mg-img bind:__l="__l" class="data-v-ed0935a4" src="{{config.icon}}" vueId="093e8bff-1"></mg-img>
+        </view>
+        <view class="posi-a t270 wh data-v-ed0935a4">
+            <view class="m03 mt10 data-v-ed0935a4">
+                <view class="bf mb30 bs20 p3 data-v-ed0935a4">
+                    <view class="f-row p24 posi-r w630 data-v-ed0935a4">
+                        <view class="{{['qddays f-col f-bt data-v-ed0935a4',v.sign==1?'bf2':'be6']}}" wx:for="{{jsqd.weeklist}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                            <view class="{{['c6 f26 f-x-c f-g-0 dhe p050 data-v-ed0935a4',v.sign==1?'cf':'c6']}}">{{v.name+'天'}}</view>
+                            <view class="f-g-1 f-x-c data-v-ed0935a4">
+                                <view class="icw data-v-ed0935a4">
+                                    <mg-img bind:__l="__l" class="data-v-ed0935a4" src="{{v.icon}}" vueId="{{'093e8bff-2-'+i}}"></mg-img>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="qddayw be6 posi-a r0 data-v-ed0935a4">
+                            <mg-img bind:__l="__l" class="data-v-ed0935a4" src="/static/wd/signin/hb.png" vueId="093e8bff-3"></mg-img>
+                        </view>
+                    </view>
+                    <view class="f-col f-y-c m20 data-v-ed0935a4">
+                        <view bindtap="__e" class="sbtn f-c cf f30 data-v-ed0935a4" data-event-opts="{{[ [ 'tap',[ ['ljqd'] ] ] ]}}" wx:if="{{goSignin=='1'}}">立即签到</view>
+                        <view class="sbtn ysbtn f-c f30 data-v-ed0935a4" wx:else>今日已签到</view>
+                        <view class="f22 c9 f-g-1 mt10 data-v-ed0935a4">已经签到<text class="cfc m01 data-v-ed0935a4">{{jsqd.totalSignDay}}</text>天，再签<text class="cfc m01 data-v-ed0935a4">{{jsqd.totalDay}}</text>天必得好礼</view>
+                    </view>
+                </view>
+                <view class="bf mb30 bs20 p3 data-v-ed0935a4">
+                    <view class="f-c c0 f32 wei data-v-ed0935a4">我的签到</view>
+                    <view class="f-row f-bt c6 p30 data-v-ed0935a4">
+                        <view class="f-g-1 f-y-c f-col data-v-ed0935a4">
+                            <view bindtap="__e" class="f26 data-v-ed0935a4" data-event-opts="{{[ [ 'tap',[ [ 'mysignin',[ [ 'o',['type',1] ] ] ] ] ] ]}}">
+                                <text class="f46 wei cfc mr10 data-v-ed0935a4">{{mySignData.integral}}</text>{{mySwitch.jfName}}</view>
+                            <view class="f24 data-v-ed0935a4">{{'累计已获'+mySwitch.jfName}}</view>
+                        </view>
+                        <view class="f-g-1 f-y-c f-col data-v-ed0935a4">
+                            <view bindtap="__e" class="f26 data-v-ed0935a4" data-event-opts="{{[ [ 'tap',[ ['mycoupon'] ] ] ]}}">
+                                <text class="f46 wei cfc mr10 data-v-ed0935a4">{{mySignData.couponNum}}</text>张</view>
+                            <view class="f24 data-v-ed0935a4">累计已获优惠券</view>
+                        </view>
+                        <view class="f-g-1 f-y-c f-col data-v-ed0935a4">
+                            <view bindtap="__e" class="f26 data-v-ed0935a4" data-event-opts="{{[ [ 'tap',[ [ 'mysignin',[ [ 'o',['type',2] ] ] ] ] ] ]}}">
+                                <text class="f46 wei cfc mr10 data-v-ed0935a4">{{mySignData.signNum}}</text>次</view>
+                            <view class="f24 data-v-ed0935a4">累计签到</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="bf mb30 bs20 p3 data-v-ed0935a4">
+                    <view class="f-c c0 f32 wei data-v-ed0935a4">签到规则</view>
+                    <view class="p3 c6 data-v-ed0935a4">{{config.introduce}}</view>
+                </view>
+                <view class="bf mb30 bs20 p3 data-v-ed0935a4">
+                    <view class="f-bt f-y-c data-v-ed0935a4">
+                        <view class="f-g-1 c3 data-v-ed0935a4">
+                            <view class="f32 wei data-v-ed0935a4">{{'下单获取额外'+mySwitch.jfName+'奖励'}}</view>
+                            <view class="c9 f22 mt10 data-v-ed0935a4">据您最近的门店<text class="f26 c3 ml10 data-v-ed0935a4">{{storeInfo.name}}</text>
+                            </view>
+                        </view>
+                        <view class="f-g-0 data-v-ed0935a4">
+                            <view bindtap="__e" class="goxd f-c ml30 cf2 data-v-ed0935a4" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/shop/goods?storeId='+storeInfo.id+'&distance='+storeInfo.distance] ] ] ] ] ] ]}}">
+                                <text class="iconfont f28 iconshangjia cf2 mr10 data-v-ed0935a4"></text>
+                                <text class="f24 data-v-ed0935a4">去下单</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="bf mb30 bs20 p3 data-v-ed0935a4">
+                    <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="兑换商品" bttc="f32" class="data-v-ed0935a4" cname="p0" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/integral/shop-index'] ] ] ] ] ] ]}}" ft="查看全部" ftc="f24 c9" hc="1" last="1" vueId="093e8bff-4"></mg-cell>
+                    <view class="bf f-raw f-bt pt30 data-v-ed0935a4" wx:if="{{dataList.length}}">
+                        <view bindtap="__e" class="bf goodsc mb20 data-v-ed0935a4" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/integral/details?id='+v.id] ] ] ] ] ] ]}}" wx:if="{{i<4}}" wx:for="{{dataList}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                            <view class="goodsimg be6 bs15 data-v-ed0935a4">
+                                <mg-img bind:__l="__l" class="data-v-ed0935a4" src="{{v.icon}}" vueId="{{'093e8bff-5-'+i}}"></mg-img>
+                            </view>
+                            <view class="p20 data-v-ed0935a4">
+                                <view class="f-bt data-v-ed0935a4">
+                                    <text class="bf2 cf f24 mr10 boxs f-g-0 data-v-ed0935a4" wx:if="{{v.type=='2'}}">红</text>
+                                    <text class="t-o-e f-g-1 data-v-ed0935a4">{{v.name}}</text>
+                                </view>
+                                <view class="cfa data-v-ed0935a4">
+                                    <view class="t-o-e f30 wei data-v-ed0935a4">
+                                        <text class="data-v-ed0935a4" wx:if="{{v.score>0}}">{{v.score}}</text>
+                                        <text class="f26 ml10 nowei data-v-ed0935a4" wx:if="{{v.score>0}}">{{mySwitch.jfName}}</text>
+                                        <text class="nowei data-v-ed0935a4" wx:if="{{v.score>0&&v.money>0}}">+</text>
+                                        <text class="data-v-ed0935a4" wx:if="{{v.money>0}}">
+                                            <text class="f22 data-v-ed0935a4">{{sl}}</text>{{v.money}}</text>
+                                    </view>
+                                    <view class="t-o-e t-d-l c9 f22 wei4 data-v-ed0935a4">{{sl+v.price}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <load bind:__l="__l" class="data-v-ed0935a4" vueId="093e8bff-6" wx:if="{{showLoading}}"></load>
+</view>

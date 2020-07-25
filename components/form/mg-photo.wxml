@@ -1,0 +1,16 @@
+<view class="{{['data-v-29438176',cname]}}">
+    <view class="f-raw data-v-29438176">
+        <view class="mpimgc posi-r data-v-29438176" wx:for="{{filePaths}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="mpimg o-h data-v-29438176" style="{{'width:'+w+';'+'height:'+w+';'}}">
+                <mg-img bind:__l="__l" class="data-v-29438176" local="{{v.tmp}}" src="{{v.url}}" vueId="{{'66ab5c32-1-'+i}}"></mg-img>
+            </view>
+            <icon bindtap="__e" class="posi-a mpclose data-v-29438176" data-event-opts="{{[ [ 'tap',[ [ 'deletePic',[i] ] ] ] ]}}" size="20" type="clear"></icon>
+        </view>
+        <view class="mpimgc data-v-29438176" wx:if="{{filePaths.length<max}}">
+            <view bindtap="__e" class="mpimg mpaddc f-c-c data-v-29438176" data-event-opts="{{[ [ 'tap',[ [ 'add',['$event'] ] ] ] ]}}" style="{{'width:'+w+';'+'height:'+w+';'}}">
+                <text class="{{['iconfont f40 c9 data-v-29438176',icon]}}"></text>
+                <view class="c9 f22 t-c mt10 p02 data-v-29438176" wx:if="{{pt}}">{{pt}}</view>
+            </view>
+        </view>
+    </view>
+</view>

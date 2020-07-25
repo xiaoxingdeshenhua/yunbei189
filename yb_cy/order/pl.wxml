@@ -1,0 +1,25 @@
+<view class="pt30 data-v-6133628f">
+    <view class="bf m03 p3 bs30 data-v-6133628f">
+        <view class="p3 t-c f34 wei data-v-6133628f">您对商家/菜品满意吗？</view>
+        <view class="p3 f-x-bt bf9 bs10 data-v-6133628f">
+            <view class="t-o-e data-v-6133628f">{{storeName}}</view>
+            <view bindtap="__e" class="f24 f-y-c data-v-6133628f" data-event-opts="{{[ [ 'tap',[ [ 'nmtap',['$event'] ] ] ] ]}}">
+                <icon class="mr20 data-v-6133628f" color="{{params.anonymous==1?tColor:'#ddd'}}" size="18" type="success"></icon>
+                <view class="data-v-6133628f">匿名评价</view>
+            </view>
+        </view>
+        <view class="p3 f-c data-v-6133628f">
+            <uni-rate bind:__l="__l" bind:change="__e" class="data-v-6133628f" data-event-opts="{{[ [ '^change',[ ['xchange'] ] ] ]}}" margin="{{50}}" size="60" value="{{params.star}}" vueId="72d667d0-1"></uni-rate>
+        </view>
+        <view class="f-raw bf p20 data-v-6133628f">
+            <bk-b bind:__l="__l" bind:tab="__e" block="1" cName="{{'f26 '+(v.a?'bf':'be6')+' c6 mr20 mb20 p-10-20 bs30'}}" class="data-v-6133628f" color="{{v.a?tColor:''}}" data-event-opts="{{[ [ '^tab',[ [ 'tabBq',[i] ] ] ] ]}}" t="{{v.name}}" type="2" vueId="{{'72d667d0-2-'+i}}" wx:for="{{bqarr}}" wx:for-index="i" wx:for-item="v" wx:key="i"></bk-b>
+        </view>
+        <view class="b-d bs10 bf9 p2 data-v-6133628f">
+            <textarea bindinput="__e" class="w100 mb20 data-v-6133628f" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','body','$event',[] ],['params'] ] ] ] ]}}" maxlength="150" placeholder="请输入您的评价" placeholderClass="cd" style="height:200rpx;" value="{{params.body}}"></textarea>
+            <mg-photo bind:__l="__l" bind:changeImg="__e" class="data-v-6133628f" data-event-opts="{{[ [ '^changeImg',[ ['changeImg'] ] ] ]}}" vueId="72d667d0-3"></mg-photo>
+        </view>
+    </view>
+    <view class="foot-btnc posi-r mt30 data-v-6133628f">
+        <button bindtap="__e" class="foot-btn data-v-6133628f" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{loading}}" hoverClass="btnhc" loading="{{loading}}" style="{{'background:'+tColor+';'}}">提交</button>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+<view class="page__bd data-v-268039de" style="{{'background:'+bgcolor+';'}}">
+    <view class="no-data-tip data-v-268039de" wx:if="{{nodata}}">
+        <image class="no-data-tipimg data-v-268039de" mode="aspectFit" src="/static/noresult.png"></image>
+        <view class="data-v-268039de">暂无相关内容~</view>
+    </view>
+    <block wx:else>
+        <view class="weui-loadmore data-v-268039de" wx:if="{{!mygd}}">
+            <view class="weui-loading data-v-268039de"></view>
+            <view class="weui-loadmore__tips data-v-268039de" style="margin:0;">正在加载</view>
+        </view>
+        <view class="weui-loadmore data-v-268039de" wx:if="{{mygd}}">
+            <view class="hx data-v-268039de"></view>
+            <view class="weui-loadmore__tips data-v-268039de">加载完毕</view>
+            <view class="hx data-v-268039de"></view>
+        </view>
+    </block>
+</view>

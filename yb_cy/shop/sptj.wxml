@@ -1,0 +1,4 @@
+<view class="pb13 data-v-408ec0ea">
+    <tj-goods bind:__l="__l" class="data-v-408ec0ea" list="{{dataList}}" type="{{r}}" vueId="7957e7db-1"></tj-goods>
+    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-408ec0ea" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="7957e7db-2"></jzz>
+</view>

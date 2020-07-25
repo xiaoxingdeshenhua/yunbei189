@@ -1,0 +1,75 @@
+<view class="{{['mh100 pb130 data-v-09e82166',tcyhqshow||tcggshow?'bgfix':'']}}" style="{{'background:'+(system.decorationModel==2||query.notg?layout.common&&layout.common.config.txtOrImg==0?layout.common.config.bgset.bgcolor:'#fff':'#fff')+';'}}">
+    <view class="data-v-09e82166" wx:if="{{!hasKp&&!query.notg}}">
+        <view class="posi-f wh t0 data-v-09e82166" style="z-index:9998;" wx:if="{{launch.switch}}">
+            <mg-swiper bind:__l="__l" class="data-v-09e82166" co="{{swiper}}" color="{{tColor}}" u="vh" vueId="1c251888-1"></mg-swiper>
+            <view bindtap="__e" class="posi-a f-c countC cf data-v-09e82166" data-event-opts="{{[ [ 'tap',[ [ 'tg',['$event'] ] ] ] ]}}" wx:if="{{launch.pageCategory==0}}">{{second+' 跳过'}}</view>
+        </view>
+    </view>
+    <view class="data-v-09e82166" wx:if="{{system.decorationModel==2||query.notg}}">
+        <image class="p-f wh data-v-09e82166" mode="aspectFill" src="{{layout.common.config.bgimg[0].url}}" wx:if="{{layout.common&&layout.common.config.txtOrImg==1}}"></image>
+        <uni-nav-bar bind:__l="__l" border="{{false}}" class="data-v-09e82166" fixed="{{true}}" id="uninavbar" isleft="{{false}}" ispr="{{false}}" statusBar="{{true}}" title="{{opcity>=1?system.name:''}}" uropcity="{{opcity}}" vueId="1c251888-2" wx:if="{{opcity>0}}"></uni-nav-bar>
+        <view class="p-r data-v-09e82166" wx:if="{{page}}">
+            <block wx:for="{{page}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <topping-swiper bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" storeInfo="{{storeInfo}}" vueId="{{'1c251888-3-'+i}}" wx:if="{{v.cmpName=='toppingSwiper'}}"></topping-swiper>
+                <block wx:else>
+                    <custom-swiper bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" storeInfo="{{storeInfo}}" vueId="{{'1c251888-4-'+i}}" wx:if="{{v.cmpName=='customSwiper'}}"></custom-swiper>
+                    <block wx:else>
+                        <entry-button-group bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c251888-5-'+i}}" wx:if="{{v.cmpName=='entryButtonGroup'}}"></entry-button-group>
+                        <block wx:else>
+                            <notice-group bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" sjxx="{{sjxx}}" vueId="{{'1c251888-6-'+i}}" wx:if="{{v.cmpName=='noticeGroup'}}"></notice-group>
+                            <block wx:else>
+                                <image-group bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c251888-7-'+i}}" wx:if="{{v.cmpName=='imageGroup'}}"></image-group>
+                                <block wx:else>
+                                    <magic-cube bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c251888-8-'+i}}" wx:if="{{v.cmpName=='magicCube'}}"></magic-cube>
+                                    <block wx:else>
+                                        <custom-title bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c251888-9-'+i}}" wx:if="{{v.cmpName=='customTitle'}}"></custom-title>
+                                        <block wx:else>
+                                            <white-space bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c251888-10-'+i}}" wx:if="{{v.cmpName=='whiteSpace'}}"></white-space>
+                                            <block wx:else>
+                                                <rich-text class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" wx:if="{{v.cmpName=='richText'}}"></rich-text>
+                                                <block wx:else>
+                                                    <segment-line bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c251888-11-'+i}}" wx:if="{{v.cmpName=='segmentLine'}}"></segment-line>
+                                                    <block wx:else>
+                                                        <custom-audio bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c251888-12-'+i}}" wx:if="{{v.cmpName=='customAudio'}}"></custom-audio>
+                                                        <block wx:else>
+                                                            <view class="p03 data-v-09e82166" style="{{'margin-top:'+v.config.topMargin+'px'+';'}}" wx:if="{{v.cmpName=='customVideo'}}">
+                                                                <txv-video bind:__l="__l" class="data-v-09e82166" data-com-type="wx" defn="超清" playerid="txv1" vid="{{v.config.videocon.links}}" vueId="{{'1c251888-13-'+i}}"></txv-video>
+                                                            </view>
+                                                            <block wx:else>
+                                                                <big-image bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c251888-14-'+i}}" wx:if="{{v.cmpName=='bigImage'}}"></big-image>
+                                                                <block wx:else>
+                                                                    <nearby-store bind:__l="__l" bind:changeStore="__e" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" data-event-opts="{{[ [ '^changeStore',[ ['changeStore'] ] ] ]}}" list="{{storeList}}" storeInfo="{{storeInfo}}" vueId="{{'1c251888-15-'+i}}" wx:if="{{v.cmpName=='nearbyStore'}}"></nearby-store>
+                                                                    <block wx:else>
+                                                                        <goods-recommendation bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" storeInfo="{{storeInfo}}" vueId="{{'1c251888-16-'+i}}" wx:if="{{v.cmpName=='goodsrecommendation'}}"></goods-recommendation>
+                                                                        <block wx:else>
+                                                                            <store-evaluate bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" storeInfo="{{storeInfo}}" vueId="{{'1c251888-17-'+i}}" wx:if="{{v.cmpName=='storeEvaluate'}}"></store-evaluate>
+                                                                            <block wx:else>
+                                                                                <custom-coupon bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" storeInfo="{{storeInfo}}" vueId="{{'1c251888-18-'+i}}" wx:if="{{v.cmpName=='coupon'}}"></custom-coupon>
+                                                                                <block wx:else>
+                                                                                    <store-information bind:__l="__l" class="data-v-09e82166" co="{{v.config}}" color="{{tColor}}" sjxx="{{sjxx}}" vueId="{{'1c251888-19-'+i}}" wx:if="{{v.cmpName=='storeInformation'}}"></store-information>
+                                                                                </block>
+                                                                            </block>
+                                                                        </block>
+                                                                    </block>
+                                                                </block>
+                                                            </block>
+                                                        </block>
+                                                    </block>
+                                                </block>
+                                            </block>
+                                        </block>
+                                    </block>
+                                </block>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </block>
+            <footc bind:__l="__l" class="data-v-09e82166" vueId="1c251888-20" wx:if="{{sjxx.id}}"></footc>
+        </view>
+        <tcyhq bind:__l="__l" bind:close="__e" bind:input="__e" class="data-v-09e82166" co="{{tcCoupon}}" color="{{tColor}}" data-event-opts="{{[ [ '^close',[ ['e0'] ] ],[ '^input',[ [ '__set_model',[ '','tcyhqshow','$event',[] ] ] ] ] ]}}" value="{{tcyhqshow}}" vueId="1c251888-21"></tcyhq>
+        <tcgg bind:__l="__l" bind:input="__e" class="data-v-09e82166" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','tcggshow','$event',[] ] ] ] ] ]}}" list="{{tcggList}}" value="{{tcggshow}}" vueId="1c251888-22"></tcgg>
+        <tab-bar bind:__l="__l" class="data-v-09e82166" vueId="1c251888-23"></tab-bar>
+    </view>
+    <load bind:__l="__l" class="data-v-09e82166" vueId="1c251888-24" wx:if="{{showLoading}}"></load>
+</view>

@@ -1,0 +1,161 @@
+<mg-form bind:__l="__l" class="data-v-6ee4b064" vueId="0f6ca39a-1" vueSlots="{{['default']}}">
+    <view class="{{['category pb115 data-v-6ee4b064',(tcyhqshow||tcggshow||showGg||showTable||showShopInfo)&&'bgfix']}}" style="{{'padding-bottom:'+'0rpx'+';'}}">
+        <view class="data-v-6ee4b064" hidden="{{!!showLoading}}">
+            <view class="htop posi-f l0 w100 p23 bf f-x-bt data-v-6ee4b064">
+                <view class="f-y-c data-v-6ee4b064">
+                    <text class="iconfont icondndc mr10 c6 f34 data-v-6ee4b064"></text>
+                    <text class="data-v-6ee4b064">{{storeInfo.tableInfo.typeName}}</text>
+                    <text class="ml10 data-v-6ee4b064">{{storeInfo.tableInfo.number}}</text>
+                    <text class="data-v-6ee4b064" wx:if="{{paIx}}">{{'/'+paIx+'位'}}</text>
+                </view>
+                <view class="f-y-c data-v-6ee4b064">
+                    <text bindtap="__e" class="iconfont icondd f48 c3 data-v-6ee4b064" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/inshop/order'] ] ] ] ] ] ]}}"></text>
+                </view>
+            </view>
+            <view class="{{['bodyer bf data-v-6ee4b064',sIndex==0?'pt150':'']}}">
+                <view class="header posi-r bf p23 data-v-6ee4b064" style="{{'z-index:'+(showShopInfo?'2001':'')+';'}}">
+                    <view class="f-x-bt data-v-6ee4b064">
+                        <view class="f36 f-y-c wei t-o-e data-v-6ee4b064">{{sjxx.storeInfo.name}}</view>
+                    </view>
+                    <view class="mt15 f-g-0 f-x-bt data-v-6ee4b064">
+                        <view class="c9 f26 data-v-6ee4b064">欢迎光临，很高兴为您服务</view>
+                        <view bindtap="__e" class="c9 f22 f-y-c data-v-6ee4b064" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+                            <text class="data-v-6ee4b064">展开</text>
+                            <text class="iconfont iconright f22 ml10 c9 r90 data-v-6ee4b064" style="{{'transform:'+(showShopInfo?'rotate(-90deg)':'')+';'+'transition:'+'0.3s'+';'}}"></text>
+                        </view>
+                    </view>
+                    <view class="{{['gdmdxx o-y-s data-v-6ee4b064',showShopInfo?'show':'']}}">
+                        <view class="p23 data-v-6ee4b064" hidden="{{!showShopInfo}}">
+                            <view class="p20 data-v-6ee4b064">营业信息</view>
+                            <view class="f24 c9 data-v-6ee4b064">
+                                <view class="f-row mb20 data-v-6ee4b064" wx:if="{{sjxx.storeSet.data.length}}">
+                                    <view class="f-g-0 yhxxhd b-l-e6f7 data-v-6ee4b064">减</view>
+                                    <view class="data-v-6ee4b064">(全部人群)<text class="data-v-6ee4b064" wx:for="{{sjxx.storeSet.data}}" wx:for-index="i" wx:for-item="v" wx:key="i">{{'满'+v.full+'减'+v.reduce+''}}<text class="data-v-6ee4b064" wx:if="{{i<sjxx.storeSet.data.length-1}}">,</text>
+                                        </text>
+                                    </view>
+                                </view>
+                                <view class="f-row mb20 data-v-6ee4b064" wx:if="{{sjxx.newStoreSet.data.length}}">
+                                    <view class="f-g-0 yhxxhd b-l-e6f7 data-v-6ee4b064">减</view>
+                                    <view class="data-v-6ee4b064">(新客专享)<text class="data-v-6ee4b064" wx:for="{{sjxx.newStoreSet.data}}" wx:for-index="i" wx:for-item="v" wx:key="i">{{'满'+v.full+'减'+v.reduce+''}}<text class="data-v-6ee4b064" wx:if="{{i<sjxx.newStoreSet.data.length-1}}">,</text>
+                                        </text>
+                                    </view>
+                                </view>
+                                <view class="f-row data-v-6ee4b064" wx:if="{{sjxx.vipStoreSet.data.length}}">
+                                    <view class="f-g-0 yhxxhd b-l-e6f7 data-v-6ee4b064">V</view>
+                                    <view class="data-v-6ee4b064">
+                                        <text class="data-v-6ee4b064" wx:for="{{sjxx.vipStoreSet.data}}" wx:for-index="i" wx:for-item="v" wx:key="i">{{'满'+v.full+'减'+v.reduce+''}}<text class="data-v-6ee4b064" wx:if="{{i<sjxx.vipStoreSet.data.length-1}}">,</text>
+                                        </text>
+                                    </view>
+                                </view>
+                                <view class="f-row data-v-6ee4b064" wx:if="{{sjxx.storeInfo.newMoney>0}}">
+                                    <view class="f-g-0 yhxxhd b-l-7c46 data-v-6ee4b064">新</view>
+                                    <view class="data-v-6ee4b064">{{'本店新用户立减'+sl+$root.m0}}</view>
+                                </view>
+                            </view>
+                            <view class="p20 data-v-6ee4b064">门店公告</view>
+                            <view class="f24 c9 data-v-6ee4b064">
+                                <view class="data-v-6ee4b064">{{sjxx.storeInfo.notice}}</view>
+                            </view>
+                            <view class="p20 data-v-6ee4b064">门店信息</view>
+                            <view class="f24 c9 data-v-6ee4b064">
+                                <view class="data-v-6ee4b064">{{'地址：'+sjxx.storeInfo.address}}</view>
+                                <view class="data-v-6ee4b064">{{'电话：'+sjxx.storeInfo.tel}}</view>
+                                <view class="data-v-6ee4b064">{{'营业时间：'+yysj}}</view>
+                            </view>
+                            <view bindtap="__e" class="p20 f-y-c data-v-6ee4b064" data-event-opts="{{[ [ 'tap',[ [ 'ckda',['$event'] ] ] ] ]}}">查看食品安全档案<text class="iconfont iconright f24 ml10 c0 data-v-6ee4b064"></text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <mg-swiper bind:__l="__l" class="data-v-6ee4b064" co="{{lbswiper}}" color="{{tColor}}" u="rpx" vueId="{{'0f6ca39a-2'+','+'0f6ca39a-1'}}"></mg-swiper>
+                <block wx:if="{{goodsList.length>0}}">
+                    <view class="p-15-30-0 f32 wei data-v-6ee4b064">商家推荐</view>
+                    <view class="f-row o-x-s p13 data-v-6ee4b064">
+                        <goods addtype="2" bind:__l="__l" bind:add="__e" bind:dec="__e" class="data-v-6ee4b064" co="{{v}}" data-event-opts="{{[ [ '^dec',[ ['dec'] ] ],[ '^add',[ ['add'] ] ] ]}}" outin="{{outin}}" type="2" vueId="{{'0f6ca39a-3-'+i+','+'0f6ca39a-1'}}" wx:for="{{goodsList}}" wx:for-index="i" wx:for-item="v" wx:key="i"></goods>
+                    </view>
+                </block>
+            </view>
+            <view class="{{['category-wrapper data-v-6ee4b064',sIndex>0?'category-fix':'']}}" style="{{'height:'+windows_height+'px'+';'}}" wx:if="{{catrgoryList.length>0}}">
+                <block wx:if="{{goodsNum<=150}}">
+                    <scroll-view class="left-wrapper data-v-6ee4b064" scrollIntoView="{{lsiv}}" scrollWithAnimation="true" scrollY="true">
+                        <view class="left-c data-v-6ee4b064">
+                            <view bindtap="__e" class="{{['title-c data-v-6ee4b064',sIndex==i?'onSelected':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'choose',[i] ] ] ] ]}}" id="{{'l'+i}}" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                                <view class="title-b data-v-6ee4b064" style="{{'background:'+tColor+';'}}" wx:if="{{sIndex==i}}"></view>
+                                <view class="title-n f-c-xc data-v-6ee4b064">
+                                    <block wx:if="{{system.model==3}}">
+                                        <view class="f-y-e data-v-6ee4b064">
+                                            <view class="title-img data-v-6ee4b064">
+                                                <mg-img bind:__l="__l" class="data-v-6ee4b064" m="aspectFit" src="{{v['$orig'].required?'/static/bxp.png':v['$orig'].icon}}" vueId="{{'0f6ca39a-4-'+i+','+'0f6ca39a-1'}}"></mg-img>
+                                            </view>
+                                            <text class="data-v-6ee4b064">{{v.m1}}</text>
+                                        </view>
+                                        <text class="mt5 t-o-e data-v-6ee4b064" wx:if="{{v.m2}}">{{v.m3}}</text>
+                                    </block>
+                                    <block wx:else>
+                                        <block wx:if="{{system.model==2}}">
+                                            <view class="f-x-c data-v-6ee4b064">
+                                                <view class="title-img data-v-6ee4b064">
+                                                    <mg-img bind:__l="__l" class="data-v-6ee4b064" m="aspectFit" src="{{v['$orig'].required?'/static/bxp.png':v['$orig'].icon}}" vueId="{{'0f6ca39a-5-'+i+','+'0f6ca39a-1'}}"></mg-img>
+                                                </view>
+                                            </view>
+                                            <text class="mt5 t-c t-o-e data-v-6ee4b064">{{v['$orig'].name}}</text>
+                                        </block>
+                                        <view class="f-x-c data-v-6ee4b064" wx:else>
+                                            <text class="t-o-e2 data-v-6ee4b064">{{v['$orig'].name}}</text>
+                                        </view>
+                                    </block>
+                                </view>
+                            </view>
+                        </view>
+                    </scroll-view>
+                    <scroll-view bindscroll="__e" class="f-g-1 right-wrapper data-v-6ee4b064" data-event-opts="{{[ [ 'scroll',[ [ 'myscroll',['$event'] ] ] ] ]}}" scrollIntoView="{{rsiv}}" scrollY="true">
+                        <view class="right-c data-v-6ee4b064">
+                            <view class="c-item data-v-6ee4b064" id="{{'r'+pi}}" wx:for="{{catrgoryList}}" wx:for-index="pi" wx:for-item="pv" wx:key="pi">
+                                <view class="c-title data-v-6ee4b064">{{pv.name}}</view>
+                                <goods addtype="2" bind:__l="__l" bind:add="__e" bind:dec="__e" class="data-v-6ee4b064" co="{{v}}" data-event-opts="{{[ [ '^dec',[ ['dec'] ] ],[ '^add',[ ['add'] ] ] ]}}" last="{{pi==catrgoryList.length-1&&i==pv.goods.length-1}}" outin="{{outin}}" vueId="{{'0f6ca39a-6-'+pi+'-'+i+','+'0f6ca39a-1'}}" wx:for="{{pv.goods}}" wx:for-index="i" wx:for-item="v" wx:key="i"></goods>
+                            </view>
+                        </view>
+                    </scroll-view>
+                </block>
+            </view>
+            <tcyhq bind:__l="__l" bind:close="__e" bind:input="__e" class="data-v-6ee4b064" co="{{tcCoupon}}" color="{{tColor}}" data-event-opts="{{[ [ '^close',[ ['e1'] ] ],[ '^input',[ [ '__set_model',[ '','tcyhqshow','$event',[] ] ] ] ] ]}}" value="{{tcyhqshow}}" vueId="{{'0f6ca39a-7'+','+'0f6ca39a-1'}}"></tcyhq>
+            <tcgg bind:__l="__l" bind:input="__e" class="data-v-6ee4b064" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','tcggshow','$event',[] ] ] ] ] ]}}" list="{{tcggList}}" value="{{tcggshow}}" vueId="{{'0f6ca39a-8'+','+'0f6ca39a-1'}}"></tcgg>
+        </view>
+        <goods-car bind:__l="__l" bind:add="__e" bind:celar="__e" bind:dec="__e" carBtm="0" carlistPab="130" carnum="{{carNum}}" class="data-v-6ee4b064" data-event-opts="{{[ [ '^dec',[ ['dec'] ] ],[ '^add',[ ['add'] ] ],[ '^celar',[ ['celarCar'] ] ] ]}}" havebxp="{{havebxp}}" sjxx="{{sjxx}}" tableinfo="{{storeInfo.tableInfo}}" vueId="{{'0f6ca39a-9'+','+'0f6ca39a-1'}}" wx:if="{{sjxx}}"></goods-car>
+        <mg-popup bind:__l="__l" bind:input="__e" class="data-v-6ee4b064" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showShopInfo','$event',[] ] ] ] ] ]}}" position="top" value="{{showShopInfo}}" vueId="{{'0f6ca39a-10'+','+'0f6ca39a-1'}}" zIndex="2000"></mg-popup>
+        <spec bind:__l="__l" bind:add="__e" bind:input="__e" class="data-v-6ee4b064" co="{{goodsInfo}}" data-event-opts="{{[ [ '^add',[ ['add'] ] ],[ '^input',[ [ '__set_model',[ '','showGg','$event',[] ] ] ] ] ]}}" outin="{{outin}}" storeid="{{storeInfo.id}}" value="{{showGg}}" vueId="{{'0f6ca39a-11'+','+'0f6ca39a-1'}}"></spec>
+        <mg-modal bind:__l="__l" bind:input="__e" class="data-v-6ee4b064" close="{{false}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showTable','$event',[] ] ] ] ] ]}}" ismr="{{true}}" position="top" value="{{showTable}}" vueId="{{'0f6ca39a-12'+','+'0f6ca39a-1'}}" vueSlots="{{['default']}}" width="687rpx" zIndex="3000">
+            <view class="tbt posi-r data-v-6ee4b064">
+                <view class="wh data-v-6ee4b064">
+                    <mg-img bind:__l="__l" class="data-v-6ee4b064" src="/static/dndc/tbbg.png" vueId="{{'0f6ca39a-13'+','+'0f6ca39a-12'}}"></mg-img>
+                </view>
+                <view class="posi-a tbtc f-y-c data-v-6ee4b064">
+                    <view class="f-g-0 mr30 tbtcimg bsf data-v-6ee4b064">
+                        <mg-img bind:__l="__l" class="data-v-6ee4b064" src="{{sjxx.storeInfo.icon}}" vueId="{{'0f6ca39a-14'+','+'0f6ca39a-12'}}"></mg-img>
+                    </view>
+                    <view class="f-g-1 cf data-v-6ee4b064">
+                        <view class="t-o-e f34 wei mb10 data-v-6ee4b064">{{sjxx.storeInfo.name}}</view>
+                        <view class="f-y-c data-v-6ee4b064">
+                            <text class="iconfont icondw cf data-v-6ee4b064"></text>
+                            <text class="f-g-1 t-o-e f24 ml5 data-v-6ee4b064">{{sjxx.storeInfo.address}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="tbb bf f-c-c data-v-6ee4b064">
+                <view class="p10 f24 cb data-v-6ee4b064">桌位号码</view>
+                <view class="f44 f-y-c wei data-v-6ee4b064">
+                    <text class="data-v-6ee4b064">{{storeInfo.tableInfo.typeName}}</text>
+                    <text class="ml20 cf1 data-v-6ee4b064">{{storeInfo.tableInfo.number}}</text>
+                </view>
+                <view class="p20 f24 cb mt20 data-v-6ee4b064">请选择就餐人数</view>
+                <view class="p03 f-x-bt f-w data-v-6ee4b064">
+                    <view bindtap="__e" class="{{['tbbv f30 f-c data-v-6ee4b064',i+1==paIx?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'dcParr',[i+1] ] ] ] ]}}" wx:for="{{parr}}" wx:for-index="i" wx:for-item="v" wx:key="i">{{v}}</view>
+                </view>
+                <view class="p20 f24 cb data-v-6ee4b064">12人以上请联系商家</view>
+                <view bindtap="__e" class="ljdc f-c m20 b-l-f0f0 data-v-6ee4b064" data-event-opts="{{[ [ 'tap',[ [ 'ljdc',['$event'] ] ] ] ]}}">立即点餐</view>
+            </view>
+        </mg-modal>
+        <load bind:__l="__l" class="data-v-6ee4b064" vueId="{{'0f6ca39a-15'+','+'0f6ca39a-1'}}" wx:if="{{showLoading}}"></load>
+    </view>
+</mg-form>

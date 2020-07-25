@@ -1,0 +1,8 @@
+<view class="data-v-65951ffc" style="{{'margin-top:'+''+co.topMargin+u+';'+'margin-bottom:'+''+co.isBottom+u+';'}}" wx:if="{{list.length}}">
+    <view class="{{['data-v-65951ffc','p3']}}">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="{{co.infoTitle||'评价'}}" bttc="f32 wei" class="data-v-65951ffc" cname="p0" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],[ 'url','/yb_cy/order/pl-list?id='+storeInfo.id+'&t='+(co.infoTitle||'评价') ] ] ] ] ] ] ]}}" ft="查看更多" ftc="f24 c6" hc="1" last="1" vueId="2f470e56-1"></mg-cell>
+    </view>
+    <view class="bf data-v-65951ffc">
+        <gf-evaluate bind:__l="__l" class="data-v-65951ffc" co="{{v}}" vueId="{{'2f470e56-2-'+i}}" wx:if="{{i<2}}" wx:for="{{list}}" wx:for-index="i" wx:for-item="v" wx:key="i"></gf-evaluate>
+    </view>
+</view>

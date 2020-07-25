@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "mg-modal": "/components/common/modal",
+        "mg-coupon": "/components/common/mg-coupon",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

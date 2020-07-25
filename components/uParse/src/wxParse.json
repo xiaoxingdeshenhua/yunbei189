@@ -1,0 +1,11 @@
+{
+    "component": true,
+    "usingComponents": {
+        "weixin-parse-template": "/components/uParse/src/components/wxParseTemplate0",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

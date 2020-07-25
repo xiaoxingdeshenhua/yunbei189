@@ -1,0 +1,36 @@
+<view>
+    <block wx:if="{{node.node=='element'}}">
+        <button size="mini" type="default" wx:if="{{node.tag=='button'}}">
+            <weixin-parse-template bind:__l="__l" node="{{node}}" vueId="{{'02d20783-1-'+index}}" wx:for="{{node.nodes}}" wx:for-item="node" wx:key="index"></weixin-parse-template>
+        </button>
+        <block wx:else>
+            <view class="{{[node.classStr]}}" style="{{node.styleStr}}" wx:if="{{node.tag=='li'}}">
+                <weixin-parse-template bind:__l="__l" node="{{node}}" vueId="{{'02d20783-2-'+index}}" wx:for="{{node.nodes}}" wx:for-item="node" wx:key="index"></weixin-parse-template>
+            </view>
+            <block wx:else>
+                <weixin-parse-video bind:__l="__l" node="{{node}}" vueId="02d20783-3" wx:if="{{node.tag=='video'}}"></weixin-parse-video>
+                <block wx:else>
+                    <weixin-parse-audio bind:__l="__l" node="{{node}}" vueId="02d20783-4" wx:if="{{node.tag=='audio'}}"></weixin-parse-audio>
+                    <block wx:else>
+                        <weixin-parse-img bind:__l="__l" node="{{node}}" vueId="02d20783-5" wx:if="{{node.tag=='img'}}"></weixin-parse-img>
+                        <block wx:else>
+                            <view bindtap="__e" class="{{[node.classStr]}}" data-event-opts="{{[ [ 'tap',[ [ 'wxParseATap',['$event'] ] ] ] ]}}" data-href="{{node.attr.href}}" style="{{node.styleStr}}" wx:if="{{node.tag=='a'}}">
+                                <weixin-parse-template bind:__l="__l" node="{{node}}" vueId="{{'02d20783-6-'+index}}" wx:for="{{node.nodes}}" wx:for-item="node" wx:key="index"></weixin-parse-template>
+                            </view>
+                            <block wx:else>
+                                <text wx:if="{{node.tag=='br'}}">
+</text>
+                                <view class="{{[node.classStr]}}" style="{{node.styleStr}}" wx:else>
+                                    <weixin-parse-template bind:__l="__l" node="{{node}}" vueId="{{'02d20783-7-'+index}}" wx:for="{{node.nodes}}" wx:for-item="node" wx:key="index"></weixin-parse-template>
+                                </view>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </block>
+        </block>
+    </block>
+    <block wx:else>
+        <block wx:if="{{node.node=='text'}}">{{node.text}}</block>
+    </block>
+</view>

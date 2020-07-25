@@ -1,0 +1,155 @@
+<view class="pb130 f22 bf data-v-738afd1f" style="overflow-x:hidden;">
+    <uni-nav-bar bind:__l="__l" border="{{opcity>=1}}" class="data-v-738afd1f" fixed="{{true}}" id="uninavbar" isleft="{{false}}" ispr="{{false}}" statusBar="{{true}}" title="个人中心" uropcity="{{opcity}}" vueId="1c593106-1"></uni-nav-bar>
+    <block wx:for="{{page}}" wx:for-index="pi" wx:for-item="v" wx:key="pi">
+        <block wx:if="{{v.cmpName=='PersonalHead'}}">
+            <view class="header posi-r f-x-c data-v-738afd1f" style="{{'background:'+v.config.bgset.bgcolor+';'}}">
+                <view class="posi-a mywh bgimg data-v-738afd1f" wx:if="{{v.config.txtOrImg}}">
+                    <mg-img bind:__l="__l" class="data-v-738afd1f" src="{{v.config.bgimg[0].url}}" vueId="{{'1c593106-2-'+pi}}"></mg-img>
+                </view>
+                <view class="posi-r mywh cf data-v-738afd1f">
+                    <view class="posi-r data-v-738afd1f" style="{{'height:'+headtop+'px'+';'}}"></view>
+                    <view class="my-header f-y-c data-v-738afd1f" wx:if="{{isLogin}}">
+                        <view class="f-g-0 posi-r data-v-738afd1f">
+                            <image class="posi-a hgimg data-v-738afd1f" src="/static/wd/vip/hg.png" wx:if="{{isVip}}"></image>
+                            <view class="img data-v-738afd1f">
+                                <mg-img bind:__l="__l" class="data-v-738afd1f" cname="bsf" src="{{user.portrait||'/static/wd/mrtx.png'}}" vueId="{{'1c593106-3-'+pi}}"></mg-img>
+                            </view>
+                        </view>
+                        <view class="f-g-1 data-v-738afd1f">
+                            <view class="f38 wei mb15 f-y-c data-v-738afd1f">
+                                <view class="t-o-e mr20 data-v-738afd1f">{{user.userName}}</view>
+                                <view class="f-g-0 f-row f22 data-v-738afd1f" wx:if="{{isVip}}">
+                                    <view class="vname-l t-c t-o-e data-v-738afd1f">{{vipConfig.title+'会员'}}</view>
+                                    <view class="vname-r t-c t-o-e data-v-738afd1f">{{user.cardName}}</view>
+                                </view>
+                            </view>
+                            <view class="f-y-c f24 data-v-738afd1f" wx:if="{{!user.userTel}}">
+                                <text class="mr10 data-v-738afd1f">用户ID:</text>
+                                <text class="data-v-738afd1f">{{user.userId}}</text>
+                                <text bindtap="__e" class="fz data-v-738afd1f" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">复制</text>
+                            </view>
+                            <view class="f-y-c f24 data-v-738afd1f" wx:else>
+                                <text class="iconfont icontel mr10 f28 cf data-v-738afd1f"></text>
+                                <text class="data-v-738afd1f">{{user.userTel2}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="my-header f-y-c data-v-738afd1f" wx:else>
+                        <view class="f-g-0 img data-v-738afd1f">
+                            <mg-img bind:__l="__l" class="data-v-738afd1f" cname="bsf" src="/static/wd/mrtx.png" vueId="{{'1c593106-4-'+pi}}"></mg-img>
+                        </view>
+                        <view class="f-g-1 data-v-738afd1f">
+                            <view class="f38 mb15 data-v-738afd1f">{{user.userName}}</view>
+                            <sq-btn bind:__l="__l" class="data-v-738afd1f" cname="text-btn bs30 f24 p0 cf" h="50" t="点击登录" vueId="{{'1c593106-5-'+pi}}" w="135"></sq-btn>
+                        </view>
+                    </view>
+                    <view class="my-bd c3 data-v-738afd1f" wx:if="{{mySwitch.vip==1}}">
+                        <view class="vc f-x-bt f22 data-v-738afd1f" wx:if="{{isVip}}">
+                            <view class="f-y-c data-v-738afd1f" style="color:#FADCAD;">
+                                <image class="vimg mr10 data-v-738afd1f" src="/static/wd/vip/mv.png"></image>
+                                <view class="data-v-738afd1f">{{user.cardName}}</view>
+                            </view>
+                            <view bindtap="__e" class="bs30 p-8-20 dlbtn f-y-c data-v-738afd1f" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/vip/ykk'] ] ] ] ] ] ]}}">
+                                <view class="mr10 data-v-738afd1f">立即查看</view>
+                                <view class="ysj data-v-738afd1f"></view>
+                            </view>
+                        </view>
+                        <view class="vc f-x-bt f22 data-v-738afd1f" wx:else>
+                            <view class="f-y-c data-v-738afd1f" style="color:#fff;">
+                                <image class="vimg mr10 data-v-738afd1f" src="/static/wd/vip/mv.png"></image>
+                                <view class="data-v-738afd1f">领取会员卡，各种优惠享不停</view>
+                            </view>
+                            <view bindtap="__e" class="bs30 p-8-20 dlbtn f-y-c data-v-738afd1f" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/vip/wkk'] ] ] ] ] ] ]}}">
+                                <view class="mr10 data-v-738afd1f">立即领取</view>
+                                <view class="ysj data-v-738afd1f"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="p23 bf5 data-v-738afd1f" style="{{'margin-bottom:'+v.config.isBottom+'px'+';'}}">
+                <view class="my-data bf bs20 f-row data-v-738afd1f">
+                    <view bindtap="__e" class="datac b-r-d f-c-c data-v-738afd1f" data-event-opts="{{[ [ 'tap',[ [ 'myDataClick',['$0'],[ [ ['myData','',i] ] ] ] ] ] ]}}" hidden="{{!!v.hide}}" wx:for="{{myData}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                        <view class="f36 wei data-v-738afd1f">{{v.num}}</view>
+                        <view class="data-v-738afd1f">{{v.name}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="data-v-738afd1f" style="{{'margin-top:'+v.config.topMargin+'px'+';'+'margin-bottom:'+v.config.isBottom+'px'+';'}}" wx:if="{{v.cmpName=='PersonalOrder'}}">
+                <mg-cell isr bind:__l="__l" class="data-v-738afd1f" cname="p0" last="1" vueId="{{'1c593106-6-'+pi}}" vueSlots="{{['bd']}}">
+                    <view class="data-v-738afd1f" slot="bd">
+                        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="我的订单" bttc="wei f34" class="data-v-738afd1f" cname="p230" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/order/index'] ] ] ] ] ] ]}}" ft="查看全部订单" ftc="f26" last="1" vueId="{{'1c593106-7-'+pi+','+'1c593106-6-'+pi}}"></mg-cell>
+                        <view class="wdddc f-x-bt data-v-738afd1f">
+                            <view bindtap="__e" class="flex-1 f-c-c data-v-738afd1f" data-event-opts="{{[ [ 'tap',[ [ 'orderClick',['$0'],[ [ ['myOrder','',i] ] ] ] ] ] ]}}" wx:for="{{myOrder}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                                <view class="ddimg mb15 data-v-738afd1f">
+                                    <mg-img bind:__l="__l" class="data-v-738afd1f" src="{{v.img}}" vueId="{{'1c593106-8-'+pi+'-'+i+','+'1c593106-6-'+pi}}"></mg-img>
+                                </view>
+                                <view class="data-v-738afd1f">{{v.name}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </mg-cell>
+            </view>
+            <block wx:else>
+                <view class="data-v-738afd1f" style="{{'margin-top:'+v.config.topMargin+'px'+';'+'margin-bottom:'+v.config.isBottom+'px'+';'}}" wx:if="{{v.cmpName=='recommendedTools'}}">
+                    <mg-cell bind:__l="__l" class="data-v-738afd1f" cname="p0" last="1" vueId="{{'1c593106-9-'+pi}}" vueSlots="{{['bd']}}">
+                        <view class="data-v-738afd1f" slot="bd">
+                            <mg-cell bind:__l="__l" btt="常用功能" bttc="wei f34" class="data-v-738afd1f" cname="p230" last="1" vueId="{{'1c593106-10-'+pi+','+'1c593106-9-'+pi}}"></mg-cell>
+                            <view class="gwglc f-raw data-v-738afd1f">
+                                <view bindtap="__e" class="f-c-c m20 data-v-738afd1f" data-event-opts="{{[ [ 'tap',[ [ 'gwglClick',['$0'],[ [ ['myGwgl','',mi] ] ] ] ] ] ]}}" hidden="{{!!mv.hide}}" style="width:25%;" wx:for="{{myGwgl}}" wx:for-index="mi" wx:for-item="mv" wx:key="mi">
+                                    <view class="glimg mb15 data-v-738afd1f">
+                                        <mg-img bind:__l="__l" class="data-v-738afd1f" src="{{mv.url}}" vueId="{{'1c593106-11-'+pi+'-'+mi+','+'1c593106-9-'+pi}}"></mg-img>
+                                    </view>
+                                    <view class="data-v-738afd1f" style="{{'color:'+v.config.color+';'}}">{{mv.label}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </mg-cell>
+                </view>
+                <block wx:else>
+                    <custom-swiper bind:__l="__l" class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c593106-12-'+pi}}" wx:if="{{v.cmpName=='customSwiper'}}"></custom-swiper>
+                    <block wx:else>
+                        <entry-button-group bind:__l="__l" class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" iheight="160" vueId="{{'1c593106-13-'+pi}}" wx:if="{{v.cmpName=='entryButtonGroup'}}"></entry-button-group>
+                        <block wx:else>
+                            <notice-group bind:__l="__l" class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" ptype="1" type="2" vueId="{{'1c593106-14-'+pi}}" wx:if="{{v.cmpName=='noticeGroup'}}"></notice-group>
+                            <block wx:else>
+                                <image-group bind:__l="__l" class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c593106-15-'+pi}}" wx:if="{{v.cmpName=='imageGroup'}}"></image-group>
+                                <block wx:else>
+                                    <magic-cube bind:__l="__l" class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c593106-16-'+pi}}" wx:if="{{v.cmpName=='magicCube'}}"></magic-cube>
+                                    <block wx:else>
+                                        <custom-title bind:__l="__l" class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c593106-17-'+pi}}" wx:if="{{v.cmpName=='customTitle'}}"></custom-title>
+                                        <block wx:else>
+                                            <white-space bind:__l="__l" class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c593106-18-'+pi}}" wx:if="{{v.cmpName=='whiteSpace'}}"></white-space>
+                                            <block wx:else>
+                                                <rich-text class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" wx:if="{{v.cmpName=='richText'}}"></rich-text>
+                                                <block wx:else>
+                                                    <segment-line bind:__l="__l" class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c593106-19-'+pi}}" wx:if="{{v.cmpName=='segmentLine'}}"></segment-line>
+                                                    <block wx:else>
+                                                        <custom-audio bind:__l="__l" class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c593106-20-'+pi}}" wx:if="{{v.cmpName=='customAudio'}}"></custom-audio>
+                                                        <block wx:else>
+                                                            <view class="bf p03 data-v-738afd1f" style="{{'margin-top:'+v.config.topMargin+'px'+';'}}" wx:if="{{v.cmpName=='customVideo'}}">
+                                                                <txv-video bind:__l="__l" class="data-v-738afd1f" data-com-type="wx" defn="超清" playerid="txv1" vid="{{v.config.videocon.links}}" vueId="{{'1c593106-21-'+pi}}"></txv-video>
+                                                            </view>
+                                                            <block wx:else>
+                                                                <big-image bind:__l="__l" class="data-v-738afd1f" co="{{v.config}}" color="{{tColor}}" vueId="{{'1c593106-22-'+pi}}" wx:if="{{v.cmpName=='bigImage'}}"></big-image>
+                                                            </block>
+                                                        </block>
+                                                    </block>
+                                                </block>
+                                            </block>
+                                        </block>
+                                    </block>
+                                </block>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </block>
+        </block>
+    </block>
+    <tab-bar bind:__l="__l" class="data-v-738afd1f" vueId="1c593106-23"></tab-bar>
+    <footc bind:__l="__l" class="data-v-738afd1f" vueId="1c593106-24"></footc>
+    <load bind:__l="__l" class="data-v-738afd1f" vueId="1c593106-25" zix="2000" wx:if="{{!page.length||!payConfig.balancePayChange}}"></load>
+</view>

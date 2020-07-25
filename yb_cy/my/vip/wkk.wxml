@@ -1,0 +1,45 @@
+<view class="data-v-2e452483">
+    <view class="viph posi-f data-v-2e452483">
+        <view class="wh data-v-2e452483"></view>
+    </view>
+    <view class="posi-f t0 w100 vipht f-y-c p3 cf data-v-2e452483" wx:if="{{user.userName}}">
+        <view class="f-g-0 vhimg mr30 data-v-2e452483">
+            <mg-img bind:__l="__l" class="data-v-2e452483" cname="bsf" src="{{user.portrait||'/static/wd/mrtx.png'}}" vueId="2dd39813-1"></mg-img>
+        </view>
+        <view class="f-g-1 data-v-2e452483">
+            <view class="f32 data-v-2e452483">{{user.userName+''}}<text class="cardName bs30 f20 ml10 data-v-2e452483" wx:if="{{user.cardName}}">{{user.cardName}}</text>
+            </view>
+            <view class="f-y-c f20 f-x-bt data-v-2e452483">
+                <view class="data-v-2e452483">
+                    <text class="mr10 data-v-2e452483">用户ID:</text>
+                    <text class="data-v-2e452483">{{user.userId}}</text>
+                </view>
+                <view bindtap="__e" class="f-g-0 f-y-c f22 cfc data-v-2e452483" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/other/gywm?t='+vipConfig.title+'会员说明&p=3'] ] ] ] ] ] ]}}">{{vipConfig.title+'会员说明'}}<text class="iconfont iconwen f26 cfc ml10 data-v-2e452483"></text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="vipb posi-r data-v-2e452483">
+        <view class="vipbt bf mb30 data-v-2e452483">
+            <view class="p3 jbc wei t-c data-v-2e452483" wx:if="{{vipConfig.title}}">
+                <text class="f34 data-v-2e452483">{{vipConfig.title+'会员 享'}}</text>
+                <text class="f50 data-v-2e452483">{{vipConfig.powerList.length}}</text>
+                <text class="f34 data-v-2e452483">大特权</text>
+            </view>
+            <view class="p03 data-v-2e452483">
+                <entry-button-group bind:__l="__l" class="data-v-2e452483" co="{{btng}}" color="{{tColor}}" imgw="84" vueId="2dd39813-2"></entry-button-group>
+            </view>
+            <view class="vbtn data-v-2e452483">
+                <button bindtap="__e" class="btn f-c data-v-2e452483" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url',user.rankId>0?'ykk':'open'] ] ] ] ] ] ]}}" wx:if="{{isLogin}}">{{user.rankId>0?'我的会员卡':'立即开通会员卡'}}</button>
+                <sq-btn bind:__l="__l" bind:refresh="__e" class="data-v-2e452483" cname="f-c" data-event-opts="{{[ [ '^refresh',[ [ 'go',[ [ 'o',['t',1],['url',user.rankId>0?'ykk':'open'] ] ] ] ] ] ]}}" sname="{{$root.a0}}" t="{{user.rankId>0?' 我的会员卡':'立即开通会员卡'}}" vueId="2dd39813-3" wx:else></sq-btn>
+            </view>
+        </view>
+        <view class="vipbb bf mb30 data-v-2e452483">
+            <view class="p30 jbc wei f34 data-v-2e452483">会员专享优惠券</view>
+            <mg-coupon bind:__l="__l" bind:btntap="__e" class="data-v-2e452483" cname="mb30" co="{{v}}" color="{{tColor}}" data-event-opts="{{[ [ '^btntap',[ ['btntap'] ] ] ]}}" ptype="6" vueId="{{'2dd39813-4-'+i}}" wx:for="{{list}}" wx:for-index="i" wx:for-item="v" wx:key="i"></mg-coupon>
+        </view>
+    </view>
+    <view class="data-v-2e452483" hidden="{{!!vipConfig.title}}">
+        <load bind:__l="__l" class="data-v-2e452483" vueId="2dd39813-5" zix="2000"></load>
+    </view>
+</view>

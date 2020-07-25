@@ -1,0 +1,17 @@
+<view class="p03 data-v-0e49e629" style="{{'margin-top:'+''+co.topMargin+u+';'}}">
+    <view class="bf ypc b-d f-row data-v-0e49e629">
+        <view class="ypcl data-v-0e49e629">
+            <image class="wh data-v-0e49e629" src="{{co.icon[0].url||'https://img-cdn-qiniu.dcloud.net.cn/uniapp/audio/music.jpg'}}"></image>
+        </view>
+        <view class="f-1 f-y-c p23 data-v-0e49e629">
+            <view class="f-1 mr30 data-v-0e49e629">
+                <view class="data-v-0e49e629">{{co.autio.title}}</view>
+                <view class="f24 c9 mt10 data-v-0e49e629">{{co.autio.author}}</view>
+            </view>
+            <view bindtap="__e" class="zban bsf f-c data-v-0e49e629" data-event-opts="{{[ [ 'tap',[ [ 'bfzt',['$event'] ] ] ] ]}}">
+                <view class="bf bs5 data-v-0e49e629" style="width:25rpx;height:25rpx;" wx:if="{{isplay}}"></view>
+                <text class="iconfont iconsxxx cf f42 ml5 data-v-0e49e629" style="transform:rotate(-90deg);" wx:else></text>
+            </view>
+        </view>
+    </view>
+</view>

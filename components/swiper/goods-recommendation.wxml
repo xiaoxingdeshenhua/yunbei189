@@ -1,0 +1,6 @@
+<view class="bf data-v-04d8580c" style="{{'margin-top:'+''+co.topMargin+u+';'+'margin-bottom:'+''+co.isBottom+u+';'}}" wx:if="{{list.length}}">
+    <view class="{{['data-v-04d8580c',co.reverseTwo==0?'p-15-30-0':'p-15-30']}}">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="{{co.infoTitle||'商品推荐'}}" bttc="f32 wei" class="data-v-04d8580c" cname="p0" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/shop/sptj?id='+storeInfo.id+'&t='+(co.infoTitle||'商品推荐')+'&r='+co.reverseTwo] ] ] ] ] ] ]}}" ft="查看全部" ftc="f24 c6" hc="1" last="1" vueId="25e238ac-1"></mg-cell>
+    </view>
+    <tj-goods bind:__l="__l" class="data-v-04d8580c" list="{{list}}" type="{{co.reverseTwo}}" vueId="25e238ac-2" wx:if="{{list.length}}"></tj-goods>
+</view>

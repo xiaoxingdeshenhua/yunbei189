@@ -1,0 +1,133 @@
+.animated.bounceIn.data-v-2e452483 {
+    animation-duration: .75s;
+}
+
+@-webkit-keyframes bounceIn-data-v-2e452483 {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes bounceIn-data-v-2e452483 {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.bounceIn.data-v-2e452483 {
+    animation-name: bounceIn-data-v-2e452483;
+}
+
+.viph.data-v-2e452483 {
+    width: 100%;
+    height: 710rpx;
+    border-radius: 100% 100% 100% 100%/0 0 12% 12%;
+    overflow: hidden;
+    background: linear-gradient(#211c1c,#382e2f);
+}
+
+.vipht.data-v-2e452483 {
+    height: 200rpx;
+    z-index: 9;
+    background: #211c1c;
+}
+
+.vhimg.data-v-2e452483 {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.cardName.data-v-2e452483 {
+    color: #f9e0bc;
+    border: 1px solid #f9e0bc;
+    padding: 2rpx 8rpx;
+}
+
+.cfc.data-v-2e452483 {
+    color: #f9e0bc;
+}
+
+.vipb.data-v-2e452483 {
+    padding: 200rpx 30rpx;
+}
+
+.vipbt.data-v-2e452483,.vipbb.data-v-2e452483 {
+    border-radius: 50rpx;
+}
+
+.vipbb.data-v-2e452483 {
+    padding: 0 30rpx 30rpx;
+}
+
+.jbc.data-v-2e452483 {
+    background: linear-gradient(90deg,#61471d 30%,#c0a883 50%,#61471d 70%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.vbtn.data-v-2e452483 {
+    padding: 40rpx 30rpx;
+}
+
+.vbtn .btn.data-v-2e452483 {
+    height: 100rpx;
+    background: linear-gradient(90deg,#f7d492,#f7c241);
+    border-radius: 50rpx;
+    color: #713c0e;
+    box-shadow: 0rpx 5rpx 20rpx 0 #f7d492;
+}

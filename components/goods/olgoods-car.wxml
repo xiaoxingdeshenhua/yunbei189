@@ -1,0 +1,22 @@
+<view class="data-v-773e959d">
+    <view class="posi-f carc f-c cf f22 data-v-773e959d" hidden="{{!(sjxx.storeInfo.isOpen==1)}}" style="{{$root.s0}}">
+        <view class="car posi-r f-row data-v-773e959d">
+            <view class="f-g-1 data-v-773e959d"></view>
+            <view class="f-g-0 carf f-c data-v-773e959d">
+                <view class="{{['carf-img posi-r f-c animated mr15 data-v-773e959d',carnum?'bounceIn':'']}}">
+                    <view class="carimg data-v-773e959d">
+                        <mg-img bind:__l="__l" class="data-v-773e959d" src="/static/dndc/dngwc.png" vueId="000d0d4a-1"></mg-img>
+                    </view>
+                    <view class="posi-a dot f-c data-v-773e959d" wx:if="{{carnum}}">{{carnum}}</view>
+                </view>
+                <view bindtap="__e" class="{{['f28 data-v-773e959d',carnum?'cf':'']}}" data-event-opts="{{[ [ 'tap',[ ['goPay'] ] ] ]}}" wx:if="{{isLogin}}">{{qsText.text}}</view>
+                <sq-btn bind:__l="__l" bind:refresh="__e" class="data-v-773e959d" cname="{{'f28 '+(carnum?'cf':'')}}" data-event-opts="{{[ [ '^refresh',[ ['goPay'] ] ] ]}}" h="105" t="{{qsText.text}}" vueId="000d0d4a-2" wx:else></sq-btn>
+            </view>
+        </view>
+    </view>
+    <view class="posi-f closec data-v-773e959d" hidden="{{!(sjxx.storeInfo.isOpen!=1)}}" style="{{'bottom:'+carBtm+'rpx'+';'}}">
+        <view class="h100 f34 cf f-c-xc data-v-773e959d">
+            <view class="f-c data-v-773e959d">门店休息中</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,56 @@
+<view class="mh100" hidden="{{!!showLoading}}">
+    <view class="w100 imggfgb bf9" wx:if="{{config.icon}}">
+        <view class="wh">
+            <mg-img bind:__l="__l" src="{{config.icon}}" vueId="b9ae56ca-1"></mg-img>
+        </view>
+    </view>
+    <view class="gfbg p2">
+        <mg-cell bgc="#FFB0BF" bind:__l="__l" cname="p0 bs20" last="1" vueId="b9ae56ca-2" vueSlots="{{['bd']}}" wx:if="{{couponData.id}}">
+            <view slot="bd">
+                <view class="p32">
+                    <mg-coupon cname bind:__l="__l" co="{{couponData}}" color="{{tColor}}" ptype="7" vueId="{{'b9ae56ca-3'+','+'b9ae56ca-2'}}"></mg-coupon>
+                </view>
+                <view class="c3 f26 f-c mb30">红包已放入：个人中心-我的卡券<label bindtap="__e" class="cf5 wei ml10 _span" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/coupon/my'] ] ] ] ] ] ]}}">查看></label>
+                </view>
+                <view class="plrb">
+                    <button bindtap="__e" class="btn f-c f34 bs20 cf bef" data-event-opts="{{[ [ 'tap',[ [ 'use',['$event'] ] ] ] ]}}" disabled="{{loading}}" loading="{{loading}}">立即使用</button>
+                </view>
+            </view>
+        </mg-cell>
+        <mg-cell bgc="#FFB0BF" bind:__l="__l" cname="p0 bs20 mt20" last="1" vueId="b9ae56ca-4" vueSlots="{{['bd']}}">
+            <view slot="bd">
+                <view>
+                    <view class="posi-r f-c p02">
+                        <view class="bee posi-a poswz"></view>
+                        <view class="bff posi-r p3 c3 f-y-c f34">看看大家手气</view>
+                    </view>
+                </view>
+                <view>
+                    <mg-cell bgc="#FFB0BF" bind:__l="__l" btt="{{v['$orig'].userName}}" bttc="f32" cname="p43 f-s c3 weui-cellt posi-r" vueId="{{'b9ae56ca-5-'+i+','+'b9ae56ca-4'}}" vueSlots="{{['hd','bd','ft']}}" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                        <view slot="hd">
+                            <view class="icon">
+                                <mg-img bind:__l="__l" cname="imgshape1" src="{{v['$orig'].portrait}}" vueId="{{'b9ae56ca-6-'+i+','+'b9ae56ca-5-'+i}}"></mg-img>
+                            </view>
+                        </view>
+                        <view class="c6" slot="bd">{{v.m0}}</view>
+                        <view class="c3" slot="ft">{{v['$orig'].money+'元'}}</view>
+                    </mg-cell>
+                </view>
+            </view>
+        </mg-cell>
+        <mg-cell bgc="#FFB0BF" bind:__l="__l" cname="p0 bs20 mt20" last="1" vueId="b9ae56ca-7" vueSlots="{{['bd']}}">
+            <view slot="bd">
+                <view>
+                    <view class="posi-r f-c p02">
+                        <view class="bee posi-a poswz"></view>
+                        <view class="bff posi-r p3 c3 f-y-c f34">活动规则</view>
+                    </view>
+                </view>
+                <view class="plrb f28 c3" wx:if="{{config.agreement}}">
+                    <mg-rtext bind:__l="__l" content="{{config.agreement}}" type="2" vueId="{{'b9ae56ca-8'+','+'b9ae56ca-7'}}"></mg-rtext>
+                </view>
+            </view>
+        </mg-cell>
+    </view>
+    <load bind:__l="__l" vueId="b9ae56ca-9" wx:if="{{showLoading}}"></load>
+</view>

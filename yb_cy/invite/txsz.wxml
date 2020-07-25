@@ -1,0 +1,33 @@
+<view class="data-v-6492971a">
+    <view class="p32 posi-r data-v-6492971a">
+        <view class="mt20 bs5 bf f26 p30 data-v-6492971a">
+            <view class="p03 data-v-6492971a">提现方式</view>
+            <nav-tab bind:__l="__l" bind:changeTab="__e" bind:input="__e" class="data-v-6492971a" color="#E60911" data-event-opts="{{[ [ '^changeTab',[ ['changeTab'] ] ],[ '^input',[ [ '__set_model',[ '','aIdx','$event',[] ] ] ] ] ]}}" ifsize="30" isname="{{$root.a1}}" ncolor="#91929D" sname="{{$root.a0}}" tabs="{{tabs}}" value="{{aIdx}}" vueId="4f138a96-1" wx:if="{{tabs.length}}"></nav-tab>
+            <mg-input bind:__l="__l" bind:input="__e" class="data-v-6492971a" cname="p23" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','txTel','$event',[] ],['params'] ] ] ] ]}}" ht="手机号" htc="f30" icn="f30" isr="1" pr="请输入手机号" t="number" value="{{params.txTel}}" vueId="4f138a96-2"></mg-input>
+            <view class="data-v-6492971a" hidden="{{!(tabs[aIdx].type==1||tabs[aIdx].type==4)}}">
+                <mg-input bind:__l="__l" bind:input="__e" class="data-v-6492971a" cname="p23" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','txUserId','$event',[] ],['params'] ] ] ] ]}}" dis="1" ht="用户ID" htc="f30" icn="f30 c9" isr="1" pr="请输入用户ID" value="{{params.txUserId}}" vueId="4f138a96-3"></mg-input>
+                <mg-input bind:__l="__l" bind:input="__e" class="data-v-6492971a" cname="p23" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','txUserName','$event',[] ],['params'] ] ] ] ]}}" dis="1" ht="用户昵称" htc="f30" icn="f30 c9" isr="1" pr="请输入用户昵称" value="{{params.txUserName}}" vueId="4f138a96-4"></mg-input>
+            </view>
+            <view class="data-v-6492971a" hidden="{{!(tabs[aIdx].type==3)}}">
+                <mg-input bind:__l="__l" bind:input="__e" class="data-v-6492971a" cname="p23" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','aliName','$event',[] ],['params'] ] ] ] ]}}" ht="支付宝姓名" htc="f30" icn="f30" isr="1" pr="请输入支付宝姓名" value="{{params.aliName}}" vueId="4f138a96-5"></mg-input>
+                <mg-input bind:__l="__l" bind:input="__e" class="data-v-6492971a" cname="p23" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','aliNumber','$event',[] ],['params'] ] ] ] ]}}" ht="支付宝账号" htc="f30" icn="f30" isr="1" pr="请输入支付宝账号" value="{{params.aliNumber}}" vueId="4f138a96-6"></mg-input>
+            </view>
+            <view class="data-v-6492971a" hidden="{{!(tabs[aIdx].type==2)}}">
+                <mg-input bind:__l="__l" bind:input="__e" class="data-v-6492971a" cname="p23" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','bank','$event',[] ],['params'] ] ] ] ]}}" ht="所属银行" htc="f30" icn="f30" isr="1" pr="请输入所属银行" value="{{params.bank}}" vueId="4f138a96-7"></mg-input>
+                <mg-input bind:__l="__l" bind:input="__e" class="data-v-6492971a" cname="p23" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','subbranch','$event',[] ],['params'] ] ] ] ]}}" ht="所属支行" htc="f30" icn="f30" isr="1" pr="请输入所属支行" value="{{params.subbranch}}" vueId="4f138a96-8"></mg-input>
+                <mg-input bind:__l="__l" bind:input="__e" class="data-v-6492971a" cname="p23" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','cardNumber','$event',[] ],['params'] ] ] ] ]}}" ht="银行卡号" htc="f30" icn="f30" isr="1" pr="请输入银行卡号" t="number" value="{{params.cardNumber}}" vueId="4f138a96-9"></mg-input>
+                <mg-input bind:__l="__l" bind:input="__e" class="data-v-6492971a" cname="p23" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','fullName','$event',[] ],['params'] ] ] ] ]}}" ht="户主姓名" htc="f30" icn="f30" isr="1" last="1" pr="请输入户主姓名" value="{{params.fullName}}" vueId="4f138a96-10"></mg-input>
+            </view>
+            <view class="data-v-6492971a" hidden="{{!(tabs[aIdx].type==1||tabs[aIdx].type==3)}}">
+                <mg-cell bind:__l="__l" class="data-v-6492971a" cname="p332" isr="1" last="1" vueId="4f138a96-11" vueSlots="{{['default','bd']}}">
+                    <view class="data-v-6492971a" slot="bd">
+                        <view class="c3 f30 data-v-6492971a">{{tabs[aIdx].type==1?'微信收款码':'支付宝收款码'}}</view>
+                        <mg-photo bind:__l="__l" bind:changeImg="__e" class="data-v-6492971a" data-event-opts="{{[ [ '^changeImg',[ ['changeImg'] ] ] ]}}" fileList="{{uploadArr[0].fileList}}" mark="{{uploadArr[0].mark}}" max="{{uploadArr[0].max}}" pkey="{{uploadArr[0].pkey}}" vueId="{{'4f138a96-12'+','+'4f138a96-11'}}" w="{{uploadArr[0].w}}"></mg-photo>
+                    </view>></mg-cell>
+            </view>
+        </view>
+    </view>
+    <view class="foot-btnc p-r data-v-6492971a" style="padding-top:40rpx;">
+        <button bindtap="__e" class="foot-btn data-v-6492971a" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{loading}}" loading="{{loading}}" style="{{'background:'+'#E60911'+';'}}">保存</button>
+    </view>
+</view>

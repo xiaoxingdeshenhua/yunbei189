@@ -1,0 +1,9 @@
+<view class="bfooter f-c-c c9 f26 t_c data-v-388fbf5e">
+    <view bindtap="__e" class="f-c data-v-388fbf5e" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+        <view class="footimg mr10 data-v-388fbf5e" wx:if="{{system.icon}}">
+            <mg-img bind:__l="__l" class="data-v-388fbf5e" src="{{system.icon}}" vueId="1e74e88c-1"></mg-img>
+        </view>
+        <view class="data-v-388fbf5e" wx:if="{{system.copyright}}">{{system.copyright}}</view>
+    </view>
+    <view bindtap="__e" class="mt10 f24 data-v-388fbf5e" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}">{{system.support}}</view>
+</view>

@@ -1,0 +1,9 @@
+<view class="bf p23 data-v-935e72e6">
+    <checkbox-group bindchange="__e" class="data-v-935e72e6" data-event-opts="{{[ [ 'change',[ [ 'checkboxChange',['$event'] ] ] ] ]}}">
+        <label class="f-y-c data-v-935e72e6">
+            <checkbox checked="{{cbVal}}" class="data-v-935e72e6" color="{{color}}" style="transform:scale(0.7);"></checkbox>
+            <view class="data-v-935e72e6">阅读并同意</view>
+            <navigator class="weui-agree__link data-v-935e72e6" style="{{'color:'+color+';'}}" url="{{'/yb_cy/my/other/gywm?t='+title+'&p='+p}}">{{'《'+title+'》'}}</navigator>
+        </label>
+    </checkbox-group>
+</view>

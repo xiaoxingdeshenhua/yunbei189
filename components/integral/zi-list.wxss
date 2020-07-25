@@ -1,0 +1,106 @@
+.animated.bounceIn.data-v-5ef9a022 {
+    animation-duration: .75s;
+}
+
+@-webkit-keyframes bounceIn-data-v-5ef9a022 {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes bounceIn-data-v-5ef9a022 {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.bounceIn.data-v-5ef9a022 {
+    animation-name: bounceIn-data-v-5ef9a022;
+}
+
+.ggc.data-v-5ef9a022 {
+    height: 72vh;
+}
+
+.ggc .ggx.data-v-5ef9a022 {
+    top: 20rpx;
+    right: 20rpx;
+}
+
+.ggc .ggh.data-v-5ef9a022 {
+    height: 10vh;
+}
+
+.ggc .ggb.data-v-5ef9a022 {
+    height: 75vh;
+    overflow-y: scroll;
+}
+
+.ggc .ggb .specv.data-v-5ef9a022 {
+    min-width: 185rpx;
+    padding: 0 30rpx;
+    height: 70rpx;
+    border-radius: 8rpx;
+    text-align: center;
+    line-height: 70rpx;
+    background: #eff3f6;
+    margin: 0 20rpx 20rpx 0;
+}
+
+.ggc .ggf.data-v-5ef9a022 {
+    height: 19vh;
+}

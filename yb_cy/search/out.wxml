@@ -1,0 +1,48 @@
+<view class="mh100 bf data-v-04cbae0e">
+    <view class="searchc p3 f-y-c data-v-04cbae0e">
+        <view class="f-g-1 scl bf2f f-y-c p03 data-v-04cbae0e">
+            <text class="iconfont iconsearch c0 data-v-04cbae0e"></text>
+            <input autoFocus="{{true}}" bindblur="__e" bindconfirm="__e" bindinput="__e" class="flex-1 p02 data-v-04cbae0e" confirmType="search" data-event-opts="{{[ [ 'confirm',[ [ 'confirm',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '$0','keywords','$event',['trim'] ],['params'] ] ] ],[ 'blur',[ ['$forceUpdate'] ] ] ]}}" focus="{{true}}" placeholder="请输入关键字搜索" placeholderClass="cb2" value="{{params.keywords}}"></input>
+            <text bindtap="__e" class="iconfont iconcuo c6 data-v-04cbae0e" data-event-opts="{{[ [ 'tap',[ [ 'cleanKey',['$event'] ] ] ] ]}}" wx:if="{{params.keywords}}"></text>
+        </view>
+        <view bindtap="__e" class="f-g-0 c8 ml30 data-v-04cbae0e" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}">搜索</view>
+    </view>
+    <view class="p03 data-v-04cbae0e" wx:if="{{!issearch}}">
+        <view class="p30 f-x-bt data-v-04cbae0e">
+            <view class="wei data-v-04cbae0e">搜索历史</view>
+            <view bindtap="__e" class="f-y-c p2 data-v-04cbae0e" data-event-opts="{{[ [ 'tap',[ [ 'clear',['$event'] ] ] ] ]}}">
+                <text class="iconfont iconshanchu c3 data-v-04cbae0e"></text>
+            </view>
+        </view>
+        <view class="f-raw data-v-04cbae0e">
+            <view bindtap="__e" class="f26 bf2f mr20 mb20 c3 lstag data-v-04cbae0e" data-event-opts="{{[ [ 'tap',[ [ 'setKey',['$0'],[ [ ['history','',i] ] ] ] ] ] ]}}" wx:for="{{history}}" wx:for-index="i" wx:for-item="v" wx:key="i">{{v}}</view>
+        </view>
+    </view>
+    <block wx:else>
+        <view class="bf f-raw data-v-04cbae0e">
+            <view class="w100 data-v-04cbae0e" wx:for="{{dataList}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <mg-cell bind:__l="__l" bind:tab="__e" brs="10rpx" class="data-v-04cbae0e" data-event-opts="{{[ [ '^tab',[ [ 'goDl',['$0'],[ [ ['dataList','',i] ] ] ] ] ] ]}}" h="150" img="{{v.icon}}" isr="1" last="{{co.reverseTwo==1}}" noc="1" vueId="{{'47c45ae4-1-'+i}}" vueSlots="{{['bd']}}" w="150">
+                    <view class="data-v-04cbae0e" slot="bd">
+                        <view class="f-bt data-v-04cbae0e">
+                            <text class="t-o-e data-v-04cbae0e">{{v.name}}</text>
+                        </view>
+                        <view class="f-bt mt15 data-v-04cbae0e">
+                            <text class="f24 c9 t-o-e data-v-04cbae0e">{{v.body}}</text>
+                        </view>
+                        <view class="mt10 f-row data-v-04cbae0e" wx:if="{{v.outVipPrice>0}}">
+                            <view class="vipl f-y-c data-v-04cbae0e">
+                                <view class="data-v-04cbae0e">{{sl+v.outVipPrice}}</view>
+                            </view>
+                            <view class="vipr f-y-c data-v-04cbae0e">VIP</view>
+                        </view>
+                        <view class="f-x-bt mt10 data-v-04cbae0e">
+                            <text class="t-o-e data-v-04cbae0e" style="{{'color:'+color+';'}}">{{sl+v.outSalesPrice}}</text>
+                            <button class="f-g-0 cartadd data-v-04cbae0e" style="{{'background:'+tColor+';'}}"></button>
+                        </view>
+                    </view>
+                </mg-cell>
+            </view>
+        </view>
+        <jzz bind:__l="__l" class="data-v-04cbae0e" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="47c45ae4-2"></jzz>
+    </block>
+</view>

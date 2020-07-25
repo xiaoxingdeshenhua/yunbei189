@@ -1,0 +1,24 @@
+<view class="container pb115 data-v-15ab7447">
+    <view class="p23 data-v-15ab7447">
+        <view bindtap="__e" class="bf bs20 p23 mb20 f-row data-v-15ab7447" data-event-opts="{{[ [ 'tap',[ [ 'chooseAdd',['$0'],[ [ ['dataList','',i,'id'] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="f-g-1 data-v-15ab7447">
+                <view class="f-row data-v-15ab7447">
+                    <view class="f32 mr10 t-o-e data-v-15ab7447" style="max-width:80%;">{{v['$orig'].address}}</view>
+                    <bk-b bind:__l="__l" cName="f-g-0 f22 c6 mr20 p-5-10" class="data-v-15ab7447" color="{{v.m0}}" t="{{v['$orig'].label}}" type="2" vueId="{{'16b65c01-1-'+i}}"></bk-b>
+                </view>
+                <view class="f24 mr10 t-o-e data-v-15ab7447">{{v['$orig'].details}}</view>
+                <view class="f-row f24 c6 mt15 data-v-15ab7447">
+                    <text class="mr20 data-v-15ab7447">{{v['$orig'].userName+'('+v['$orig'].sex+'）'}}</text>
+                    <text class="data-v-15ab7447">{{v['$orig'].userTel}}</text>
+                </view>
+            </view>
+            <view catchtap="__e" class="f-g-0 f-c ml20 data-v-15ab7447" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','address?id='+v['$orig'].id] ] ] ] ] ] ]}}">
+                <text class="iconfont iconbianji f40 data-v-15ab7447"></text>
+            </view>
+        </view>
+    </view>
+    <view class="foot-btnc data-v-15ab7447">
+        <button bindtap="__e" class="foot-btn data-v-15ab7447" data-event-opts="{{[ [ 'tap',[ [ 'xzdz',['$event'] ] ] ] ]}}" style="{{'background:'+tColor+';'}}">+新增地址</button>
+    </view>
+    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-15ab7447" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="16b65c01-2"></jzz>
+</view>

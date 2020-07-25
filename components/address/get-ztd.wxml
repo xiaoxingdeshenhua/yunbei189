@@ -1,0 +1,5 @@
+<mg-cell bbt="{{sjxx.storeInfo.address}}" bind:__l="__l" btt="{{sjxx.storeInfo.name||'商家名称'}}" bttc="f34" class="data-v-7d7bbea4" last="1" vueId="513c60b9-1" vueSlots="{{['ft']}}">
+    <view bindtap="__e" class="f-y-c data-v-7d7bbea4" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" slot="ft">
+        <text class="iconfont iconditu f44 data-v-7d7bbea4" style="{{'color:'+tColor+';'}}"></text>
+    </view>
+</mg-cell>

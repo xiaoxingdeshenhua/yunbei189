@@ -1,0 +1,16 @@
+<view class="mh100 bf pb130 data-v-16b4bfcd">
+    <view class="f-bt p23 data-v-16b4bfcd" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+        <view class="flex-1 t-o-e data-v-16b4bfcd">{{v['$orig'].name}}</view>
+        <view class="flex-1 f-bt data-v-16b4bfcd">
+            <text class="c6 ml30 data-v-16b4bfcd">{{'每一份收'+v['$orig'].boxMoney+'元'}}</text>
+            <text class="data-v-16b4bfcd">{{sl+v.m0}}</text>
+        </view>
+    </view>
+    <view class="f-bt p03 data-v-16b4bfcd">
+        <view class="data-v-16b4bfcd">小计</view>
+        <view class="wei f30 data-v-16b4bfcd">{{sl+getBoxMoney}}</view>
+    </view>
+    <view class="foot-btnc data-v-16b4bfcd">
+        <button bindtap="__e" class="foot-btn data-v-16b4bfcd" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',4] ] ] ] ] ] ]}}" style="{{'background:'+tColor+';'}}">我知道了</button>
+    </view>
+</view>

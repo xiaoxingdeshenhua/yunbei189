@@ -1,0 +1,52 @@
+<view class="bf pb30 f-raw data-v-77586f16" wx:if="{{type==0}}">
+    <view class="w100 data-v-77586f16" wx:for="{{list}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+        <mg-cell bind:__l="__l" bind:tab="__e" brs="10rpx" class="data-v-77586f16" data-event-opts="{{[ [ '^tab',[ [ 'goDl',['$0'],[ [ ['list','',i] ] ] ] ] ] ]}}" h="150" img="{{v.icon}}" isr="1" last="{{co.reverseTwo==1}}" noc="1" vueId="{{'0b03c593-1-'+i}}" vueSlots="{{['bd']}}" w="150">
+            <view class="data-v-77586f16" slot="bd">
+                <view class="f-bt data-v-77586f16">
+                    <text class="t-o-e data-v-77586f16">{{v.name}}</text>
+                </view>
+                <view class="f-bt mt15 data-v-77586f16">
+                    <text class="f24 c9 t-o-e data-v-77586f16">{{v.body}}</text>
+                </view>
+                <view class="mt10 f-row data-v-77586f16" wx:if="{{v.outVipPrice>0}}">
+                    <view class="vipl f-y-c data-v-77586f16">
+                        <view class="data-v-77586f16">{{sl+v.outVipPrice}}</view>
+                    </view>
+                    <view class="vipr f-y-c data-v-77586f16">VIP</view>
+                </view>
+                <view class="f-x-bt mt10 data-v-77586f16">
+                    <view class="t-o-e data-v-77586f16">
+                        <text class="wei cf0a data-v-77586f16">{{sl+v.outSalesPrice}}</text>
+                        <text class="t-d-l ml10 c9 f22 data-v-77586f16">{{sl+v.outPrice}}</text>
+                    </view>
+                    <button class="f-g-0 cartadd bf0a data-v-77586f16"></button>
+                </view>
+            </view>
+        </mg-cell>
+    </view>
+</view>
+<view class="f-raw f-s f-bt p2 data-v-77586f16" wx:else>
+    <view bindtap="__e" class="bf goodsc bs10 mb20 data-v-77586f16" data-event-opts="{{[ [ 'tap',[ [ 'goDl',['$0'],[ [ ['list','',i] ] ] ] ] ] ]}}" wx:for="{{list}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+        <view class="goodsimg bf6 data-v-77586f16">
+            <mg-img bind:__l="__l" class="data-v-77586f16" src="{{v.icon}}" vueId="{{'0b03c593-2-'+i}}"></mg-img>
+        </view>
+        <view class="p23 data-v-77586f16">
+            <view class="f-bt data-v-77586f16">
+                <text class="t-o-e data-v-77586f16">{{v.name}}</text>
+            </view>
+            <view class="mt10 f-row data-v-77586f16" wx:if="{{v.outVipPrice>0}}">
+                <view class="vipl f-y-c data-v-77586f16">
+                    <view class="data-v-77586f16">{{sl+v.outVipPrice}}</view>
+                </view>
+                <view class="vipr f-y-c data-v-77586f16">VIP</view>
+            </view>
+            <view class="f-x-bt mt10 data-v-77586f16">
+                <view class="t-o-e data-v-77586f16">
+                    <text class="wei cf0a data-v-77586f16">{{sl+v.outSalesPrice}}</text>
+                    <text class="t-d-l ml10 c9 f22 data-v-77586f16">{{sl+v.outPrice}}</text>
+                </view>
+                <button class="f-g-0 cartadd bf0a data-v-77586f16"></button>
+            </view>
+        </view>
+    </view>
+</view>

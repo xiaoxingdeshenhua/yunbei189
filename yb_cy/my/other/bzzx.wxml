@@ -1,0 +1,5 @@
+<view class="bf m3 bs20 data-v-58633656">
+    <view class="bf data-v-58633656" wx:for="{{arr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="{{v.title}}" bttc="c3" class="data-v-58633656" cname="p23" data-event-opts="{{[ [ '^tab',[ [ 'goDl',['$0'],[ [ ['arr','',i] ] ] ] ] ] ]}}" isr="1" last="{{i==arr.length-1}}" vueId="{{'5f5b9e6f-1-'+i}}"></mg-cell>
+    </view>
+</view>

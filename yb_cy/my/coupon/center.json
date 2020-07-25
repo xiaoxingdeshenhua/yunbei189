@@ -1,0 +1,12 @@
+{
+    "usingComponents": {
+        "nav-tab": "/components/swiper/nav-tab",
+        "mg-coupon": "/components/common/mg-coupon",
+        "jzz": "/components/common/jzz",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

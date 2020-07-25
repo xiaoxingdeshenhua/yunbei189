@@ -1,0 +1,28 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "mg-form": "/components/common/mg-form",
+        "bk-b": "/components/common/block-b",
+        "sq-btn": "/components/common/sq-btn",
+        "tab-bar": "/components/common/tabbar",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "mg-cell": "/components/common/mg-cell",
+        "footc": "/components/common/footc",
+        "uni-nav-bar": "/components/third/uni-nav-bar",
+        "load": "/components/common/load",
+        "custom-swiper": "/components/swiper/swiper",
+        "entry-button-group": "/components/swiper/entry-button-group",
+        "notice-group": "/components/swiper/notice-group",
+        "image-group": "/components/swiper/image-group",
+        "magic-cube": "/components/swiper/magic-cube",
+        "custom-title": "/components/swiper/custom-title",
+        "white-space": "/components/swiper/white-space",
+        "rich-text": "/components/swiper/rich-text",
+        "segment-line": "/components/swiper/segment-line",
+        "custom-audio": "/components/swiper/custom-audio",
+        "custom-video": "/components/swiper/custom-video",
+        "big-image": "/components/swiper/big-image",
+        "txv-video": "plugin://wxa75efa648b60994b/video"
+    }
+}

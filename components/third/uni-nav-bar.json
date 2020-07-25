@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "uni-status-bar": "/components/third/uni-status-bar",
+        "mg-popup": "/components/common/popup",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

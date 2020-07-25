@@ -1,0 +1,41 @@
+<view class="bf data-v-5d0c76ea" wx:if="{{sjxx.storeInfo}}">
+    <view class="p-15-30-0 data-v-5d0c76ea">
+        <mg-cell bind:__l="__l" btt="{{co.infoTitle||'商家信息'}}" bttc="f32 wei" class="data-v-5d0c76ea" cname="p0" last="1" vueId="967fc13c-1"></mg-cell>
+    </view>
+    <mg-cell bind:__l="__l" class="data-v-5d0c76ea" isr="1" vueId="967fc13c-2" vueSlots="{{['bd']}}" wx:if="{{$root.g0}}">
+        <view class="data-v-5d0c76ea" slot="bd">
+            <view class="data-v-5d0c76ea">商家服务</view>
+            <view class="mt10 f-raw data-v-5d0c76ea">
+                <bk-b bind:__l="__l" block="1" cName="f24 mt10 mr20 p-5-20 bs5" class="data-v-5d0c76ea" sname="{{$root.a0}}" t="{{v}}" vueId="{{'967fc13c-3-'+i+','+'967fc13c-2'}}" wx:for="{{sjxx.storeInfo.service}}" wx:for-index="i" wx:for-item="v" wx:key="i"></bk-b>
+            </view>
+        </view>
+    </mg-cell>
+    <mg-cell bind:__l="__l" class="data-v-5d0c76ea" isr="1" vueId="967fc13c-4" vueSlots="{{['bd']}}" wx:if="{{$root.g1}}">
+        <view class="data-v-5d0c76ea" slot="bd">
+            <view class="data-v-5d0c76ea">营业时间</view>
+            <view class="mt10 c9 f24 data-v-5d0c76ea">{{$root.m0}}</view>
+        </view>
+    </mg-cell>
+    <mg-cell bind:__l="__l" class="data-v-5d0c76ea" isr="1" vueId="967fc13c-5" vueSlots="{{['bd']}}" wx:if="{{$root.g2}}">
+        <view class="data-v-5d0c76ea" slot="bd">
+            <view class="data-v-5d0c76ea">商家地址</view>
+            <view class="mt20 f-bt data-v-5d0c76ea">
+                <view class="c9 f24 data-v-5d0c76ea">{{sjxx.storeInfo.address}}</view>
+                <view class="f-y-c data-v-5d0c76ea">
+                    <text bindtap="__e" class="iconfont icondw ml30 f36 data-v-5d0c76ea" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}"></text>
+                    <text bindtap="__e" class="iconfont icondh ml30 f36 data-v-5d0c76ea" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}"></text>
+                </view>
+            </view>
+        </view>
+    </mg-cell>
+    <view class="pb30 data-v-5d0c76ea" wx:if="{{$root.g3}}">
+        <mg-cell bttc arrow="1" bind:__l="__l" bind:tab="__e" btt="商家环境" class="data-v-5d0c76ea" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/shop/sjjs?type=1&info='+$root.m1] ] ] ] ] ] ]}}" ft="查看全部" ftc="f24 c6" hc="1" last="1" vueId="967fc13c-6"></mg-cell>
+        <view class="f-row o-x-s p03 data-v-5d0c76ea">
+            <blick bind:__l="__l" class="data-v-5d0c76ea" vueId="{{'967fc13c-7-'+i}}" vueSlots="{{['default']}}" wx:for="{{sjxx.storeInfo.media}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <view bindtap="__e" class="{{['f-g-0 imgc bs10 data-v-5d0c76ea',i<3?'mr20':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'yl',[i] ] ] ] ]}}" wx:if="{{i<4}}">
+                    <mg-img bind:__l="__l" class="data-v-5d0c76ea" src="{{v}}" vueId="{{'967fc13c-8-'+i+','+'967fc13c-7-'+i}}"></mg-img>
+                </view>
+            </blick>
+        </view>
+    </view>
+</view>

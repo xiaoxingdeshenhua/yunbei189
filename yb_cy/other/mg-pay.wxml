@@ -1,0 +1,37 @@
+<mg-form bind:__l="__l" class="data-v-68d05d6e" vueId="24417981-1" vueSlots="{{['default']}}">
+    <view class="mh100 bf data-v-68d05d6e">
+        <view class="paytop f-c-c data-v-68d05d6e">
+            <image class="payimg data-v-68d05d6e" src="/static/pay/payok.png"></image>
+            <view class="f26 c9 mt30 data-v-68d05d6e" wx:if="{{payObj.orderType==1}}">支付剩余时间<text class="ml10 data-v-68d05d6e" wx:if="{{stime}}">{{stime[2]+':'+stime[3]}}</text>
+            </view>
+            <view class="paymoeny wei data-v-68d05d6e">
+                <text class="f30 data-v-68d05d6e">{{sl}}</text>
+                <text class="f60 ml5 data-v-68d05d6e">{{pmoney}}</text>
+            </view>
+            <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="{{info.storeName+' 订单详情'}}" bttc="f26 c9" class="data-v-68d05d6e" cname="p13" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/order/order-dl?id='+info.id] ] ] ] ] ] ]}}" hc="1" last="1" vueId="{{'24417981-2'+','+'24417981-1'}}" wx:if="{{payObj.orderType==1&&info}}"></mg-cell>
+            <view class="p13 f26 c9 data-v-68d05d6e" wx:if="{{payObj.orderType==2}}">{{payObj.info.type}}</view>
+        </view>
+        <form bindsubmit="__e" class="data-v-68d05d6e" data-event-opts="{{[ [ 'submit',[ [ 'formSubmit',['$event'] ] ] ] ]}}">
+            <view class="data-v-68d05d6e">
+                <radio-group class="data-v-68d05d6e" name="radiogroup">
+                    <label class="weui-cell weui-check__label right30 data-v-68d05d6e" wx:for="{{payArr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                        <view class="weui-cell__hd f-y-c data-v-68d05d6e">
+                            <image class="hdimg data-v-68d05d6e" mode="aspectFit" src="{{v.img}}"></image>
+                        </view>
+                        <view class="weui-cell__bd data-v-68d05d6e">
+                            <view class="f34 wei data-v-68d05d6e">{{v.name}}</view>
+                            <view class="yezf data-v-68d05d6e" wx:if="{{v.value=='ye'}}">可用余额<text class="data-v-68d05d6e" style="{{'color:'+tColor+';'}}">{{sl+user.balance}}</text>
+                            </view>
+                        </view>
+                        <view class="weui-cell__ft weui-cell__ft_in-radio data-v-68d05d6e">
+                            <radio checked="{{v.checked}}" class="data-v-68d05d6e" color="#07C160" value="{{v.value}}"></radio>
+                        </view>
+                    </label>
+                </radio-group>
+            </view>
+            <view class="foot-btnc data-v-68d05d6e">
+                <button class="foot-btn b-s-2 bs0 f30 wei data-v-68d05d6e" disabled="{{loading}}" formType="submit" loading="{{loading}}" style="{{'background:'+'#07C160'+';'}}">确认支付</button>
+            </view>
+        </form>
+    </view>
+</mg-form>

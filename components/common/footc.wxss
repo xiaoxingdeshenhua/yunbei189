@@ -1,0 +1,90 @@
+.animated.bounceIn.data-v-388fbf5e {
+    animation-duration: .75s;
+}
+
+@-webkit-keyframes bounceIn-data-v-388fbf5e {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes bounceIn-data-v-388fbf5e {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.bounceIn.data-v-388fbf5e {
+    animation-name: bounceIn-data-v-388fbf5e;
+}
+
+.weui-footer_fixed-bottom.data-v-388fbf5e {
+    position: fixed;
+    bottom: .52em;
+    left: 0;
+    right: 0;
+    margin-bottom: 120rpx;
+}
+
+.bfooter.data-v-388fbf5e {
+    padding: 30rpx 20rpx 20rpx;
+}
+
+.footimg.data-v-388fbf5e {
+    width: 40rpx;
+    height: 40rpx;
+}

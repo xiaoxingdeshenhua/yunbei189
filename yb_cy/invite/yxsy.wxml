@@ -1,0 +1,20 @@
+<view class="bf mh100 data-v-0559357a">
+    <view class="xqyfixedtop bf data-v-0559357a">
+        <view class="hlb nav wei f-row data-v-0559357a">
+            <view class="f-1 f-c data-v-0559357a" wx:for="{{nav}}" wx:for-index="i" wx:for-item="v" wx:key="i">{{v}}</view>
+        </view>
+    </view>
+    <view class="p03 mt90 data-v-0559357a">
+        <mg-cell bind:__l="__l" bind:tab="__e" class="data-v-0559357a" cname="p30" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','syxq?day='+v.day] ] ] ] ] ] ]}}" hc="1" isl="1" vueId="{{'32b4dcfc-1-'+i}}" vueSlots="{{['bd']}}" wx:for="{{dataList}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="f-row t-c f26 c9 data-v-0559357a" slot="bd">
+                <view class="f-1 data-v-0559357a">{{v.day}}</view>
+                <view class="f-1 data-v-0559357a">{{v.number}}</view>
+                <view class="f-1 wei crb f-y-c f-x-e data-v-0559357a">
+                    <text class="data-v-0559357a">{{sl+v.money}}</text>
+                    <text class="iconfont iconright crb ml10 mr30 f28 data-v-0559357a"></text>
+                </view>
+            </view>
+        </mg-cell>
+        <jzz bgcolor="transparent" bind:__l="__l" class="data-v-0559357a" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="32b4dcfc-2"></jzz>
+    </view>
+</view>

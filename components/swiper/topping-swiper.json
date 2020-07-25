@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "custom-swiper": "/components/swiper/swiper",
+        "search-box": "/components/swiper/search-box",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

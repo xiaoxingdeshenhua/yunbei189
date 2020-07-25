@@ -1,0 +1,16 @@
+{
+    "usingComponents": {
+        "nav-tab": "/components/swiper/nav-tab",
+        "my-order": "/components/order/my-order",
+        "jzz": "/components/common/jzz",
+        "tab-bar": "/components/common/tabbar",
+        "mg-modal": "/components/common/modal",
+        "mg-coupon": "/components/common/mg-coupon",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-popup": "/components/common/popup",
+        "mg-radio": "/components/form/mg-radio",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper"
+    }
+}

@@ -1,0 +1,144 @@
+.animated.bounceIn.data-v-a28d827a {
+    animation-duration: .75s;
+}
+
+@-webkit-keyframes bounceIn-data-v-a28d827a {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes bounceIn-data-v-a28d827a {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.bounceIn.data-v-a28d827a {
+    animation-name: bounceIn-data-v-a28d827a;
+}
+
+.fxc.data-v-a28d827a {
+    padding: 60rpx 30rpx 100rpx;
+}
+
+.c60.data-v-a28d827a {
+    color: #c65f10;
+}
+
+.ggc.data-v-a28d827a {
+    padding: 0rpx 35rpx;
+}
+
+.ggl.data-v-a28d827a {
+    height: 42rpx;
+    background: linear-gradient(90deg,#f54857,#f90630);
+    border-radius: 42rpx;
+}
+
+.ggr.data-v-a28d827a {
+    height: 76rpx;
+}
+
+.fx1c.data-v-a28d827a {
+    padding: 50rpx 30rpx;
+    background: linear-gradient(180deg,#fffbf1,#fffbf1);
+}
+
+.fx1c .img.data-v-a28d827a {
+    width: 129rpx;
+    height: 129rpx;
+}
+
+.fx1c .tjc.data-v-a28d827a {
+    height: 40rpx;
+    border-radius: 40rpx;
+    background: linear-gradient(0deg,#fcb535,#fef653);
+    padding: 0 20rpx 0 88rpx;
+}
+
+.fx1c .tjrc.data-v-a28d827a {
+    width: 74rpx;
+    height: 52rpx;
+    padding: 5rpx;
+    border-radius: 52rpx;
+    top: -6rpx;
+    left: -2rpx;
+    background: #fdf4c1;
+}
+
+.fx1c .tjr.data-v-a28d827a {
+    font-size: 18rpx;
+    border: 1px solid #fa720e;
+    border-radius: 52rpx;
+    color: #eb7d24;
+}
+
+.yqhb.data-v-a28d827a {
+    border-color: #c65f10;
+    height: 52rpx;
+    padding: 0 25rpx;
+    border-radius: 52rpx;
+}
+
+.fx2c .b-r-d.data-v-a28d827a::after {
+    background: #eee;
+}
+
+.fx2c .lb.data-v-a28d827a {
+    height: 80rpx;
+}

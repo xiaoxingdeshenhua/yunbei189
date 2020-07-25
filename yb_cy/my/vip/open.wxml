@@ -1,0 +1,27 @@
+<view class="container pb115 data-v-222b2ad5">
+    <view class="main data-v-222b2ad5">
+        <view class="bf bs10 mainc data-v-222b2ad5">
+            <view class="p03 data-v-222b2ad5">
+                <view class="p30 f32 wei t-c data-v-222b2ad5">{{(isbj?'修改':'填写')+'个人资料'}}</view>
+                <view class="mb30 f24 c6 data-v-222b2ad5">*请提供正确的个人资料与联系方式，以便获得最新会员优惠信息</view>
+            </view>
+            <mg-input bind:__l="__l" bind:input="__e" class="data-v-222b2ad5" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','realName','$event',[] ],['params'] ] ] ] ]}}" ht="姓名" hw="130" isr="1" pr="请输入姓名" value="{{params.realName}}" vueId="1dad9888-1"></mg-input>
+            <mg-input bind:__l="__l" bind:input="__e" class="data-v-222b2ad5" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','userTel','$event',[] ],['params'] ] ] ] ]}}" ht="电话" hw="130" isr="1" max="{{11}}" pr="请输入手机号" t="number" value="{{params.userTel}}" vueId="1dad9888-2" vueSlots="{{['default']}}">
+                <sq-btn bind:__l="__l" bind:refresh="__e" class="data-v-222b2ad5" cname="text-btnf f24 ml20 p0 b00" data-event-opts="{{[ [ '^refresh',[ ['setTel'] ] ] ]}}" h="50" slot="ft" t="自动填写" type="2" vueId="{{'1dad9888-3'+','+'1dad9888-2'}}" w="120" wx:if="{{!user.userTel}}"></sq-btn>
+            </mg-input>
+            <mg-cell bind:__l="__l" class="data-v-222b2ad5" cname="p03" ht="性别" hw="130" isr="1" vueId="1dad9888-4" vueSlots="{{['bd']}}">
+                <view class="data-v-222b2ad5" slot="bd">
+                    <mg-radio arr="{{sexArr}}" bind:__l="__l" bind:input="__e" class="data-v-222b2ad5" color="#07C160" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','sex','$event',[] ],['params'] ] ] ] ]}}" value="{{params.sex}}" vueId="{{'1dad9888-5'+','+'1dad9888-4'}}"></mg-radio>
+                </view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" class="data-v-222b2ad5" ht="生日" hw="130" isr="1" last="1" vueId="1dad9888-6" vueSlots="{{['bd']}}">
+                <picker bindchange="__e" class="data-v-222b2ad5" data-event-opts="{{[ [ 'change',[ [ 'bindDateChange',['$event'] ] ] ] ]}}" end="{{endDate}}" mode="date" slot="bd" value="{{date}}">
+                    <view class="c6 data-v-222b2ad5">{{date}}</view>
+                </picker>
+            </mg-cell>
+        </view>
+    </view>
+    <view class="foot-btnc posi-r mt30 data-v-222b2ad5">
+        <button bindtap="__e" class="foot-btn b00 bs15 data-v-222b2ad5" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{loading}}" hoverClass="btnhc" loading="{{loading}}">提交</button>
+    </view>
+</view>

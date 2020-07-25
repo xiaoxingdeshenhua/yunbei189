@@ -1,0 +1,12 @@
+<view class="bf mh100 data-v-60408332">
+    <view class="p03 data-v-60408332">
+        <mg-cell bind:__l="__l" brs="50%" class="data-v-60408332" cname="p30" h="72" img="{{v['$orig'].portrait}}" isl="1" vueId="{{'2adeb913-1-'+i}}" vueSlots="{{['bd']}}" w="72" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="data-v-60408332" slot="bd">
+                <view class="f26 data-v-60408332">{{v['$orig'].userName}}<text class="f22 c9 ml5 data-v-60408332">{{'（UID：'+v['$orig'].userId+'）'}}</text>
+                </view>
+                <view class="f22 c9 mt10 data-v-60408332">{{'推荐时间：'+v.g0}}</view>
+            </view>
+        </mg-cell>
+        <jzz bgcolor="transparent" bind:__l="__l" class="data-v-60408332" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="2adeb913-2"></jzz>
+    </view>
+</view>

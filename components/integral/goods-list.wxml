@@ -1,0 +1,23 @@
+<view class="bf f-raw f-bt p23 data-v-7469f5ac" wx:if="{{goodsList.length}}">
+    <view bindtap="__e" class="bf goodsc mb20 data-v-7469f5ac" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/integral/details?id='+v.id] ] ] ] ] ] ]}}" wx:for="{{goodsList}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+        <view class="goodsimg be6 bs15 data-v-7469f5ac">
+            <mg-img bind:__l="__l" class="data-v-7469f5ac" src="{{v.icon}}" vueId="{{'ed16eece-1-'+i}}"></mg-img>
+        </view>
+        <view class="p20 data-v-7469f5ac">
+            <view class="f-bt data-v-7469f5ac">
+                <view class="bf2 cf f24 mr10 boxs f-g-0 data-v-7469f5ac" wx:if="{{v.type=='2'}}">红</view>
+                <view class="t-o-e f-g-1 data-v-7469f5ac">{{v.name}}</view>
+            </view>
+            <view class="cfa data-v-7469f5ac">
+                <view class="t-o-e f30 wei data-v-7469f5ac">
+                    <text class="data-v-7469f5ac" wx:if="{{v.score>0}}">{{v.score}}</text>
+                    <text class="f26 ml10 nowei data-v-7469f5ac" wx:if="{{v.score>0}}">{{mySwitch.jfName}}</text>
+                    <text class="nowei data-v-7469f5ac" wx:if="{{v.score>0&&v.money>0}}">+</text>
+                    <text class="data-v-7469f5ac" wx:if="{{v.money>0}}">
+                        <text class="f22 data-v-7469f5ac">{{sl}}</text>{{v.money}}</text>
+                </view>
+                <view class="t-o-e t-d-l c9 f22 wei4 data-v-7469f5ac">{{sl+v.price}}</view>
+            </view>
+        </view>
+    </view>
+</view>

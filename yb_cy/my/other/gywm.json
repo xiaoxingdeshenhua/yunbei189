@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "mg-rtext": "/components/swiper/rich-text",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

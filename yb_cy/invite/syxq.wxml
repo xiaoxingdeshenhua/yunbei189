@@ -1,0 +1,26 @@
+<view class="mh100 data-v-70c46bc1">
+    <view class="xqyfixedtop data-v-70c46bc1" wx:if="{{aIdx!=-1}}">
+        <nav-tab bind:__l="__l" bind:changeTab="__e" bind:input="__e" class="data-v-70c46bc1" cname="hlb" color="#FF3535" data-event-opts="{{[ [ '^changeTab',[ ['changeTab'] ] ],[ '^input',[ [ '__set_model',[ '','aIdx','$event',[] ] ] ] ] ]}}" tabs="{{tabs}}" value="{{aIdx}}" vueId="1bd3d322-1"></nav-tab>
+    </view>
+    <view class="{{['p3 data-v-70c46bc1',aIdx!=-1?'mt90':'']}}">
+        <view class="p3 bf bs10 mb30 data-v-70c46bc1" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <mg-cell bind:__l="__l" bind:tab="__e" brs="50%" class="data-v-70c46bc1" cname="p0" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url',''] ] ] ] ] ] ]}}" h="80" img="{{v['$orig'].portrait}}" last="1" vueId="{{'1bd3d322-2-'+i}}" vueSlots="{{['bd']}}" w="80">
+                <view class="data-v-70c46bc1" slot="bd">
+                    <view class="f26 f-row data-v-70c46bc1">
+                        <view class="f-1 f30 wei data-v-70c46bc1">{{v['$orig'].userName}}<text class="f22 c9 nowei ml5 data-v-70c46bc1">{{'（UID：'+v['$orig'].userId+'）'}}</text>
+                        </view>
+                        <view class="data-v-70c46bc1" style="{{'color:'+(v['$orig'].state==1?'#14A118':'#74B9FF')+';'}}">{{v['$orig'].state==1?'待入账':'已入账'}}</view>
+                    </view>
+                    <view class="f22 c9 mt10 f-x-bt data-v-70c46bc1">
+                        <view class="fsc bs5 p-3-10 f18 f-g-0 data-v-70c46bc1">{{v['$orig'].note}}</view>
+                        <view class="f24 c9 data-v-70c46bc1">预计收益:<text class="crb wei data-v-70c46bc1">{{sl+v['$orig'].money}}</text>
+                        </view>
+                    </view>
+                </view>
+            </mg-cell>
+            <view class="mt30 f24 c6 data-v-70c46bc1">{{'订单编号：'+v['$orig'].outTradeNo}}</view>
+            <view class="mt10 f24 c6 data-v-70c46bc1">{{'订单时间：'+v.m0}}</view>
+        </view>
+        <jzz bgcolor="transparent" bind:__l="__l" class="data-v-70c46bc1" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="1bd3d322-3"></jzz>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "mg-img": "/components/common/mg-img",
+        "mg-cell": "/components/common/mg-cell",
+        "entry-button-group": "/components/swiper/entry-button-group",
+        "mg-form": "/components/common/mg-form",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

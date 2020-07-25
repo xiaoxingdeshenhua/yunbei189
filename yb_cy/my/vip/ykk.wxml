@@ -1,0 +1,68 @@
+<view class="bf data-v-ca3fac20">
+    <view class="p3 data-v-ca3fac20">
+        <view class="viph posi-r bs30 data-v-ca3fac20">
+            <view class="wh data-v-ca3fac20" wx:if="{{vipInfo}}">
+                <mg-img bind:__l="__l" class="data-v-ca3fac20" src="{{vipInfo.icon}}" vueId="04d41c5e-1"></mg-img>
+            </view>
+            <view class="posi-a t0 wh c8d data-v-ca3fac20">
+                <view class="vipht f-y-c data-v-ca3fac20">
+                    <view class="f-g-0 posi-r data-v-ca3fac20">
+                        <image class="posi-a hgimg data-v-ca3fac20" src="/static/wd/vip/hg.png" wx:if="{{isVip}}"></image>
+                        <view class="vhimg posi-r bsf mr30 data-v-ca3fac20">
+                            <mg-img bind:__l="__l" class="data-v-ca3fac20" src="{{user.portrait||'/static/wd/mrtx.png'}}" vueId="04d41c5e-2"></mg-img>
+                        </view>
+                    </view>
+                    <view class="f-g-1 data-v-ca3fac20">
+                        <view class="f-bt data-v-ca3fac20">
+                            <view class="f32 wei ce5 data-v-ca3fac20">{{user.userName}}</view>
+                            <view bindtap="__e" class="f-g-0 f-y-c f22 cfc data-v-ca3fac20" data-event-opts="{{[ [ 'tap',[ [ 'xgzl',['$event'] ] ] ] ]}}">修改资料<text class="iconfont iconright f26 cfc data-v-ca3fac20"></text>
+                            </view>
+                        </view>
+                        <view class="mt15 f-bt f24 data-v-ca3fac20">
+                            <view class="data-v-ca3fac20">
+                                <text class="mr10 data-v-ca3fac20">有效期:</text>
+                                <text class="data-v-ca3fac20">永久有效</text>
+                            </view>
+                            <view bindtap="__e" class="f-g-0 f-y-c f22 cfc data-v-ca3fac20" data-event-opts="{{[ [ 'tap',[ [ 'djgz',['$event'] ] ] ] ]}}">等级规则<text class="iconfont iconright f26 cfc data-v-ca3fac20"></text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="viphb f-row data-v-ca3fac20" wx:if="{{vipInfo}}">
+                    <view class="f-g-1 f-y-bt data-v-ca3fac20">
+                        <view class="f34 wei jbc data-v-ca3fac20">{{vipInfo.growth}}</view>
+                        <view bindtap="__e" class="cfc f24 f-y-c data-v-ca3fac20" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','czz'] ] ] ] ] ] ]}}">成长值<text class="iconfont iconright f26 cfc ml5 data-v-ca3fac20"></text>
+                        </view>
+                    </view>
+                    <view class="f-g-0 f-y-bt data-v-ca3fac20">
+                        <view class="cfc data-v-ca3fac20">当前等级</view>
+                        <view class="mt10 ce5 f32 wei data-v-ca3fac20">{{vipInfo.name}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <notice-group bind:__l="__l" class="data-v-ca3fac20" co="{{ggConfig}}" color="{{tColor}}" list="{{ggList}}" type="2" vueId="04d41c5e-3"></notice-group>
+    <view class="vipb posi-r data-v-ca3fac20">
+        <view class="vipbt data-v-ca3fac20">
+            <view class="p3 f34 wei data-v-ca3fac20">会员权益</view>
+            <view class="p03 data-v-ca3fac20">
+                <entry-button-group bind:__l="__l" class="data-v-ca3fac20" co="{{btng}}" color="{{tColor}}" imgw="84" vueId="04d41c5e-4"></entry-button-group>
+            </view>
+        </view>
+        <view class="vbtn data-v-ca3fac20" wx:if="{{isVip}}">
+            <navigator appId="wxeb490c6f9b154ef9" class="data-v-ca3fac20" extraData="{{adata}}" target="miniProgram" wx:if="{{adata&&user.WeChatCard==2}}">
+                <button class="btn f-c f34 data-v-ca3fac20" hoverClass="btnhc">同步微信卡包</button>
+            </navigator>
+            <navigator appId="wxeb490c6f9b154ef9" class="data-v-ca3fac20" extraData="{{adata}}" target="miniProgram" wx:if="{{user.WeChatCard==1}}">
+                <button class="btn f-c f34 data-v-ca3fac20" hoverClass="btnhc">查看微信卡包</button>
+            </navigator>
+        </view>
+        <view class="vipbb pb30 data-v-ca3fac20">
+            <view class="p3 f34 wei data-v-ca3fac20">会员优惠券</view>
+            <view class="p03 data-v-ca3fac20">
+                <mg-coupon bind:__l="__l" bind:btntap="__e" class="data-v-ca3fac20" cname="mb30" co="{{v}}" color="{{tColor}}" data-event-opts="{{[ [ '^btntap',[ [ 'btntap',['$0'],[ [ ['list','',i,'id'] ] ] ] ] ] ]}}" ptype="6" vueId="{{'04d41c5e-5-'+i}}" wx:for="{{list}}" wx:for-index="i" wx:for-item="v" wx:key="i"></mg-coupon>
+            </view>
+        </view>
+    </view>
+</view>

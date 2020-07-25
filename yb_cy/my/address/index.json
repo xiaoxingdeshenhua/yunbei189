@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "我的地址",
+    "usingComponents": {
+        "mg-input": "/components/form/mg-input",
+        "mg-radio": "/components/form/mg-radio",
+        "bk-b": "/components/common/block-b",
+        "jzz": "/components/common/jzz",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

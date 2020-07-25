@@ -1,0 +1,39 @@
+<view class="data-v-866cba54" wx:if="{{info.type}}">
+    <view class="bf p330 f-c-c data-v-866cba54">
+        <view class="f-y-c data-v-866cba54">
+            <image class="img mr20 data-v-866cba54" src="/static/wd/invite/txje.png"></image>
+            <view class="data-v-866cba54">收益提现</view>
+        </view>
+        <view class="mt20 f56 data-v-866cba54">{{info.actualMoney}}</view>
+        <view class="{{['m10 data-v-866cba54',info.state==2?'c00':info.state==3?'crb':'cf3']}}">{{info.state==2?'已通过':info.state==3?'已拒绝':'待审核'}}</view>
+    </view>
+    <mg-cell bind:__l="__l" btt="打款方式" bttc="f30 c9" class="data-v-866cba54" ft="{{dkfs}}" ftc="f30 c3" isr="1" vueId="48371544-1" wx:if="{{info.paymentType>0}}"></mg-cell>
+    <mg-cell bind:__l="__l" btt="提现方式" bttc="f30 c9" class="data-v-866cba54" ft="{{txType}}" ftc="f30 c3" isr="1" vueId="48371544-2"></mg-cell>
+    <mg-cell bind:__l="__l" btt="提现金额" bttc="f30 c9" class="data-v-866cba54" ft="{{info.money}}" ftc="f30 c3" isr="1" vueId="48371544-3"></mg-cell>
+    <mg-cell bind:__l="__l" btt="提现手续费" bttc="f30 c9" class="data-v-866cba54" ft="{{info.charge}}" ftc="f30 c3" isr="1" vueId="48371544-4"></mg-cell>
+    <block wx:if="{{info.type==1||info.type==4}}">
+        <mg-cell bind:__l="__l" btt="用户ID" bttc="f30 c9" class="data-v-866cba54" cname="mt20" ft="{{info.userId}}" ftc="f30 c3" isr="1" vueId="48371544-5"></mg-cell>
+        <mg-cell bind:__l="__l" btt="用户昵称" bttc="f30 c9" class="data-v-866cba54" ft="{{info.userName}}" ftc="f30 c3" isr="1" vueId="48371544-6"></mg-cell>
+    </block>
+    <block wx:else>
+        <block wx:if="{{info.type==2}}">
+            <mg-cell bind:__l="__l" btt="银行卡号" bttc="f30 c9" class="data-v-866cba54" cname="mt20" ft="{{info.cardNumber}}" ftc="f30 c3" isr="1" vueId="48371544-7"></mg-cell>
+            <mg-cell bind:__l="__l" btt="户主姓名" bttc="f30 c9" class="data-v-866cba54" ft="{{info.fullName}}" ftc="f30 c3" isr="1" vueId="48371544-8"></mg-cell>
+        </block>
+        <block wx:else>
+            <block wx:if="{{info.type==3}}">
+                <mg-cell bind:__l="__l" btt="支付宝姓名" bttc="f30 c9" class="data-v-866cba54" cname="mt20" ft="{{info.aliName}}" ftc="f30 c3" isr="1" vueId="48371544-9"></mg-cell>
+                <mg-cell bind:__l="__l" btt="支付宝账号" bttc="f30 c9" class="data-v-866cba54" ft="{{info.aliNumber}}" ftc="f30 c3" isr="1" vueId="48371544-10"></mg-cell>
+            </block>
+        </block>
+    </block>
+    <mg-cell bind:__l="__l" btt="手机号" bttc="f30 c9" class="data-v-866cba54" ft="{{info.tel}}" ftc="f30 c3" isr="1" vueId="48371544-11"></mg-cell>
+    <mg-cell bind:__l="__l" btt="收款码" bttc="f30 c9" class="data-v-866cba54" noc="1" vueId="48371544-12" vueSlots="{{['ft']}}" wx:if="{{info.type==1||info.type==3}}">
+        <view class="mimg bs10 data-v-866cba54" slot="ft">
+            <mg-img bind:__l="__l" class="data-v-866cba54" src="{{info.txImg}}" vueId="{{'48371544-13'+','+'48371544-12'}}"></mg-img>
+        </view>
+    </mg-cell>
+    <mg-cell bind:__l="__l" btt="创建时间" bttc="f30 c9" class="data-v-866cba54" cname="mt20" ft="{{$root.m0}}" ftc="f30 c3" isr="1" vueId="48371544-14"></mg-cell>
+    <mg-cell bind:__l="__l" btt="完成时间" bttc="f30 c9" class="data-v-866cba54" ft="{{$root.m1}}" ftc="f30 c3" isr="1" vueId="48371544-15" wx:if="{{info.completeAt>0}}"></mg-cell>
+    <mg-cell bind:__l="__l" btt="订单号" bttc="f30 c9" class="data-v-866cba54" cname="mb50" ft="{{info.outTradeNo}}" ftc="f30 c3" isr="1" vueId="48371544-16"></mg-cell>
+</view>

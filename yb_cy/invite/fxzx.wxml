@@ -1,0 +1,85 @@
+<view class="bf mh100 fxc data-v-a28d827a" wx:if="{{fxsInfo.been}}">
+    <view class="fixedtop l0 b05 ggc f-y-c data-v-a28d827a">
+        <view class="ggl f-y-c f24 cf p02 mr30 data-v-a28d827a">
+            <text class="iconfont iconlb cf f28 mr20 data-v-a28d827a"></text>
+            <text class="data-v-a28d827a">公告</text>
+        </view>
+        <view class="f-1 ggr p10 data-v-a28d827a">
+            <uni-notice-bar backgroundColor="transparent" bind:__l="__l" class="data-v-a28d827a" color="#fff" scrollable="{{true}}" single="{{true}}" text="{{fxsInfo.notice}}" vueId="bb9133de-1"></uni-notice-bar>
+        </view>
+    </view>
+    <view class="bs20 fx1c f-row data-v-a28d827a">
+        <view class="img bsf mr30 data-v-a28d827a">
+            <mg-img bind:__l="__l" class="data-v-a28d827a" src="{{user.portrait}}" vueId="bb9133de-2"></mg-img>
+        </view>
+        <view class="f-1 data-v-a28d827a">
+            <view class="f-x-bt data-v-a28d827a">
+                <view class="f38 wei f-1 c0 data-v-a28d827a">{{user.userName}}</view>
+                <view bindtap="__e" class="yqhb f-c f24 c60 b-d data-v-a28d827a" data-event-opts="{{[ [ 'tap',[ [ 'ljyq',['$event'] ] ] ] ]}}">邀请伙伴</view>
+            </view>
+            <view class="mt20 p-r f20 c0 f-y-c data-v-a28d827a">
+                <view class="tjc f-c data-v-a28d827a">{{fxsInfo.name}}</view>
+                <view class="p-a tjrc data-v-a28d827a">
+                    <view class="tjr wh f-c wei data-v-a28d827a">推荐人</view>
+                </view>
+            </view>
+            <view class="mt20 c9 f24 data-v-a28d827a">{{'申请时间：'+fxsInfo.createdAt}}</view>
+        </view>
+    </view>
+    <mg-swiper bind:__l="__l" class="data-v-a28d827a" co="{{swiper}}" color="{{tColor}}" u="rpx" vueId="bb9133de-3"></mg-swiper>
+    <view class="fx2c mt20 bs20 bf b-s-3 data-v-a28d827a">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="预估收益" bttc="f30 wei c0" class="data-v-a28d827a" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','yxsy'] ] ] ] ] ] ]}}" ft="查看更多" ftc="f26" hc="1" last="1" vueId="bb9133de-4"></mg-cell>
+        <mg-cell bind:__l="__l" class="data-v-a28d827a" cname="p3" isr="1" vueId="bb9133de-5" vueSlots="{{['bd']}}">
+            <view class="f-y-c data-v-a28d827a" slot="bd">
+                <view bindtap="__e" class="f-1 f-c-c b-r-d data-v-a28d827a" data-event-opts="{{[ [ 'tap',[ [ 'goDl',['$0'],[ [ ['syarr','',i] ] ] ] ] ] ]}}" hoverClass="be" wx:for="{{syarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <view class="f32 wei crb data-v-a28d827a">{{v.n}}</view>
+                    <view class="f24 c9 m20 data-v-a28d827a">{{v.t}}</view>
+                    <view class="text-btnf bs30 p-8-20 bf7 c60 data-v-a28d827a">收益详情</view>
+                </view>
+            </view>
+        </mg-cell>
+        <view class="p03 f-y-c data-v-a28d827a">
+            <text class="iconfont iconytq mr30 cf0a data-v-a28d827a"></text>
+            <swiper autoplay="true" class="f-1 lb data-v-a28d827a" interval="3000" vertical="true">
+                <swiper-item class="f-y-c data-v-a28d827a" wx:for="{{lbarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <view class="t-o-e f24 data-v-a28d827a">{{v.userName+' 已赚'}}<text class="cf2 data-v-a28d827a">{{v.commission}}</text>元</view>
+                </swiper-item>
+            </swiper>
+        </view>
+    </view>
+    <view class="fx2c mt30 bs20 bf b-s-3 pb20 data-v-a28d827a">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" brs="50%" btt="可提现金额" bttc="f30 wei c0" class="data-v-a28d827a" color="#C65F10" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','tx'] ] ] ] ] ] ]}}" ft="点击提现" ftc="f26" h="48" hc="1" img="/static/wd/invite/txje.png" last="1" vueId="bb9133de-6" w="48"></mg-cell>
+        <mg-cell bind:__l="__l" class="data-v-a28d827a" cname="p23" isr="1" last="1" vueId="bb9133de-7" vueSlots="{{['bd']}}">
+            <view class="f-y-c data-v-a28d827a" slot="bd">
+                <view bindtap="__e" class="f-1 f-c-c b-r-d data-v-a28d827a" data-event-opts="{{[ [ 'tap',[ [ 'goDl',['$0'],[ [ ['txarr','',i] ] ] ] ] ] ]}}" hoverClass="be" wx:for="{{txarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <view class="f24 c9 data-v-a28d827a">{{v.t}}</view>
+                    <view class="f32 wei mt20 f-y-c wbba data-v-a28d827a" style="{{'color:'+v.c+';'}}">{{v.n}}<text class="iconfont iconright crb ml5 data-v-a28d827a" style="{{'color:'+v.c+';'}}"></text>
+                    </view>
+                </view>
+            </view>
+        </mg-cell>
+    </view>
+    <view class="fx2c mt30 bs20 bf b-s-3 pb20 data-v-a28d827a">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" brs="50%" btt="我的伙伴" bttc="f30 wei c0" class="data-v-a28d827a" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','wdfs?idx=0'] ] ] ] ] ] ]}}" ft="查看更多" ftc="f26" h="48" hc="1" img="/static/wd/invite/wdhb.png" last="1" vueId="bb9133de-8" w="48"></mg-cell>
+        <mg-cell bind:__l="__l" class="data-v-a28d827a" cname="p23" isr="1" last="1" vueId="bb9133de-9" vueSlots="{{['bd']}}">
+            <view class="f-y-c data-v-a28d827a" slot="bd">
+                <view bindtap="__e" class="f-1 f-c-c b-r-d data-v-a28d827a" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','wdfs?idx='+i] ] ] ] ] ] ]}}" hidden="{{!!v.hide}}" hoverClass="be" wx:for="{{hbarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <view class="f24 c9 data-v-a28d827a">{{v.t}}</view>
+                    <view class="f32 wei mt20 data-v-a28d827a">{{v.n}}</view>
+                </view>
+            </view>
+        </mg-cell>
+    </view>
+    <view class="fx2c mt30 bs20 bf b-s-3 pb20 data-v-a28d827a">
+        <mg-cell bind:__l="__l" bind:tab="__e" brs="50%" btt="订单统计" bttc="f30 wei c0" class="data-v-a28d827a" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url',''] ] ] ] ] ] ]}}" h="48" hc="1" img="/static/wd/invite/ddtj.png" last="1" vueId="bb9133de-10" w="48"></mg-cell>
+        <mg-cell bind:__l="__l" class="data-v-a28d827a" cname="p23" isr="1" last="1" vueId="bb9133de-11" vueSlots="{{['bd']}}">
+            <view class="f-y-c data-v-a28d827a" slot="bd">
+                <view bindtap="__e" class="f-1 f-c-c b-r-d data-v-a28d827a" data-event-opts="{{[ [ 'tap',[ [ 'goDl',['$0'],[ [ ['tjarr','',i] ] ] ] ] ] ]}}" hoverClass="be" wx:for="{{tjarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <view class="f24 c9 data-v-a28d827a">{{v.t}}</view>
+                    <view class="f32 wei mt20 data-v-a28d827a">{{v.n}}</view>
+                </view>
+            </view>
+        </mg-cell>
+    </view>
+    <mg-share bind:__l="__l" bind:input="__e" class="data-v-a28d827a" co="{{shareCo}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','shareshow','$event',[] ] ] ] ] ]}}" hbs="{{shareCo.isget}}" ptype="1" value="{{shareshow}}" vueId="bb9133de-12" wxs="1"></mg-share>
+</view>

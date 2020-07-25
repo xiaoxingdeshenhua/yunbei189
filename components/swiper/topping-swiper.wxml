@@ -1,0 +1,6 @@
+<view class="posi-r">
+    <custom-swiper bind:__l="__l" co="{{swiper}}" color="{{tColor}}" vueId="208c9888-1"></custom-swiper>
+    <view class="posi-a w100" style="{{'top:'+$root.g0.statusBarHeight+'px'+';'}}">
+        <search-box bgc="bt" bind:__l="__l" co="{{search}}" color="#fff" ptype="index" storeInfo="{{storeInfo}}" vueId="208c9888-2"></search-box>
+    </view>
+</view>

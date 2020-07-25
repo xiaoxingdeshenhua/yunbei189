@@ -1,0 +1,83 @@
+<view bindtap="__e" class="bf bs30 mb30 pb10 f24 data-v-50af59e0" data-event-opts="{{[ [ 'tap',[ [ 'goDL',['$event'] ] ] ] ]}}">
+    <block wx:if="{{otype==1}}">
+        <mg-cell bind:__l="__l" class="data-v-50af59e0" cname="p253" isr="1" noc="1" vueId="f8444332-1" vueSlots="{{['bd']}}">
+            <view class="f-y-c data-v-50af59e0" slot="bd">
+                <view class="mrltc bsf f-c b-l-ts mr15 data-v-50af59e0">
+                    <text class="iconfont icondndc cf data-v-50af59e0"></text>
+                </view>
+                <view class="flex-1 data-v-50af59e0">
+                    <view catchtap="__e" class="f-y-c data-v-50af59e0" data-event-opts="{{[ [ 'tap',[ [ 'gosjDL',['$event'] ] ] ] ]}}">
+                        <text class="t-o-e f28 data-v-50af59e0">{{co.storeName+''}}</text>
+                        <text class="iconfont iconright c0 f24 data-v-50af59e0"></text>
+                    </view>
+                </view>
+                <view class="f-g-0 data-v-50af59e0" style="{{'color:'+$root.m0+';'}}">{{''+$root.m1+stime}}</view>
+            </view>
+        </mg-cell>
+        <mg-cell bind:__l="__l" brs="10rpx" class="data-v-50af59e0" cname="p23" h="110" img="{{co.goods[0].icon}}" last="1" noc="1" vueId="f8444332-2" vueSlots="{{['bd']}}" w="110">
+            <view class="data-v-50af59e0" slot="bd">
+                <view class="data-v-50af59e0">{{'时间：'+$root.m2}}</view>
+                <view class="mt10 data-v-50af59e0">{{co.goods[0].name+' 等 '+co.goodsNum+'件商品'}}</view>
+                <view class="f-y-c mt10 c9 data-v-50af59e0">
+                    <view class="data-v-50af59e0">堂食</view>
+                    <view class="b-r data-v-50af59e0"></view>
+                    <view class="data-v-50af59e0">{{co.people+'位'}}</view>
+                </view>
+            </view>
+        </mg-cell>
+        <view class="p23 data-v-50af59e0">
+            <view class="f-x-bt mb20 data-v-50af59e0">
+                <view class="f-y-c data-v-50af59e0" style="{{'color:'+tColor+';'}}">桌号:<text class="ml20 data-v-50af59e0">{{co.typeName+co.tableNum}}</text>
+                </view>
+                <view class="data-v-50af59e0">{{'共'+co.goodsNum+'件'}}<text class="ml20 data-v-50af59e0">{{''+(co.symbol||sl)+co.money}}</text>
+                </view>
+            </view>
+            <view class="f-row data-v-50af59e0">
+                <view class="f-g-0 f-y-c c9 data-v-50af59e0">
+                    <text class="iconfont icondndc mr10 data-v-50af59e0"></text>
+                    <text class="data-v-50af59e0">堂食订单</text>
+                </view>
+                <view class="f-g-1 f-x-e data-v-50af59e0">
+                    <view catchtap="__e" class="obtn cf data-v-50af59e0" data-event-opts="{{[ [ 'tap',[ [ '$emit',[ 'operation',[ 'o',['t','ljzf'],['co',co] ] ] ] ] ] ]}}" style="{{'background:'+tColor+';'}}" wx:if="{{co.state==1}}">立即支付</view>
+                    <view catchtap="__e" class="obtn b-d data-v-50af59e0" data-event-opts="{{[ [ 'tap',[ [ '$emit',[ 'operation',[ 'o',['t','lxsj'],['co',co] ] ] ] ] ] ]}}" wx:if="{{co.state==3}}">联系商家</view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <block wx:if="{{otype==2}}">
+            <mg-cell bind:__l="__l" class="data-v-50af59e0" cname="p253" isr="1" noc="1" vueId="f8444332-3" vueSlots="{{['bd']}}">
+                <view class="f-y-c data-v-50af59e0" slot="bd">
+                    <view class="mrltc bsf f-c b-l-sy mr15 data-v-50af59e0">
+                        <text class="iconfont iconyue cf f28 data-v-50af59e0"></text>
+                    </view>
+                    <view class="flex-1 data-v-50af59e0">
+                        <view catchtap="__e" class="f-y-c data-v-50af59e0" data-event-opts="{{[ [ 'tap',[ [ 'gosjDL',['$event'] ] ] ] ]}}">
+                            <text class="t-o-e f28 data-v-50af59e0">{{co.storeName+''}}</text>
+                            <text class="iconfont iconright c0 f24 data-v-50af59e0"></text>
+                        </view>
+                    </view>
+                    <view class="f-g-0 data-v-50af59e0" style="{{'color:'+$root.m3+';'}}">{{''+$root.m4}}</view>
+                </view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" brs="10rpx" class="data-v-50af59e0" cname="p23" h="110" img="{{co.icon}}" last="1" noc="1" vueId="f8444332-4" vueSlots="{{['bd']}}" w="110">
+                <view class="data-v-50af59e0" slot="bd">
+                    <view class="data-v-50af59e0">{{'时间：'+$root.m5}}</view>
+                    <view class="mt10 data-v-50af59e0">{{'总计：'+''+(co.symbol||sl)+co.originalMoney}}</view>
+                    <view class="mt10 data-v-50af59e0">{{'实付：'+''+(co.symbol||sl)+co.money}}</view>
+                </view>
+            </mg-cell>
+            <view class="p23 data-v-50af59e0">
+                <view class="f-row data-v-50af59e0">
+                    <view class="f-g-0 f-y-c c9 data-v-50af59e0">
+                        <text class="iconfont iconyue mr10 data-v-50af59e0"></text>
+                        <text class="data-v-50af59e0">收银订单</text>
+                    </view>
+                    <view class="f-g-1 f-x-e data-v-50af59e0">
+                        <view class="obtn b-d data-v-50af59e0">查看详情</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </block>
+</view>

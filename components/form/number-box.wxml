@@ -1,0 +1,5 @@
+<view class="uni-numbox">
+    <view bindtap="__e" class="{{['uni-numbox__minus',inputValue<=min||disabled?'uni-numbox--disabled':'']}}" data-event-opts="{{[ [ 'tap',[ [ '_calcValue',['minus'] ] ] ] ]}}">-</view>
+    <input bindblur="__e" bindinput="__e" class="uni-numbox__value" data-event-opts="{{[ [ 'blur',[ [ '_onBlur',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','inputValue','$event',[] ] ] ] ] ]}}" disabled="{{disabled}}" type="number" value="{{inputValue}}"></input>
+    <view bindtap="__e" class="{{['uni-numbox__plus',inputValue>=max||disabled?'uni-numbox--disabled':'']}}" data-event-opts="{{[ [ 'tap',[ [ '_calcValue',['plus'] ] ] ] ]}}">+</view>
+</view>

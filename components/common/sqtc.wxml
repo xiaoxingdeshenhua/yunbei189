@@ -1,0 +1,10 @@
+<mg-popup bind:__l="__l" bind:input="__e" class="data-v-89f5b6cc" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showSq','$event',[] ] ] ] ] ]}}" position="middle" value="{{showSq}}" vueId="ec782d80-1" vueSlots="{{['default']}}">
+    <view class="bf t-c p3 bs30 data-v-89f5b6cc" style="width:540rpx;">
+        <view class="p03 f30 wei data-v-89f5b6cc">温馨提示</view>
+        <view class="m30 data-v-89f5b6cc">为了您更好的使用，您可以设置相关授权信息后，重新打开小程序体验</view>
+        <view class="p03 f-x-bt data-v-89f5b6cc">
+            <button bindtap="__e" class="rbtn data-v-89f5b6cc" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">不设置</button>
+            <button bindtap="__e" class="rbtn cf data-v-89f5b6cc" data-event-opts="{{[ [ 'tap',[ [ 'qsz',['$event'] ] ] ] ]}}" style="{{'background:'+tColor+';'}}">去设置</button>
+        </view>
+    </view>
+</mg-popup>

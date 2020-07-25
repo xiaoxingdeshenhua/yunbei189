@@ -1,0 +1,95 @@
+.animated.bounceIn.data-v-0b768a24 {
+    animation-duration: .75s;
+}
+
+@-webkit-keyframes bounceIn-data-v-0b768a24 {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes bounceIn-data-v-0b768a24 {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.bounceIn.data-v-0b768a24 {
+    animation-name: bounceIn-data-v-0b768a24;
+}
+
+.payimg.data-v-0b768a24 {
+    width: 153rpx;
+    height: 155rpx;
+}
+
+.pt60.data-v-0b768a24 {
+    padding-top: 50rpx;
+}
+
+.btn.data-v-0b768a24 {
+    border-radius: 0;
+}
+
+.btn.data-v-0b768a24::after {
+    transform-origin: 50% 50%;
+    border-radius: 0;
+}
+
+.p25.data-v-0b768a24 {
+    padding: 20rpx 50rpx;
+}

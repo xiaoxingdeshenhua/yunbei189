@@ -1,0 +1,48 @@
+<view class="data-v-cdda2cac" style="{{'padding:'+''+ebg.padding+u+';'+'margin-top:'+''+ebg.topMargin+u+';'}}" wx:if="{{ebg.entryButtonList.length>0}}">
+    <swiper autoplay="{{ebg.autoplay}}" circular="{{ebg.circular}}" class="data-v-cdda2cac" indicatorActiveColor="{{color}}" indicatorColor="#999" indicatorDots="{{ebg.entryButtonList.length>1&&!ebg.hidedot}}" interval="{{ebg.interval}}" style="{{'height:'+ebg.height+'rpx'+';'}}">
+        <swiper-item class="data-v-cdda2cac" wx:for="{{ebg.entryButtonList}}" wx:for-index="pi" wx:for-item="pv" wx:key="pi">
+            <view class="f-row swiper-v data-v-cdda2cac">
+                <view bindtap="__e" class="f-c-c data-v-cdda2cac" data-event-opts="{{[ [ 'tap',[ [ 'goTo',['$0'],[ [ ['ebg.entryButtonList','',pi],['','',i] ] ] ] ] ] ]}}" style="{{'width:'+ebg.width+'%'+';'+'height:'+'175rpx'+';'}}" wx:for="{{pv}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <view class="{{['swiper-imgv bf6 o-h data-v-cdda2cac','imgshape'+ebg.shape]}}" style="{{'width:'+imgw+'rpx'+';'+'height:'+imgw+'rpx'+';'}}">
+                        <mg-img bind:__l="__l" class="data-v-cdda2cac" src="{{v.url}}" vueId="{{'1aa7c50a-1-'+pi+'-'+i}}"></mg-img>
+                    </view>
+                    <view class="swiper-tv mt10 t-o-e c6 data-v-cdda2cac" style="{{'color:'+(ebg.active&&activeIndex==v.id?color:ebg.color)+';'}}">{{v.label}}</view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+    <mg-modal bind:__l="__l" bind:input="__e" class="data-v-cdda2cac" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','show','$event',[] ] ] ] ] ]}}" ismr="{{true}}" value="{{show}}" vueId="1aa7c50a-2" vueSlots="{{['default']}}" width="80%" zIndex="{{2002}}">
+        <view class="bf bs30 data-v-cdda2cac">
+            <view class="t-c p330 f30 data-v-cdda2cac">温馨提示：本店无线网络已覆盖</view>
+            <view class="p2 data-v-cdda2cac">
+                <mg-cell bind:__l="__l" btt="{{sjxx.storeInfo.wifiName}}" class="data-v-cdda2cac" ht="Wifi名称:" hw="80" last="1" vueId="{{'1aa7c50a-3'+','+'1aa7c50a-2'}}"></mg-cell>
+                <mg-cell bind:__l="__l" class="data-v-cdda2cac" ht="Wifi密码:" hw="80" last="1" vueId="{{'1aa7c50a-4'+','+'1aa7c50a-2'}}" vueSlots="{{['bd']}}">
+                    <view class="f-y-c c6 data-v-cdda2cac" slot="bd">
+                        <text class="f-g-1 data-v-cdda2cac">{{sjxx.storeInfo.wifiPassworwd}}</text>
+                        <view class="f-g-0 data-v-cdda2cac">
+                            <bk-b bind:__l="__l" bind:tab="__e" cName="f24 ml20" class="data-v-cdda2cac" color="{{tColor}}" data-event-opts="{{[ [ '^tab',[ ['e0'] ] ] ]}}" t="复制" type="2" vueId="{{'1aa7c50a-5'+','+'1aa7c50a-4'}}"></bk-b>
+                        </view>
+                    </view>
+                </mg-cell>
+            </view>
+            <view class="f-row hlt dbbtnc data-v-cdda2cac">
+                <button bindtap="__e" class="flex-1 bf f30 h100 f-c data-v-cdda2cac" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}" hoverClass="be">确定</button>
+            </view>
+        </view>
+    </mg-modal>
+    <mg-modal bind:__l="__l" bind:input="__e" class="data-v-cdda2cac" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showsm','$event',[] ] ] ] ] ]}}" ismr="{{true}}" value="{{showsm}}" vueId="1aa7c50a-6" vueSlots="{{['default']}}" width="76%" zIndex="{{2002}}">
+        <view class="bf bs20 smc f-col f-y-c data-v-cdda2cac">
+            <view class="smimg mb30 data-v-cdda2cac">
+                <mg-img bind:__l="__l" class="data-v-cdda2cac" src="/static/dndc/sm.png" vueId="{{'1aa7c50a-7'+','+'1aa7c50a-6'}}"></mg-img>
+            </view>
+            <view class="f40 wei m30 data-v-cdda2cac">请扫描桌号二维码下单</view>
+            <view class="f26 c6 mb50 data-v-cdda2cac">扫描二维码手机下单</view>
+            <view class="foot-btnc posi-r mt30 p0 data-v-cdda2cac">
+                <button bindtap="__e" class="foot-btn b-l-f0f0 data-v-cdda2cac" data-event-opts="{{[ [ 'tap',[ [ 'smdc',['$event'] ] ] ] ]}}">扫桌号二维码</button>
+            </view>
+            <view class="foot-btnc posi-r mt20 p0 data-v-cdda2cac">
+                <button bindtap="__e" class="foot-btn bf cf1 data-v-cdda2cac" data-event-opts="{{[ [ 'tap',[ [ 'e2',['$event'] ] ] ] ]}}">稍后下单</button>
+            </view>
+        </view>
+    </mg-modal>
+</view>

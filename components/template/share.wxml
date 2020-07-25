@@ -1,0 +1,26 @@
+<mg-popup bind:__l="__l" bind:input="__e" class="data-v-157a84a0" close="1" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','show','$event',[] ] ] ] ] ]}}" value="{{show}}" vueId="1fdb2abe-1" vueSlots="{{['default']}}" zIndex="{{5000}}">
+    <view class="p3 data-v-157a84a0">
+        <view class="bf bs30 p3 data-v-157a84a0">
+            <view class="f-c data-v-157a84a0">
+                <view class="hx data-v-157a84a0"></view>
+                <view class="m02 f32 wei data-v-157a84a0">分享到</view>
+                <view class="hx data-v-157a84a0"></view>
+            </view>
+            <view class="sharec f-row data-v-157a84a0">
+                <view class="flex-1 f-c-c posi-r data-v-157a84a0" wx:if="{{wxs}}">
+                    <view class="fximg bsf data-v-157a84a0">
+                        <mg-img bind:__l="__l" class="data-v-157a84a0" src="{{onImgurl+'/wxs.png'}}" vueId="{{'1fdb2abe-2'+','+'1fdb2abe-1'}}"></mg-img>
+                    </view>
+                    <view class="mt20 f24 data-v-157a84a0">分享好友</view>
+                    <button class="sharebtn data-v-157a84a0" openType="share"></button>
+                </view>
+                <view bindtap="__e" class="flex-1 f-c-c data-v-157a84a0" data-event-opts="{{[ [ 'tap',[ [ 'hbfx',['$event'] ] ] ] ]}}" wx:if="{{hbs}}">
+                    <view class="fximg bsf data-v-157a84a0">
+                        <mg-img bind:__l="__l" class="data-v-157a84a0" src="{{onImgurl+'/hbs.png'}}" vueId="{{'1fdb2abe-3'+','+'1fdb2abe-1'}}"></mg-img>
+                    </view>
+                    <view class="mt20 f24 data-v-157a84a0">海报分享</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</mg-popup>

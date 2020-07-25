@@ -1,0 +1,112 @@
+<view class="mh100 data-v-67241877">
+    <view class="ptb7 cf data-v-67241877" style="{{'background:'+tColor+';'}}">
+        <view class="f-bt data-v-67241877">
+            <view class="f32 data-v-67241877" wx:if="{{dlDatl.state=='1'}}">未付款</view>
+            <view class="f32 data-v-67241877" wx:if="{{dlDatl.deliveryMode=='1'&&dlDatl.state=='2'}}">待发货</view>
+            <view class="f32 data-v-67241877" wx:if="{{dlDatl.deliveryMode=='2'&&dlDatl.state=='2'}}">待核销</view>
+            <view class="f32 data-v-67241877" wx:if="{{dlDatl.state=='3'}}">已发货</view>
+            <view class="f32 data-v-67241877" wx:if="{{dlDatl.state=='4'}}">已完成</view>
+            <view class="data-v-67241877">
+                <text class="iconfont iconddys mr10 f60 cf data-v-67241877"></text>
+            </view>
+        </view>
+        <view class="f32 mt20 data-v-67241877" wx:if="{{dlDatl.goodsType=='1'&&dlDatl.deliveryMode=='2'}}">{{'核销码：'+dlDatl.selfCode}}</view>
+    </view>
+    <view class="m23 data-v-67241877">
+        <view class="bf bs20 f24 p32 f-bt mb20 data-v-67241877" wx:if="{{dlDatl.goodsType=='1'}}">
+            <view class="f-g-0 mr20 data-v-67241877">
+                <view class="yuan f-c data-v-67241877" style="{{'background:'+tColor+';'}}">
+                    <text class="iconfont icondddy mr10 f42 cf ml10 data-v-67241877"></text>
+                </view>
+            </view>
+            <view class="f-g-1 data-v-67241877">
+                <view class="f28 c3 data-v-67241877">
+                    <text class="f32 mr20 data-v-67241877">{{dlDatl.receiveName}}</text>
+                    <text class="c9 data-v-67241877">{{dlDatl.receiveTel}}</text>
+                </view>
+                <view class="f28 t-o-e2 mt0 data-v-67241877">{{dlDatl.receiveAddress}}</view>
+            </view>
+        </view>
+        <view class="f28 bf bs20 p32 c3 mb20 data-v-67241877">
+            <view class="f-row data-v-67241877">
+                <view class="f-g-0 mr30 data-v-67241877">
+                    <view class="imgw bs10 bf7 data-v-67241877">
+                        <mg-img bind:__l="__l" class="data-v-67241877" src="{{dlDatl.icon}}" vueId="082a796e-1"></mg-img>
+                    </view>
+                </view>
+                <view class="f-g-1 f-y-bt data-v-67241877">
+                    <view class="wei4 f30 t-o-e2 c6 data-v-67241877">{{dlDatl.goodsName}}</view>
+                    <view class="f-x-bt data-v-67241877">
+                        <view class="cfa t-o-e wei4 data-v-67241877">
+                            <text class="data-v-67241877" wx:if="{{dlDatl.score>0}}">{{dlDatl.score}}</text>
+                            <text class="f26 ml10 nowei data-v-67241877" wx:if="{{dlDatl.score>0}}">{{mySwitch.jfName}}</text>
+                            <text class="nowei data-v-67241877" wx:if="{{dlDatl.score>0&&dlDatl.money>0}}">+</text>
+                            <text class="data-v-67241877" wx:if="{{dlDatl.money>0}}">
+                                <text class="f22 data-v-67241877">{{sl}}</text>{{dlDatl.money}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="f-bt mt20 data-v-67241877">
+                <view class="data-v-67241877">购买数量</view>
+                <view class="data-v-67241877">{{'x'+dlDatl.convertNum}}</view>
+            </view>
+            <view class="f-bt mt20 data-v-67241877" wx:if="{{dlDatl.goodsType=='1'&&dlDatl.deliveryMode!='0'}}">
+                <view class="f-g-0 mr30 data-v-67241877">配送方式</view>
+                <view class="f-g-1 f-bt data-v-67241877" wx:if="{{dlDatl.deliveryMode=='1'}}">
+                    <view class="c9 data-v-67241877">快递配送</view>
+                    <view class="data-v-67241877" style="{{'color:'+tColor+';'}}">免邮</view>
+                </view>
+                <view class="f-g-1 data-v-67241877" wx:if="{{dlDatl.deliveryMode=='2'}}">
+                    <view class="c9 data-v-67241877">到店自取</view>
+                </view>
+            </view>
+            <view class="wei4 cfa f-x-e mt20 mb20 line24 data-v-67241877">
+                <text class="c3 data-v-67241877">实付：</text>
+                <text class="data-v-67241877" wx:if="{{dlDatl.score>0}}">{{dlDatl.score}}</text>
+                <text class="f26 ml10 nowei data-v-67241877" wx:if="{{dlDatl.score>0}}">{{mySwitch.jfName}}</text>
+                <text class="nowei data-v-67241877" wx:if="{{dlDatl.score>0&&dlDatl.money>0}}">+</text>
+                <text class="data-v-67241877" wx:if="{{dlDatl.money>0}}">
+                    <text class="f22 data-v-67241877">{{sl}}</text>{{dlDatl.money}}</text>
+            </view>
+            <mg-cell bgc="#FAFBFC" bind:__l="__l" bind:tab="__e" class="data-v-67241877" cname="b-t-e" data-event-opts="{{[ [ '^tab',[ ['e0'] ] ] ]}}" last="1" vueId="082a796e-2" vueSlots="{{['bd']}}" wx:if="{{dlDatl.goodsType=='1'}}">
+                <view class="data-v-67241877" slot="bd">
+                    <view class="f30 f-c data-v-67241877">
+                        <text class="iconfont f42 icondh c0 mr20 data-v-67241877"></text>
+                        <text class="t-o-e data-v-67241877">联系商家</text>
+                    </view>
+                </view>
+            </mg-cell>
+        </view>
+        <view class="f28 bf bs20 p32 c3 mb20 data-v-67241877">
+            <view class="f32 data-v-67241877">订单信息</view>
+            <view class="f-bt mt20 data-v-67241877">
+                <view class="f-g-0 mr30 data-v-67241877">订单编号</view>
+                <view class="f-g-1 c6 data-v-67241877">{{dlDatl.outTradeNo}}</view>
+            </view>
+            <view class="f-bt mt20 data-v-67241877">
+                <view class="f-g-0 mr30 data-v-67241877">支付时间</view>
+                <view class="f-g-1 c6 data-v-67241877">{{$root.m0}}</view>
+            </view>
+            <view class="f-bt mt20 data-v-67241877" wx:if="{{dlDatl.logisticsName}}">
+                <view class="f-g-0 mr30 data-v-67241877">快递名称</view>
+                <view class="f-g-1 c6 data-v-67241877">{{dlDatl.logisticsName}}</view>
+            </view>
+            <view class="f-bt mt20 data-v-67241877" wx:if="{{dlDatl.logisticsCode}}">
+                <view class="f-g-0 mr30 data-v-67241877">快递单号</view>
+                <view class="f-g-1 c6 data-v-67241877">{{dlDatl.logisticsCode}}</view>
+            </view>
+            <view class="f-bt mt20 data-v-67241877" wx:if="{{dlDatl.payMode>0}}">
+                <view class="f-g-0 mr30 data-v-67241877">支付方式</view>
+                <view class="f-g-1 c6 data-v-67241877" wx:if="{{dlDatl.payMode=='1'}}">微信支付</view>
+                <view class="f-g-1 c6 data-v-67241877" wx:if="{{dlDatl.payMode=='2'}}">支付宝支付</view>
+                <view class="f-g-1 c6 data-v-67241877" wx:if="{{dlDatl.payMode=='3'}}">百度支付</view>
+                <view class="f-g-1 c6 data-v-67241877" wx:if="{{dlDatl.payMode=='4'}}">公众号支付</view>
+                <view class="f-g-1 c6 data-v-67241877" wx:if="{{dlDatl.payMode=='5'}}">余额支付</view>
+            </view>
+        </view>
+        <view class="foot-btn mt60 data-v-67241877" wx:if="{{dlDatl.goodsType=='1'&&dlDatl.deliveryMode=='1'&&dlDatl.state=='3'}}">
+            <button class="foot-btn data-v-67241877" style="{{'background:'+tColor+';'}}">确认收货</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,31 @@
+<mg-form bind:__l="__l" class="data-v-13b6f2a0" vueId="3a1f7fec-1" vueSlots="{{['default']}}">
+    <view class="container h100 data-v-13b6f2a0">
+        <view class="dlhd f-c-c data-v-13b6f2a0">
+            <view class="hdimg data-v-13b6f2a0">
+                <mg-img bind:__l="__l" class="data-v-13b6f2a0" src="{{system.icon}}" vueId="{{'3a1f7fec-2'+','+'3a1f7fec-1'}}"></mg-img>
+            </view>
+            <view class="c9 f26 p23 data-v-13b6f2a0">{{system.name}}</view>
+        </view>
+        <mg-modal bind:__l="__l" bind:input="__e" class="data-v-13b6f2a0" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showGg','$event',[] ] ] ] ] ]}}" ismr="{{true}}" value="{{showGg}}" vueId="{{'3a1f7fec-3'+','+'3a1f7fec-1'}}" vueSlots="{{['default']}}" width="90%" zIndex="{{2000}}">
+            <view class="weui-cell isright data-v-13b6f2a0">
+                <view class="weui-label data-v-13b6f2a0">手机号</view>
+                <view class="f-g-1 data-v-13b6f2a0">
+                    <input bindinput="__e" class="weui-input data-v-13b6f2a0" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','tel','$event',[] ],['params'] ] ] ] ]}}" maxlength="11" placeholder="请输入手机号" value="{{params.tel}}"></input>
+                </view>
+                <view class="f-g-0 data-v-13b6f2a0">
+                    <view bindtap="__e" class="code f-c data-v-13b6f2a0" data-event-opts="{{[ [ 'tap',[ [ 'getCode',['$event'] ] ] ] ]}}" style="{{'background:'+tColor+';'}}" wx:if="{{!send}}">获取验证码</view>
+                    <view class="code f-c data-v-13b6f2a0" style="{{'background:'+'#fff'+';'+'color:'+tColor+';'+'border-color:'+tColor+';'}}" wx:else>{{'('+second+'s)'}}</view>
+                </view>
+            </view>
+            <view class="weui-cell isright noafter data-v-13b6f2a0">
+                <view class="weui-label data-v-13b6f2a0">验证码</view>
+                <view class="f-g-1 data-v-13b6f2a0">
+                    <input bindinput="__e" class="weui-input data-v-13b6f2a0" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','code','$event',[] ],['params'] ] ] ] ]}}" maxlength="11" placeholder="请输入验证码" value="{{params.code}}"></input>
+                </view>
+            </view>
+            <view class="foot-btnc posi-r data-v-13b6f2a0">
+                <button bindtap="__e" class="foot-btn data-v-13b6f2a0" data-event-opts="{{[ [ 'tap',[ [ 'ljbd',['$event'] ] ] ] ]}}" disabled="{{loading}}" loading="{{loading}}" style="{{'background:'+tColor+';'}}">立即绑定</button>
+            </view>
+        </mg-modal>
+    </view>
+</mg-form>

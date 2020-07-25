@@ -1,0 +1,52 @@
+<mg-form bind:__l="__l" class="data-v-49c92ca6" vueId="23717271-1" vueSlots="{{['default']}}">
+    <view class="f-col h100 data-v-49c92ca6">
+        <mg-cell bbt="{{'名称:'+(sjxx.storeInfo&&sjxx.storeInfo.name||'商家名称')}}" bgc="transparent" bind:__l="__l" btt="付款给商家" bttc="f32 wei" class="data-v-49c92ca6" last="1" sname="{{$root.a0}}" vueId="{{'23717271-2'+','+'23717271-1'}}" vueSlots="{{['ft']}}">
+            <view class="sjimg bsf data-v-49c92ca6" slot="ft">
+                <mg-img bind:__l="__l" class="data-v-49c92ca6" src="{{sjxx.storeInfo&&sjxx.storeInfo.icon||''}}" vueId="{{'23717271-3'+','+'23717271-2'}}"></mg-img>
+            </view>
+        </mg-cell>
+        <view class="f-g-1 bf mdbd p30 data-v-49c92ca6">
+            <view class="mdbdt data-v-49c92ca6">
+                <view class="c9 f-x-bt data-v-49c92ca6">
+                    <text class="data-v-49c92ca6">金额</text>
+                    <text class="data-v-49c92ca6">请询问服务员后输入</text>
+                </view>
+                <view class="p20 b-b-e f-row data-v-49c92ca6" style="align-items:flex-start;">
+                    <text class="mr20 f56 wei data-v-49c92ca6" style="margin-top:-6rpx;">{{sl}}</text>
+                    <input bindinput="__e" class="f-g-1 mdinput wei data-v-49c92ca6" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','money','$event',[] ] ],[ 'minput',['$event'] ] ] ] ]}}" focus="true" maxlength="9" placeholder="消费金额" placeholderClass="mdps" placeholderStyle="line-height: normal;" style="{{'caret-color:'+tColor+';'}}" type="digit" value="{{money}}"></input>
+                </view>
+            </view>
+            <view class="mdbdb mt30 data-v-49c92ca6" wx:if="{{mdconfig}}">
+                <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="优惠券抵扣" bttc="f30 wei" class="data-v-49c92ca6" cname="p30" color="{{kyhb.n>0?tColor:''}}" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/coupon/use-coupon?storeId='+params.storeId] ] ] ] ] ] ]}}" isl="1" last="1" vueId="{{'23717271-4'+','+'23717271-1'}}" vueSlots="{{['ft']}}" wx:if="{{yhq}}">
+                    <view class="data-v-49c92ca6" slot="ft">
+                        <text class="f32 data-v-49c92ca6" wx:if="{{couponInfo}}">{{'-'+sl+couponInfo.money}}</text>
+                        <block wx:else>
+                            <view class="hongbao bs5 f20 f-y-c data-v-49c92ca6" wx:if="{{kyhb.n>0}}">
+                                <text class="iconfont iconhb cf mr10 f26 data-v-49c92ca6"></text>{{kyhb.n+'个可用'}}</view>
+                            <block wx:else>
+                                <view class="f24 f-y-c data-v-49c92ca6" wx:if="{{kyhb.n==0}}">暂无可用</view>
+                            </block>
+                        </block>
+                    </view>
+                </mg-cell>
+                <mg-cell bind:__l="__l" class="data-v-49c92ca6" cname="p30" ft="{{'-'+sl+zkmoney}}" ftc="f32" isl="1" last="1" vueId="{{'23717271-5'+','+'23717271-1'}}" vueSlots="{{['bd']}}" wx:if="{{vip}}">
+                    <view class="data-v-49c92ca6" slot="bd">
+                        <text class="f30 wei data-v-49c92ca6">会员折扣</text>
+                        <text class="ml10 cfc data-v-49c92ca6" wx:if="{{user.discount}}">{{'（'+user.discount+'折）'}}</text>
+                    </view>
+                </mg-cell>
+                <mg-cell bind:__l="__l" btt="实际应付" bttc="f30 wei" class="data-v-49c92ca6" cname="p30" isl="1" last="1" vueId="{{'23717271-6'+','+'23717271-1'}}" vueSlots="{{['ft']}}">
+                    <view class="c3 data-v-49c92ca6" slot="ft">
+                        <text class="mr20 data-v-49c92ca6">合计</text>
+                        <text class="f26 data-v-49c92ca6">{{sl}}</text>
+                        <text class="f40 data-v-49c92ca6">{{money?total:0}}</text>
+                    </view>
+                </mg-cell>
+            </view>
+            <view class="foot-btnc mt90 data-v-49c92ca6">
+                <sq-btn bind:__l="__l" bind:refresh="__e" class="data-v-49c92ca6" cname="foot-btn b-l-f0fa" data-event-opts="{{[ [ '^refresh',[ ['qdzf'] ] ] ]}}" sname="{{$root.a1}}" t="已和店员确认，立即买单" vueId="{{'23717271-7'+','+'23717271-1'}}" wx:if="{{!isLogin&&mdconfig.cloud==1}}"></sq-btn>
+                <button bindtap="__e" class="foot-btn b-l-f0fa data-v-49c92ca6" data-event-opts="{{[ [ 'tap',[ [ 'qdzf',['$event'] ] ] ] ]}}" disabled="{{loading}}" loading="{{loading}}" wx:else>已和店员确认，立即买单</button>
+            </view>
+        </view>
+    </view>
+</mg-form>

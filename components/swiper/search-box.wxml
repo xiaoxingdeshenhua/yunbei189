@@ -1,0 +1,20 @@
+<view class="searchc data-v-69b5eb86">
+    <view class="{{['f-x-bt data-v-69b5eb86',bgc,cname]}}" style="{{'height:'+''+co.height+u+';'}}" wx:if="{{co.city==1}}">
+        <view class="f-g-1 searchl f-y-c data-v-69b5eb86">
+            <view class="f-g-0 f-y-c mr15 data-v-69b5eb86">
+                <text class="iconfont iconmd f42 data-v-69b5eb86" style="{{'color:'+color+';'}}"></text>
+            </view>
+            <view class="f-g-1 f32 data-v-69b5eb86">
+                <view bindtap="__e" class="f-y-c cf data-v-69b5eb86" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+                    <text class="t-o-e data-v-69b5eb86">{{storeInfo.name}}</text>
+                    <text class="nowei f22 data-v-69b5eb86" wx:if="{{storeInfo.distance}}">{{'(距离您'+storeInfo.distance+')'}}</text>
+                    <text class="iconfont iconright ml10 cf f24 data-v-69b5eb86" wx:if="{{system.defaultStore==2&&system.decorationModel!=3}}"></text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="__e" class="{{['f-g-0 searchr p-10-20 f-y-c data-v-69b5eb86',co.fontStyle!='left'?'f-c':'',co.city!=1?'f-g-1':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/search/out?page=index'] ] ] ] ] ] ]}}" style="{{'border-radius:'+(co.shape==3?'50rpx':co.shape==1?'10rpx':'0')+';'}}" wx:if="{{co.search==1}}">
+        <text class="iconfont iconsearch mr20 data-v-69b5eb86" style="{{'color:'+'#999'+';'}}"></text>
+        <text class="c6 f26 data-v-69b5eb86">{{co.recommendSearch?co.keyWords||'搜索':'搜索'}}</text>
+    </view>
+</view>

@@ -1,0 +1,27 @@
+<mg-popup bind:__l="__l" bind:input="__e" class="data-v-2e11b91a" close="{{close}}" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','show','$event',[] ] ] ] ] ]}}" value="{{show}}" vueId="5e3c1450-1" vueSlots="{{['default']}}">
+    <view class="bf data-v-2e11b91a">
+        <view class="p3 t-c f34 data-v-2e11b91a">支付方式</view>
+        <form bindsubmit="__e" class="data-v-2e11b91a" data-event-opts="{{[ [ 'submit',[ [ 'formSubmit',['$event'] ] ] ] ]}}">
+            <view class="data-v-2e11b91a">
+                <radio-group class="data-v-2e11b91a" name="radiogroup">
+                    <label class="weui-cell weui-check__label right30 data-v-2e11b91a" wx:for="{{payArr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                        <view class="weui-cell__hd f-y-c data-v-2e11b91a">
+                            <image class="hdimg data-v-2e11b91a" mode="aspectFit" src="{{v.img}}"></image>
+                        </view>
+                        <view class="weui-cell__bd data-v-2e11b91a">
+                            <view class="f32 data-v-2e11b91a">{{v.name}}</view>
+                            <view class="yezf data-v-2e11b91a" wx:if="{{v.value=='ye'}}">可用余额<text class="data-v-2e11b91a" style="{{'color:'+tColor+';'}}">123</text>
+                            </view>
+                        </view>
+                        <view class="weui-cell__ft weui-cell__ft_in-radio data-v-2e11b91a">
+                            <radio checked="{{v.checked}}" class="data-v-2e11b91a" color="{{tColor}}" value="{{v.value}}"></radio>
+                        </view>
+                    </label>
+                </radio-group>
+            </view>
+            <view class="foot-btnc posi-r data-v-2e11b91a">
+                <button class="foot-btn b-s-2 data-v-2e11b91a" disabled="{{loading}}" formType="submit" loading="{{loading}}" style="{{'background:'+tColor+';'}}">确认支付</button>
+            </view>
+        </form>
+    </view>
+</mg-popup>

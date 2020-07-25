@@ -1,0 +1,50 @@
+<view class="data-v-49a7498e">
+    <mg-modal bind:__l="__l" bind:input="__e" class="data-v-49a7498e" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showGg','$event',[] ] ] ] ] ]}}" ismr="{{true}}" value="{{showGg}}" vueId="6dccb2d2-1" vueSlots="{{['default']}}" width="90%" zIndex="{{3000}}">
+        <view class="ggc bs30 bf posi-r data-v-49a7498e">
+            <text bindtap="__e" class="ggx posi-a iconfont iconcuo f60 c9 data-v-49a7498e" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}"></text>
+            <view class="p20 ggh f-c f32 wei data-v-49a7498e">
+                <view class="t-o-e t-c data-v-49a7498e" style="width:80%;">{{goodsInfo.name}}</view>
+            </view>
+            <view class="ggb p23 data-v-49a7498e">
+                <block wx:if="{{goodsInfo.isSpec==1&&goodsInfo.spec.length}}">
+                    <view class="p15 c6 data-v-49a7498e" style="{{'color:'+tColor+';'}}">规格</view>
+                    <view class="data-v-49a7498e" wx:for="{{goodsInfo.spec}}" wx:for-index="pi" wx:for-item="pv" wx:key="pi">
+                        <view class="p15 c6 f28 ml20 data-v-49a7498e">{{pv.spec}}</view>
+                        <view class="f-raw data-v-49a7498e">
+                            <view bindtap="__e" class="specv t-o-e f26 data-v-49a7498e" data-event-opts="{{[ [ 'tap',[ [ 'clickSpec',[pi,ci] ] ] ] ]}}" style="{{'background:'+(cv.a?tColor:'')+';'+'color:'+(cv.a?'#fff':'')+';'}}" wx:for="{{pv.specVal}}" wx:for-index="ci" wx:for-item="cv" wx:key="ci">{{cv.name}}</view>
+                        </view>
+                    </view>
+                </block>
+                <block wx:if="{{goodsInfo.isAttribute==1&&goodsInfo.attribute.length}}">
+                    <view class="p15 c6 data-v-49a7498e" style="{{'color:'+tColor+';'}}">属性</view>
+                    <view class="data-v-49a7498e" wx:for="{{goodsInfo.attribute}}" wx:for-index="pi" wx:for-item="pv" wx:key="pi">
+                        <view class="p15 c6 f28 ml20 data-v-49a7498e">{{pv.name}}</view>
+                        <view class="f-raw data-v-49a7498e">
+                            <view bindtap="__e" class="specv t-o-e f26 data-v-49a7498e" data-event-opts="{{[ [ 'tap',[ [ 'clickAttribute',[pi,ci] ] ] ] ]}}" style="{{'background:'+(cv.a?tColor:'')+';'+'color:'+(cv.a?'#fff':'')+';'}}" wx:for="{{pv.value}}" wx:for-index="ci" wx:for-item="cv" wx:key="ci">{{cv.value}}</view>
+                        </view>
+                    </view>
+                </block>
+                <view class="data-v-49a7498e" wx:if="{{goodsInfo.isMaterial==1&&goodsInfo.material.length}}">
+                    <view class="p15 c6 data-v-49a7498e" style="{{'color:'+tColor+';'}}">加料</view>
+                    <view class="f-raw data-v-49a7498e">
+                        <view bindtap="__e" class="specv t-o-e f26 data-v-49a7498e" data-event-opts="{{[ [ 'tap',[ [ 'clickMaterial',[ci] ] ] ] ]}}" style="{{'background:'+(cv.a?tColor:'')+';'+'color:'+(cv.a?'#fff':'')+';'}}" wx:for="{{goodsInfo.material}}" wx:for-index="ci" wx:for-item="cv" wx:key="ci">{{cv.name}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="ggf p23 b-t-e f-col f-x-ad data-v-49a7498e" wx:if="{{goodsInfo.goodsId}}">
+                <view class="f-x-bt data-v-49a7498e">
+                    <view class="f-g-1 data-v-49a7498e">
+                        <view class="data-v-49a7498e" style="{{'color:'+tColor+';'}}">
+                            <text class="f34 wei mr20 data-v-49a7498e" wx:if="{{goodsInfo.isSpec==1&&goodsInfo.spec.length}}">{{sl+(outin==1?isVip&&xzSpecInfo.outVipPrice>0?xzSpecInfo.outVipPrice:xzSpecInfo.outSalesPrice:isVip&&xzSpecInfo.inVipPrice>0?xzSpecInfo.inVipPrice:xzSpecInfo.inSalesPrice)+''}}<text class="f28 nowei c9 data-v-49a7498e">{{'(库存'+(outin==1?xzSpecInfo.outStock:xzSpecInfo.inStock)+')'}}</text>
+                            </text>
+                            <text class="data-v-49a7498e" wx:if="{{goodsInfo.isMaterial==1&&goodsInfo.material.length}}">{{'加料+'+sl+xzJlInfo.money}}</text>
+                        </view>
+                        <view class="f22 c9 t-o-e3 data-v-49a7498e">{{goodsInfo.body}}</view>
+                    </view>
+                    <view class="f-g-0 data-v-49a7498e"></view>
+                </view>
+                <button bindtap="__e" class="w100 cf data-v-49a7498e" data-event-opts="{{[ [ 'tap',[ [ 'jrgwc',['$event'] ] ] ] ]}}" style="{{'background:'+tColor+';'}}">加入购物车</button>
+            </view>
+        </view>
+    </mg-modal>
+</view>

@@ -1,0 +1,17 @@
+<view class="bf data-v-f3ac0bdc">
+    <view class="fixedtop data-v-f3ac0bdc">
+        <nav-tab icname bind:__l="__l" bind:changeTab="__e" bind:input="__e" class="data-v-f3ac0bdc" cname="hlb" color="{{tColor}}" data-event-opts="{{[ [ '^changeTab',[ ['changeTab'] ] ],[ '^input',[ [ '__set_model',[ '','aIdx','$event',[] ] ] ] ] ]}}" id="vnode" tabs="{{tabs}}" value="{{aIdx}}" vueId="5fdf7599-1" wx:if="{{tabs.length}}"></nav-tab>
+    </view>
+    <swiper bindchange="__e" class="data-v-f3ac0bdc" current="{{aIdx}}" data-event-opts="{{[ [ 'change',[ [ 'swiperTab',['$event'] ] ] ] ]}}" style="min-height:100vh;">
+        <swiper-item class="data-v-f3ac0bdc" wx:for="{{tabs}}" wx:for-index="ti" wx:for-item="tv" wx:key="ti">
+            <scroll-view bindscrolltolower="__e" class="data-v-f3ac0bdc" data-event-opts="{{[ [ 'scrolltolower',[ [ 'lower',['$event'] ] ] ] ]}}" scrollY="true" style="height:100%;">
+                <view class="tabht data-v-f3ac0bdc" id="{{'top'+ti}}">边距盒子</view>
+                <view class="f-raw bf p-30-30-0 data-v-f3ac0bdc" wx:if="{{ti==0}}">
+                    <bk-b bind:__l="__l" bind:tab="__e" block="1" cName="{{'f26 '+(bqIdx==i?'bf':'be6')+' c6 mr20 mb20 p-10-20 bs30'}}" class="data-v-f3ac0bdc" color="{{bqIdx==i?tColor:''}}" data-event-opts="{{[ [ '^tab',[ [ 'tabBq',[i] ] ] ] ]}}" t="{{v.name+' '+v.num}}" type="2" vueId="{{'5fdf7599-2-'+ti+'-'+i}}" wx:if="{{v.num>0}}" wx:for="{{bqarr}}" wx:for-index="i" wx:for-item="v" wx:key="i"></bk-b>
+                </view>
+                <gf-evaluate bind:__l="__l" class="data-v-f3ac0bdc" co="{{v}}" num="9" vueId="{{'5fdf7599-3-'+ti+'-'+i}}" wx:for="{{dataList[aIdx].list}}" wx:for-index="i" wx:for-item="v" wx:key="i"></gf-evaluate>
+                <jzz bind:__l="__l" class="data-v-f3ac0bdc" mygd="{{dataList[aIdx].mygd}}" nodata="{{dataList[aIdx].list.length==0&&dataList[aIdx].isget}}" vueId="{{'5fdf7599-4-'+ti}}"></jzz>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

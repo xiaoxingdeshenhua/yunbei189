@@ -1,0 +1,3 @@
+<view class="bf p20 data-v-be1de2b8">
+    <view class="borderv data-v-be1de2b8" style="{{'border-bottom:'+''+co.height+u+' '+stype+' '+co.color+';'+'opacity:'+co.opacity/100+';'}}"></view>
+</view>

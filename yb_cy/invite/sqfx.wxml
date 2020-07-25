@@ -1,0 +1,15 @@
+<view class="container pb115 data-v-71c4787c">
+    <mg-swiper bind:__l="__l" class="data-v-71c4787c" co="{{swiper}}" color="{{tColor}}" u="rpx" vueId="308c2df1-1"></mg-swiper>
+    <view class="main data-v-71c4787c">
+        <view class="bf mainc data-v-71c4787c">
+            <view class="p03 data-v-71c4787c">
+                <view class="p30 f32 wei t-c data-v-71c4787c">{{(isbj?'修改':'填写')+'资料'}}</view>
+            </view>
+            <mg-input bind:__l="__l" bind:input="__e" class="data-v-71c4787c" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','name','$event',[] ],['params'] ] ] ] ]}}" ht="姓名" hw="130" isr="1" pr="请输入姓名" value="{{params.name}}" vueId="308c2df1-2"></mg-input>
+            <mg-input bind:__l="__l" bind:input="__e" class="data-v-71c4787c" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '$0','tel','$event',[] ],['params'] ] ] ] ]}}" ht="手机号" hw="130" isr="1" max="{{11}}" pr="请输入手机号" t="number" value="{{params.tel}}" vueId="308c2df1-3"></mg-input>
+        </view>
+    </view>
+    <view class="foot-btnc posi-r mt30 data-v-71c4787c">
+        <button bindtap="__e" class="foot-btn bs15 data-v-71c4787c" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{loading}}" hoverClass="btnhc" loading="{{loading}}" style="background:#FF4E3A;">提交</button>
+    </view>
+</view>

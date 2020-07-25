@@ -1,0 +1,28 @@
+<view class="f-row p3 hlt data-v-3c57ba61">
+    <view class="f-g-0 mr30 data-v-3c57ba61">
+        <view class="gehdimg bsf data-v-3c57ba61">
+            <mg-img bind:__l="__l" class="data-v-3c57ba61" src="{{co.portrait}}" vueId="42e968fa-1"></mg-img>
+        </view>
+    </view>
+    <view class="f-g-1 data-v-3c57ba61">
+        <view class="f-x-bt mt10 f24 data-v-3c57ba61">
+            <view class="f-g-1 mr20 data-v-3c57ba61">
+                <view class="t-o-e f26 wei data-v-3c57ba61">{{co.anonymous==1?'*****':co.userName}}</view>
+                <view class="f-y-c mt10 data-v-3c57ba61">
+                    <uni-rate bind:__l="__l" class="data-v-3c57ba61" disabled="{{true}}" margin="{{4}}" size="22" value="{{co.star}}" vueId="42e968fa-2"></uni-rate>
+                </view>
+            </view>
+            <view class="f-g-0 c9 f24 data-v-3c57ba61">{{$root.m0}}</view>
+        </view>
+        <view class="mt20 t-o-e3 data-v-3c57ba61">{{co.body}}</view>
+        <view class="f-raw geplcon posi-r data-v-3c57ba61">
+            <view bindtap="__e" class="geplitem data-v-3c57ba61" data-event-opts="{{[ [ 'tap',[ [ 'yl',[i] ] ] ] ]}}" wx:if="{{i<num}}" wx:for="{{co.media}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <view class="geplimg bs5 data-v-3c57ba61">
+                    <mg-img bind:__l="__l" class="data-v-3c57ba61" src="{{v}}" vueId="{{'42e968fa-3-'+i}}"></mg-img>
+                </view>
+            </view>
+            <view class="posi-a ptnum b05 cf p-5-20 bs30 f26 data-v-3c57ba61" wx:if="{{co.media.length>num}}">{{co.media.length}}</view>
+        </view>
+        <view class="bs10 bfa p23 f24 c6 data-v-3c57ba61" wx:if="{{co.reply}}">{{'商家回复:'+co.reply}}</view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+<view class="data-v-2df5e624" style="{{'padding:'+''+co.upDownPadding+u+' '+co.leftRightPadding+u+';'+'margin-top:'+''+co.topMargin+u+';'}}">
+    <view class="f-bt f-w data-v-2df5e624">
+        <view bindtap="__e" class="{{['o-h flex-1 data-v-2df5e624',co.padding&&co.numberOfRow>1&&i>0?'ml20':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'goTo',[i] ] ] ] ]}}" style="{{'height:'+''+(u=='px'?$root.m0:co.height)+u+';'+'border-radius:'+''+co.radius+u+';'+'padding:'+0+'px'+';'}}" wx:if="{{i<co.numberOfRow}}" wx:for="{{co.pictureList}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <mg-img bind:__l="__l" class="data-v-2df5e624" src="{{v.url}}" vueId="{{'041dd135-1-'+i}}"></mg-img>
+        </view>
+    </view>
+</view>

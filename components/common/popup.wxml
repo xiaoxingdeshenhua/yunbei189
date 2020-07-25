@@ -1,0 +1,6 @@
+<view class="{{[ 'data-v-0a6ed646','am-popup',className,[value?'am-popup-show':''],[animation?'animation':''] ]}}">
+    <view bindtap="__e" catchtouchmove="__e" class="am-popup-mask data-v-0a6ed646" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ],[ 'tap',[ [ 'maskTap',['$event'] ] ] ] ]}}" style="{{'z-index:'+zIndex+';'}}" wx:if="{{mask}}"></view>
+    <view class="{{['am-popup-content data-v-0a6ed646',position]}}" style="{{'z-index:'+zIndex+';'}}">
+        <slot></slot>
+    </view>
+</view>

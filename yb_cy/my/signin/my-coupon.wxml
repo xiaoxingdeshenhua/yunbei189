@@ -1,0 +1,15 @@
+<view class="mh100 data-v-d7a3ed3e">
+    <view class="bf data-v-d7a3ed3e">
+        <view class="f32 wei p3 bor-b data-v-d7a3ed3e">优惠券列表</view>
+        <view class="p3 bf bor-b data-v-d7a3ed3e" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="f-x-bt data-v-d7a3ed3e">
+                <view class="t-o-e f28 data-v-d7a3ed3e">{{v['$orig'].name}}</view>
+                <view class="cf7 f28 data-v-d7a3ed3e">{{'¥'+v['$orig'].money}}</view>
+            </view>
+            <view class="f-x-bt data-v-d7a3ed3e">
+                <view class="c9 f24 m10 data-v-d7a3ed3e">{{'截止时间:'+v.m0}}</view>
+            </view>
+        </view>
+    </view>
+    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-d7a3ed3e" mygd="{{mygd}}" nodata="{{dlData.length==0&&isget}}" vueId="8e50f5ec-1"></jzz>
+</view>

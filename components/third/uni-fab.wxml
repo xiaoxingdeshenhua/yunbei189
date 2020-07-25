@@ -1,0 +1,15 @@
+<view class="data-v-292eb428">
+    <view class="{{['fab-box fab data-v-292eb428',leftBottom?'leftBottom':'',rightBottom?'rightBottom':'',leftTop?'leftTop':'',rightTop?'rightTop':'']}}">
+        <view bindtap="__e" class="{{['fab-circle data-v-292eb428',horizontal==='left'&&direction==='horizontal'?'left':'',vertical==='top'&&direction==='vertical'?'top':'',vertical==='bottom'&&direction==='vertical'?'bottom':'',horizontal==='right'&&direction==='horizontal'?'right':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'open',['$event'] ] ] ] ]}}" style="{{'background-color:'+styles.buttonColor+';'}}">
+            <text class="{{['iconfont icontop data-v-292eb428',showContent?'active':'']}}"></text>
+        </view>
+        <view class="{{['fab-content data-v-292eb428',horizontal==='left'?'left':'',horizontal==='right'?'right':'',direction==='vertical'?'flexDirection':'',flexDirectionStart?'flexDirectionStart':'',flexDirectionEnd?'flexDirectionEnd':'']}}" style="{{'width:'+boxWidth+';'+'height:'+boxHeight+';'+'background:'+styles.backgroundColor+';'}}">
+            <view class="fab-item first data-v-292eb428" wx:if="{{flexDirectionStart||horizontalLeft}}"></view>
+            <view bindtap="__e" class="{{['fab-item data-v-292eb428',showContent?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'taps',[index,'$0'],[ [ ['content','',index] ] ] ] ] ] ]}}" style="{{'color:'+(item.active?styles.selectedColor:styles.color)+';'}}" wx:for="{{content}}" wx:key="index">
+                <text class="{{['content-image iconfont f40 t-c data-v-292eb428',item.icon]}}"></text>
+                <text class="text data-v-292eb428">{{item.text}}</text>
+            </view>
+            <view class="fab-item first data-v-292eb428" wx:if="{{flexDirectionEnd||horizontalRight}}"></view>
+        </view>
+    </view>
+</view>

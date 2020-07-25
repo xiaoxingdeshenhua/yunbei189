@@ -1,0 +1,12 @@
+{
+    "usingComponents": {
+        "uni-rate": "/components/third/uni-rate",
+        "bk-b": "/components/common/block-b",
+        "mg-photo": "/components/form/mg-photo",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

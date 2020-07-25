@@ -1,0 +1,3 @@
+<view class="p23 data-v-ae22c9ae" wx:if="{{content}}">
+    <mg-rtext bind:__l="__l" class="data-v-ae22c9ae" content="{{content}}" type="2" vueId="2b589bfd-1"></mg-rtext>
+</view>

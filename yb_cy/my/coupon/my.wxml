@@ -1,0 +1,9 @@
+<view class="data-v-019ff544">
+    <nav-tab bind:__l="__l" bind:changeTab="__e" bind:input="__e" class="data-v-019ff544" cname="fixedtop" data-event-opts="{{[ [ '^changeTab',[ ['changeTab'] ] ],[ '^input',[ [ '__set_model',[ '','aIdx','$event',[] ] ] ] ] ]}}" tabs="{{tabs}}" value="{{aIdx}}" vueId="d599a2fa-1"></nav-tab>
+    <mg-form bind:__l="__l" class="data-v-019ff544" vueId="d599a2fa-2" vueSlots="{{['default']}}">
+        <view class="mt90 p3 data-v-019ff544">
+            <mg-coupon bind:__l="__l" bind:btntap="__e" bind:operation="__e" class="data-v-019ff544" cname="mb30" co="{{v}}" color="{{tColor}}" data-event-opts="{{[ [ '^btntap',[ [ 'btntap',['$0'],[ [ ['dataList','',i,'id'] ] ] ] ] ],[ '^operation',[ ['operation'] ] ] ]}}" ttype="2" vueId="{{'d599a2fa-3-'+i+','+'d599a2fa-2'}}" wx:for="{{dataList}}" wx:for-index="i" wx:for-item="v" wx:key="i"></mg-coupon>
+            <jzz bgcolor="transparent" bind:__l="__l" class="data-v-019ff544" mygd="{{mygd}}" nodata="{{dataList.length==0&&isget}}" vueId="{{'d599a2fa-4'+','+'d599a2fa-2'}}"></jzz>
+        </view>
+    </mg-form>
+</view>

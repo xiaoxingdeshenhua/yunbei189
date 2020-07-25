@@ -1,0 +1,11 @@
+{
+    "component": true,
+    "usingComponents": {
+        "u-parse": "/components/uParse/src/wxParse",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

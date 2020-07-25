@@ -1,0 +1,16 @@
+<view class="data-v-4ccf69d6">
+    <view class="dlhd f-c-c data-v-4ccf69d6">
+        <view class="hdimg bsf data-v-4ccf69d6">
+            <mg-img bind:__l="__l" class="data-v-4ccf69d6" src="{{system.icon}}" vueId="5972538a-1"></mg-img>
+        </view>
+        <view class="c9 f26 p23 data-v-4ccf69d6">{{system.name}}</view>
+    </view>
+    <view class="foot-btnc posi-r data-v-4ccf69d6">
+        <button bindtap="__e" class="foot-btn data-v-4ccf69d6" data-event-opts="{{[ [ 'tap',[ [ 'zxkf',['$event'] ] ] ] ]}}" style="{{'background:'+tColor+';'}}" wx:if="{{system.serviceUrl}}">在线客服</button>
+        <button class="foot-btn data-v-4ccf69d6" openType="contact" style="{{'background:'+tColor+';'}}" wx:else>在线客服</button>
+    </view>
+    <view bindtap="__e" class="foot-btnc posi-r data-v-4ccf69d6" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+        <button class="foot-btn f-c data-v-4ccf69d6" style="{{'background:'+'transparent'+';'+'border:'+'1px solid '+tColor+';'+'color:'+tColor+';'}}">
+            <text class="iconfont icondh mr20 f42 data-v-4ccf69d6" style="{{'color:'+tColor+';'}}"></text>联系电话</button>
+    </view>
+</view>

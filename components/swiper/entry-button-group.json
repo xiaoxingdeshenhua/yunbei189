@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "mg-modal": "/components/common/modal",
+        "bk-b": "/components/common/block-b",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-img": "/components/common/mg-img",
+        "mg-form": "/components/common/mg-form",
+        "mg-swiper": "/components/swiper/swiper",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

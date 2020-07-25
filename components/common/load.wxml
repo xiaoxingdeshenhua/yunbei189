@@ -1,0 +1,6 @@
+<view class="posi-f wh bf t0 z9999 skeletonbg data-v-0d5d7f00">
+    <view class="animation_opactiy posi-f wh bf t0 l0 data-v-0d5d7f00"></view>
+    <view class="jzzc data-v-0d5d7f00">
+        <mg-img bind:__l="__l" class="data-v-0d5d7f00" src="/static/jzz.gif" vueId="7e7e0d72-1"></mg-img>
+    </view>
+</view>

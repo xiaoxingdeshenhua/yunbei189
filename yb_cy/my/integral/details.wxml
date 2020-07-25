@@ -1,0 +1,97 @@
+<view class="pb130 data-v-794a7d09" hidden="{{!!showLoading}}">
+    <mg-swiper bind:__l="__l" class="data-v-794a7d09" co="{{swiper}}" color="{{tColor}}" u="rpx" vueId="7b55b885-1"></mg-swiper>
+    <view class="p3 bf bor-b data-v-794a7d09">
+        <view class="f-x-bt data-v-794a7d09">
+            <view class="t-o-e f34 wei data-v-794a7d09">{{dlDatl.name}}</view>
+        </view>
+        <view class="f-x-bt data-v-794a7d09">
+            <view class="cfa f30 m10 wei data-v-794a7d09">
+                <text class="data-v-794a7d09" wx:if="{{dlDatl.score>0}}">{{dlDatl.score}}</text>
+                <text class="f26 ml10 nowei data-v-794a7d09" wx:if="{{dlDatl.score>0}}">{{mySwitch.jfName}}</text>
+                <text class="nowei data-v-794a7d09" wx:if="{{dlDatl.score>0&&dlDatl.money>0}}">+</text>
+                <text class="data-v-794a7d09" wx:if="{{dlDatl.money>0}}">
+                    <text class="f22 data-v-794a7d09">{{sl}}</text>{{dlDatl.money}}</text>
+                <view class="t-o-e t-d-l c9 f22 wei4 data-v-794a7d09">{{sl+dlDatl.price}}</view>
+            </view>
+            <view class="f24 c9 data-v-794a7d09">{{'已有'+dlDatl.convertNum+'人兑换'}}</view>
+        </view>
+    </view>
+    <view class="bf p3 data-v-794a7d09">
+        <view class="f32 wei data-v-794a7d09">商品详情</view>
+        <view class="mt30 data-v-794a7d09" wx:if="{{co.details}}">
+            <mg-rtext bind:__l="__l" class="data-v-794a7d09" content="{{co.details}}" type="2" vueId="7b55b885-2"></mg-rtext>
+        </view>
+    </view>
+    <view class="dbbtnc data-v-794a7d09" style="{{'bottom:'+(isIpx?'40rpx':0)+';'}}">
+        <view class="dbbtn data-v-794a7d09">
+            <button bindtap="__e" class="rt f-c data-v-794a7d09" data-event-opts="{{[ [ 'tap',[ ['ljdh'] ] ] ]}}" disabled="{{loading}}" loading="{{loading}}" style="{{'background:'+tColor+';'}}">立即兑换</button>
+        </view>
+    </view>
+    <view class="bgf data-v-794a7d09" wx:if="{{isIpx}}"></view>
+    <mg-popup bind:__l="__l" bind:input="__e" class="data-v-794a7d09" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','showTime','$event',[] ] ] ] ] ]}}" value="{{showTime}}" vueId="7b55b885-3" vueSlots="{{['default']}}">
+        <view class="bf c3 bs2000 data-v-794a7d09">
+            <view class="f24 p3 pb0 data-v-794a7d09">
+                <view class="bf cout f-row bor-b pb30 data-v-794a7d09">
+                    <view class="f-g-0 coutl mr30 data-v-794a7d09">
+                        <view class="imgw bs10 bf7 data-v-794a7d09">
+                            <mg-img bind:__l="__l" class="data-v-794a7d09" src="{{dlDatl.icon}}" vueId="{{'7b55b885-4'+','+'7b55b885-3'}}"></mg-img>
+                        </view>
+                    </view>
+                    <view class="f-g-1 f-y-bt data-v-794a7d09">
+                        <view class="wei4 f32 t-o-e c3 data-v-794a7d09">{{dlDatl.name}}</view>
+                        <view class="f-x-bt mt20 cf7 f36 wei4 data-v-794a7d09">
+                            <view class="cfa data-v-794a7d09">
+                                <text class="cfa data-v-794a7d09" wx:if="{{dlDatl.score>0}}">{{dlDatl.score}}</text>
+                                <text class="f26 ml10 nowei data-v-794a7d09" wx:if="{{dlDatl.score>0}}">{{mySwitch.jfName}}</text>
+                                <text class="nowei data-v-794a7d09" wx:if="{{dlDatl.score>0&&dlDatl.money>0}}">+</text>
+                                <text class="data-v-794a7d09" wx:if="{{dlDatl.money>0}}">
+                                    <text class="f22 data-v-794a7d09">{{sl}}</text>{{dlDatl.money}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="f-x-bt p3 bor-b bor-t data-v-794a7d09" wx:if="{{dlDatl.type==1}}">
+                <view class="f28 wei4 data-v-794a7d09">配送方式</view>
+                <view class="data-v-794a7d09">
+                    <view class="bf f-x-bt data-v-794a7d09">
+                        <view class="pstypec f-c ml30 data-v-794a7d09" style="{{'color:'+tColor+';'+'border-color:'+tColor+';'}}" wx:if="{{config.delivery=='1'}}">
+                            <text class="iconfont f28 iconddys mr10 data-v-794a7d09" style="{{'color:'+tColor+';'}}"></text>
+                            <text class="f24 data-v-794a7d09">快递配送</text>
+                        </view>
+                        <view class="pstypec f-c ml30 data-v-794a7d09" style="{{'color:'+tColor+';'+'border-color:'+tColor+';'}}" wx:if="{{config.delivery=='2'}}">
+                            <text class="iconfont f28 iconshangjia mr10 data-v-794a7d09" style="{{'color:'+tColor+';'}}"></text>
+                            <text class="f24 data-v-794a7d09">门店自提</text>
+                        </view>
+                        <view bindtap="__e" class="pstypec f-c ml30 data-v-794a7d09" data-event-opts="{{[ [ 'tap',[ [ 'clickMode',['$0'],[ [ ['ModeArr','',i] ] ] ] ] ] ]}}" style="{{'color:'+(v.value==params.deliveryMode?tColor:'')+';'+'border-color:'+(v.value==params.deliveryMode?tColor:'')+';'}}" wx:if="{{config.delivery=='3'}}" wx:for="{{ModeArr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                            <text class="{{['iconfont f28 mr10 data-v-794a7d09',v.icon]}}" style="{{'color:'+(v.value==params.deliveryMode?tColor:'')+';'}}"></text>
+                            <text class="f24 data-v-794a7d09">{{v.name}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <block wx:if="{{dlDatl.type=='1'}}">
+                <get-address address="{{wmAddress}}" bind:__l="__l" class="data-v-794a7d09" ptype="{{2}}" vueId="{{'7b55b885-5'+','+'7b55b885-3'}}" wx:if="{{config.delivery=='1'||config.delivery=='3'&&params.deliveryMode=='1'}}"></get-address>
+                <get-ztjf address="{{ziAddress}}" bind:__l="__l" bind:ztshow="__e" class="data-v-794a7d09" data-event-opts="{{[ [ '^ztshow',[ ['ztshow'] ] ] ]}}" vueId="{{'7b55b885-6'+','+'7b55b885-3'}}" wx:if="{{config.delivery=='2'||config.delivery=='3'&&params.deliveryMode=='2'}}"></get-ztjf>
+            </block>
+            <view class="f-x-bt p3 bor-b bor-t data-v-794a7d09">
+                <view class="f28 wei4 data-v-794a7d09">兑换数量</view>
+                <view class="data-v-794a7d09">
+                    <number-box bind:__l="__l" bind:change="__e" class="data-v-794a7d09" data-event-opts="{{[ [ '^change',[ ['bindChange'] ] ] ]}}" max="{{maxNum}}" min="{{1}}" vueId="{{'7b55b885-7'+','+'7b55b885-3'}}"></number-box>
+                </view>
+            </view>
+            <view class="p3 f28 t-r data-v-794a7d09">
+                <view class="data-v-794a7d09">{{'共'+params.convertNum+'份，合计'}}<text class="cfa data-v-794a7d09" wx:if="{{dlDatl.score>0}}">{{xjMoney.totalScore}}</text>
+                    <text class="data-v-794a7d09" wx:if="{{dlDatl.score>0}}">{{mySwitch.jfName}}</text>
+                    <text class="data-v-794a7d09" wx:if="{{dlDatl.score>0&&dlDatl.money>0}}">+</text>
+                    <text class="cfa data-v-794a7d09" wx:if="{{dlDatl.money>0}}">{{sl+xjMoney.total}}</text>
+                </view>
+            </view>
+            <view class="p3 data-v-794a7d09">
+                <button bindtap="__e" class="w100 cf f34 qrdh data-v-794a7d09" data-event-opts="{{[ [ 'tap',[ ['qrdh'] ] ] ]}}" style="{{'background:'+tColor+';'}}">确认兑换</button>
+            </view>
+        </view>
+    </mg-popup>
+    <zi-list bind:__l="__l" bind:chooseAdd="__e" bind:input="__e" class="data-v-794a7d09" co="{{zitiList}}" data-event-opts="{{[ [ '^chooseAdd',[ ['chooseAdd'] ] ],[ '^input',[ [ '__set_model',[ '','showGg','$event',[] ] ] ] ] ]}}" value="{{showGg}}" vueId="7b55b885-8"></zi-list>
+    <load bind:__l="__l" class="data-v-794a7d09" vueId="7b55b885-9" wx:if="{{showLoading}}"></load>
+</view>

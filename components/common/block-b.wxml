@@ -1,0 +1,4 @@
+<text catchtap="__e" class="{{['text-btnf data-v-72588308',cName]}}" data-event-opts="{{[ [ 'tap',[ [ '$emit',['tab'] ] ] ] ]}}" style="{{$root.s0}}" wx:if="{{type==1}}">{{t}}</text>
+<block wx:else>
+    <text catchtap="__e" class="{{['text-btn data-v-72588308',cName]}}" data-event-opts="{{[ [ 'tap',[ [ '$emit',['tab'] ] ] ] ]}}" style="{{$root.s1}}" wx:if="{{type==2}}">{{t}}</text>
+</block>

@@ -1,0 +1,7 @@
+<view class="mh100 bf pb130 data-v-0551e3b2">
+    <view class="f-raw f-x-bt p03 data-v-0551e3b2">
+        <view bindtap="__e" class="imgc bs10 data-v-0551e3b2" data-event-opts="{{[ [ 'tap',[ [ 'yl',[i] ] ] ] ]}}" wx:for="{{list}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <mg-img bind:__l="__l" class="data-v-0551e3b2" src="{{v}}" vueId="{{'086e27ae-1-'+i}}"></mg-img>
+        </view>
+    </view>
+</view>

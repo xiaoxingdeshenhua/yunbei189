@@ -1,0 +1,19 @@
+<view bindtap="__e" class="{{['weui-cell data-v-0cce9c88',[last?'last':''],[isl?'left0':''],[isr?'right30':''],[noc?'aligns':''],cname]}}" data-event-opts="{{[ [ 'tap',[ [ '$emit',['tab'] ] ] ] ]}}" hoverClass="{{hc?'weui-cell_active':''}}" style="{{$root.s0}}">
+    <view class="f-g-0 f-c data-v-0cce9c88">
+        <view class="weui-label data-v-0cce9c88" style="{{'width:'+hw+'rpx'+';'}}" wx:if="{{ht}}">{{ht}}</view>
+        <view class="img bf6 o-h data-v-0cce9c88" style="{{'width:'+w+'rpx'+';'+'height:'+h+'rpx'+';'+'border-radius:'+brs+';'}}" wx:if="{{img}}">
+            <mg-img bind:__l="__l" class="data-v-0cce9c88" m="{{m}}" src="{{img}}" vueId="197e4b7a-1"></mg-img>
+        </view>
+        <slot name="hd"></slot>
+    </view>
+    <view class="f-g-1 data-v-0cce9c88">
+        <view class="{{['data-v-0cce9c88',bttc]}}" wx:if="{{btt}}">{{btt}}</view>
+        <view class="mt10 c9 f24 data-v-0cce9c88" wx:if="{{bbt}}">{{bbt}}</view>
+        <slot name="bd"></slot>
+    </view>
+    <view class="{{['f-g-0 c9 data-v-0cce9c88',ftc]}}" style="{{'color:'+color+';'}}">
+        <block wx:if="{{ft}}">{{ft}}</block>
+        <slot name="ft" wx:else></slot>
+    </view>
+    <text class="{{['ml10 iconfont iconright c9 data-v-0cce9c88',ftc]}}" style="{{'color:'+color+';'}}" wx:if="{{arrow}}"></text>
+</view>

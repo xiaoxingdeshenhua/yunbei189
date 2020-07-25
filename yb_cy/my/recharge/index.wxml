@@ -1,0 +1,55 @@
+<view class="mh100 bf pb130 data-v-46041bde">
+    <view class="p3 data-v-46041bde">
+        <view class="czbg bs20 posi-r data-v-46041bde">
+            <view class="wh data-v-46041bde">
+                <mg-img bind:__l="__l" class="data-v-46041bde" src="/static/czbg.png" vueId="b94a6b4c-1"></mg-img>
+            </view>
+            <view class="posi-a t0 wh cf f28 data-v-46041bde">
+                <view class="f-bt h100 data-v-46041bde">
+                    <view class="f-g-1 f-c-xc t-l ml50 data-v-46041bde">
+                        <view class="t_l data-v-46041bde">可用余额</view>
+                        <view class="t_l f28 mt10 posi-r data-v-46041bde">
+                            <text class="data-v-46041bde">{{sl}}</text>
+                            <text bindtap="__e" class="f56 wei data-v-46041bde" data-event-opts="{{[ [ 'tap',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/my/recharge/yemx'] ] ] ] ] ] ]}}">{{user.balance}}</text>
+                            <text class="ml20 iconfont iconright f30 cf posi-a arrow data-v-46041bde"></text>
+                        </view>
+                    </view>
+                    <view class="f-g-0 f-c-xc t-l mr40 f24 data-v-46041bde" wx:if="{{balanced}}">
+                        <view class="cae data-v-46041bde">余额：<text class="wei cf ml20 f22 data-v-46041bde">{{sl+balanced.money}}</text>
+                        </view>
+                        <view class="mt10 cae data-v-46041bde">赠送：<text class="wei cf ml20 f22 data-v-46041bde">{{sl+balanced.giveMoney}}</text>
+                        </view>
+                        <view class="mt10 cae data-v-46041bde">{{mySwitch.jfName+'：'}}<text class="wei cf ml20 f22 data-v-46041bde">{{user.integral}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="pt50 f-raw data-v-46041bde">
+            <view bindtap="__e" class="moudle bs20 f-c-xc t-c posi-r data-v-46041bde" data-event-opts="{{[ [ 'tap',[ [ 'clickMode',['$0'],[ [ ['rMoney','',i] ] ] ] ] ] ]}}" style="{{'border-color:'+(v.money==params.money?'#4781FE':'')+';'}}" wx:for="{{rMoney}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <view class="sjx posi-a data-v-46041bde" style="{{'border-top-color:'+(v.money==params.money?'#4781FE':'')+';'}}" wx:if="{{v.integral>0}}"></view>
+                <view class="posi-a f22 cf itxt wei data-v-46041bde" wx:if="{{v.integral>0}}">{{'+'+v.integral}}<view class="_br data-v-46041bde"></view>
+                    <text class="nowei data-v-46041bde">{{mySwitch.jfName}}</text>
+                </view>
+                <view class="f34 c3 t-o-e data-v-46041bde" style="{{'color:'+(v.money==params.money?'#4781FE':'')+';'}}">{{v.money+'元'}}</view>
+                <view class="f24 c9 mt10 t-o-e data-v-46041bde" style="{{'color:'+(v.money==params.money?'#4781FE':'')+';'}}" wx:if="{{v.giveMoney>0}}">{{'赠送'+v.giveMoney+'元'}}</view>
+            </view>
+            <view class="moudle bs20 f-c-xc t-c posi-r data-v-46041bde">
+                <view class="f30 c3 data-v-46041bde">其他金额</view>
+                <input bindinput="__e" class="weui-input data-v-46041bde" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','money','$event',[] ],['params'] ] ] ] ]}}" placeholder="请输入充值金额" type="digit" value="{{params.money}}"></input>
+            </view>
+        </view>
+    </view>
+    <view class="p3 data-v-46041bde">
+        <checkbox-group bindchange="__e" class="data-v-46041bde" data-event-opts="{{[ [ 'change',[ [ 'checkboxChange',['$event'] ] ] ] ]}}">
+            <label class="data-v-46041bde">
+                <checkbox checked="{{isAgree}}" class="data-v-46041bde" color="#4781FE" style="transform:scale(0.7);" value="cb"></checkbox>阅读并同意</label>
+            <navigator class="weui-agree__link data-v-46041bde" url="/yb_cy/my/other/gywm?t=充值服务协议&p=5">《充值服务协议》</navigator>
+        </checkbox-group>
+    </view>
+    <view class="p03 data-v-46041bde">
+        <button bindtap="__e" class="btn f-c f34 bs20 cf data-v-46041bde" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{loading}}" loading="{{loading}}" wx:if="{{isLogin}}">充值</button>
+        <sq-btn bind:__l="__l" bind:refresh="__e" class="data-v-46041bde" cname="btn f-c f34 bs20 cf" data-event-opts="{{[ [ '^refresh',[ ['save'] ] ] ]}}" sname="{{$root.a0}}" t="充值" vueId="b94a6b4c-2" wx:else></sq-btn>
+    </view>
+    <uni-fab bind:__l="__l" bind:trigger="__e" class="data-v-46041bde" content="{{content}}" data-event-opts="{{[ [ '^trigger',[ ['trigger'] ] ] ]}}" direction="vertical" horizontal="right" pattern="{{pattern}}" vertical="bottom" vueId="b94a6b4c-3" wx:if="{{!showLoading}}"></uni-fab>
+</view>

@@ -1,0 +1,33 @@
+<view class="mh100 data-v-091387c7">
+    <view class="bf data-v-091387c7">
+        <view class="f-c-c p30 data-v-091387c7">
+            <view class="f28 data-v-091387c7">{{'当前'+mySwitch.jfName}}</view>
+            <view class="f56 cf7 wei data-v-091387c7">{{integral}}</view>
+        </view>
+        <view class="f-x-bt data-v-091387c7">
+            <view bindtap="__e" class="f-c p3 data-v-091387c7" data-event-opts="{{[ [ 'tap',[ [ 'integralMall',['$event'] ] ] ] ]}}">
+                <text class="iconfont iconjfsc mr10 cf7 f34 data-v-091387c7"></text>
+                <text class="data-v-091387c7">{{mySwitch.jfName+'商城'}}</text>
+            </view>
+            <view bindtap="__e" class="f-c p3 data-v-091387c7" data-event-opts="{{[ [ 'tap',[ [ 'integralRule',['$event'] ] ] ] ]}}">
+                <text class="iconfont iconjfgz mr10 cf7 f34 data-v-091387c7"></text>
+                <text class="data-v-091387c7">{{mySwitch.jfName+'规则'}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="bf mt30 data-v-091387c7">
+        <view class="f32 wei p3 bor-b data-v-091387c7">{{mySwitch.jfName+'记录'}}</view>
+        <view class="p3 bf bor-b data-v-091387c7" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="f-x-bt data-v-091387c7">
+                <view class="t-o-e f28 data-v-091387c7">{{v['$orig'].note}}</view>
+                <view class="cf7 f28 data-v-091387c7">
+                    <text class="data-v-091387c7" wx:if="{{v['$orig'].type=='1'}}">+</text>
+                    <text class="data-v-091387c7" if="v.type=='2'" wx:else>-</text>{{v['$orig'].integral}}</view>
+            </view>
+            <view class="f-x-bt data-v-091387c7">
+                <view class="c9 f24 m10 data-v-091387c7">{{v.m0}}</view>
+            </view>
+        </view>
+    </view>
+    <jzz bgcolor="transparent" bind:__l="__l" class="data-v-091387c7" mygd="{{mygd}}" nodata="{{dlData.length==0&&isget}}" vueId="5bc0d47a-1"></jzz>
+</view>

@@ -1,0 +1,141 @@
+.animated.bounceIn.data-v-ca3fac20 {
+    animation-duration: .75s;
+}
+
+@-webkit-keyframes bounceIn-data-v-ca3fac20 {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes bounceIn-data-v-ca3fac20 {
+    from,20%,40%,60%,80%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        transform: scale3d(1.1,1.1,1.1);
+    }
+
+    40% {
+        transform: scale3d(.9,.9,.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03,1.03,1.03);
+    }
+
+    80% {
+        transform: scale3d(.97,.97,.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.bounceIn.data-v-ca3fac20 {
+    animation-name: bounceIn-data-v-ca3fac20;
+}
+
+.viph.data-v-ca3fac20 {
+    height: 340rpx;
+    background: linear-gradient(#15171d,#292d2f);
+}
+
+.vhimg.data-v-ca3fac20 {
+    width: 88rpx;
+    height: 88rpx;
+}
+
+.c8d.data-v-ca3fac20 {
+    color: #85766d;
+}
+
+.ce5.data-v-ca3fac20 {
+    color: #e2c8b5;
+}
+
+.vipht.data-v-ca3fac20 {
+    padding: 40rpx 30rpx;
+}
+
+.viphb.data-v-ca3fac20 {
+    padding: 10rpx 30rpx 0;
+}
+
+.jbc.data-v-ca3fac20 {
+    background: linear-gradient(90deg,#e6dbce,#dba789);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.vbtn.data-v-ca3fac20 {
+    padding: 20rpx 60rpx;
+}
+
+.btn.data-v-ca3fac20 {
+    border-radius: 50rpx;
+    background: #eac28f;
+    height: 85rpx;
+}
+
+.btnlt.data-v-ca3fac20 {
+    left: 110rpx;
+    top: 0rpx;
+    width: 81rpx;
+    height: 87rpx;
+}
+
+.btnrt.data-v-ca3fac20 {
+    right: 80rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 66rpx;
+    height: 66rpx;
+    border-radius: 50%;
+    background: linear-gradient(#fdfbfb,#fae1c6);
+    color: #e0b780;
+}
+
+.hgimg.data-v-ca3fac20 {
+    top: -18rpx;
+    right: 10rpx;
+    width: 53rpx;
+    height: 54rpx;
+}

@@ -1,0 +1,130 @@
+<view class="data-v-4e55e935">
+    <view class="p03 pb130 data-v-4e55e935" wx:if="{{info.id}}">
+        <mg-cell bgc="transparent" bind:__l="__l" class="data-v-4e55e935" cname="p30" last="1" vueId="c27af3a8-1" vueSlots="{{['bd']}}">
+            <view class="data-v-4e55e935" slot="bd">
+                <view class="f36 f-y-c data-v-4e55e935">
+                    <text class="t-o-e wei data-v-4e55e935">{{orderState.str1}}</text>
+                </view>
+            </view>
+        </mg-cell>
+        <mg-cell bind:__l="__l" brs="50%" class="data-v-4e55e935" cname="mb30 bs20" h="60" img="/static/lb.png" vueId="c27af3a8-2" vueSlots="{{['bd']}}" w="60" wx:if="{{info.state==1&&info.eatType==1}}">
+            <view class="f26 data-v-4e55e935" slot="bd">
+                <view class="data-v-4e55e935">{{'超过'+dndcConfig.waitTime+'分钟未支付，订单将自动取消哦！'}}</view>
+                <view class="mt10 data-v-4e55e935" wx:if="{{stime}}">剩余:<text class="ml20 data-v-4e55e935" style="{{'color:'+tColor+';'}}">{{stime[2]+':'+stime[3]}}</text>
+                </view>
+            </view>
+        </mg-cell>
+        <view class="bf mb30 bs20 data-v-4e55e935">
+            <view class="p3 data-v-4e55e935">
+                <view class="data-v-4e55e935" wx:if="{{orderState.str2}}">
+                    <view class="f30 wei data-v-4e55e935">{{orderState.str2}}</view>
+                    <view class="mt30 f-c data-v-4e55e935" wx:if="{{orderState.str3&&info.state==4&&info.deliveryMode==1}}">
+                        <view class="{{['zqmc f-c data-v-4e55e935',i<zqmArr.length-1?'mr30':'']}}" wx:for="{{zqmArr}}" wx:for-index="i" wx:for-item="v" wx:key="i">{{v}}</view>
+                    </view>
+                    <block wx:else>
+                        <view class="f24 mt10 data-v-4e55e935" style="{{'color:'+tColor+';'}}" wx:if="{{orderState.str3}}">{{orderState.str3}}</view>
+                    </block>
+                </view>
+                <view class="p30 data-v-4e55e935" style="{{'color:'+tColor+';'}}">
+                    <text class="data-v-4e55e935">{{info.typeName}}</text>
+                    <text class="ml20 data-v-4e55e935">{{info.tableNum}}</text>
+                </view>
+            </view>
+            <mg-cell bgc="#FAFBFC" bind:__l="__l" bind:tab="__e" class="data-v-4e55e935" cname="b-t-e" data-event-opts="{{[ [ '^tab',[ ['e0'] ] ] ]}}" last="1" vueId="c27af3a8-3" vueSlots="{{['bd']}}">
+                <view class="data-v-4e55e935" slot="bd">
+                    <view class="f30 f-c data-v-4e55e935">
+                        <text class="iconfont f42 icondh c0 mr20 data-v-4e55e935"></text>
+                        <text class="t-o-e data-v-4e55e935">联系商家</text>
+                    </view>
+                </view>
+            </mg-cell>
+        </view>
+        <view class="mb30 bs20 data-v-4e55e935">
+            <mg-cell bind:__l="__l" class="data-v-4e55e935" isr="1" vueId="c27af3a8-4" vueSlots="{{['bd']}}">
+                <view class="data-v-4e55e935" slot="bd">
+                    <view class="f30 f-y-c data-v-4e55e935">
+                        <text class="t-o-e wei data-v-4e55e935">{{info.storeName}}</text>
+                        <text class="iconfont iconright c3 f26 ml10 data-v-4e55e935"></text>
+                    </view>
+                </view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" brs="5rpx" class="data-v-4e55e935" cname="{{i!=info.goods.length-1?'la154':''}}" h="104" img="{{v['$orig'].icon}}" isr="1" vueId="{{'c27af3a8-5-'+i}}" vueSlots="{{['bd']}}" w="104" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                <view class="data-v-4e55e935" slot="bd">
+                    <view class="f-bt data-v-4e55e935">
+                        <view class="t-o-e data-v-4e55e935">{{v['$orig'].name}}</view>
+                        <view class="f-g-0 f32 data-v-4e55e935">{{sl+v.m0}}</view>
+                    </view>
+                    <view class="f-bt mt10 f24 c9 data-v-4e55e935">
+                        <view class="f-g-1 f-y-c data-v-4e55e935">
+                            <text class="ml10 data-v-4e55e935" wx:if="{{v['$orig'].spec}}">{{v['$orig'].spec}}</text>
+                            <text class="data-v-4e55e935" wx:if="{{v['$orig'].attribute}}">{{'('+v['$orig'].attribute+')'}}</text>
+                            <text class="ml10 data-v-4e55e935" wx:if="{{v['$orig'].material}}">{{'+'+v['$orig'].material}}</text>
+                        </view>
+                        <view class="data-v-4e55e935">{{'x'+v['$orig'].num}}</view>
+                    </view>
+                </view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" btt="桌位费" class="data-v-4e55e935" ft="{{''+sl+info.tablewareMoney}}" ftc="f32 c3" isr="1" vueId="c27af3a8-6" vueSlots="{{['hd']}}">
+                <view class="itemcon popsf mr20 data-v-4e55e935" slot="hd">桌位</view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" btt="店铺满减优惠" class="data-v-4e55e935" color="{{tColor}}" ft="{{'-'+sl+info.preferentialMoney}}" ftc="f32" isr="1" vueId="c27af3a8-7" vueSlots="{{['hd']}}" wx:if="{{info.preferentialMoney>0}}">
+                <view class="itemcon pomj mr20 data-v-4e55e935" slot="hd">满减</view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" btt="门店新客立减" class="data-v-4e55e935" color="{{tColor}}" ft="{{'-'+sl+info.newMoney}}" ftc="f32" isl="1" vueId="c27af3a8-8" vueSlots="{{['hd']}}" wx:if="{{info.newMoney>0}}">
+                <view class="itemcon poxk mr20 data-v-4e55e935" slot="hd">新客</view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" btt="优惠券抵扣" class="data-v-4e55e935" color="{{tColor}}" ft="{{'-'+sl+info.couponPreferential}}" ftc="f32" isr="1" vueId="c27af3a8-9" vueSlots="{{['hd']}}" wx:if="{{info.couponPreferential>0}}">
+                <view class="itemcon pomj mr20 data-v-4e55e935" slot="hd">优惠券</view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" class="data-v-4e55e935" isl="1" vueId="c27af3a8-10" vueSlots="{{['bd','ft']}}" wx:if="{{info.taxRatio>0}}">
+                <view class="f-y-c data-v-4e55e935" slot="bd">税率<text class="ml10 c6 f24 data-v-4e55e935">{{'('+info.taxRatio+'%)'}}</text>
+                </view>
+                <view class="f32 c3 data-v-4e55e935" slot="ft">{{'+'+sl+info.tax}}</view>
+            </mg-cell>
+            <mg-cell bind:__l="__l" class="data-v-4e55e935" isr="1" last="1" vueId="c27af3a8-11" vueSlots="{{['bd','ft']}}">
+                <view class="c9 f24 f-row data-v-4e55e935" slot="bd">
+                    <view class="f-g-0 f-y-c data-v-4e55e935">优惠规则<text class="iconfont iconwen f26 c9 ml10 data-v-4e55e935"></text>
+                    </view>
+                </view>
+                <view class="ml10 c3 data-v-4e55e935" slot="ft">
+                    <text class="f24 data-v-4e55e935">{{'共'+info.num+'件商品'}}</text>
+                    <text class="m02 data-v-4e55e935">小计</text>
+                    <text class="f34 data-v-4e55e935">{{sl+info.money}}</text>
+                </view>
+            </mg-cell>
+        </view>
+        <view class="mb30 bf bs20 data-v-4e55e935" wx:if="{{info.deliveryMode==1}}">
+            <mg-cell bind:__l="__l" btt="自取信息" bttc="f30 wei" class="data-v-4e55e935" isr="1" vueId="c27af3a8-12"></mg-cell>
+            <view class="p20 data-v-4e55e935">
+                <mg-cell bind:__l="__l" btt="自取时间" bttc="c9" class="data-v-4e55e935" cname="p13" ft="{{$root.m1}}" ftc="c3" last="1" vueId="c27af3a8-13" wx:if="{{info.appointment==1}}"></mg-cell>
+                <mg-cell bind:__l="__l" btt="自取时间" bttc="c9" class="data-v-4e55e935" cname="p13" ft="{{info.serviceAt}}" ftc="c3" last="1" vueId="c27af3a8-14" wx:else></mg-cell>
+                <mg-cell bind:__l="__l" btt="取货码" bttc="c9" class="data-v-4e55e935" cname="p13" ft="{{info.selfCode}}" ftc="c3" last="1" vueId="c27af3a8-15"></mg-cell>
+                <mg-cell bind:__l="__l" btt="商家地址" bttc="c9" class="data-v-4e55e935" cname="p13" ftc="c3" last="1" noc="1" vueId="c27af3a8-16" vueSlots="{{['ft']}}">
+                    <view class="f-c-e w500 data-v-4e55e935" slot="ft">
+                        <view bindtap="__e" class="t-r data-v-4e55e935" data-event-opts="{{[ [ 'tap',[ [ 'ckwz',['$event'] ] ] ] ]}}">{{info.storeAddress}}</view>
+                        <view bindtap="__e" class="data-v-4e55e935" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}">{{info.storeName+' ('+info.storeTel+')'}}</view>
+                    </view>
+                </mg-cell>
+                <mg-cell bind:__l="__l" btt="预留电话" bttc="c9" class="data-v-4e55e935" cname="p13" ft="{{info.receivedTel}}" ftc="c3" last="1" vueId="c27af3a8-17"></mg-cell>
+            </view>
+        </view>
+        <view class="mb30 bf bs20 data-v-4e55e935">
+            <mg-cell bind:__l="__l" btt="订单信息" bttc="f30 wei" class="data-v-4e55e935" isr="1" vueId="c27af3a8-18"></mg-cell>
+            <view class="p20 data-v-4e55e935">
+                <mg-cell bind:__l="__l" btt="订单号码" bttc="c9" class="data-v-4e55e935" cname="p13" last="1" vueId="c27af3a8-19" vueSlots="{{['ft']}}">
+                    <view class="f-y-c data-v-4e55e935" slot="ft">
+                        <text class="c3 data-v-4e55e935">{{info.outTradeNo}}</text>
+                        <bk-b bind:__l="__l" bind:tab="__e" cName="f24 ml20" class="data-v-4e55e935" data-event-opts="{{[ [ '^tab',[ ['e2'] ] ] ]}}" t="复制" type="2" vueId="{{'c27af3a8-20'+','+'c27af3a8-19'}}"></bk-b>
+                    </view>
+                </mg-cell>
+                <mg-cell bind:__l="__l" btt="下单时间" bttc="c9" class="data-v-4e55e935" cname="p13" ft="{{$root.m2}}" ftc="c3" last="1" vueId="c27af3a8-21"></mg-cell>
+                <mg-cell bind:__l="__l" btt="支付方式" bttc="c9" class="data-v-4e55e935" cname="p13" ft="{{$root.m3}}" ftc="c3" last="1" vueId="c27af3a8-22" wx:if="{{info.payMode}}"></mg-cell>
+                <mg-cell bind:__l="__l" btt="订单备注" bttc="c9" class="data-v-4e55e935" cname="p13" ft="{{info.userNote}}" ftc="c3 f-s-1" last="1" noc="1" vueId="c27af3a8-23" wx:if="{{info.userNote}}"></mg-cell>
+            </view>
+        </view>
+    </view>
+    <view class="foot-btnc f-row data-v-4e55e935" style="{{'bottom:'+'20rpx'+';'}}" wx:if="{{info.state==1}}">
+        <button bindtap="__e" class="flex-1 foot-btn b-l-fdf3 mr30 data-v-4e55e935" data-event-opts="{{[ [ 'tap',[ [ 'jxtj',['$event'] ] ] ] ]}}" hoverClass="btnhc" wx:if="{{sjxx&&sjxx.inStoreSet.multiplayerMode==1&&info.eatType==2}}">继续加菜</button>
+        <button bindtap="__e" class="flex-1 foot-btn b-l-f0f0 data-v-4e55e935" data-event-opts="{{[ [ 'tap',[ [ 'ljzf',['$event'] ] ] ] ]}}" disabled="{{loading}}" hoverClass="btnhc" loading="{{loading}}">立即支付</button>
+    </view>
+</view>

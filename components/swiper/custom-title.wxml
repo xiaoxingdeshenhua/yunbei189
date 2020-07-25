@@ -1,0 +1,19 @@
+<view class="p20 data-v-9f80742a" style="{{'background:'+co.backgroundColor+';'+'color:'+co.color+';'+'border-radius:'+''+co.radius+u+';'+'margin-top:'+''+co.topMargin+u+';'}}">
+    <view class="f-c data-v-9f80742a" wx:if="{{co.titleStyle=='1'}}">
+        <view class="hx data-v-9f80742a" style="{{'background:'+co.color+';'}}"></view>
+        <view class="{{['m03 f32 data-v-9f80742a',co.fontWeight=='bold'?'wei':'']}}">{{co.title}}</view>
+        <view class="hx data-v-9f80742a" style="{{'background:'+co.color+';'}}"></view>
+    </view>
+    <view class="f-c-c data-v-9f80742a" wx:if="{{co.titleStyle=='2'}}">
+        <view class="{{['m03 f32 data-v-9f80742a',co.fontWeight=='bold'?'wei':'']}}">{{co.title}}</view>
+        <view class="f-c data-v-9f80742a">
+            <view class="hx data-v-9f80742a" style="{{'background:'+co.color+';'}}"></view>
+            <view class="{{['m03 f26 data-v-9f80742a',co.fontWeight=='bold'?'wei':'']}}">{{co.subTitle}}</view>
+            <view class="hx data-v-9f80742a" style="{{'background:'+co.color+';'}}"></view>
+        </view>
+    </view>
+    <view class="{{['f-c data-v-9f80742a',co.typesetting=='0'?'f-bt':'',co.fontWeight=='bold'?'wei':'']}}" wx:if="{{co.titleStyle=='3'}}">
+        <view class="ml20 f32 data-v-9f80742a">{{co.title}}</view>
+        <view class="ml10 mr20 fon_26 data-v-9f80742a">{{co.subTitle}}</view>
+    </view>
+</view>

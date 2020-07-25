@@ -1,0 +1,19 @@
+<view class="bf data-v-62a88d4b" style="{{'margin-top:'+''+co.topMargin+u+';'}}" wx:if="{{storelist.length&&system.defaultStore==2}}">
+    <view class="p-15-30-0 data-v-62a88d4b">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="{{co.infoTitle||'附近门店'}}" bttc="f32 wei" class="data-v-62a88d4b" cname="p0" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','/yb_cy/shop/select?page=index&id='+storeInfo.id] ] ] ] ] ] ]}}" ft="查看全部" ftc="f24 c6" hc="1" last="1" vueId="ab7706f2-1"></mg-cell>
+    </view>
+    <view class="f-row o-x-s p30 data-v-62a88d4b">
+        <view bindtap="__e" class="f-g-0 w-210 ml20 p2 bs10 b-s data-v-62a88d4b" data-event-opts="{{[ [ 'tap',[ [ 'goTo',['$0'],[ [ ['storelist','',i] ] ] ] ] ] ]}}" wx:if="{{i<10}}" wx:for="{{storelist}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+            <view class="imgc bs20 data-v-62a88d4b">
+                <mg-img bind:__l="__l" class="data-v-62a88d4b" src="{{v.icon}}" vueId="{{'ab7706f2-2-'+i}}"></mg-img>
+            </view>
+            <view class="mt10 data-v-62a88d4b">
+                <view class="t-o-e data-v-62a88d4b">{{v.name}}</view>
+                <view class="mt10 f24 c6 f-row data-v-62a88d4b">
+                    <text class="iconfont icondw c3 mr10 f28 data-v-62a88d4b"></text>
+                    <text class="f22 data-v-62a88d4b">{{v.distance}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

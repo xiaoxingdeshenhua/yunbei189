@@ -1,0 +1,19 @@
+.mpimgc.data-v-29438176 {
+    padding: 20rpx 20rpx 0 0;
+    margin: 0 10rpx 20rpx 0;
+}
+
+.mpimg.data-v-29438176 {
+    width: 136rpx;
+    height: 136rpx;
+    border-radius: 10rpx;
+}
+
+.mpclose.data-v-29438176 {
+    top: 0rpx;
+    right: 0rpx;
+}
+
+.mpaddc.data-v-29438176 {
+    border: 1px dashed #d5d5d5;
+}

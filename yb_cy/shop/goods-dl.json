@@ -1,0 +1,17 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "mg-swiper": "/components/swiper/swiper",
+        "shop-car-animation": "/components/fly-in-cart/fly-in-cart",
+        "goods-car": "/components/goods/goods-car",
+        "spec": "/components/goods/spec",
+        "goods": "/components/goods/index",
+        "u-parse": "/components/uParse/src/wxParse",
+        "uni-nav-bar": "/components/third/uni-nav-bar",
+        "mg-rtext": "/components/swiper/rich-text",
+        "mg-cell": "/components/common/mg-cell",
+        "mg-form": "/components/common/mg-form",
+        "mg-img": "/components/common/mg-img",
+        "tab-bar": "/components/common/tabbar"
+    }
+}

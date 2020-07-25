@@ -1,0 +1,67 @@
+<view class="data-v-08b0b084">
+    <view class="viph posi-r data-v-08b0b084">
+        <view class="posi-a t0 wh c8d data-v-08b0b084">
+            <view class="vipht f-y-c data-v-08b0b084">
+                <view class="f-g-1 data-v-08b0b084">
+                    <view class="f-bt data-v-08b0b084">
+                        <view class="f-y-c data-v-08b0b084">
+                            <view class="cfc mr10 data-v-08b0b084">当前等级:</view>
+                            <view class="ce5 f32 wei data-v-08b0b084">{{vipInfo.name}}</view>
+                        </view>
+                        <view bindtap="__e" class="f-g-0 f-y-c f22 cfc data-v-08b0b084" data-event-opts="{{[ [ 'tap',[ [ 'djgz',['$event'] ] ] ] ]}}">等级规则<text class="iconfont iconright f26 cfc data-v-08b0b084"></text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="f-c-c data-v-08b0b084" wx:if="{{vipInfo}}">
+                <view class="f60 wei jbc data-v-08b0b084">{{vipInfo.growth}}</view>
+                <view class="cfc f24 f-y-c data-v-08b0b084">成长值</view>
+            </view>
+        </view>
+    </view>
+    <view class="p3 bf data-v-08b0b084">
+        <view class="data-v-08b0b084">
+            <view class="jdtic f-bt data-v-08b0b084">
+                <view class="wei posi-r data-v-08b0b084" style="{{'color:'+(v.active?'#DBA98B':'#bbb')+';'}}" wx:for="{{djarr}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <view class="data-v-08b0b084">{{v.name}}</view>
+                    <view class="posi-a jdtih f-c data-v-08b0b084" style="{{'background:'+(v.active?'#DBA98B':'')+';'}}">
+                        <text class="iconfont iconhg f24 cf data-v-08b0b084"></text>
+                    </view>
+                </view>
+            </view>
+            <view class="jdtbj mb30 data-v-08b0b084"></view>
+        </view>
+        <view class="mb10 t-c c6 f24 data-v-08b0b084">{{vipInfo.differ>0?'再获取 '+vipInfo.differ+' 经验值可升级':'已到最高级'}}</view>
+    </view>
+    <view class="bf mt30 p10 hlb data-v-08b0b084">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="当前会员权益" bttc="f34 wei" class="data-v-08b0b084" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',1],['url','wkk'] ] ] ] ] ] ]}}" ft="全部会员权益" ftc="f24" last="1" vueId="435240c7-1"></mg-cell>
+        <view class="p03 data-v-08b0b084">
+            <entry-button-group bind:__l="__l" class="data-v-08b0b084" co="{{btng}}" color="#DBA98B" imgw="84" vueId="435240c7-2"></entry-button-group>
+        </view>
+    </view>
+    <view class="bf p10 hlb data-v-08b0b084">
+        <mg-cell arrow="1" bind:__l="__l" bind:tab="__e" btt="提升成长值" bttc="f34 wei" class="data-v-08b0b084" color="{{tColor}}" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',3],['url','/yb_cy/index/index'] ] ] ] ] ] ]}}" ft="去逛逛" ftc="f24" last="1" vueId="435240c7-3"></mg-cell>
+        <mg-cell bbt="{{dzzf.t1}}" bind:__l="__l" btt="电子支付获取成长值" bttc="f32" class="data-v-08b0b084" cname="p13" h="88" img="/static/wd/vip/dzzf.png" last="1" vueId="435240c7-4" w="88"></mg-cell>
+        <view class="p23 f26 c6 data-v-08b0b084">{{dzzf.t2}}</view>
+    </view>
+    <view class="bf p10 data-v-08b0b084">
+        <mg-cell bind:__l="__l" btt="成长值明细" bttc="f34 wei" class="data-v-08b0b084" last="1" vueId="435240c7-5"></mg-cell>
+        <view class="p03 data-v-08b0b084">
+            <view class="czzmxc posi-r data-v-08b0b084">
+                <view class="posi-r data-v-08b0b084" wx:for="{{$root.l0}}" wx:for-index="i" wx:for-item="v" wx:key="i">
+                    <view class="czzmxi f-row data-v-08b0b084">
+                        <view class="f-g-0 data-v-08b0b084">{{v.m0}}</view>
+                        <view class="f-g-1 ml20 data-v-08b0b084">
+                            <view class="data-v-08b0b084">{{v.m1}}</view>
+                            <view class="c9 f24 mt10 data-v-08b0b084">{{'订单号:'+v['$orig'].outTradeNo}}</view>
+                        </view>
+                        <view class="f34 wei data-v-08b0b084" style="color:#DBA98B;">{{'+'+(vipConfig.conditions==1?v['$orig'].money:1)}}</view>
+                    </view>
+                    <view class="czzyd posi-a data-v-08b0b084">
+                        <view class="yd bsf data-v-08b0b084"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

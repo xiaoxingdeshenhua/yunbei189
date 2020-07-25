@@ -1,0 +1,59 @@
+<view class="data-v-2cafd09c">
+    <view class="pb130 data-v-2cafd09c" wx:if="{{info.id}}">
+        <view class="sltop cf data-v-2cafd09c" style="{{'background:'+tColor+';'}}">
+            <view class="p3 f36 data-v-2cafd09c">{{orderState.str1}}</view>
+        </view>
+        <view class="p03 slbd data-v-2cafd09c">
+            <view class="bf mb30 bs20 data-v-2cafd09c">
+                <view class="slbdt1 f30 wei data-v-2cafd09c">感谢您对我们的信任，期待下次光临</view>
+                <mg-cell bgc="#F1F2F3" bind:__l="__l" bind:tab="__e" class="data-v-2cafd09c" cname="b-t-e" data-event-opts="{{[ [ '^tab',[ ['e0'] ] ] ]}}" last="1" vueId="18feb046-1" vueSlots="{{['bd']}}">
+                    <view class="data-v-2cafd09c" slot="bd">
+                        <view class="f30 f-c data-v-2cafd09c">
+                            <text class="iconfont f42 icondh c0 mr20 data-v-2cafd09c"></text>
+                            <text class="t-o-e data-v-2cafd09c">联系商家</text>
+                        </view>
+                    </view>
+                </mg-cell>
+            </view>
+            <view class="mb30 bs20 data-v-2cafd09c">
+                <mg-cell bind:__l="__l" bind:tab="__e" class="data-v-2cafd09c" data-event-opts="{{[ [ '^tab',[ [ 'go',[ [ 'o',['t',3],['url','/yb_cy/shop/index?storeId='+info.storeId] ] ] ] ] ] ]}}" isr="1" vueId="18feb046-2" vueSlots="{{['bd']}}">
+                    <view class="data-v-2cafd09c" slot="bd">
+                        <view class="f30 f-y-c data-v-2cafd09c">
+                            <text class="t-o-e wei data-v-2cafd09c">{{info.storeName}}</text>
+                            <text class="iconfont iconright c3 f26 ml10 data-v-2cafd09c"></text>
+                        </view>
+                    </view>
+                </mg-cell>
+                <mg-cell bind:__l="__l" btt="订单总额" class="data-v-2cafd09c" ft="{{''+sl+info.originalMoney}}" ftc="f32 c3" isr="1" vueId="18feb046-3"></mg-cell>
+                <mg-cell bind:__l="__l" btt="会员折扣" class="data-v-2cafd09c" color="{{tColor}}" ft="{{info.vipDiscount*10+'折'}}" ftc="f32" isr="1" vueId="18feb046-4" vueSlots="{{['hd']}}" wx:if="{{info.vipDiscountMoney>0}}">
+                    <view class="itemcon pomj mr20 data-v-2cafd09c" slot="hd">会员</view>
+                </mg-cell>
+                <mg-cell bind:__l="__l" btt="优惠券抵扣" class="data-v-2cafd09c" color="{{tColor}}" ft="{{'-'+sl+info.couponPreferential}}" ftc="f32" isr="1" vueId="18feb046-5" vueSlots="{{['hd']}}" wx:if="{{info.couponPreferential>0}}">
+                    <view class="itemcon pomj mr20 data-v-2cafd09c" slot="hd">优惠券</view>
+                </mg-cell>
+                <mg-cell bind:__l="__l" class="data-v-2cafd09c" isr="1" last="1" vueId="18feb046-6" vueSlots="{{['ft']}}">
+                    <view class="ml10 c3 data-v-2cafd09c" slot="ft">
+                        <text class="data-v-2cafd09c" wx:if="{{zyh>0}}">已优惠<text class="data-v-2cafd09c" style="{{'color:'+tColor+';'}}">{{sl+zyh}}</text>
+                        </text>
+                        <text class="m02 data-v-2cafd09c">小计</text>
+                        <text class="f34 wei data-v-2cafd09c">{{sl+info.money}}</text>
+                    </view>
+                </mg-cell>
+            </view>
+            <view class="mb30 bf bs20 data-v-2cafd09c">
+                <mg-cell bind:__l="__l" btt="订单信息" bttc="f30 wei" class="data-v-2cafd09c" isr="1" vueId="18feb046-7"></mg-cell>
+                <view class="p20 data-v-2cafd09c">
+                    <mg-cell bind:__l="__l" btt="订单号码" bttc="c9" class="data-v-2cafd09c" cname="p13" last="1" vueId="18feb046-8" vueSlots="{{['ft']}}">
+                        <view class="f-y-c data-v-2cafd09c" slot="ft">
+                            <text class="c3 data-v-2cafd09c">{{info.outTradeNo}}</text>
+                            <bk-b bind:__l="__l" bind:tab="__e" cName="f24 ml20" class="data-v-2cafd09c" data-event-opts="{{[ [ '^tab',[ ['e1'] ] ] ]}}" t="复制" type="2" vueId="{{'18feb046-9'+','+'18feb046-8'}}"></bk-b>
+                        </view>
+                    </mg-cell>
+                    <mg-cell bind:__l="__l" btt="下单时间" bttc="c9" class="data-v-2cafd09c" cname="p13" ft="{{$root.m0}}" ftc="c3" last="1" vueId="18feb046-10"></mg-cell>
+                    <mg-cell bind:__l="__l" btt="支付方式" bttc="c9" class="data-v-2cafd09c" cname="p13" ft="{{$root.m1}}" ftc="c3" last="1" vueId="18feb046-11" wx:if="{{info.payMode}}"></mg-cell>
+                    <mg-cell bind:__l="__l" btt="订单备注" bttc="c9" class="data-v-2cafd09c" cname="p13" ft="{{info.userNote}}" ftc="c3 f-s-1" last="1" noc="1" vueId="18feb046-12" wx:if="{{info.userNote}}"></mg-cell>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

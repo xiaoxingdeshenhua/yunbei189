@@ -1,0 +1,25 @@
+<view class="{{['f-x-bt data-v-6c30cd6a',cname]}}">
+    <view class="{{['f-g-1 wei t-o-e data-v-6c30cd6a',pcname,'cf0a']}}" wx:if="{{isprice}}">
+        <text class="mr5 f28 data-v-6c30cd6a">{{sl}}</text>{{(price||0)+''}}<text class="nowei c9 f24 data-v-6c30cd6a" wx:if="{{isunit}}">{{'/'+co.unit}}</text>
+        <text class="t-d-l nowei ml10 c9 f24 data-v-6c30cd6a" wx:if="{{isyprice}}">{{sl+$root.m0}}</text>
+    </view>
+    <view catchtap="__e" class="f-g-0 cartggc f-c data-v-6c30cd6a" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" wx:if="{{(co.isSpec==1||co.isMaterial==1||co.isAttribute=='1')&&showspec}}">
+        <view class="text-btnf f22 f-c ggc data-v-6c30cd6a" style="{{'background:'+(isClose?tColor:'#ccc')+';'}}">
+            <text class="data-v-6c30cd6a">选 择</text>
+            <text class="dot f-c data-v-6c30cd6a" style="{{'background:'+tColor+';'}}" wx:if="{{co.num>0}}">{{co.num}}</text>
+        </view>
+    </view>
+    <view class="f-g-0 f-bt data-v-6c30cd6a" wx:else>
+        <view class="reducecon active f-y-c data-v-6c30cd6a" wx:if="{{co.num>0}}">
+            <view catchtap="__e" class="cartc f-c data-v-6c30cd6a" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}">
+                <button class="cartdec data-v-6c30cd6a" style="{{'border-color:'+(isClose?tColor:'#ccc')+';'}}">
+                    <view class="cartdecab data-v-6c30cd6a" style="{{'background:'+(isClose?tColor:'#ccc')+';'}}"></view>
+                </button>
+            </view>
+            <text class="f26 ma c0 data-v-6c30cd6a">{{co.num}}</text>
+        </view>
+        <view catchtap="__e" class="cartc f-c data-v-6c30cd6a" data-event-opts="{{[ [ 'tap',[ [ 'e2',['$event'] ] ] ] ]}}">
+            <button class="cartadd data-v-6c30cd6a" style="{{'background:'+(isClose?tColor:'#ccc')+';'}}"></button>
+        </view>
+    </view>
+</view>

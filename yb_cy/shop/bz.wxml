@@ -1,0 +1,15 @@
+<view class="data-v-6c8f4450">
+    <view class="p3 data-v-6c8f4450">
+        <view class="bf9 bs10 p2 data-v-6c8f4450">
+            <textarea bindinput="__e" class="w100 c6 data-v-6c8f4450" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','note','$event',[] ] ] ] ] ]}}" maxlength="50" placeholder="填写额外备注信息" placeholderClass="f24" style="height:160rpx;" value="{{note}}"></textarea>
+            <view class="f-x-e f24 c9 data-v-6c8f4450">{{note.length}}<text class="m05 data-v-6c8f4450">/</text>50个字</view>
+        </view>
+        <view class="kjsr data-v-6c8f4450">快捷输入</view>
+        <view class="f-raw data-v-6c8f4450">
+            <view bindtap="__e" class="label bs10 f-c c6 f26 data-v-6c8f4450" data-event-opts="{{[ [ 'tap',[ [ 'djnote',['$0'],[ [ ['larr','',i] ] ] ] ] ] ]}}" wx:for="{{larr}}" wx:for-index="i" wx:for-item="v" wx:key="i">{{v}}</view>
+        </view>
+    </view>
+    <view class="foot-btnc posi-r mt30 data-v-6c8f4450">
+        <button bindtap="__e" class="foot-btn b00 bs15 data-v-6c8f4450" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{loading}}" hoverClass="btnhc" loading="{{loading}}">提交</button>
+    </view>
+</view>

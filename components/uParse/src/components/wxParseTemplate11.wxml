@@ -1,0 +1,28 @@
+<view>
+    <block wx:if="{{node.node=='element'}}">
+        <button size="mini" type="default" wx:if="{{node.tag=='button'}}"></button>
+        <block wx:else>
+            <view class="{{[node.classStr]}}" style="{{node.styleStr}}" wx:if="{{node.tag=='li'}}">{{''+node.text+''}}</view>
+            <block wx:else>
+                <weixin-parse-video bind:__l="__l" node="{{node}}" vueId="0486e022-1" wx:if="{{node.tag=='video'}}"></weixin-parse-video>
+                <block wx:else>
+                    <weixin-parse-audio bind:__l="__l" node="{{node}}" vueId="0486e022-2" wx:if="{{node.tag=='audio'}}"></weixin-parse-audio>
+                    <block wx:else>
+                        <weixin-parse-img bind:__l="__l" node="{{node}}" vueId="0486e022-3" wx:if="{{node.tag=='img'}}"></weixin-parse-img>
+                        <block wx:else>
+                            <view bindtap="__e" class="{{[node.classStr]}}" data-event-opts="{{[ [ 'tap',[ [ 'wxParseATap',['$event'] ] ] ] ]}}" data-href="{{node.attr.href}}" style="{{node.styleStr}}" wx:if="{{node.tag=='a'}}">{{''+node.text+''}}</view>
+                            <block wx:else>
+                                <text wx:if="{{node.tag=='br'}}">
+</text>
+                                <view class="{{[node.classStr]}}" style="{{node.styleStr}}" wx:else>{{''+node.text+''}}</view>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </block>
+        </block>
+    </block>
+    <block wx:else>
+        <block wx:if="{{node.node=='text'}}">{{node.text}}</block>
+    </block>
+</view>
